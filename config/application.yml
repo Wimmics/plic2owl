@@ -1,0 +1,4 @@
+default_namespace: 'http://www.gbif.es/PliC/'
+
+namespaces_to_process:
+  - 'http://www.gbif.es/PliC/'
