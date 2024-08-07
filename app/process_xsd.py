@@ -1,17 +1,19 @@
-import logging.config
+import logging
 from xmlschema import XMLSchema
 from xmlschema.validators.complex_types import XsdComplexType
 from xmlschema.validators.simple_types import XsdAtomicRestriction, XsdAtomicBuiltin
 from xmlschema.validators.elements import XsdElement
 from xmlschema.validators import XsdGroup, XsdComponent
 
+from RdfGraph import graph
+
 # Get the config parameters
 import app_config
 
-logger = logging.getLogger('app.' + __name__)
+logger = logging.getLogger("app." + __name__)
 
 
-def clean_string(description: str):
+def clean_string(description: str) -> str:
     """
     Remove newline characters, carriage returns, and leading/trailing
     whitespaces from a string. Return None if the resulting string is empty.
@@ -29,20 +31,23 @@ def clean_string(description: str):
         return cleaned
 
 
-def generate_complex_type_str(component: XsdComplexType):
+def generate_complex_type_str(component: XsdComplexType) -> str:
     """Generate the string representating an XSD complex type. For logging purposes.
 
     Args:
         component (XsdComplexType): the xsd complex type
+
+    Returns:
+      formatted type name
     """
     if component.local_name is None or component.prefixed_name is None:
-        component_str = f"Anonymous {str(component)}"
+        component_str = f"(anonymous) {str(component)}"
     else:
         component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name})"
     return component_str
 
 
-def load_schema(filepath, namespace=None, local_copy_folder=None):
+def load_schema(filepath, namespace=None, local_copy_folder=None) -> XMLSchema:
     """
     Load an XML schema from a specified filepath with lax validation
 
@@ -70,7 +75,7 @@ def load_schema(filepath, namespace=None, local_copy_folder=None):
         return None
 
 
-def process_complex_type(component: XsdComplexType, indent=""):
+def process_complex_type(component: XsdComplexType, indent="") -> None:
     """Recursively process the content of an XSD complex type.
     Only processes elements whithin the namespaces mentioned in
     config param 'namespaces_to_process'.
@@ -85,12 +90,14 @@ def process_complex_type(component: XsdComplexType, indent=""):
     component_str = generate_complex_type_str(component)
 
     # Only process the target namespaces
-    if component.default_namespace not in app_config.get('namespaces_to_process'):
-        logger.debug(indent + f"  Ignoring complex type {component_str}")
+    if component.default_namespace not in app_config.get("namespaces_to_process"):
+        logger.info(indent + f"  Ignoring complex type {component_str}")
         return
 
-    logger.debug(indent + f"┌ Processing complex type {component_str}")
-    process_annotation(component, indent + "| ")
+    logger.info(indent + f"┌ Processing complex type {component_str}")
+    if get_annotation(component) is not None:
+        logger.debug(print_annotation(get_annotation(component), indent + "| "))
+        process_annotation(component)
 
     if component.has_simple_content():
         # Case of an xs:complexType containing only an xs:simpleContent
@@ -106,12 +113,12 @@ def process_complex_type(component: XsdComplexType, indent=""):
                     logger.warning(indent + f"  Non-managed type1 {str(_component)}")
             except Exception as e:
                 logger.warning(
-                    f"Error while processing component {str(_component)}: {str(e)}"
+                    f"Error while processing component {str(_component)}, parent {str(_component.parent)}: {str(e)}"
                 )
-    logger.debug(indent + "└ Completed processing complex type " + component_str)
+    logger.info(indent + "└ Completed processing complex type " + component_str)
 
 
-def process_group(component: XsdGroup, indent=""):
+def process_group(component: XsdGroup, indent="") -> None:
     """Manage the content of an XsdGroup, i.e. a sequence, choice...
 
     Args:
@@ -120,7 +127,9 @@ def process_group(component: XsdGroup, indent=""):
     """
     indent = f"{indent}| "
     logger.debug(indent + str(component))
-    process_annotation(component, indent)
+    if get_annotation(component) is not None:
+        logger.debug(print_annotation(get_annotation(component), indent))
+        process_annotation(component)
 
     for _component in component.iter_model():
         if type(_component) is XsdElement:
@@ -131,7 +140,7 @@ def process_group(component: XsdGroup, indent=""):
             logger.warning(indent + f"  Non-managed type2 {str(_component)}")
 
 
-def process_element(component: XsdElement, indent=""):
+def process_element(component: XsdElement, indent="") -> None:
     """Process the content of a non-global XSD element, i.e. defined whithin the scope of another
      element, typically a complex type.
 
@@ -139,13 +148,14 @@ def process_element(component: XsdElement, indent=""):
         component (XsdElement): the XSD element to process
         indent (str): optional, used to indent print outs"""
     indent = f"{indent}| "
-    process_annotation(component, indent)
 
     if component.ref is None:
         # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>
         # Referenced elements (<xs:element ref='Element'/>) are handled separately
         logger.debug(f"{indent}{str(component)}, type: {str(component.type)}")
-        process_annotation(component, indent + "| ")
+        if get_annotation(component) is not None:
+            logger.debug(print_annotation(get_annotation(component), indent + "| "))
+            process_annotation(component)
 
         # Case of an XsdAtomicBuiltin like: <xs:element name="CommonName" type="xs:string"/>
         if type(component.type) is XsdAtomicBuiltin:
@@ -162,29 +172,49 @@ def process_element(component: XsdElement, indent=""):
             if component.type.local_name == "anyType":
                 logger.debug(f"{indent}| {str(component)}")
             else:
-                # Finally, case when the xs:complexType is "really" a complex type
-                process_complex_type(component.type, f"{indent}| ")
+                # Finally, case where the xs:complexType is "really" a complex type,
+                # and only if it is anonymous (if it is global, it is already managed separately)
+                if component.type.local_name is None:
+                    process_complex_type(component.type, f"{indent}| ")
         else:
             logger.debug(f"{indent}| | {str(component)}")
     else:
         logger.debug(f"{indent}Ignoring {str(component)}, type: {str(component.type)}")
 
 
-def process_annotation(component: XsdComponent, indent=""):
-    """Turns the annotation of any XsdComponenet into a label
+def process_annotation(component: XsdComponent, indent="") -> None:
+    """Turns the annotation of any XsdComponent into a label
 
     Args:
         component (XsdComponent): any xsd component that may have an annotation
         indent (str): optional, used to indent print outs
     """
-    if (
-        component.annotation is not None
-        and clean_string(str(component.annotation)) is not None
-    ):
-        logger.debug(f'{indent}Annotation: "{clean_string(str(component.annotation))}"')
+    return
 
 
-def process_global_element(component: XsdElement):
+def get_annotation(component: XsdComponent) -> None:
+    """Returns the annotation of a XsdComponent, or None if empty
+
+    Args:
+        component (XsdComponent): any xsd component that may have an annotation
+    """
+    if component.annotation is not None:
+        _annot = clean_string(str(component.annotation))
+        if _annot is not None:
+            return _annot
+    return None
+
+
+def print_annotation(annotation: str, indent: str = None) -> str:
+    """Just a pretty print of the annotation for logging purposes
+    Args:
+        component (XsdComponent): any xsd component that may have an annotation
+        indent (str): optional, used to indent print outs
+    """
+    return f'{indent}Annotation: "{annotation[:40]}"'
+
+
+def process_global_element(component: XsdElement) -> None:
     """Process a globally-defined, named, typed XSD element,
     i.e. an element retrieved from myschema.iter_globals() and defined as:
     <xs:element name="Element" type="ElementType"/>
@@ -201,15 +231,15 @@ def process_global_element(component: XsdElement):
         component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name}), type: {str(component.type)}"
 
     # Only process the target namespaces
-    if component.default_namespace not in app_config.get('namespaces_to_process'):
-        logger.debug(f"- Ignoring element {component_str}")
+    if component.default_namespace not in app_config.get("namespaces_to_process"):
+        logger.info(f"- Ignoring element {component_str}")
         return
 
-    logger.debug(f"Processing element {component_str}")
+    logger.info(f"Processing global element {component_str}")
     if (
         component.annotation is not None
         and clean_string(str(component.annotation)) is not None
     ):
-        logger.debug(f'  "{clean_string(str(component.annotation))}"')
+        logger.debug(f'  "{clean_string(str(component.annotation))[:40]}"')
 
     # TODO: generate the RDF property for that element
