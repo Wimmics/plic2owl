@@ -62,19 +62,24 @@ if __name__ == "__main__":
         namespaces = [
             (_prefix, _uri)
             for _prefix, _uri in plic_schema.namespaces.items()
-            if _prefix != ""
+            if _prefix not in ['', 'xs', 'xsd']
         ]
+
+        # Change the XSD namespcace: use prefix 'xs' and and URI with a tailing '#'' to meet RDF convention
+        namespaces.append(('xs', 'http://www.w3.org/2001/XMLSchema#'))
+        # TODO probablky need to add a hash at the end of all namespaces that do not end with a '/'
+
         graph.add_namespaces(namespaces)
         logger.debug(
-            f"Added prefix/namespace declqrqtions to the RDF graph:\n{pformat(graph.get_namespaces())}"
+            f"Added prefix/namespace declarations to the RDF graph:\n{pformat(graph.get_namespaces())}"
         )
         logger.debug("---------------------------------- Initializations completed --------------------------------------")
 
         # ----------------------- Process the XSD components  --------------------------------
 
         # Process one: XsdElement: AnnualCycleAtomized
-        component = plic_schema.elements["AnnualCycleAtomized"]
-        process_global_element(component)
+        #component = plic_schema.elements["AnnualCycleAtomized"]
+        #process_global_element(component)
 
         # Process one XsdComplextype: DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType,
         #   EcologicalSignificanceType : 2 sous-groups 1 atomized, 1 unstruct
@@ -83,10 +88,11 @@ if __name__ == "__main__":
         #process_complex_type(component)
 
         # Process the whole schema
-        if False:
+        if True:
             for component in plic_schema.iter_globals():
                 if type(component) is XsdComplexType:
-                    process_complex_type(component)
+                    #process_complex_type(component)
+                    pass
                 elif type(component) is XsdElement:
                     process_global_element(component)
                 else:

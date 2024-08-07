@@ -4,6 +4,7 @@ from xmlschema.validators.complex_types import XsdComplexType
 from xmlschema.validators.simple_types import XsdAtomicRestriction, XsdAtomicBuiltin
 from xmlschema.validators.elements import XsdElement
 from xmlschema.validators import XsdGroup, XsdComponent
+from rdflib.namespace import XSD
 
 from RdfGraph import graph
 
@@ -31,11 +32,11 @@ def clean_string(description: str) -> str:
         return cleaned
 
 
-def generate_complex_type_str(component: XsdComplexType) -> str:
+def make_complex_type_str(component: XsdComplexType) -> str:
     """Generate the string representating an XSD complex type. For logging purposes.
 
     Args:
-        component (XsdComplexType): the xsd complex type
+        component (XsdComplexType): the XSD complex type
 
     Returns:
       formatted type name
@@ -44,6 +45,23 @@ def generate_complex_type_str(component: XsdComplexType) -> str:
         component_str = f"(anonymous) {str(component)}"
     else:
         component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name})"
+    return component_str
+
+
+def make_element_str(component: XsdElement) -> str:
+    """Generate the string representating an XSD element. For logging purposes.
+
+    Args:
+        component (XsdElement): the element
+
+    Returns:
+      formatted type name
+    """
+
+    if component.local_name is None or component.prefixed_name is None:
+        component_str = str(component)
+    else:
+        component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name}), type: {str(component.type)}"
     return component_str
 
 
@@ -87,7 +105,7 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
     Returns:
         None
     """
-    component_str = generate_complex_type_str(component)
+    component_str = make_complex_type_str(component)
 
     # Only process the target namespaces
     if component.default_namespace not in app_config.get("namespaces_to_process"):
@@ -95,9 +113,10 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
         return
 
     logger.info(indent + f"┌ Processing complex type {component_str}")
-    if get_annotation(component) is not None:
-        logger.debug(print_annotation(get_annotation(component), indent + "| "))
-        process_annotation(component)
+    annotation = get_annotation(component)
+    if annotation is not None:
+        logger.debug(print_annotation(annotation, indent + "| "))
+        process_annotation(component, annotation)
 
     if component.has_simple_content():
         # Case of an xs:complexType containing only an xs:simpleContent
@@ -127,9 +146,10 @@ def process_group(component: XsdGroup, indent="") -> None:
     """
     indent = f"{indent}| "
     logger.debug(indent + str(component))
-    if get_annotation(component) is not None:
-        logger.debug(print_annotation(get_annotation(component), indent))
-        process_annotation(component)
+    annotation = get_annotation(component)
+    if annotation is not None:
+        logger.debug(print_annotation(annotation, indent))
+        process_annotation(component, annotation)
 
     for _component in component.iter_model():
         if type(_component) is XsdElement:
@@ -153,9 +173,9 @@ def process_element(component: XsdElement, indent="") -> None:
         # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>
         # Referenced elements (<xs:element ref='Element'/>) are handled separately
         logger.debug(f"{indent}{str(component)}, type: {str(component.type)}")
-        if get_annotation(component) is not None:
-            logger.debug(print_annotation(get_annotation(component), indent + "| "))
-            process_annotation(component)
+        annotation = get_annotation(component)
+        if annotation is not None:
+            logger.debug(print_annotation(annotation, indent + "| "))
 
         # Case of an XsdAtomicBuiltin like: <xs:element name="CommonName" type="xs:string"/>
         if type(component.type) is XsdAtomicBuiltin:
@@ -182,21 +202,11 @@ def process_element(component: XsdElement, indent="") -> None:
         logger.debug(f"{indent}Ignoring {str(component)}, type: {str(component.type)}")
 
 
-def process_annotation(component: XsdComponent, indent="") -> None:
-    """Turns the annotation of any XsdComponent into a label
-
-    Args:
-        component (XsdComponent): any xsd component that may have an annotation
-        indent (str): optional, used to indent print outs
-    """
-    return
-
-
 def get_annotation(component: XsdComponent) -> None:
     """Returns the annotation of a XsdComponent, or None if empty
 
     Args:
-        component (XsdComponent): any xsd component that may have an annotation
+        component (XsdComponent): any XSD component that may have an annotation
     """
     if component.annotation is not None:
         _annot = clean_string(str(component.annotation))
@@ -211,7 +221,7 @@ def print_annotation(annotation: str, indent: str = None) -> str:
         component (XsdComponent): any xsd component that may have an annotation
         indent (str): optional, used to indent print outs
     """
-    return f'{indent}Annotation: "{annotation[:40]}"'
+    return f'{indent}Annotation: "{annotation[:70]}"'
 
 
 def process_global_element(component: XsdElement) -> None:
@@ -225,10 +235,7 @@ def process_global_element(component: XsdElement) -> None:
     Returns:
         None
     """
-    if component.local_name is None or component.prefixed_name is None:
-        component_str = str(component)
-    else:
-        component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name}), type: {str(component.type)}"
+    component_str = make_element_str(component)
 
     # Only process the target namespaces
     if component.default_namespace not in app_config.get("namespaces_to_process"):
@@ -236,10 +243,32 @@ def process_global_element(component: XsdElement) -> None:
         return
 
     logger.info(f"Processing global element {component_str}")
-    if (
-        component.annotation is not None
-        and clean_string(str(component.annotation)) is not None
-    ):
-        logger.debug(f'  "{clean_string(str(component.annotation))[:40]}"')
 
-    # TODO: generate the RDF property for that element
+    annotation = get_annotation(component)
+    if annotation is not None:
+        logger.debug(print_annotation(annotation, "  "))
+
+    # Case of an XsdAtomicBuiltin
+    if type(component.type) is XsdAtomicBuiltin:
+        ptype = component.type.prefixed_name
+        if ptype == "xs:string":
+            graph.add_datatype_property(component.prefixed_name, description=annotation)
+            graph.add_property_domain_range(component.prefixed_name, range=XSD.string)
+
+    # TODO *************************************- TO BE CONTINUED
+    elif type(component.type) is XsdAtomicRestriction:
+        # Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
+        for _enum in component.type.enumeration:
+            logger.debug(f"{_enum}")
+
+    elif type(component.type) is XsdComplexType:
+        if component.type.local_name == "anyType":
+            logger.debug(f"{component.type}")
+        else:
+            # Finally, case where the xs:complexType is "really" a complex type,
+            # and only if it is anonymous (if it is global, it is already managed separately)
+            if component.type.local_name is None:
+                # process_complex_type(component.type, f"{indent}| ")
+                pass
+    else:
+        logger.debug(f"{component_str}")

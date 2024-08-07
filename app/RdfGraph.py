@@ -29,6 +29,12 @@ class RdfGraph:
         ]
         return _namespaces
 
+    def serialize(self, format: str = "turtle") -> str:
+        """
+        Serialize the graph
+        """
+        return self.graph.serialize(format=format)
+
     def add_class(
         self, class_uri: str, label: str = None, description: str = None
     ) -> None:
@@ -42,11 +48,30 @@ class RdfGraph:
         if description is not None:
             self.graph.add((_uri, RDFS.comment, Literal(description)))
 
-    def serialize(self, format: str = "turtle") -> str:
+    def add_datatype_property(
+        self, property_uri: str, label: str = None, description: str = None
+    ) -> None:
         """
-        Serialize the graph
+        Add a datatype property to the graph, along with optional label and description
         """
-        return self.graph.serialize(format=format)
+        _uri = URIRef(property_uri)
+        self.graph.add((_uri, RDF.type, OWL.DatatypeProperty))
+        if label is not None:
+            self.graph.add((_uri, RDFS.label, Literal(label)))
+        if description is not None:
+            self.graph.add((_uri, RDFS.comment, Literal(description)))
+
+    def add_property_domain_range(
+        self, property_uri: str, domain: str = None, range: str = None
+    ) -> None:
+        """
+        Add domain and range to a datatype or object property
+        """
+        _uri = URIRef(property_uri)
+        if domain is not None:
+            self.graph.add((_uri, RDFS.domain, URIRef(domain)))
+        if range is not None:
+            self.graph.add((_uri, RDFS.range, URIRef(range)))
 
 
 # Global graph object
