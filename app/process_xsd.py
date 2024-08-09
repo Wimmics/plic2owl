@@ -9,7 +9,7 @@ from rdflib.namespace import XSD
 from RdfGraph import graph
 
 # Get the config parameters
-import app_config
+import application_config
 
 logger = logging.getLogger("app." + __name__)
 
@@ -18,12 +18,6 @@ def clean_string(description: str) -> str:
     """
     Remove newline characters, carriage returns, and leading/trailing
     whitespaces from a string. Return None if the resulting string is empty.
-
-    Args:
-      description (str): the string to "clean"
-
-    Returns:
-      cleaned string or None if the result is empty
     """
     cleaned = description.replace("\n", " ").replace("\r", "").strip()
     if cleaned == "":
@@ -33,7 +27,8 @@ def clean_string(description: str) -> str:
 
 
 def make_complex_type_str(component: XsdComplexType) -> str:
-    """Generate the string representating an XSD complex type. For logging purposes.
+    """Generate the string representing an XSD complex type, dependoing on whether this
+    is a named or anonymous type. Used for logging purposes.
 
     Args:
         component (XsdComplexType): the XSD complex type
@@ -49,7 +44,8 @@ def make_complex_type_str(component: XsdComplexType) -> str:
 
 
 def make_element_str(component: XsdElement) -> str:
-    """Generate the string representating an XSD element. For logging purposes.
+    """Generate the string representating an XSD element, dependoing on whether this
+    is a named or anonymous element. Used for logging purposes.
 
     Args:
         component (XsdElement): the element
@@ -108,7 +104,7 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
     component_str = make_complex_type_str(component)
 
     # Only process the target namespaces
-    if component.default_namespace not in app_config.get("namespaces_to_process"):
+    if component.default_namespace not in application_config.get("namespaces_to_process"):
         logger.info(indent + f"  Ignoring complex type {component_str}")
         return
 
@@ -116,7 +112,6 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
     annotation = get_annotation(component)
     if annotation is not None:
         logger.debug(print_annotation(annotation, indent + "| "))
-        process_annotation(component, annotation)
 
     if component.has_simple_content():
         # Case of an xs:complexType containing only an xs:simpleContent
@@ -138,7 +133,7 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
 
 
 def process_group(component: XsdGroup, indent="") -> None:
-    """Manage the content of an XsdGroup, i.e. a sequence, choice...
+    """Process the content of an XsdGroup, i.e. a sequence, choice...
 
     Args:
         component (XsdGroup): the xsd group to process
@@ -149,7 +144,6 @@ def process_group(component: XsdGroup, indent="") -> None:
     annotation = get_annotation(component)
     if annotation is not None:
         logger.debug(print_annotation(annotation, indent))
-        process_annotation(component, annotation)
 
     for _component in component.iter_model():
         if type(_component) is XsdElement:
@@ -204,9 +198,6 @@ def process_element(component: XsdElement, indent="") -> None:
 
 def get_annotation(component: XsdComponent) -> None:
     """Returns the annotation of a XsdComponent, or None if empty
-
-    Args:
-        component (XsdComponent): any XSD component that may have an annotation
     """
     if component.annotation is not None:
         _annot = clean_string(str(component.annotation))
@@ -216,10 +207,7 @@ def get_annotation(component: XsdComponent) -> None:
 
 
 def print_annotation(annotation: str, indent: str = None) -> str:
-    """Just a pretty print of the annotation for logging purposes
-    Args:
-        component (XsdComponent): any xsd component that may have an annotation
-        indent (str): optional, used to indent print outs
+    """Just a pretty print of the annotation for logging purposes, with indentation
     """
     return f'{indent}Annotation: "{annotation[:70]}"'
 
@@ -238,7 +226,7 @@ def process_global_element(component: XsdElement) -> None:
     component_str = make_element_str(component)
 
     # Only process the target namespaces
-    if component.default_namespace not in app_config.get("namespaces_to_process"):
+    if component.default_namespace not in application_config.get("namespaces_to_process"):
         logger.info(f"- Ignoring element {component_str}")
         return
 
