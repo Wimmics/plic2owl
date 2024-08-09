@@ -11,7 +11,9 @@ logger = logging.getLogger("app." + __name__)
 
 
 class RdfGraph:
-    """Class to handle the RDF graph generated"""
+    """
+    Class to handle the RDF graph generated
+    """
 
     def __init__(self) -> None:
         self.graph: Graph = rdflib.Graph(bind_namespaces="core")
@@ -29,20 +31,29 @@ class RdfGraph:
         return _namespaces
 
     def serialize(self, format: str = "turtle") -> str:
-        """Serialize the graph"""
+        """
+        Serialize the graph
+        """
         return self.graph.serialize(format=format)
 
     def add_class(
         self, class_uri: str, label: str = None, description: str = None
     ) -> None:
-        """Add an OWL class to the graph, along with optional label and description"""
+        """
+        Add an OWL class to the graph, along with optional label and description.
+        If the class alredy exists, no triples are added
 
+        """
         _uri = URIRef(class_uri)
-        self.graph.add((_uri, RDF.type, OWL.Class))
-        if label is not None:
-            self.graph.add((_uri, RDFS.label, Literal(label)))
-        if description is not None:
-            self.graph.add((_uri, RDFS.comment, Literal(description)))
+
+        if (_uri, RDF.type, OWL.Class) in self.graph:
+            logger.warning(f"-- Class {_uri} already exists")
+        else:
+            self.graph.add((_uri, RDF.type, OWL.Class))
+            if label is not None:
+                self.graph.add((_uri, RDFS.label, Literal(label)))
+            if description is not None:
+                self.graph.add((_uri, RDFS.comment, Literal(description)))
 
     def add_oneof_class_members(self, class_uri: str, members: list[str]) -> None:
         """
@@ -65,32 +76,44 @@ class RdfGraph:
     def add_datatype_property(
         self, property_uri: str, label: str = None, description: str = None
     ) -> None:
-        """Add a datatype property to the graph, along with optional label and description"""
-
+        """
+        Add a datatype property to the graph, along with optional label and description
+        """
         _uri = URIRef(property_uri)
-        self.graph.add((_uri, RDF.type, OWL.DatatypeProperty))
-        if label is not None:
-            self.graph.add((_uri, RDFS.label, Literal(label)))
-        if description is not None:
-            self.graph.add((_uri, RDFS.comment, Literal(description)))
+
+        if (_uri, RDF.type, OWL.DatatypeProperty) in self.graph:
+            logger.warning(f"-- Property {_uri} already exists")
+        else:
+            self.graph.add((_uri, RDF.type, OWL.DatatypeProperty))
+            if label is not None:
+                self.graph.add((_uri, RDFS.label, Literal(label)))
+            if description is not None:
+                self.graph.add((_uri, RDFS.comment, Literal(description)))
 
     def add_object_property(
         self, property_uri: str, label: str = None, description: str = None
     ) -> None:
-        """Add a datatype property to the graph, along with optional label and description"""
-
+        """
+        Add a datatype property to the graph, along with optional label and description
+        """
         _uri = URIRef(property_uri)
-        self.graph.add((_uri, RDF.type, OWL.ObjectProperty))
-        if label is not None:
-            self.graph.add((_uri, RDFS.label, Literal(label)))
-        if description is not None:
-            self.graph.add((_uri, RDFS.comment, Literal(description)))
+
+        if (_uri, RDF.type, OWL.ObjectProperty) in self.graph:
+            logger.warning(f"-- Property {_uri} already exists")
+        else:
+
+            self.graph.add((_uri, RDF.type, OWL.ObjectProperty))
+            if label is not None:
+                self.graph.add((_uri, RDFS.label, Literal(label)))
+            if description is not None:
+                self.graph.add((_uri, RDFS.comment, Literal(description)))
 
     def add_property_domain_range(
         self, property_uri: str, domain: str = None, range: str = None
     ) -> None:
-        """Add domain and range to a datatype or object property"""
-
+        """
+        Add domain and range to a datatype or object property
+        """
         _uri = URIRef(property_uri)
         if domain is not None:
             self.graph.add((_uri, RDFS.domain, URIRef(domain)))

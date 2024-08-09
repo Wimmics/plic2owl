@@ -44,6 +44,38 @@ def make_complex_type_str(component: XsdComplexType) -> str:
     return component_str
 
 
+def find_first_local_name(component: XsdComponent) -> str:
+    """
+    Return the local name of the XSD component if any, otherwise the local of the parent, or the parent of the parent, etc.
+    Return None if no local name is found at the root component.
+    """
+    if component.local_name is not None:
+        return component.local_name
+    else:
+        if component.parent is not None:
+            return find_first_local_name(component.parent)
+        else:
+            return None
+
+
+def make_complex_type_uri(component: XsdComplexType) -> str:
+    """
+    Generate a URI of an XSD complex type.
+    If the complex type has is named (it has a local nametype), this simply concatenates the namespace and local name.
+    Otherwise look for the local name of the first parent that has a local name.
+
+    Args:
+        component (XsdComplexType): the XSD complex type
+
+    Returns:
+      URI as a string
+    """
+    _uri = component.default_namespace + find_first_local_name(component)
+    if not _uri.endswith("Type"):
+        _uri += "Type"
+    return _uri
+
+
 def make_element_str(component: XsdElement) -> str:
     """
     Generate the string representating an XSD element, depending on whether this
@@ -59,7 +91,7 @@ def make_element_str(component: XsdElement) -> str:
     if component.local_name is None or component.prefixed_name is None:
         component_str = str(component)
     else:
-        component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name}), type: {str(component.type)}"
+        component_str = f"{str(component)} {component.default_namespace}{component.local_name}, type: {str(component.type)}"
     return component_str
 
 
@@ -168,7 +200,7 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
 
     # Only process the target namespaces
     if component.default_namespace not in config.get("namespaces_to_process"):
-        logger.info(indent + f"  Ignoring complex type {component_str}")
+        logger.info(indent + f"-- Ignoring complex type {component_str}")
         return
 
     logger.info(indent + f"┌ Processing complex type {component_str}")
@@ -178,8 +210,13 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
 
     if component.has_simple_content():
         # Case of an xs:complexType containing only an xs:simpleContent
-        logger.debug(f"{indent}|   xs:simpleContent: {str(component)}")
+        logger.warning(
+            f"{indent}|  -- Complex type with simple content should be managed at the parent level: {component_str}"
+        )
     else:
+        # Create the class for that complex type
+        graph.add_class(make_complex_type_uri(component), description=annotation)
+
         for _component in component.content.iter_model():
             try:
                 if type(_component) is XsdElement:
@@ -187,10 +224,12 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
                 elif type(_component) is XsdGroup:
                     process_group(_component, indent + "| ")
                 else:
-                    logger.warning(indent + f"  Non-managed type1 {str(_component)}")
+                    logger.warning(
+                        indent + f"  -- Non-managed type component {str(_component)}"
+                    )
             except Exception as e:
                 logger.warning(
-                    f"Error while processing component {str(_component)}, parent {str(_component.parent)}: {str(e)}"
+                    f"--Error while processing component {str(_component)}, parent {str(_component.parent)}: {str(e)}"
                 )
     logger.info(indent + "└ Completed processing complex type " + component_str)
 
@@ -215,7 +254,7 @@ def process_group(component: XsdGroup, indent="") -> None:
         elif type(_component) is XsdGroup:
             process_group(_component, indent)
         else:
-            logger.warning(indent + f"  Non-managed type2 {str(_component)}")
+            logger.warning(indent + f"Non-managed group {str(_component)}")
 
 
 def process_element(component: XsdElement, indent="") -> None:
@@ -228,38 +267,45 @@ def process_element(component: XsdElement, indent="") -> None:
         indent (str): optional, used to indent print outs
     """
     indent = f"{indent}| "
+    component_str = make_element_str(component)
 
-    if component.ref is None:
-        # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>
-        # Referenced elements (<xs:element ref='Element'/>) are handled separately
-        logger.debug(f"{indent}{str(component)}, type: {str(component.type)}")
-        annotation = get_annotation(component)
-        if annotation is not None:
-            logger.debug(print_annotation(annotation, indent + "| "))
+    # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>
+    # Referenced elements (<xs:element ref='Element'/>) are handled separately
+    if component.ref is not None:
+        logger.debug(f"{indent}-- Ignoring {str(component)}")
+        return
+    logger.debug(f"{indent}{component_str}")
+    _annotation = get_annotation(component)
+    if _annotation is not None:
+        logger.debug(print_annotation(_annotation, indent + "| "))
 
-        # Case of an XsdAtomicBuiltin like: <xs:element name="CommonName" type="xs:string"/>
-        if type(component.type) is XsdAtomicBuiltin:
-            # Case of an XsdAtomicBuiltin like: <xs:element name="CommonName" type="xs:string"/>
-            # is _elem.type.is_simple() equivalent?
-            logger.debug(f"{indent}| {str(component)}")
+    # Make the URI of the property that will be created
+    _prop_uri = make_rdf_property_uri(component)
 
-        elif type(component.type) is XsdAtomicRestriction:
-            # Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
-            for _enum in component.type.enumeration:
-                logger.debug(f"{indent}| {_enum}")
+    # Case of an XsdAtomicBuiltin e.g. <xs:element name="CommonName" type="xs:string"/>
+    if type(component.type) is XsdAtomicBuiltin:
+        logger.debug(f"{indent}| {component_str}")
+        if component.type.prefixed_name == "xs:string":
+            graph.add_datatype_property(_prop_uri, description=_annotation)
+            graph.add_property_domain_range(_prop_uri, range=XSD.string)
 
-        elif type(component.type) is XsdComplexType:
-            if component.type.prefixed_name == "xs:anyType":
-                logger.debug(f"{indent}| {str(component)}")
-            else:
-                # Finally, case where the xs:complexType is "really" a complex type,
-                # and only if it is anonymous (if it is global, it is already managed separately)
-                if component.type.local_name is None:
-                    process_complex_type(component.type, f"{indent}| ")
+    # TODO continue from here ##########################################################################
+
+    elif type(component.type) is XsdAtomicRestriction:
+        # Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
+        for _enum in component.type.enumeration:
+            logger.debug(f"{indent}| {_enum}")
+
+    elif type(component.type) is XsdComplexType:
+        if component.type.prefixed_name == "xs:anyType":
+            logger.debug(f"{indent}| {component_str}")
         else:
-            logger.debug(f"{indent}| | {str(component)}")
+            # Finally, case where the xs:complexType is "really" a complex type,
+            # and only if it is anonymous (if it is global, it is already managed separately)
+            if component.type.local_name is None:
+                process_complex_type(component.type, f"{indent}| ")
     else:
-        logger.debug(f"{indent}Ignoring {str(component)}, type: {str(component.type)}")
+        logger.warning(f"{indent}-- Non-managed element {component_str}")
 
 
 def process_global_element(component: XsdElement) -> None:
@@ -282,7 +328,7 @@ def process_global_element(component: XsdElement) -> None:
 
     # Only process the target namespaces
     if component.default_namespace not in config.get("namespaces_to_process"):
-        logger.info(f"- Ignoring element {component_str}")
+        logger.info(f"-- Ignoring element {component_str}")
         return
     logger.info(f"Processing global element {component_str}")
 
@@ -295,8 +341,7 @@ def process_global_element(component: XsdElement) -> None:
 
     # Case of an XsdAtomicBuiltin
     if type(component.type) is XsdAtomicBuiltin:
-        ptype = component.type.prefixed_name
-        if ptype == "xs:string":
+        if component.type.prefixed_name == "xs:string":
             graph.add_datatype_property(_prop_uri, description=_annotation)
             graph.add_property_domain_range(_prop_uri, range=XSD.string)
 
@@ -317,9 +362,13 @@ def process_global_element(component: XsdElement) -> None:
     # Finally, case where the xs:complexType is a "real" complex type
     elif type(component.type) is XsdComplexType:
         graph.add_object_property(_prop_uri, description=_annotation)
-        if component.type.prefixed_name != "xs:anyType":
+        if (
+            component.type.prefixed_name != "xs:anyType"
+            and component.type.local_name is not None
+        ):
             graph.add_property_domain_range(
-                _prop_uri, range=component.type.prefixed_name
+                _prop_uri,
+                range=component.type.default_namespace + component.type.local_name,
             )
     else:
         logger.warning(f"Non-managed element {component_str}")
