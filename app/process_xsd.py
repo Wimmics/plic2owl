@@ -4,7 +4,7 @@ from xmlschema.validators.complex_types import XsdComplexType
 from xmlschema.validators.simple_types import XsdAtomicRestriction, XsdAtomicBuiltin
 from xmlschema.validators.elements import XsdElement
 from xmlschema.validators import XsdGroup, XsdComponent
-from rdflib.namespace import XSD
+from rdflib.namespace import XSD, URIRef
 
 from RdfGraph import graph
 
@@ -141,11 +141,85 @@ def get_annotation(component: XsdComponent) -> None:
     return None
 
 
-def print_annotation(annotation: str, indent: str = None) -> str:
+def print_annotation(annotation: str, indent: str = "") -> str:
     """
     Just a pretty print of the annotation for logging purposes, with indentation
     """
     return f'{indent}Annotation: "{annotation[:70]}"'
+
+
+def map_xsd_builtin_type_to_rdf(xsd_type: str) -> URIRef:
+    """
+    Map XSD builtin types to RDF datatypes.
+
+    Args:
+        xsd_type (str): XSD builtin type prefixed with "xs:"
+
+    Returns:
+        str: datatype from RDFlib (URIRef), or None if not recognized
+    """
+    _datatype = None
+
+    # Map XSD builtin types to RDF datatypes
+    match xsd_type:
+        case "xs:string":
+            _datatype = XSD.string
+        case "xs:boolean":
+            _datatype = XSD.boolean
+        case "xs:decimal":
+            _datatype = XSD.decimal
+        case "xs:float":
+            _datatype = XSD.float
+        case "xs:double":
+            _datatype = XSD.double
+        case "xs:duration":
+            _datatype = XSD.duration
+        case "xs:dateTime":
+            _datatype = XSD.dateTime
+        case "xs:time":
+            _datatype = XSD.time
+        case "xs:date":
+            _datatype = XSD.date
+        case "xs:gYearMonth":
+            _datatype = XSD.gYearMonth
+        case "xs:gYear":
+            _datatype = XSD.gYear
+        case "xs:gMonthDay":
+            _datatype = XSD.gMonthDay
+        case "xs:gDay":
+            _datatype = XSD.gDay
+        case "xs:gMonth":
+            _datatype = XSD.gMonth
+        case "xs:hexBinary":
+            _datatype = XSD.hexBinary
+        case "xs:base64Binary":
+            _datatype = XSD.base64Binary
+        case "xs:anyURI":
+            _datatype = XSD.anyURI
+        case "integer":
+            _datatype = XSD.int
+        case "int":
+            _datatype = XSD.int
+        case "short":
+            _datatype = XSD.short
+        case "byte":
+            _datatype = XSD.byte
+        case "nonNegativeInteger":
+            _datatype = XSD.nonNegativeInteger
+        case "unsignedLong":
+            _datatype = XSD.unsignedLong
+        case "unsignedInt":
+            _datatype = XSD.unsignedInt
+        case "unsignedShort":
+            _datatype = XSD.unsignedShort
+        case "unsignedByte":
+            _datatype = XSD.unsignedByte
+        case "positiveInteger":
+            _datatype = XSD.positiveInteger
+        case _:
+            _datatype = None
+
+    return _datatype
 
 
 def load_schema(filepath, namespace=None, local_copy_folder=None) -> XMLSchema:
@@ -183,7 +257,7 @@ def get_namespaces(schema: XMLSchema) -> list[tuple[str, str]]:
     return [(_prefix, _uri) for _prefix, _uri in schema.namespaces.items()]
 
 
-def process_complex_type(component: XsdComplexType, indent="") -> None:
+def process_complex_type(component: XsdComplexType, indent="") -> str:
     """
     Recursively process the content of an XSD complex type.
     Only processes elements whithin the namespaces mentioned in
@@ -194,14 +268,16 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
         indent (str): optional, used to indent print outs
 
     Returns:
-        None
+        str: URI of the complex type created or None
     """
     component_str = make_complex_type_str(component)
+
+    _class = None
 
     # Only process the target namespaces
     if component.default_namespace not in config.get("namespaces_to_process"):
         logger.info(indent + f"-- Ignoring complex type {component_str}")
-        return
+        return None
 
     logger.info(indent + f"┌ Processing complex type {component_str}")
     annotation = get_annotation(component)
@@ -215,7 +291,8 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
         )
     else:
         # Create the class for that complex type
-        graph.add_class(make_complex_type_uri(component), description=annotation)
+        _class = make_complex_type_uri(component)
+        graph.add_class(_class, description=annotation)
 
         for _component in component.content.iter_model():
             try:
@@ -232,6 +309,7 @@ def process_complex_type(component: XsdComplexType, indent="") -> None:
                     f"--Error while processing component {str(_component)}, parent {str(_component.parent)}: {str(e)}"
                 )
     logger.info(indent + "└ Completed processing complex type " + component_str)
+    return _class
 
 
 def process_group(component: XsdGroup, indent="") -> None:
@@ -259,8 +337,14 @@ def process_group(component: XsdGroup, indent="") -> None:
 
 def process_element(component: XsdElement, indent="") -> None:
     """
-    Process the content of a non-global XSD element, i.e. defined whithin the scope of another
-     element, typically a complex type.
+    Process the content of an XSD element either:
+    - globally-defined, named, typed XSD element, i.e. an element retrieved
+    from myschema.iter_globals() and defined as: <xs:element name="ElementName" type="ElementType"/>
+    - non-global, i.e. defined whithin the scope of another element, typically a complex type.
+
+    Each element entails the creation of an OWL datatype or object property.
+    The range of the property is set depending on the element type.
+    An element whose type is an enum entails the creation of a class with the enum values as individuals.
 
     Args:
         component (XsdElement): the XSD element to process
@@ -269,106 +353,93 @@ def process_element(component: XsdElement, indent="") -> None:
     indent = f"{indent}| "
     component_str = make_element_str(component)
 
-    # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>
-    # Referenced elements (<xs:element ref='Element'/>) are handled separately
-    if component.ref is not None:
-        logger.debug(f"{indent}-- Ignoring {str(component)}")
-        return
-    logger.debug(f"{indent}{component_str}")
-    _annotation = get_annotation(component)
-    if _annotation is not None:
-        logger.debug(print_annotation(_annotation, indent + "| "))
-
-    # Make the URI of the property that will be created
-    _prop_uri = make_rdf_property_uri(component)
-
-    # Case of an XsdAtomicBuiltin e.g. <xs:element name="CommonName" type="xs:string"/>
-    if type(component.type) is XsdAtomicBuiltin:
-        logger.debug(f"{indent}| {component_str}")
-        if component.type.prefixed_name == "xs:string":
-            graph.add_datatype_property(_prop_uri, description=_annotation)
-            graph.add_property_domain_range(_prop_uri, range=XSD.string)
-
-    # TODO continue from here ##########################################################################
-
-    elif type(component.type) is XsdAtomicRestriction:
-        # Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
-        for _enum in component.type.enumeration:
-            logger.debug(f"{indent}| {_enum}")
-
-    elif type(component.type) is XsdComplexType:
-        if component.type.prefixed_name == "xs:anyType":
-            logger.debug(f"{indent}| {component_str}")
-        else:
-            # Finally, case where the xs:complexType is "really" a complex type,
-            # and only if it is anonymous (if it is global, it is already managed separately)
-            if component.type.local_name is None:
-                process_complex_type(component.type, f"{indent}| ")
-    else:
-        logger.warning(f"{indent}-- Non-managed element {component_str}")
-
-
-def process_global_element(component: XsdElement) -> None:
-    """
-    Process a globally-defined, named, typed XSD element,
-    i.e. an element retrieved from myschema.iter_globals() and defined as:
-    <xs:element name="ElementName" type="ElementType"/>
-
-    Each element entails the creation of an OWL datatype or object property.
-    The range of the property is set depending on the element type.
-    An element whose type is an enum entails the creation of a clsss with the enum values as individuals.
-
-    Args:
-        component (XsdElement): the XSD element to process
-
-    Returns:
-        None
-    """
-    component_str = make_element_str(component)
-
     # Only process the target namespaces
     if component.default_namespace not in config.get("namespaces_to_process"):
-        logger.info(f"-- Ignoring element {component_str}")
+        logger.info(
+            f"{indent}-- Ignoring element from other non-managed namespace {component_str}"
+        )
         return
-    logger.info(f"Processing global element {component_str}")
+
+    # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>.
+    # Referenced elements (<xs:element ref='Element'/>) are handled separately
+    if component.ref is not None:
+        logger.debug(f"{indent}-- Ignoring referenced {str(component)}")
+        return
+
+    logger.debug(f"{indent}Processing element {component_str}")
 
     _annotation = get_annotation(component)
     if _annotation is not None:
-        logger.debug(print_annotation(_annotation, "  "))
+        logger.debug(f"{indent}| {print_annotation(_annotation)}")
 
     # Make the URI of the property that will be created
     _prop_uri = make_rdf_property_uri(component)
 
-    # Case of an XsdAtomicBuiltin
+    # --- Start checking the multiplde possible cases ---
+
+    # Case of an XsdAtomicBuiltin e.g. with type "xs:string", "xs:float" etc.
     if type(component.type) is XsdAtomicBuiltin:
-        if component.type.prefixed_name == "xs:string":
+        _datatype = map_xsd_builtin_type_to_rdf(component.type.prefixed_name)
+        if _datatype is not None:
             graph.add_datatype_property(_prop_uri, description=_annotation)
-            graph.add_property_domain_range(_prop_uri, range=XSD.string)
+            graph.add_property_domain_range(_prop_uri, range=_datatype)
+            logger.debug(f"{indent}| Making datatype property for {component_str}")
+        else:
+            logger.warning(f"{indent}| Non-managed element {component_str}")
 
     # Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
     elif type(component.type) is XsdAtomicRestriction:
         # The enum values are the members of a new class defined as owl:oneOf
-        _class_uri = component.default_namespace + component.local_name + "EnumType"
-        graph.add_class(_class_uri, description=_annotation)
+        _class_enum = component.default_namespace + component.local_name + "EnumType"
+        graph.add_class(_class_enum, description=_annotation)
         graph.add_oneof_class_members(
-            _class_uri, [str(_enum) for _enum in component.type.enumeration]
+            _class_enum, [str(_enum) for _enum in component.type.enumeration]
         )
-        for _enum in component.type.enumeration:
-            logger.debug(f"{_enum}")
+        _enum_values = [str(_enum) for _enum in component.type.enumeration]
+        logger.debug(f"{indent}|  Enum values: {_enum_values}")
 
+        # The new property has as range the enumerated class above
         graph.add_object_property(_prop_uri, description=_annotation)
-        graph.add_property_domain_range(_prop_uri, range=_class_uri)
+        graph.add_property_domain_range(_prop_uri, range=_class_enum)
+        logger.debug(f"{indent}| Making object property for {component_str}")
 
-    # Finally, case where the xs:complexType is a "real" complex type
     elif type(component.type) is XsdComplexType:
-        graph.add_object_property(_prop_uri, description=_annotation)
-        if (
-            component.type.prefixed_name != "xs:anyType"
-            and component.type.local_name is not None
-        ):
-            graph.add_property_domain_range(
-                _prop_uri,
-                range=component.type.default_namespace + component.type.local_name,
-            )
+
+        if component.type.prefixed_name == "xs:anyType":
+            # Assumption: a complex element of type xs:anyType is used for
+            # natural language notes, thus it is a datatype property
+            graph.add_datatype_property(_prop_uri, description=_annotation)
+            logger.debug(f"{indent}| Making datatype property for {component_str}")
+
+        elif component.type.is_extension():
+            # Case of a <xs:complexType><xs:simpleContent><xs:extension base="...">
+            if type(component.type.content) is XsdAtomicBuiltin:
+                _datatype = map_xsd_builtin_type_to_rdf(
+                    component.type.content.prefixed_name
+                )
+                if _datatype is not None:
+                    graph.add_datatype_property(_prop_uri, description=_annotation)
+                    graph.add_property_domain_range(_prop_uri, range=_datatype)
+                    logger.debug(
+                        f"{indent}| Making datatype property for {component_str}"
+                    )
+                else:
+                    # TODO manage datatype vs. object
+                    logger.warning(f"{indent}| Non-managed element {component_str}")
+
+        else:
+            # Finally, case where the xs:complexType is "really" a complex type
+            graph.add_object_property(_prop_uri, description=_annotation)
+            logger.debug(f"{indent}| Making object property for {component_str}")
+            if component.type.local_name is not None:
+                graph.add_property_domain_range(
+                    _prop_uri,
+                    range=component.type.default_namespace + component.type.local_name,
+                )
+            else:
+                # if the complex type is anonymous
+                _class = process_complex_type(component.type, f"{indent}| ")
+                if _class is not None:
+                    graph.add_property_domain_range(_prop_uri, range=_class)
     else:
-        logger.warning(f"Non-managed element {component_str}")
+        logger.warning(f"{indent}-- Non-managed element {component_str}")

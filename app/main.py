@@ -14,7 +14,7 @@ import yaml
 from process_xsd import (
     load_schema,
     process_complex_type,
-    process_global_element,
+    process_element,
     get_namespaces,
 )
 
@@ -99,25 +99,25 @@ if __name__ == "__main__":
 
         # ----------------------- Process the XSD components  --------------------------------
 
-        # Process one: XsdElement: AnnualCycleAtomized
-        component = plic_schema.elements["Audience"]
-        #process_global_element(component)
+        # Process one: XsdElement: AudiencesUnstructured, AnnualCycleAtomized, DetailUnstructured, Dataset
+        component = plic_schema.elements["DetailUnstructured"]
+        process_element(component)
 
         # Process one XsdComplextype: DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType,
         #   EcologicalSignificanceType : 2 sous-groups 1 atomized, 1 unstruct
         #   FeedingAtomizedType: elem Thropic est un <xs:complexType> anonyme
-        #   BaseElementsType: lement of type xs:string
-        component = plic_schema.types["BaseElementsType"]
-        process_complex_type(component)
+        #   BaseElementsType: element of type xs:string
+        component = plic_schema.types["NormalDate"]
+        # process_complex_type(component)
 
         # Process the whole schema
         if False:
             for component in plic_schema.iter_globals():
                 if type(component) is XsdComplexType:
                     process_complex_type(component)
-                    #pass
+                    # pass
                 elif type(component) is XsdElement:
-                    #process_global_element(component)
+                    # process_global_element(component)
                     pass
                 else:
                     logger.warning(f"Non-managed global component {str(component)}")
