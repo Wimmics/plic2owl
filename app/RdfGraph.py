@@ -1,11 +1,9 @@
+import logging
 import rdflib
 from rdflib import Graph, Literal, URIRef, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, XSD, OWL
-
-import logging
-import csv
-from io import StringIO
+from urllib import parse
 
 logger = logging.getLogger("app." + __name__)
 
@@ -17,6 +15,12 @@ class RdfGraph:
 
     def __init__(self) -> None:
         self.graph: Graph = rdflib.Graph(bind_namespaces="core")
+
+    @staticmethod
+    def make_rdf_namespace(xsd_namespace: str) -> str:
+        if xsd_namespace[-1] != "/":
+            xsd_namespace += "#"
+        return xsd_namespace
 
     def add_namespaces(self, namespaces: list[tuple[str, str]]) -> None:
         for _prefix, _uri in namespaces:
@@ -30,11 +34,15 @@ class RdfGraph:
         ]
         return _namespaces
 
-    def serialize(self, format: str = "turtle") -> str:
+    def serialize(self, destination: str = None, format: str = "turtle") -> str:
         """
         Serialize the graph
         """
-        return self.graph.serialize(format=format)
+        if destination is None:
+            return self.graph.serialize(format=format)
+        else:
+            self.graph.serialize(destination=destination, format=format)
+            return None
 
     def add_class(
         self, class_uri: str, label: str = None, description: str = None
@@ -66,7 +74,7 @@ class RdfGraph:
         _collection_node = BNode()
         _collection = Collection(self.graph, _collection_node)
         for _member in members:
-            _member_uri = URIRef(class_uri + "_" + _member)
+            _member_uri = URIRef(class_uri + "_" + parse.quote(_member.strip()))
             self.graph.add((_member_uri, RDFS.label, Literal(_member)))
             _collection.append(_member_uri)
 

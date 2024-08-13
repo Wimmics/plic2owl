@@ -20,6 +20,7 @@ from process_xsd import (
 
 from RdfGraph import graph
 
+
 # Get the config parameters
 import application_config
 
@@ -38,9 +39,7 @@ def make_rdf_namespaces(schema: XMLSchema) -> list[tuple[str, str]]:
     for _prefix, _uri in get_namespaces(schema):
         # Ignore the default namespace '' as we'll use only prefixed names
         if _prefix not in [""]:
-            if _uri[-1] != "/":
-                _uri += "#"
-            _rdf_namespaces.append((_prefix, _uri))
+            _rdf_namespaces.append((_prefix, graph.make_rdf_namespace(_uri)))
     # Add prefix 'xs' in case we would only have 'xsd', as we need it to be exactly 'xs' in the RDF generation
     _rdf_namespaces.append(("xs", "http://www.w3.org/2001/XMLSchema#"))
     return _rdf_namespaces
@@ -62,6 +61,7 @@ if __name__ == "__main__":
             log_config = yaml.safe_load(f.read())
         logging.config.dictConfig(log_config)
         logger = logging.getLogger("app." + __name__)
+        # logging.basicConfig(level=logging.DEBUG)
 
         # Checking the loaded configuration
         logger.debug(
@@ -90,41 +90,49 @@ if __name__ == "__main__":
 
         # Create the RDF namespaces from those declared in the XSD
         graph.add_namespaces(make_rdf_namespaces(plic_schema))
-        logger.debug(
-            f"Added prefix/namespace declarations to the RDF graph:\n{pformat(graph.get_namespaces())}"
-        )
+        #logger.debug(f"RDF prefix/namespaces:\n{pformat(graph.get_namespaces())}")
         logger.debug(
             "---------------------------------- Initializations completed --------------------------------------"
         )
 
-        # ----------------------- Process the XSD components  --------------------------------
+        # ----------------------- Process individual XSD components (test) --------------------------------
 
         # Process one: XsdElement: AudiencesUnstructured, AnnualCycleAtomized, DetailUnstructured, Dataset
-        component = plic_schema.elements["DetailUnstructured"]
-        process_element(component)
+        component = plic_schema.elements["AncillaryData"]
+        #process_element(component)
 
         # Process one XsdComplextype: DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType,
         #   EcologicalSignificanceType : 2 sous-groups 1 atomized, 1 unstruct
         #   FeedingAtomizedType: elem Thropic est un <xs:complexType> anonyme
         #   BaseElementsType: element of type xs:string
-        component = plic_schema.types["NormalDate"]
-        # process_complex_type(component)
+        component = plic_schema.types["SynonymsAtomizedType"]
+        #process_complex_type(component)
 
-        # Process the whole schema
+        # Process all complex types
         if False:
             for component in plic_schema.iter_globals():
                 if type(component) is XsdComplexType:
                     process_complex_type(component)
-                    # pass
                 elif type(component) is XsdElement:
-                    # process_global_element(component)
                     pass
+                else:
+                    logger.warning(f"Non-managed global component {str(component)}")
+
+        # Process all root elements
+        if False:
+            for component in plic_schema.iter_globals():
+                if type(component) is XsdComplexType:
+                    pass
+                elif type(component) is XsdElement:
+                    process_element(component)
                 else:
                     logger.warning(f"Non-managed global component {str(component)}")
 
         logger.debug(
             "---------------------------------- Graph generation completed --------------------------------------"
         )
+
+        # graph.serialize(destination="outpout.ttl", format="turtle")
         print(graph.serialize(format="turtle"))
 
     except Exception as e:
