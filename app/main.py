@@ -1,6 +1,3 @@
-# To instal the first time:
-# mamba install -c conda-forge xmlschema
-
 import argparse
 import logging.config
 import os
@@ -65,7 +62,8 @@ if __name__ == "__main__":
 
         # Parse inline arguments
         parser = argparse.ArgumentParser(
-            description="Convert the PlinianCore XSD into an RDF/OWL vocabulary"
+            description="Convert the PlinianCore XSD into an RDF/OWL vocabulary",
+            epilog="Example: python ./main.py PlinianCore_AbstractModel_v3.2.2.7.xsd --copy ./_schemas --output output.ttl",
         )
         parser.add_argument(
             "schema", help="Local path or URL to the XSD schema to process"
@@ -73,37 +71,40 @@ if __name__ == "__main__":
         parser.add_argument(
             "-c",
             "--copy",
+            dest="folder",
             help="""Local folder: if it does not exist, the downloaded schemas are stored locally.
               If it exists, the schemas are reloaded from the local folder.""",
         )
         parser.add_argument(
             "-o",
             "--output",
-            help="Output file (Turtle). If not provided, defaults to the standard output.",
+            dest="output_file",
+            help="Output file in RDF Turtle. If not provided, defaults to the standard output.",
         )
         args = parser.parse_args()
+        print(pformat(args))
 
         # --- Load the schema either from path/url or from a local copy
-        if args.copy is None:
+        if args.folder is None:
             logger.debug(f"Loading {args.schema}")
             schema = load_schema(
                 args.schema, namespace=application_config.get("default_namespace")
             )
-        elif not os.path.isdir(args.copy):
+        elif not os.path.isdir(args.folder):
             # Download the schemas and store them locally
-            logger.debug(f"Loading {args.schema} and storing copy to {args.copy}")
+            logger.debug(f"Loading {args.schema} and storing copy to {args.folder}")
             schema = load_schema(
                 args.schema,
                 namespace=application_config.get("default_namespace"),
-                local_copy_folder=args.copy,
+                local_copy_folder=args.folder,
             )
         else:
             # Reload locally stored schemas
             logger.debug(
-                f"Loading {os.path.basename(args.schema)} from local folder {args.copy}"
+                f"Loading {os.path.basename(args.schema)} from local folder {args.folder}"
             )
             schema = load_schema(
-                os.path.join(args.copy, os.path.basename(args.schema)),
+                os.path.join(args.folder, os.path.basename(args.schema)),
                 namespace=application_config.get("default_namespace"),
             )
         logger.debug(f"Schema loaded: {schema}")
@@ -136,10 +137,10 @@ if __name__ == "__main__":
                     logger.warning(f"Non-managed global component {str(component)}")
         logger.debug("---------------- Graph generation completed ------------------")
 
-        if args.output is None:
+        if args.output_file is None:
             print(graph.serialize(format="turtle"))
         else:
-            graph.serialize(destination=args.output, format="turtle")
+            graph.serialize(destination=args.output_file, format="turtle")
 
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
