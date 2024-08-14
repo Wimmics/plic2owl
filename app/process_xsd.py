@@ -95,7 +95,9 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     Returns:
       URI as a string
     """
-    _uri = component.default_namespace + find_first_local_name(component)
+    _local_name = find_first_local_name(component)
+    _local_name = _local_name[0].upper() + _local_name[1:]
+    _uri = component.default_namespace + _local_name
     if not _uri.endswith("Type"):
         _uri += "Type"
     return _uri
@@ -193,7 +195,8 @@ def make_element_uri(
     if namespace is None:
         namespace = graph.make_rdf_namespace(component.default_namespace)
 
-    return namespace + "has" + local_name
+    _local_name = local_name[0].upper() + local_name[1:]
+    return namespace + "has" + _local_name
 
 
 def get_annotation(component: XsdComponent) -> None:

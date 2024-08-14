@@ -1,4 +1,5 @@
 # Plic2RDF: PlinianCore-to-RDF translation
+[![License Info](http://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](LICENSE)
 
 This repository is a stand-alone Python application that transtlates the [Plinian Core vocabulary](https://github.com/tdwg/PlinianCore/tree/master), represented as a XML schema, into an RDF/OWL ontology. The output format is [RDF Turtle](https://www.w3.org/TR/turtle/).
 
