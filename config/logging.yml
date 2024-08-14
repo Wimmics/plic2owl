@@ -12,7 +12,7 @@ handlers:
     stream: ext://sys.stdout
 loggers:
     app:
-        level: DEBUG
+        level: WARNING
         handlers: [console]
         propagate: no
 root:
