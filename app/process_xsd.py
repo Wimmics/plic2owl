@@ -1,5 +1,6 @@
 import logging
 from rdflib.namespace import XSD, URIRef
+from traceback import format_exc
 from xmlschema import XMLSchema
 from xmlschema.validators.complex_types import XsdComplexType
 from xmlschema.validators.simple_types import XsdAtomicRestriction, XsdAtomicBuiltin
@@ -58,11 +59,35 @@ def find_first_local_name(component: XsdComponent) -> str:
             return None
 
 
+def find_first_parent_complex_type(component: XsdComponent) -> XsdComplexType:
+    """
+    Return the first parent of the XSD component, that is an XSD complex type.
+    Or return None if no parent complex type is found.
+    """
+    if component.parent is None:
+        return None
+    elif type(component.parent) is XsdComplexType:
+        return component.parent
+    else:
+        return find_first_parent_complex_type(component.parent)
+
+
 def make_complex_type_uri(component: XsdComplexType) -> str:
     """
     Generate a URI of an XSD complex type.
-    If the complex type has is named (it has a local nametype), this simply concatenates the namespace and local name.
-    Otherwise look for the local name of the first parent that has a local name.
+    If the complex type is named (it has a local_name), simply use this name.
+    If the complex type is anonymous, recursively look for the first parent that
+    has a local name and return it. Most likely that should be the parent element.
+
+    Example:
+    The type of element Throphic has an anonymous complex type:
+    ```<xs:complexType name="FeedingAtomizedType">
+          <xs:sequence>
+            <xs:element name="Thropic" minOccurs="0">
+              <xs:complexType>
+                ...
+    ```
+    Hence we generate a new complex type named "ThropicType" that will be the range of property "hasThropic".
 
     Args:
         component (XsdComplexType): the XSD complex type
@@ -74,6 +99,46 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     if not _uri.endswith("Type"):
         _uri += "Type"
     return _uri
+
+
+def has_element_unique_use(elem: XsdElement) -> bool:
+    """
+    Check if an element is used only once in the schema, or multiple times. This helps decide whether the
+    correponding property should have an rdfs:domain (single use) or not (multiple uses).
+
+    The function looks for all the occurrences of the element in the schema.
+    An occurrence may be the definition of the element `<xs:element name="ElemName"...>` or a reference
+    to an element `<xs:element ref="ElemName"...>`.
+
+    If an element is only defined (name=...) and never referenced, then it has a unique use.
+    If an element is defined (name=...) globally, and referenced only once, then it has a unique use.
+    In all the other cases, the element is used multiple times.
+
+    Args:
+        elem (XsdElement): the XSD element to check
+
+    Returns:
+        True if the element is used only once, False otherwise
+    """
+    _uri = make_element_uri(elem)
+    _elem_uses = list()
+    for _comp in elem.schema.iter_components():
+        # Iterate over all the elements of the schema and look for one with the same URI
+        if type(_comp) is XsdElement:
+            if make_element_uri(_comp) == _uri:
+                _elem_uses.append(_comp)
+
+    if len(_elem_uses) <= 1:
+        # The element is used once, i.e. defined (name=...) and never referenced, then it has a unique use
+        return True
+    elif len(_elem_uses) == 2:
+        # The element is defined (name=...) globally, and referenced only once, then it has a unique use.
+        if _elem_uses[0].is_global() and _elem_uses[1].ref is not None:
+            return True
+        if _elem_uses[1].is_global() and _elem_uses[0].ref is not None:
+            return True
+
+    return False
 
 
 def make_element_str(component: XsdElement) -> str:
@@ -95,14 +160,15 @@ def make_element_str(component: XsdElement) -> str:
     return component_str
 
 
-def make_rdf_property_uri(
-    component: XsdComponent, local_name: str = None, namespace: str = None
+def make_element_uri(
+    component: XsdElement, local_name: str = None, namespace: str = None
 ) -> str:
     """
-    Create an RDF property URI from the name and namespace of an XSD component,
+    Create an RDF property URI from the name and namespace of an XSD element,
     where local name "Xxxx" is turned into "hasXxxx".
 
-    If the component has no local name/namespace, the local_name/namespace parameter must be provided.
+    If the element has no local name, the local_name parameter must be provided.
+    If the element has no namespace, the namespace parameter must be provided.
     If provided, parameters local_name and namespace override those from the component if any.
 
     Args:
@@ -247,6 +313,7 @@ def load_schema(filepath, namespace=None, local_copy_folder=None) -> XMLSchema:
 
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
+        logger.error(format_exc())
         return None
 
 
@@ -274,8 +341,8 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
 
     _class = None
 
-    # Only process the target namespaces
-    if component.default_namespace not in config.get("namespaces_to_process"):
+    # Only process the namespaces of interest
+    if component.target_namespace not in config.get("namespaces_to_process"):
         logger.info(indent + f"-- Ignoring complex type {component_str}")
         return None
 
@@ -316,8 +383,10 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
                     )
             except Exception as e:
                 logger.warning(
-                    f"--Error while processing component {str(_component)}, parent {str(_component.parent)}: {str(e)}"
+                    f"-- Error while processing component {str(_component)}, parent {str(_component.parent)}: {str(e)}"
                 )
+                logger.error(format_exc())
+
     logger.info(indent + "└ Completed processing complex type " + component_str)
     return _class
 
@@ -363,31 +432,37 @@ def process_element(component: XsdElement, indent="") -> None:
     indent = f"{indent}| "
     component_str = make_element_str(component)
 
-    # Only process the target namespaces
-    if component.default_namespace not in config.get("namespaces_to_process"):
+    # Only process the namespaces of interest
+    if component.target_namespace not in config.get("namespaces_to_process"):
         logger.info(
-            f"{indent}-- Ignoring element from other non-managed namespace {component_str}"
+            f"{indent}-- Ignoring element from non-managed namespace {component_str}"
         )
         return
-
-    # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>.
-    # Referenced elements (<xs:element ref='Element'/>) are handled separately
-    if component.ref is not None:
-        logger.debug(f"{indent}-- Ignoring referenced {str(component)}")
-        return
-
-    logger.debug(f"{indent}Processing element {component_str}")
 
     # Get the optional annotation of the element
     _annotation = get_annotation(component)
     if _annotation is not None:
         logger.debug(f"{indent}| {print_annotation(_annotation)}")
 
-    # Make the URI of the property that will be created
-    _prop_uri = make_rdf_property_uri(component)
+    # Make the URI of the property to be be created
+    _prop_uri = make_element_uri(component)
+
+    # Find the parent complex type to be used as the rdfs:domain of the property to be created
+    _parent_uri = None
+    _parent_complex_type = find_first_parent_complex_type(component)
+    if has_element_unique_use(component) and _parent_complex_type is not None:
+        _parent_uri = make_complex_type_uri(_parent_complex_type)
+        graph.add_property_domain_range(_prop_uri, domain=_parent_uri)
+
+    # Only process named elements, i.e. defined as: <xs:element name="Element" type="ElementType"/>.
+    if component.ref is not None:
+        logger.debug(f"{indent}-- Ignoring referenced {str(component)}")
+        return
+
+    logger.debug(f"{indent}Processing element {component_str}")
 
     # -------------------------------------------------------
-    # --- Start checking the (many) possible cases
+    # --- Start checking the possible forms of an element
     # -------------------------------------------------------
 
     # --- Case of an XsdAtomicBuiltin e.g. with type "xs:string", "xs:float" etc.
