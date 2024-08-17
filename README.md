@@ -1,19 +1,19 @@
-# Plic2RDF: PlinianCore-to-RDF translation
+# Plic2OWL: PlinianCore-to-OWL translation
 [![License Info](http://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)](LICENSE)
 
-This repository is a stand-alone Python application that transtlates the [Plinian Core vocabulary](https://github.com/tdwg/PlinianCore/tree/master), represented as a XML schema, into an RDF/OWL ontology. The output format is [RDF Turtle](https://www.w3.org/TR/turtle/).
+This repository is a stand-alone Python application that transtlates the [Plinian Core vocabulary](https://github.com/tdwg/PlinianCore/tree/master), represented as a XML schema, into an OWL ontology. The output format is [RDF Turtle](https://www.w3.org/TR/turtle/).
 
 
 ## Quick start guide
 
 This repository relies on [Conda](https://conda.io/) to manage the execution environment.
-File `environment.yml` defines an environment named `plic2rdf`.
+File `environment.yml` defines an environment named `plic2owl`.
 
 1) [Install Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 2) Set up and activate the environment:
 ```sh 
 conda env create -f environment.yml
-conda activate plic2rdf
+conda activate plic2owl
 ```
 3) Run the translation of the currently available Plinian Core schema:
 
@@ -53,7 +53,7 @@ python ./main.py PlinianCore.xsd --copy ./_schemas
 
 By default, the generated RDF triples are printed out on the standard output. You may change this with option `--output`:
 ```sh
-python ./main.py PlinianCore.xsd --copy ./_schemas --output PlinianCore.ttl
+python ./main.py PlinianCore.xsd --copy ./_schemas --output ontology.ttl
 ```
 
 ## Configuration
