@@ -27,6 +27,16 @@ def clean_string(description: str) -> str:
         return cleaned
 
 
+def camel_case_split(s) -> str:
+    """
+    Transform a Camel-case string into a string with blanks to separate workds
+    """
+    _mod = map(lambda _c: "|" + _c.lower() if _c.isupper() else _c, s)
+    _split = "".join(_mod).split("|")
+    _split = list(filter(lambda x: x != "", _split))
+    return " ".join(_split)
+
+
 def make_complex_type_str(component: XsdComplexType) -> str:
     """
     Generate the string representing an XSD complex type, depending on whether this
@@ -101,6 +111,29 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     if not _uri.endswith("Type"):
         _uri += "Type"
     return _uri
+
+
+def make_complex_type_label(component: XsdComplexType) -> str:
+    """
+    Generate a label of an XSD complex type.
+    If the complex type is named (it has a local_name), simply use this name.
+    If the complex type is anonymous, recursively look for the first parent that
+    has a local name and return it. Most likely that should be the parent element.
+
+    Example:
+    type "FeedingAtomizedType" generate "Feeding Atomized Type"
+
+    Args:
+        component (XsdComplexType): the XSD complex type
+
+    Returns:
+      label
+    """
+    _local_name = find_first_local_name(component)
+    _local_name = _local_name[0].upper() + _local_name[1:]
+    if _local_name.endswith("Type"):
+        _local_name = _local_name[:-4]
+    return camel_case_split(_local_name)
 
 
 def has_element_unique_use(elem: XsdElement) -> bool:
@@ -201,20 +234,14 @@ def make_element_uri(
 
 def get_annotation(component: XsdComponent) -> None:
     """
-    Returns the annotation of a XsdComponent, or None if empty
+    Returns the annotation of a XsdComponent, or None if empty.
+    The annotation is trimed and cleaned from line breaks
     """
     if component.annotation is not None:
         _annot = clean_string(str(component.annotation))
         if _annot is not None:
             return _annot
     return None
-
-
-def print_annotation(annotation: str, indent: str = "") -> str:
-    """
-    Just a pretty print of the annotation for logging purposes, with indentation
-    """
-    return f'{indent}Annotation: "{annotation[:70]}"'
 
 
 def map_xsd_builtin_type_to_rdf(xsd_type: str) -> URIRef:
@@ -350,9 +377,9 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
         return None
 
     logger.info(indent + f"┌ Processing complex type {component_str}")
-    annotation = get_annotation(component)
-    if annotation is not None:
-        logger.debug(print_annotation(annotation, indent + "| "))
+    _annotation = get_annotation(component)
+    if _annotation is not None:
+        logger.debug(f'{indent}| Annotation: "{_annotation[:70]}')
 
     # -------------------------------------------------------
     # --- Start checking the possible cases
@@ -372,7 +399,9 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
     # Create the class for that complex type
     else:
         _class = make_complex_type_uri(component)
-        graph.add_class(_class, description=annotation)
+        graph.add_class(
+            _class, label=make_complex_type_label(component), description=_annotation
+        )
 
         for _component in component.content.iter_model():
             try:
@@ -404,9 +433,9 @@ def process_group(component: XsdGroup, indent="") -> None:
     """
     indent = f"{indent}| "
     logger.debug(indent + str(component))
-    annotation = get_annotation(component)
-    if annotation is not None:
-        logger.debug(print_annotation(annotation, indent))
+    _annotation = get_annotation(component)
+    if _annotation is not None:
+        logger.debug(f'{indent}| Annotation: "{_annotation[:70]}')
 
     for _component in component.iter_model():
         if type(_component) is XsdElement:
@@ -445,7 +474,7 @@ def process_element(component: XsdElement, indent="") -> None:
     # Get the optional annotation of the element
     _annotation = get_annotation(component)
     if _annotation is not None:
-        logger.debug(f"{indent}| {print_annotation(_annotation)}")
+        logger.debug(f'{indent}| Annotation: "{_annotation[:70]}')
 
     # Make the URI of the property to be be created
     _prop_uri = make_element_uri(component)
@@ -486,7 +515,7 @@ def process_element(component: XsdElement, indent="") -> None:
             + component.local_name
             + "EnumType"
         )
-        graph.add_class(_class_enum, description=_annotation)
+        graph.add_class(_class_enum, label=f"Enum values for {component.local_name}", description=_annotation)
         graph.add_oneof_class_members(
             _class_enum, [str(_enum) for _enum in component.type.enumeration]
         )
