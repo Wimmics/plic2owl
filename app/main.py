@@ -12,7 +12,7 @@ from process_xsd import (
     load_schema,
     process_complex_type,
     process_element,
-    get_namespaces,
+    get_namespaces
 )
 
 import application_config
@@ -118,11 +118,11 @@ if __name__ == "__main__":
 
         # Process one: XsdElement e.g.: AudiencesUnstructured, AnnualCycleAtomized, DetailUnstructured, Dataset
         component = schema.elements["AncillaryData"]
-        #process_element(component)
+        # process_element(component)
 
         # Process one XsdComplextype e.g.: BaseElementsType, DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType, FeedingAtomizedType
         component = schema.types["DetailType"]
-        #process_complex_type(component)
+        # process_complex_type(component)
 
         # ------------------- Process the whole schema ---------------------
 

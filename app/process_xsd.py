@@ -6,6 +6,7 @@ from xmlschema.validators.complex_types import XsdComplexType
 from xmlschema.validators.simple_types import XsdAtomicRestriction, XsdAtomicBuiltin
 from xmlschema.validators.elements import XsdElement
 from xmlschema.validators import XsdGroup, XsdComponent
+import re
 
 from RdfGraph import graph
 
@@ -30,11 +31,10 @@ def clean_string(description: str) -> str:
 def camel_case_split(s) -> str:
     """
     Transform a Camel-case string into a string with blanks to separate words
+    See: https://stackoverflow.com/questions/5020906/python-convert-camel-case-to-space-delimited-using-regex-and-taking-acronyms-in
     """
-    _mod = map(lambda _c: "|" + _c if _c.isupper() else _c, s)
-    _split = "".join(_mod).split("|")
-    _split = list(filter(lambda x: x != "", _split))
-    return " ".join(_split)
+    s = re.sub(r"((?<=[a-z])[A-Z]|(?<!\A)[A-Z](?=[a-z]))", r" \1", s, flags=re.VERBOSE)
+    return s
 
 
 def make_complex_type_str(component: XsdComplexType) -> str:
@@ -107,7 +107,7 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     """
     _local_name = find_first_local_name(component)
     _local_name = _local_name[0].upper() + _local_name[1:]
-    _uri = component.target_namespace + _local_name
+    _uri = graph.make_rdf_namespace(component.target_namespace) + _local_name
     if not _uri.endswith("Type"):
         _uri += "Type"
     return _uri
