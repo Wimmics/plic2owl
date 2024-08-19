@@ -164,6 +164,7 @@ cython_debug/
 
 
 # Custom
-schemas
+_schema
 _schemas
 output.ttl
+myDocumentation

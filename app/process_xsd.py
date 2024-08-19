@@ -29,9 +29,9 @@ def clean_string(description: str) -> str:
 
 def camel_case_split(s) -> str:
     """
-    Transform a Camel-case string into a string with blanks to separate workds
+    Transform a Camel-case string into a string with blanks to separate words
     """
-    _mod = map(lambda _c: "|" + _c.lower() if _c.isupper() else _c, s)
+    _mod = map(lambda _c: "|" + _c if _c.isupper() else _c, s)
     _split = "".join(_mod).split("|")
     _split = list(filter(lambda x: x != "", _split))
     return " ".join(_split)
@@ -51,7 +51,7 @@ def make_complex_type_str(component: XsdComplexType) -> str:
     if component.local_name is None or component.prefixed_name is None:
         component_str = f"(anonymous) {str(component)}"
     else:
-        component_str = f"{component.default_namespace}{component.local_name} ({component.prefixed_name})"
+        component_str = f"{component.target_namespace}{component.local_name} ({component.prefixed_name})"
     return component_str
 
 
@@ -107,7 +107,7 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     """
     _local_name = find_first_local_name(component)
     _local_name = _local_name[0].upper() + _local_name[1:]
-    _uri = component.default_namespace + _local_name
+    _uri = component.target_namespace + _local_name
     if not _uri.endswith("Type"):
         _uri += "Type"
     return _uri
@@ -115,7 +115,7 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
 
 def make_complex_type_label(component: XsdComplexType) -> str:
     """
-    Generate a label of an XSD complex type.
+    Generate a label of an XSD complex type by turning the Camel case format to string with spaces.
     If the complex type is named (it has a local_name), simply use this name.
     If the complex type is anonymous, recursively look for the first parent that
     has a local name and return it. Most likely that should be the parent element.
@@ -191,7 +191,7 @@ def make_element_str(component: XsdElement) -> str:
     if component.local_name is None or component.prefixed_name is None:
         component_str = str(component)
     else:
-        component_str = f"{str(component)} {component.default_namespace}{component.local_name}, type: {str(component.type)}"
+        component_str = f"{str(component)} {component.target_namespace}{component.local_name}, type: {str(component.type)}"
     return component_str
 
 
@@ -223,13 +223,42 @@ def make_element_uri(
     if local_name is None:
         local_name = component.local_name
 
-    if namespace is None and component.default_namespace is None:
+    if namespace is None and component.target_namespace is None:
         raise ValueError("Namespace required for a component without default namespace")
     if namespace is None:
-        namespace = graph.make_rdf_namespace(component.default_namespace)
+        namespace = graph.make_rdf_namespace(component.target_namespace)
 
     _local_name = local_name[0].upper() + local_name[1:]
     return namespace + "has" + _local_name
+
+
+def make_element_label(component: XsdElement, local_name: str = None) -> str:
+    """
+    Create an RDF property label from the name of an XSD element,
+    by turning the Camel case format to string with spaces.
+    Example: name "XxYy" is turned into "has Xx Yy".
+
+    If the element has no local name, the local_name parameter must be provided.
+    If provided, parameter local_name overrides the one from the component if any.
+
+    Args:
+        component: the XSD component
+        local_name: optional, local name to use
+
+    Returns:
+        RDF property label
+
+    Throws:
+        ValueError if local name or namespace are not provided
+    """
+
+    if local_name is None and component.local_name is None:
+        raise ValueError("Local name required for a component without local name")
+    if local_name is None:
+        local_name = component.local_name
+
+    local_name = local_name[0].upper() + local_name[1:]
+    return camel_case_split("has" + local_name)
 
 
 def get_annotation(component: XsdComponent) -> None:
@@ -325,7 +354,7 @@ def load_schema(filepath, namespace=None, local_copy_folder=None) -> XMLSchema:
     Args:
       filepath: path to the XML schema file
       namespace: default namespace of the schema. Defaults to None
-      local_copy_folder: folder where to store a local of the imported schemas. Defaults to None
+      local_copy_folder: folder where to store the imported schemas. Defaults to None
 
     Returns:
       XMLSchema object of the schema after building, None in case of an error
@@ -476,8 +505,9 @@ def process_element(component: XsdElement, indent="") -> None:
     if _annotation is not None:
         logger.debug(f'{indent}| Annotation: "{_annotation[:70]}')
 
-    # Make the URI of the property to be be created
+    # Make the URI and label of the property to be be created
     _prop_uri = make_element_uri(component)
+    _prop_label = make_element_label(component)
 
     # Find the parent complex type to be used as the rdfs:domain of the property to be created
     _parent_uri = None
@@ -499,7 +529,9 @@ def process_element(component: XsdElement, indent="") -> None:
 
     # --- Case of an XsdAtomicBuiltin e.g. with type "xs:string", "xs:float" etc.
     if type(component.type) is XsdAtomicBuiltin:
-        graph.add_datatype_property(_prop_uri, description=_annotation)
+        graph.add_datatype_property(
+            _prop_uri, label=_prop_label, description=_annotation
+        )
         _datatype = map_xsd_builtin_type_to_rdf(component.type.prefixed_name)
         if _datatype is not None:
             graph.add_property_domain_range(_prop_uri, range=_datatype)
@@ -511,11 +543,15 @@ def process_element(component: XsdElement, indent="") -> None:
     elif type(component.type) is XsdAtomicRestriction:
         # The enum values are the members of a new class defined as owl:oneOf
         _class_enum = (
-            graph.make_rdf_namespace(component.default_namespace)
+            graph.make_rdf_namespace(component.target_namespace)
             + component.local_name
             + "EnumType"
         )
-        graph.add_class(_class_enum, label=f"Enum values for {component.local_name}", description=_annotation)
+        graph.add_class(
+            _class_enum,
+            label=f"Enum values for {component.local_name}",
+            description=_annotation,
+        )
         graph.add_oneof_class_members(
             _class_enum, [str(_enum) for _enum in component.type.enumeration]
         )
@@ -523,7 +559,7 @@ def process_element(component: XsdElement, indent="") -> None:
         logger.debug(f"{indent}|  Enum values: {_enum_values}")
 
         # The new property has as range the enumerated class above
-        graph.add_object_property(_prop_uri, description=_annotation)
+        graph.add_object_property(_prop_uri, label=_prop_label, description=_annotation)
         graph.add_property_domain_range(_prop_uri, range=_class_enum)
         logger.debug(f"{indent}| Making object property for {component_str}")
 
@@ -532,7 +568,9 @@ def process_element(component: XsdElement, indent="") -> None:
 
         # --- Assumption: a complex element of type xs:anyType is used for NL notes -> datatype property
         if component.type.prefixed_name == "xs:anyType":
-            graph.add_datatype_property(_prop_uri, description=_annotation)
+            graph.add_datatype_property(
+                _prop_uri, label=_prop_label, description=_annotation
+            )
             logger.debug(f"{indent}| Making datatype property for {component_str}")
 
         # --- Complex type extends a builtin type -> datatype property
@@ -540,7 +578,9 @@ def process_element(component: XsdElement, indent="") -> None:
             component.type.is_extension()
             and type(component.type.content) is XsdAtomicBuiltin
         ):
-            graph.add_datatype_property(_prop_uri, description=_annotation)
+            graph.add_datatype_property(
+                _prop_uri, label=_prop_label, description=_annotation
+            )
             _datatype = map_xsd_builtin_type_to_rdf(
                 component.type.content.prefixed_name
             )
@@ -554,13 +594,15 @@ def process_element(component: XsdElement, indent="") -> None:
 
         # --- Finally, case where the xs:complexType is "really" a complex type
         else:
-            graph.add_object_property(_prop_uri, description=_annotation)
+            graph.add_object_property(
+                _prop_uri, label=_prop_label, description=_annotation
+            )
             logger.debug(f"{indent}| Making object property for {component_str}")
             # Case of a named complex type
             if component.type.local_name is not None:
                 graph.add_property_domain_range(
                     _prop_uri,
-                    range=graph.make_rdf_namespace(component.type.default_namespace)
+                    range=graph.make_rdf_namespace(component.type.target_namespace)
                     + component.type.local_name,
                 )
             # Case of an anonymous complex type

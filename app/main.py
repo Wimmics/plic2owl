@@ -63,7 +63,7 @@ if __name__ == "__main__":
         # Parse inline arguments
         parser = argparse.ArgumentParser(
             description="Convert the PlinianCore XSD into an RDF/OWL vocabulary",
-            epilog="Example: python ./main.py PlinianCore_AbstractModel_v3.2.2.7.xsd --copy ./_schemas --output plic_ontology.ttl",
+            epilog="Example: python ./main.py PlinianCore_AbstractModel_v3.2.2.7.xsd --copy _schemas --output ../ontology/plic_ontology.ttl",
         )
         parser.add_argument(
             "schema", help="Local path or URL to the XSD schema to process"
@@ -117,12 +117,12 @@ if __name__ == "__main__":
         # ------------------- Process individual XSD components (test) ---------------------
 
         # Process one: XsdElement e.g.: AudiencesUnstructured, AnnualCycleAtomized, DetailUnstructured, Dataset
-        component = schema.elements["Abstract"]
-        # process_element(component)
+        component = schema.elements["AncillaryData"]
+        #process_element(component)
 
         # Process one XsdComplextype e.g.: BaseElementsType, DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType, FeedingAtomizedType
-        component = schema.types["BaseElementsType"]
-        # process_complex_type(component)
+        component = schema.types["DetailType"]
+        #process_complex_type(component)
 
         # ------------------- Process the whole schema ---------------------
 
