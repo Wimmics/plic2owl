@@ -51,13 +51,13 @@ def make_complex_type_str(component: XsdComplexType) -> str:
     if component.local_name is None or component.prefixed_name is None:
         component_str = f"(anonymous) {str(component)}"
     else:
-        component_str = f"{component.target_namespace}{component.local_name} ({component.prefixed_name})"
+        component_str = f"{graph.make_rdf_namespace(component.target_namespace)}{component.local_name} ({component.prefixed_name})"
     return component_str
 
 
 def find_first_local_name(component: XsdComponent) -> str:
     """
-    Return the local name of the XSD component if any, otherwise the local of the parent, or the parent of the parent, etc.
+    Return the local name of the XSD component if any, otherwise the local name of the parent, or the parent of the parent, etc.
     Return None if no local name is found at the root component.
     """
     if component.local_name is not None:
@@ -191,7 +191,7 @@ def make_element_str(component: XsdElement) -> str:
     if component.local_name is None or component.prefixed_name is None:
         component_str = str(component)
     else:
-        component_str = f"{str(component)} {component.target_namespace}{component.local_name}, type: {str(component.type)}"
+        component_str = f"{str(component)} {graph.make_rdf_namespace(component.target_namespace)}{component.local_name}, type: {str(component.type)}"
     return component_str
 
 
@@ -452,6 +452,58 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
     return _class
 
 
+def process_simple_type_restriction(component: XsdAtomicRestriction, indent="") -> str:
+    """
+    Create a class for an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
+
+    Args:
+        component (XsdAtomicRestriction): the xsd type to process
+        indent (str): optional, used to indent print outs
+
+    Returns:
+        str: URI of the type created
+    """
+
+    component_str = str(component)
+    _class = None
+
+    # Only process the namespaces of interest
+    if component.target_namespace not in config.get("namespaces_to_process"):
+        logger.info(indent + f"-- Ignoring restriction type {component_str}")
+        return None
+
+    if component.enumeration is None:
+        logger.info(
+            indent + f"-- Ignoring restriction type without enum values {component_str}"
+        )
+        return None
+
+    logger.info(indent + f"┌ Processing restriction type {component_str}")
+    _annotation = get_annotation(component)
+    if _annotation is not None:
+        logger.debug(f'{indent}| Annotation: "{_annotation[:70]}')
+
+    # The enum values are the members of a new class defined as owl:oneOf
+    _class = (
+        graph.make_rdf_namespace(component.target_namespace)
+        + component.local_name
+        + "EnumType"
+    )
+    graph.add_class(
+        _class, label=f"Enum values for {component.local_name}", description=_annotation
+    )
+    graph.add_oneof_class_members(
+        _class,
+        members=[str(_enum) for _enum in component.enumeration],
+        enum_type=component.base_type.prefixed_name,
+    )
+    _enum_values = [str(_enum) for _enum in component.enumeration]
+    logger.debug(f"{indent}|  Enum values: {_enum_values}")
+
+    logger.info(indent + "└ Completed processing restriction type " + component_str)
+    return _class
+
+
 def process_group(component: XsdGroup, indent="") -> None:
     """
     Process the content of an XsdGroup, i.e. a sequence, choice...
@@ -540,7 +592,10 @@ def process_element(component: XsdElement, indent="") -> None:
             logger.warning(f"{indent}| Non-managed element {component_str}")
 
     # --- Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
-    elif type(component.type) is XsdAtomicRestriction:
+    elif (
+        type(component.type) is XsdAtomicRestriction
+        and component.type.enumeration is not None
+    ):
         # The enum values are the members of a new class defined as owl:oneOf
         _class_enum = (
             graph.make_rdf_namespace(component.target_namespace)
@@ -553,7 +608,9 @@ def process_element(component: XsdElement, indent="") -> None:
             description=_annotation,
         )
         graph.add_oneof_class_members(
-            _class_enum, [str(_enum) for _enum in component.type.enumeration]
+            _class_enum,
+            members=[str(_enum) for _enum in component.type.enumeration],
+            enum_type=component.type.base_type.prefixed_name,
         )
         _enum_values = [str(_enum) for _enum in component.type.enumeration]
         logger.debug(f"{indent}|  Enum values: {_enum_values}")

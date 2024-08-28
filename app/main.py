@@ -6,10 +6,12 @@ from traceback import format_exc
 from urllib.request import build_opener, install_opener
 from xmlschema import XMLSchema
 from xmlschema.validators.complex_types import XsdComplexType
+from xmlschema.validators.simple_types import XsdAtomicRestriction
 from xmlschema.validators.elements import XsdElement
 import yaml
 from process_xsd import (
     load_schema,
+    process_simple_type_restriction,
     process_complex_type,
     process_element,
     get_namespaces
@@ -117,11 +119,11 @@ if __name__ == "__main__":
         # ------------------- Process individual XSD components (test) ---------------------
 
         # Process one: XsdElement e.g.: AudiencesUnstructured, AnnualCycleAtomized, DetailUnstructured, Dataset
-        component = schema.elements["AncillaryData"]
+        #component = schema.elements["AncillaryData"]
         # process_element(component)
 
         # Process one XsdComplextype e.g.: BaseElementsType, DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType, FeedingAtomizedType
-        component = schema.types["DetailType"]
+        #component = schema.types["DetailType"]
         # process_complex_type(component)
 
         # ------------------- Process the whole schema ---------------------
@@ -131,6 +133,8 @@ if __name__ == "__main__":
             for component in schema.iter_globals():
                 if type(component) is XsdComplexType:
                     process_complex_type(component)
+                elif type(component) is XsdAtomicRestriction:
+                    process_simple_type_restriction(component)
                 elif type(component) is XsdElement:
                     process_element(component)
                 else:

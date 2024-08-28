@@ -63,10 +63,13 @@ class RdfGraph:
             if description is not None:
                 self.graph.add((_uri, RDFS.comment, Literal(description)))
 
-    def add_oneof_class_members(self, class_uri: str, members: list[str]) -> None:
+    def add_oneof_class_members(
+        self, class_uri: str, members: list[str], enum_type: str = None
+    ) -> None:
         """
         Add a class description to the graph, using the owl:oneOf construct.
-        Each member (string) is turned into an individual whose URI is build after the URI of the class
+        Each string member is turned into an individual whose URI is build after the URI of the class.
+        Each URI member is simply used as is.
         """
         _uri = URIRef(class_uri)
 
@@ -74,8 +77,12 @@ class RdfGraph:
         _collection_node = BNode()
         _collection = Collection(self.graph, _collection_node)
         for _member in members:
-            _member_uri = URIRef(class_uri + "_" + parse.quote(_member.strip()))
-            self.graph.add((_member_uri, RDFS.label, Literal(_member)))
+            if enum_type == "xs:anyURI":
+                _member_uri = URIRef(_member.strip())
+            else:
+                # For a string, create a new URI with that string as a label
+                _member_uri = URIRef(class_uri + "_" + parse.quote(_member.strip()))
+                self.graph.add((_member_uri, RDFS.label, Literal(_member)))
             _collection.append(_member_uri)
 
         # Link the collection to the class iwth owl:oneOf
