@@ -3,6 +3,7 @@ import rdflib
 from rdflib import Graph, Literal, URIRef, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, XSD, OWL
+import re
 from urllib import parse
 
 logger = logging.getLogger("app." + __name__)
@@ -21,6 +22,15 @@ class RdfGraph:
         if xsd_namespace[-1] != "/":
             xsd_namespace += "#"
         return xsd_namespace
+
+    @staticmethod
+    def camel_case_split(s) -> str:
+        """
+        Transform a Camel-case string into a string with blanks to separate words
+        See: https://stackoverflow.com/questions/5020906/python-convert-camel-case-to-space-delimited-using-regex-and-taking-acronyms-in
+        """
+        s = re.sub(r"((?<=[a-z])[A-Z]|(?<!\A)[A-Z](?=[a-z]))", r" \1", s, flags=re.VERBOSE)
+        return s
 
     def add_namespaces(self, namespaces: list[tuple[str, str]]) -> None:
         for _prefix, _uri in namespaces:
@@ -81,8 +91,8 @@ class RdfGraph:
                 _member_uri = URIRef(_member.strip())
             else:
                 # For a string, create a new URI with that string as a label
-                _member_uri = URIRef(class_uri + "_" + parse.quote(_member.strip()))
-                self.graph.add((_member_uri, RDFS.label, Literal(_member)))
+                _member_uri = URIRef(class_uri + "_" + parse.quote(re.sub('[[!@#$%&*()\[\]{};:,./<>?\|`~=+ ]', '_', _member.strip())))
+                self.graph.add((_member_uri, RDFS.label, Literal(self.camel_case_split(_member.strip()).lower())))
             _collection.append(_member_uri)
 
         # Link the collection to the class iwth owl:oneOf

@@ -484,20 +484,20 @@ def process_simple_type_restriction(component: XsdAtomicRestriction, indent="") 
         logger.debug(f'{indent}| Annotation: "{_annotation[:70]}')
 
     # The enum values are the members of a new class defined as owl:oneOf
+    _local_name = find_first_local_name(component)
+    _local_name = _local_name[0].upper() + _local_name[1:]
     _class = (
-        graph.make_rdf_namespace(component.target_namespace)
-        + component.local_name
-        + "EnumType"
+        graph.make_rdf_namespace(component.target_namespace) + _local_name + "EnumType"
     )
     graph.add_class(
-        _class, label=f"Enum values for {component.local_name}", description=_annotation
-    )
-    graph.add_oneof_class_members(
-        _class,
-        members=[str(_enum) for _enum in component.enumeration],
-        enum_type=component.base_type.prefixed_name,
+        _class, label=f"Enum values for {_local_name}", description=_annotation
     )
     _enum_values = [str(_enum) for _enum in component.enumeration]
+    graph.add_oneof_class_members(
+        _class,
+        members=_enum_values,
+        enum_type=component.base_type.prefixed_name,
+    )
     logger.debug(f"{indent}|  Enum values: {_enum_values}")
 
     logger.info(indent + "└ Completed processing restriction type " + component_str)
@@ -559,7 +559,7 @@ def process_element(component: XsdElement, indent="") -> None:
 
     # Make the URI and label of the property to be be created
     _prop_uri = make_element_uri(component)
-    _prop_label = make_element_label(component)
+    _prop_label = make_element_label(component).lower()
 
     # Find the parent complex type to be used as the rdfs:domain of the property to be created
     _parent_uri = None
@@ -589,31 +589,12 @@ def process_element(component: XsdElement, indent="") -> None:
             graph.add_property_domain_range(_prop_uri, range=_datatype)
             logger.debug(f"{indent}| Making datatype property for {component_str}")
         else:
-            logger.warning(f"{indent}| Non-managed element {component_str}")
+            logger.warning(f"{indent}| Non-managed builtin type {component_str}")
 
     # --- Case of an enumeration: <xs:simpleType><xs:restriction base="xs:string"><xs:enumeration value=...
-    elif (
-        type(component.type) is XsdAtomicRestriction
-        and component.type.enumeration is not None
-    ):
+    elif type(component.type) is XsdAtomicRestriction:
         # The enum values are the members of a new class defined as owl:oneOf
-        _class_enum = (
-            graph.make_rdf_namespace(component.target_namespace)
-            + component.local_name
-            + "EnumType"
-        )
-        graph.add_class(
-            _class_enum,
-            label=f"Enum values for {component.local_name}",
-            description=_annotation,
-        )
-        graph.add_oneof_class_members(
-            _class_enum,
-            members=[str(_enum) for _enum in component.type.enumeration],
-            enum_type=component.type.base_type.prefixed_name,
-        )
-        _enum_values = [str(_enum) for _enum in component.type.enumeration]
-        logger.debug(f"{indent}|  Enum values: {_enum_values}")
+        _class_enum = process_simple_type_restriction(component.type, f"{indent}| ")
 
         # The new property has as range the enumerated class above
         graph.add_object_property(_prop_uri, label=_prop_label, description=_annotation)
