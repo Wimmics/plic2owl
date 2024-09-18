@@ -1,5 +1,5 @@
 import argparse
-import logging.config
+import logging, logging.config
 import os
 from pprint import pformat
 from traceback import format_exc
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         # Checking the loaded configuration
         logger.info(f"Configuration parameters:\n{pformat(application_config.config)}")
 
-        # Parse inline arguments
+        # Define inline arguments
         parser = argparse.ArgumentParser(
             description="Convert the PlinianCore XSD into an RDF/OWL vocabulary",
             epilog="Example: python ./main.py PlinianCore_AbstractModel_v3.2.2.7.xsd --copy _schemas --output ../ontology/plic_ontology.ttl",
@@ -83,8 +83,10 @@ if __name__ == "__main__":
             dest="output_file",
             help="Output file in RDF Turtle. If not provided, defaults to the standard output.",
         )
+
+        # Parse the inline parameters
         args = parser.parse_args()
-        print(pformat(args))
+        logger.info("Inline parameters: " + pformat(args))
 
         # --- Load the schema either from path/url or from a local copy
         if args.folder is None:
