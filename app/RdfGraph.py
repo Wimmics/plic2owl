@@ -8,6 +8,9 @@ from urllib import parse
 
 logger = logging.getLogger("app." + __name__)
 
+# Get the config parameters
+import application_config as config
+
 
 class RdfGraph:
     """
@@ -19,6 +22,9 @@ class RdfGraph:
 
     @staticmethod
     def make_rdf_namespace(xsd_namespace: str) -> str:
+        if xsd_namespace is None or xsd_namespace == "":
+            xsd_namespace = config.get("default_namespace")
+            logger.warning("Namespace not provided. Defaulting to " + xsd_namespace)
         if xsd_namespace[-1] != "/":
             xsd_namespace += "#"
         return xsd_namespace

@@ -2,7 +2,7 @@ import logging
 from rdflib.namespace import XSD, URIRef
 from traceback import format_exc
 from xmlschema import XMLSchema
-from xmlschema.validators.complex_types import XsdComplexType
+from xmlschema.validators.complex_types import XsdComplexType, XsdUnion
 from xmlschema.validators.simple_types import XsdAtomicRestriction, XsdAtomicBuiltin
 from xmlschema.validators.elements import XsdElement
 from xmlschema.validators import XsdGroup, XsdComponent
@@ -79,7 +79,7 @@ def find_first_local_name(component: XsdComponent) -> str:
 
 def find_first_parent_complex_type(component: XsdComponent) -> XsdComplexType:
     """
-    Return the first parent of the XSD component, that is an XSD complex type.
+    Return the first parent of the XSD component that is an XSD complex type.
     Or return None if no parent complex type is found.
     """
     if component.parent is None:
@@ -98,12 +98,10 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     has a local name and return it. Most likely that should be the parent element.
 
     Example:
-    The type of element Throphic has an anonymous complex type:
-    ```<xs:complexType name="FeedingAtomizedType">
-          <xs:sequence>
-            <xs:element name="Thropic" minOccurs="0">
-              <xs:complexType>
-                ...
+    The type of element Throphic is an anonymous complex type:
+    ```<xs:element name="Thropic" minOccurs="0">
+           <xs:complexType>
+               ...
     ```
     Hence we generate a new complex type named "ThropicType" that will be the range of property "hasThropic".
 
@@ -118,8 +116,13 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     _uri = graph.make_rdf_namespace(component.target_namespace) + to_camel_case(
         _local_name
     )
-    if not _uri.endswith("Type"):
-        _uri += "Type"
+
+    # If the complex type has a local name (it is not anonymous) then we keep it as is.
+    # If not, that means that find_first_local_name() has gone up to the parent element,
+    # so we add "Type" to the element name to avoid name collision.
+    if component.local_name is None:
+        if not _uri.endswith("Type"):
+            _uri += "Type"
     return _uri
 
 
@@ -149,7 +152,7 @@ def make_complex_type_label(component: XsdComplexType) -> str:
 def has_element_unique_use(elem: XsdElement) -> bool:
     """
     Check if an element is used only once in the schema, or multiple times. This helps decide whether the
-    correponding property should have an rdfs:domain (single use) or not (multiple uses).
+    corresponding property should have an rdfs:domain (single use) or not (multiple uses).
 
     The function looks for all the occurrences of the element in the schema.
     An occurrence may be the definition of the element `<xs:element name="ElemName"...>` or a reference
@@ -576,10 +579,12 @@ def process_element(component: XsdElement, indent="") -> None:
     _prop_uri = make_element_uri(component)
     _prop_label = make_element_label(component).lower()
 
-    # Find the parent complex type to be used as the rdfs:domain of the property to be created
-    _parent_uri = None
+    # Find the parent complex type to be used as the rdfs:domain of the property to be created.
+    # This must be done for elements (referenced or named) that are embedded in a complex type
+    # because this complex type is the parent type we are looking for.
+    # Whereas a global element has no parent type by definition.
     _parent_complex_type = find_first_parent_complex_type(component)
-    if has_element_unique_use(component) and _parent_complex_type is not None:
+    if _parent_complex_type is not None and has_element_unique_use(component):
         _parent_uri = make_complex_type_uri(_parent_complex_type)
         graph.add_property_domain_range(_prop_uri, domain=_parent_uri)
 
@@ -681,5 +686,12 @@ def process_element(component: XsdElement, indent="") -> None:
                 _class = process_complex_type(component.type, f"{indent}| ")
                 if _class is not None:
                     graph.add_property_domain_range(_prop_uri, range=_class)
+
+    # --- Case of an XsdUnion: in a frist approach, these are considered as simple literal data types
+    elif type(component.type) is XsdUnion:
+        graph.add_datatype_property(
+            _prop_uri, label=_prop_label, description=_annotation
+        )
+
     else:
         logger.warning(f"{indent}-- Non-managed element {component_str}")
