@@ -427,8 +427,13 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
 
     # --- Complex type extends a builtin type: no type is created,
     #     instead the parent property will be a datatype property with builtin type as range
-    if component.is_extension() and type(component.content) is XsdAtomicBuiltin:
-        pass
+    if component.is_extension():
+        if type(component.content) is XsdAtomicBuiltin:
+            pass
+        else:
+            logger.warning(
+                f"{indent}|  -- Not supported: complex type ({component_str}) is an extension of another complex type"
+            )
 
     # --- Case of an xs:complexType containing only an xs:simpleContent
     elif component.has_simple_content():

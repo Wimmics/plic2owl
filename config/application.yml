@@ -4,6 +4,7 @@ default_namespace: 'http://www.gbif.es/PliC/'
 #default_namespace: 'http://www.gisin.org/gisin/SpeciesStatus'
 #default_namespace: 'eml://ecoinformatics.org/eml-2.1.1'
 #default_namespace: 'http://www.tdwg.org/schemas/tcs/1.01'
+#default_namespace: 'http://www.tdwg.org/schemas/abcd/2.06'
 
 # Generate RDF terms for XSD components from only these namespaces
 namespaces_to_process:
@@ -12,3 +13,4 @@ namespaces_to_process:
 #  - 'http://www.gisin.org/gisin/SpeciesStatus'
 #  - 'eml://ecoinformatics.org/eml-2.1.1'
 #  - 'http://www.tdwg.org/schemas/tcs/1.01'
+#  - 'http://www.tdwg.org/schemas/abcd/2.06'
