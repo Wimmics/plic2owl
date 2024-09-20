@@ -1,9 +1,15 @@
+"""
+This module loads the YAML configuration file at starup
+and provides a function to retrive a confirgation parameter.
+
+Author: Franck Michel, Université Côte d'Azur, CNRS, Inria
+Created: Aug. 2024
+"""
+
 import logging
 import yaml
 
-"""This module loads the YAML configuration file at starup
-and provides a function to retrive a confirgation parameter.
-"""
+
 logger = logging.getLogger("app." + __name__)
 
 

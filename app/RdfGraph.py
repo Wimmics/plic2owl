@@ -1,3 +1,11 @@
+"""
+This module provides the necessary tools to handle the generation of an OWL ontology: 
+functinos to create classes, properties, deal with namespaces, etc.
+
+Author: Franck Michel, Université Côte d'Azur, CNRS, Inria
+Created: Aug. 2024
+"""
+
 import logging
 import rdflib
 from rdflib import Graph, Literal, URIRef, BNode
@@ -103,9 +111,7 @@ class RdfGraph:
                     class_uri
                     + "_"
                     + parse.quote(
-                        re.sub(
-                            "[!@#$%&*()\[\]{};:,./<>?\|`~=+ ]", "_", _member.strip()
-                        )
+                        re.sub("[!@#$%&*()\[\]{};:,./<>?\|`~=+ ]", "_", _member.strip())
                     )
                 )
                 self.graph.add(

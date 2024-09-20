@@ -1,4 +1,13 @@
+"""
+This module provides funtions to parse an XML schema definition (XSD) and 
+progressively generate an OWL ontology from it.
+
+Author: Franck Michel, Université Côte d'Azur, CNRS, Inria
+Created: Aug. 2024
+"""
+
 import logging
+from pprint import pformat
 from rdflib.namespace import XSD, URIRef
 from traceback import format_exc
 from xmlschema import XMLSchema
@@ -12,6 +21,7 @@ from RdfGraph import graph
 
 # Get the config parameters
 import application_config as config
+
 
 logger = logging.getLogger("app." + __name__)
 

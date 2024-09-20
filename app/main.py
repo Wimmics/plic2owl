@@ -1,3 +1,9 @@
+"""
+Author: Franck Michel, Université Côte d'Azur, CNRS, Inria
+Created: Aug. 2024
+Description: Main script to start the convertion of an XSD schema into an RDF/OWL vocabulary
+"""
+
 import argparse
 import logging, logging.config
 import os
@@ -16,7 +22,6 @@ from process_xsd import (
     process_element,
     get_namespaces,
 )
-
 import application_config
 from RdfGraph import graph
 
@@ -132,13 +137,13 @@ if __name__ == "__main__":
         # process_element(component)
 
         # Process one XsdComplextype e.g.: BaseElementsType, DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType, FeedingAtomizedType
-        # component = schema.types["DetailType"]
-        # process_complex_type(component)
+        component = schema.types["HierarchyType"]
+        process_complex_type(component)
 
         # ------------------- Process the whole schema ---------------------
 
         # Process global types and elements
-        if True:
+        if False:
             for component in schema.iter_globals():
                 if type(component) is XsdComplexType:
                     process_complex_type(component)
