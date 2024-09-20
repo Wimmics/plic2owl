@@ -1,0 +1,6 @@
+# Default namespace of imported XSD components, used when loaded XSDs do not mention a target namespace
+default_namespace: 'http://www.eol.org/transfer/content/0.3'
+
+# Generate RDF terms for XSD components from only these namespaces
+namespaces_to_process:
+  - 'http://www.eol.org/transfer/content/0.3'

@@ -14,7 +14,7 @@ from process_xsd import (
     process_simple_type_restriction,
     process_complex_type,
     process_element,
-    get_namespaces
+    get_namespaces,
 )
 
 import application_config
@@ -49,36 +49,35 @@ if __name__ == "__main__":
         # Set an new opener for urllib as some webservers return HTTP 403 Forbidden for the default user agent of urllib
         # See https://theorangeone.net/posts/urllib-useragent/
         opener = build_opener()
-        opener.addheaders = [("User-Agent", "plic2rdf")]
+        opener.addheaders = [("User-Agent", "plic2owl")]
         install_opener(opener)
 
-        # Configure logging service
+        # --- Configure logging service
         with open("../config/logging.yml", "rt") as f:
             log_config = yaml.safe_load(f.read())
         logging.config.dictConfig(log_config)
         logger = logging.getLogger("app." + __name__)
-        # logging.basicConfig(level=logging.DEBUG)
 
-        # Checking the loaded configuration
-        logger.info(f"Configuration parameters:\n{pformat(application_config.config)}")
-
-        # Define inline arguments
+        # --- Define inline arguments
         parser = argparse.ArgumentParser(
-            description="Convert the PlinianCore XSD into an RDF/OWL vocabulary",
-            epilog="Example: python ./main.py PlinianCore_AbstractModel_v3.2.2.7.xsd --copy _schemas --output ../ontology/plic_ontology.ttl",
+            description="Convert an XSD shema into an RDF/OWL vocabulary",
+            epilog="Example: python ./main.py PlinianCore_AbstractModel_v3.2.2.7.xsd --copy schemas --output plic_ontology.ttl",
         )
         parser.add_argument(
             "schema", help="Local path or URL to the XSD schema to process"
         )
         parser.add_argument(
-            "-c",
+            "--config",
+            dest="config_file",
+            help="""Configuration file. Defaults to ../config/default_config.py""",
+        )
+        parser.add_argument(
             "--copy",
             dest="folder",
             help="""Local folder: if it does not exist, the downloaded schemas are stored locally.
               If it exists, the schemas are reloaded from the local folder.""",
         )
         parser.add_argument(
-            "-o",
             "--output",
             dest="output_file",
             help="Output file in RDF Turtle. If not provided, defaults to the standard output.",
@@ -88,15 +87,22 @@ if __name__ == "__main__":
         args = parser.parse_args()
         logger.info("Inline parameters: " + pformat(args))
 
+        # --- Load the aplication configuration
+        if args.config_file is None:
+            application_config.init("../config/default_config.yml")
+        else:
+            application_config.init(args.config_file)
+        logger.info(f"Configuration parameters:\n{pformat(application_config.config)}")
+
         # --- Load the schema either from path/url or from a local copy
         if args.folder is None:
-            logger.debug(f"Loading {args.schema}")
+            logger.info(f"Loading {args.schema}")
             schema = load_schema(
                 args.schema, namespace=application_config.get("default_namespace")
             )
         elif not os.path.isdir(args.folder):
             # Download the schemas and store them locally
-            logger.debug(f"Loading {args.schema} and storing copy to {args.folder}")
+            logger.info(f"Loading {args.schema} and storing copy to {args.folder}")
             schema = load_schema(
                 args.schema,
                 namespace=application_config.get("default_namespace"),
@@ -104,28 +110,29 @@ if __name__ == "__main__":
             )
         else:
             # Reload locally stored schemas
-            logger.debug(
+            logger.info(
                 f"Loading {os.path.basename(args.schema)} from local folder {args.folder}"
             )
             schema = load_schema(
                 os.path.join(args.folder, os.path.basename(args.schema)),
                 namespace=application_config.get("default_namespace"),
             )
-        logger.debug(f"Schema loaded: {schema}")
+        logger.info(f"Schema loaded: {schema}")
 
         # Create the RDF namespaces from those declared in the XSD
         graph.add_namespaces(make_rdf_namespaces(schema))
-        logger.debug(f"RDF prefix/namespaces:\n{pformat(graph.get_namespaces())}")
-        logger.debug("---------------- Initializations completed ------------------")
+        logger.info(f"RDF prefix/namespaces:\n{pformat(graph.get_namespaces())}")
+        logger.info("---------------- Initializations completed ------------------")
+        logger.info("")
 
         # ------------------- Process individual XSD components (test) ---------------------
 
         # Process one: XsdElement e.g.: AudiencesUnstructured, AnnualCycleAtomized, DetailUnstructured, Dataset
-        #component = schema.elements["AncillaryData"]
+        # component = schema.elements["AncillaryData"]
         # process_element(component)
 
         # Process one XsdComplextype e.g.: BaseElementsType, DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType, FeedingAtomizedType
-        #component = schema.types["DetailType"]
+        # component = schema.types["DetailType"]
         # process_complex_type(component)
 
         # ------------------- Process the whole schema ---------------------

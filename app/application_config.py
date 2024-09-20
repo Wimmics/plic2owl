@@ -1,13 +1,18 @@
 import logging
 import yaml
 
-"""This module loads the YAML configuration file (/config/application.yml) at starup
+"""This module loads the YAML configuration file at starup
 and provides a function to retrive a confirgation parameter.
 """
 logger = logging.getLogger("app." + __name__)
 
-with open("../config/application.yml", "r") as cfg:
-    config = yaml.load(cfg, Loader=yaml.FullLoader)
+
+def init(config_file: str) -> None:
+    """Load a configuration file"""
+    global config
+    logger.info(f"Loading configuration file {config_file}")
+    with open(config_file, "r") as cfg:
+        config = yaml.load(cfg, Loader=yaml.FullLoader)
 
 
 def get(key: str) -> str:
