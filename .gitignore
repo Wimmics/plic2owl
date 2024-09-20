@@ -164,7 +164,7 @@ cython_debug/
 
 
 # Custom
-_schema
-_schemas
+_schema*
 output.ttl
 myDocumentation
+_do_not_commit

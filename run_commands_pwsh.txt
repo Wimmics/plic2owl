@@ -1,0 +1,59 @@
+# PliC: http://www.gbif.es/PliC/
+python main.py `
+    _schemas/PlinianCore_AbstractModel_v3.2.2.8.1.xsd `
+    --config ..\config\config_plic.yml `
+    --copy _schemas_plic `
+    --output ..\ontology\plic_ontology.ttl
+
+# EOL: http://www.eol.org/transfer/content/0.3
+python main.py `
+    'https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract models/stable version/content_0_3.xsd' `
+    --config ..\config\config_eol.yml `
+    --copy _schemas_eol `
+    --output ..\ontology\eol_ontology.ttl
+
+# EML: eml://ecoinformatics.org/eml-2.1.1
+python main.py `
+    'https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/eml.xsd' `
+    --config ..\config\config_eml.yml `
+    --copy _schemas_eml `
+    --output ..\ontology\eml_ontology.ttl
+    
+python main.py `
+    'eml-gbif-profile.xsd' `
+    --config ..\config\config_eml.yml `
+    --copy _schemas_eml `
+    --output ..\ontology\eml_ontology.ttl
+
+# GISIN: http://www.gisin.org/gisin/SpeciesStatus
+python main.py `
+    'https://raw.githubusercontent.com/tdwg/gisin/master/xsd/SpeciesStatus.xsd' `
+    --config ..\config\config_gisin.yml `
+    --copy _schemas_gisin `
+    --output ..\ontology\gisin_ontology.ttl
+
+# TCS: http://www.tdwg.org/schemas/tcs/1.01
+python main.py `
+    'https://raw.githubusercontent.com/tdwg/tcs/master/TCS101/v101.xsd' `
+    --config ..\config\config_tcs.yml `
+    --copy _schemas_tcs `
+    --output ..\ontology\tcs_ontology.ttl
+
+# ABCD: http://www.tdwg.org/schemas/abcd/2.06
+python main.py `
+    'http://rs.tdwg.org/abcd/2.06/ABCD_2.06.xsd' `
+    --config ..\config\config_abcd.yml `
+    --copy _schemas_abcd `
+    --output ..\ontology\abcd_ontology.ttl
+
+
+# --------------- Doc generaton -----------------
+
+cd %USERPROFILE%\Documents\Development\plic2owl\_do_not_commit
+java -jar widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+
+Check:
+- Add all sections to a single document
+Uncheck:
+- Abstract
+- Include change log from last version
