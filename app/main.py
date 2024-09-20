@@ -22,7 +22,7 @@ from process_xsd import (
     process_element,
     get_namespaces,
 )
-import application_config
+import config
 from RdfGraph import graph
 
 
@@ -94,23 +94,23 @@ if __name__ == "__main__":
 
         # --- Load the aplication configuration
         if args.config_file is None:
-            application_config.init("../config/default_config.yml")
+            config.init("../config/default_config.yml")
         else:
-            application_config.init(args.config_file)
-        logger.info(f"Configuration parameters:\n{pformat(application_config.config)}")
+            config.init(args.config_file)
+        logger.info(f"Configuration parameters:\n{pformat(config.config)}")
 
         # --- Load the schema either from path/url or from a local copy
         if args.folder is None:
             logger.info(f"Loading {args.schema}")
             schema = load_schema(
-                args.schema, namespace=application_config.get("default_namespace")
+                args.schema, namespace=config.get("default_namespace")
             )
         elif not os.path.isdir(args.folder):
             # Download the schemas and store them locally
             logger.info(f"Loading {args.schema} and storing copy to {args.folder}")
             schema = load_schema(
                 args.schema,
-                namespace=application_config.get("default_namespace"),
+                namespace=config.get("default_namespace"),
                 local_copy_folder=args.folder,
             )
         else:
@@ -120,7 +120,7 @@ if __name__ == "__main__":
             )
             schema = load_schema(
                 os.path.join(args.folder, os.path.basename(args.schema)),
-                namespace=application_config.get("default_namespace"),
+                namespace=config.get("default_namespace"),
             )
         logger.info(f"Schema loaded: {schema}")
 

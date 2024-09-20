@@ -20,7 +20,7 @@ import re
 from RdfGraph import graph
 
 # Get the config parameters
-import application_config as config
+import config
 
 
 logger = logging.getLogger("app." + __name__)

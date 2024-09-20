@@ -17,7 +17,7 @@ from urllib import parse
 logger = logging.getLogger("app." + __name__)
 
 # Get the config parameters
-import application_config as config
+import config
 
 
 class RdfGraph:
