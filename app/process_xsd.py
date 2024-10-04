@@ -123,9 +123,7 @@ def make_complex_type_uri(component: XsdComplexType) -> str:
     """
     _local_name = find_first_local_name(component)
     _local_name = to_camel_case(_local_name)
-    _uri = graph.make_rdf_namespace(component.target_namespace) + to_camel_case(
-        _local_name
-    )
+    _uri = graph.make_rdf_namespace(component.target_namespace) + _local_name
 
     # If the complex type has a local name (it is not anonymous) then we keep it as is.
     # If not, that means that find_first_local_name() has gone up to the parent element,
@@ -435,6 +433,21 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
     # --- Start checking the possible cases
     # -------------------------------------------------------
 
+    # Process the optional attributes of the type
+    for _attribute in component.attributes:
+
+        # Create a property corresponding to the attribute, with a unique URI
+        _local_name = find_first_local_name(component)
+        _local_name = to_camel_case(_local_name + "_" + str(_attribute))
+        _prop_uri = graph.make_rdf_namespace(component.target_namespace) + _local_name
+        graph.add_datatype_property(_prop_uri, label=f"attribute {str(_attribute)}")
+
+        _class = make_complex_type_uri(component)
+        logger.debug(
+            f"{indent}| Making datatype property {_prop_uri} for attribute '{str(_attribute)}' of {component_str}"
+        )
+        graph.add_property_domain_range(_prop_uri, domain=_class)
+
     # --- Complex type extends a builtin type: no type is created,
     #     instead the parent property will be a datatype property with builtin type as range
     if component.is_extension():
@@ -702,7 +715,7 @@ def process_element(component: XsdElement, indent="") -> None:
                 if _class is not None:
                     graph.add_property_domain_range(_prop_uri, range=_class)
 
-    # --- Case of an XsdUnion: in a frist approach, these are considered as simple literal data types
+    # --- Case of an XsdUnion: in a first approach, these are considered as simple literal data types
     elif type(component.type) is XsdUnion:
         graph.add_datatype_property(
             _prop_uri, label=_prop_label, description=_annotation

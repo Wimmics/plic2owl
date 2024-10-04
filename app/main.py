@@ -137,13 +137,13 @@ if __name__ == "__main__":
         # process_element(component)
 
         # Process one XsdComplextype e.g.: BaseElementsType, DistributionType, DistributionAtomizedType, TaxonRecordNameType, TaxonomicDescriptionType, FeedingAtomizedType
-        component = schema.types["HierarchyType"]
-        process_complex_type(component)
+        #component = schema.types["HierarchyType"]
+        #process_complex_type(component)
 
         # ------------------- Process the whole schema ---------------------
 
         # Process global types and elements
-        if False:
+        if True:
             for component in schema.iter_globals():
                 if type(component) is XsdComplexType:
                     process_complex_type(component)
