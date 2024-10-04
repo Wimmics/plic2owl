@@ -78,30 +78,30 @@ By default the target is the standard output, and the log level is WARNING. See 
 
 ## Imported schemas and equivalent RDF vocabularies
 
-| Vocabulary | Location |
+| |  |
 |--------------| ------------- |
-|**Access to Biological Collection Data (ABCD)** ||
+||**Access to Biological Collection Data (ABCD)** |
 | XSD | Namespace: http://www.tdwg.org/schemas/abcd/2.06 <br>Source: http://rs.tdwg.org/abcd/2.06/ABCD_2.06.xsd |
 | RDF | Namespace: http://rs.tdwg.org/abcd/terms/ <br>Source: https://github.com/tdwg/abcd/blob/master/ontology/abcd_concepts.owl |
-|**Darwin Core Terms (DwC) + extensions**||
+||**Darwin Core Terms (DwC) + extensions**|
 | XSD | Namespace: http://rs.tdwg.org/dwc/terms/ <br>Source: https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/tdwg_dwc_extensions.xsd |
 | RDF | Namespace: http://rs.tdwg.org/dwc/terms/ <br>Source:  http://rs.tdwg.org/dump/terms.ttl |
-| **Dublin Core Elements** ||
+|| **Dublin Core Elements** |
 | XSD | Namespace: http://purl.org/dc/elements/1.1/ <br>Source: http://dublincore.org/schemas/xmls/qdc/dc.xsd |
 | RDF | Namespace: http://purl.org/dc/elements/1.1/ <br>Source:  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.ttl |
-| **Dublin Core Terms** ||
+|| **Dublin Core Terms** |
 | XSD | Namespace: http://purl.org/dc/terms/ <br>Source: http://dublincore.org/schemas/xmls/qdc/dcterms.xsd |
 | RDF | Namespace: http://purl.org/dc/terms/ <br>Source:  https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl |
-| **Ecological Metadata Language (EML)** |
+|| **Ecological Metadata Language (EML)** |
 | XSD | Namespace: eml://ecoinformatics.org/eml-2.1.1 <br>Source: https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/eml.xsd |
 | RDF | none |
-| **Encyclopedia of Life (EOL)** |
+|| **Encyclopedia of Life (EOL)** |
 | XSD | Namespace: http://www.eol.org/transfer/content/0.3 <br>Source: https://raw.githubusercontent.com/tdwg/PlinianCore/master/xsd/abstract%20models/stable%20version/content_0_3.xsd |
 | RDF | none |
-| **GISIN** |
+|| **GISIN** |
 | XSD | Namespace: http://www.gisin.org/gisin/SpeciesStatus <br>Source: https://raw.githubusercontent.com/tdwg/gisin/master/xsd/SpeciesStatus.xsd |
 | RDF | none |
-| **Taxon Concept Schema (TCS)** |
+|| **Taxon Concept Schema (TCS)** |
 | XSD | Namespace: http://www.tdwg.org/schemas/tcs/1.01 <br>Source: https://raw.githubusercontent.com/tdwg/tcs/master/TCS101/v101.xsd |
 | RDF | none |
 
