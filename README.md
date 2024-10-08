@@ -8,6 +8,12 @@ The **Plinian Core ontology** is a representation the XSD PlinianCore data model
 This repository is a Python application that transtlates the Plinian Core XML schema into an OWL ontology. The output format is [RDF Turtle](https://www.w3.org/TR/turtle/).
 
 
+## Current status
+
+The documentation of the ontology is deployed on [the Github pages of this repository](https://wimmics.github.io/plic2owl/documentation/index-en.html).
+
+The WebVOWL only interface is accessible from [this page](https://wimmics.github.io/plic2owl/documentation/webvowl).
+
 **WARNING**: this is an on-going work, the generated ontology may change at any time.
 
 
