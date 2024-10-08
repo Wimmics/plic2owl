@@ -55,21 +55,31 @@ def to_camel_case(s) -> str:
     return s[0].upper() + s[1:]
 
 
-def make_complex_type_str(component: XsdComplexType) -> str:
+def make_component_str(component: XsdComponent) -> str:
     """
-    Generate the string representing an XSD complex type, depending on whether this
-    is a named or anonymous type. Used for logging purposes.
+    Generate the string representating an XSD element or complex type, depending on whether this
+    is a named or anonymous element. Used for logging purposes.
 
     Args:
-        component (XsdComplexType): the XSD complex type
+        component (XsdComponent): the element or complex type
 
     Returns:
       formatted type name
     """
-    if component.local_name is None or component.prefixed_name is None:
-        component_str = f"(anonymous) {str(component)}"
+
+    if type(component) is XsdComplexType:
+        if component.local_name is None or component.prefixed_name is None:
+            component_str = f"(anonymous) {str(component)}"
+        else:
+            component_str = f"{graph.make_rdf_namespace(component.target_namespace)}{component.local_name} ({component.prefixed_name})"
+        return component_str
+    elif type(component) is XsdElement:
+        if component.local_name is None or component.prefixed_name is None:
+            component_str = str(component)
+        else:
+            component_str = f"{str(component)} {graph.make_rdf_namespace(component.target_namespace)}{component.local_name}, type: {str(component.type)}"
     else:
-        component_str = f"{graph.make_rdf_namespace(component.target_namespace)}{component.local_name} ({component.prefixed_name})"
+        raise TypeError(f"Unsupported type {type(component)}")
     return component_str
 
 
@@ -98,6 +108,46 @@ def find_first_parent_complex_type(component: XsdComponent) -> XsdComplexType:
         return component.parent
     else:
         return find_first_parent_complex_type(component.parent)
+
+
+def has_element_unique_use(elem: XsdElement) -> bool:
+    """
+    Check if an element is used only once in the schema, or multiple times. This helps decide whether the
+    corresponding property should have an rdfs:domain (single use) or not (multiple uses).
+
+    The function looks for all the occurrences of the element in the schema.
+    An occurrence may be the definition of the element `<xs:element name="ElemName"...>` or a reference
+    to an element `<xs:element ref="ElemName"...>`.
+
+    If an element is only defined (name=...) and never referenced, then it has a unique use.
+    If an element is defined (name=...) globally, and referenced only once, then it has a unique use.
+    In all the other cases, the element is used multiple times.
+
+    Args:
+        elem (XsdElement): the XSD element to check
+
+    Returns:
+        True if the element is used only once, False otherwise
+    """
+    _uri = make_element_uri(elem)
+    _elem_uses = list()
+    for _comp in elem.schema.iter_components():
+        # Iterate over all the elements of the schema and look for one with the same URI
+        if type(_comp) is XsdElement:
+            if make_element_uri(_comp) == _uri:
+                _elem_uses.append(_comp)
+
+    if len(_elem_uses) <= 1:
+        # The element is used once, i.e. defined (name=...) and never referenced, then it has a unique use
+        return True
+    elif len(_elem_uses) == 2:
+        # The element is defined (name=...) globally, and referenced only once, then it has a unique use.
+        if _elem_uses[0].is_global() and _elem_uses[1].ref is not None:
+            return True
+        if _elem_uses[1].is_global() and _elem_uses[0].ref is not None:
+            return True
+
+    return False
 
 
 def make_complex_type_uri(component: XsdComplexType) -> str:
@@ -155,65 +205,6 @@ def make_complex_type_label(component: XsdComplexType) -> str:
     if _local_name.endswith("Type"):
         _local_name = _local_name[:-4]
     return camel_case_split(_local_name)
-
-
-def has_element_unique_use(elem: XsdElement) -> bool:
-    """
-    Check if an element is used only once in the schema, or multiple times. This helps decide whether the
-    corresponding property should have an rdfs:domain (single use) or not (multiple uses).
-
-    The function looks for all the occurrences of the element in the schema.
-    An occurrence may be the definition of the element `<xs:element name="ElemName"...>` or a reference
-    to an element `<xs:element ref="ElemName"...>`.
-
-    If an element is only defined (name=...) and never referenced, then it has a unique use.
-    If an element is defined (name=...) globally, and referenced only once, then it has a unique use.
-    In all the other cases, the element is used multiple times.
-
-    Args:
-        elem (XsdElement): the XSD element to check
-
-    Returns:
-        True if the element is used only once, False otherwise
-    """
-    _uri = make_element_uri(elem)
-    _elem_uses = list()
-    for _comp in elem.schema.iter_components():
-        # Iterate over all the elements of the schema and look for one with the same URI
-        if type(_comp) is XsdElement:
-            if make_element_uri(_comp) == _uri:
-                _elem_uses.append(_comp)
-
-    if len(_elem_uses) <= 1:
-        # The element is used once, i.e. defined (name=...) and never referenced, then it has a unique use
-        return True
-    elif len(_elem_uses) == 2:
-        # The element is defined (name=...) globally, and referenced only once, then it has a unique use.
-        if _elem_uses[0].is_global() and _elem_uses[1].ref is not None:
-            return True
-        if _elem_uses[1].is_global() and _elem_uses[0].ref is not None:
-            return True
-
-    return False
-
-
-def make_element_str(component: XsdElement) -> str:
-    """
-    Generate the string representating an XSD element, depending on whether this
-    is a named or anonymous element. Used for logging purposes.
-
-    Args:
-        component (XsdElement): the element
-
-    Returns:
-      formatted type name
-    """
-
-    if component.local_name is None or component.prefixed_name is None:
-        component_str = str(component)
-    else:
-        component_str = f"{str(component)} {graph.make_rdf_namespace(component.target_namespace)}{component.local_name}, type: {str(component.type)}"
-    return component_str
 
 
 def make_element_uri(
@@ -402,6 +393,43 @@ def get_namespaces(schema: XMLSchema) -> list[tuple[str, str]]:
     return [(_prefix, _uri) for _prefix, _uri in schema.namespaces.items()]
 
 
+def create_property_from_atribute(component: XsdComponent, indent="") -> None:
+    """
+    Create a data type property for each attribute of a component
+
+    Args:
+        component (XsdComponent): the component in which to look for attributes
+        indent (str): optional, used to indent print outs
+
+    Returns:
+        None
+    """
+    component_str = make_component_str(component)
+
+    # Only process the namespaces of interest
+    if component.target_namespace not in config.get("namespaces_to_process"):
+        logger.info(
+            f"{indent}-- Ignoring element from non-managed namespace {component_str}"
+        )
+        return
+
+    for _attribute in component.attributes:
+        if _attribute is not None:
+            # Create a property corresponding to the attribute, with a unique URI
+            _local_name = find_first_local_name(component)
+            _local_name = to_camel_case(_local_name + "_" + str(_attribute))
+            _prop_uri = (
+                graph.make_rdf_namespace(component.target_namespace) + "has" + _local_name
+            )
+            graph.add_datatype_property(_prop_uri, label=f"attribute '{str(_attribute)}'")
+
+            _class = make_complex_type_uri(component)
+            logger.debug(
+                f"{indent}| Making datatype property (1) {_prop_uri} for attribute '{str(_attribute)}' of {component_str}"
+            )
+            graph.add_property_domain_range(_prop_uri, domain=_class)
+
+
 def process_complex_type(component: XsdComplexType, indent="") -> str:
     """
     Recursively process the content of an XSD complex type.
@@ -415,7 +443,7 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
     Returns:
         str: URI of the complex type created or None
     """
-    component_str = make_complex_type_str(component)
+    component_str = make_component_str(component)
 
     _class = None
 
@@ -433,20 +461,8 @@ def process_complex_type(component: XsdComplexType, indent="") -> str:
     # --- Start checking the possible cases
     # -------------------------------------------------------
 
-    # Process the optional attributes of the type
-    for _attribute in component.attributes:
-
-        # Create a property corresponding to the attribute, with a unique URI
-        _local_name = find_first_local_name(component)
-        _local_name = to_camel_case(_local_name + "_" + str(_attribute))
-        _prop_uri = graph.make_rdf_namespace(component.target_namespace) + _local_name
-        graph.add_datatype_property(_prop_uri, label=f"attribute {str(_attribute)}")
-
-        _class = make_complex_type_uri(component)
-        logger.debug(
-            f"{indent}| Making datatype property {_prop_uri} for attribute '{str(_attribute)}' of {component_str}"
-        )
-        graph.add_property_domain_range(_prop_uri, domain=_class)
+    # --- Process the optional attributes of the type
+    create_property_from_atribute(component, indent)
 
     # --- Complex type extends a builtin type: no type is created,
     #     instead the parent property will be a datatype property with builtin type as range
@@ -589,7 +605,7 @@ def process_element(component: XsdElement, indent="") -> None:
         indent (str): optional, used to indent print outs
     """
     indent = f"{indent}| "
-    component_str = make_element_str(component)
+    component_str = make_component_str(component)
 
     # Only process the namespaces of interest
     if component.target_namespace not in config.get("namespaces_to_process"):
@@ -635,7 +651,7 @@ def process_element(component: XsdElement, indent="") -> None:
         _datatype = map_xsd_builtin_type_to_rdf(component.type.prefixed_name)
         if _datatype is not None:
             logger.debug(
-                f"{indent}| Making datatype property {_prop_uri} for {component_str}"
+                f"{indent}| Making datatype property (2) {_prop_uri} for {component_str}"
             )
             graph.add_property_domain_range(_prop_uri, range=_datatype)
         else:
@@ -664,10 +680,13 @@ def process_element(component: XsdElement, indent="") -> None:
     # --- Other cases where the element has a complex type
     elif type(component.type) is XsdComplexType:
 
+        # --- Process the optional attributes of the type
+        create_property_from_atribute(component.type, indent)
+
         # --- Assumption: a complex element of type xs:anyType is used for NL notes -> datatype property
         if component.type.prefixed_name == "xs:anyType":
             logger.debug(
-                f"{indent}| Making datatype property {_prop_uri} for {component_str}"
+                f"{indent}| Making datatype property (3) {_prop_uri} for {component_str}"
             )
             graph.add_datatype_property(
                 _prop_uri, label=_prop_label, description=_annotation
@@ -686,7 +705,7 @@ def process_element(component: XsdElement, indent="") -> None:
             )
             if _datatype is not None:
                 logger.debug(
-                    f"{indent}| Making datatype property {_prop_uri} for {component_str}"
+                    f"{indent}| Making datatype property (4) {_prop_uri} for {component_str}"
                 )
                 graph.add_property_domain_range(_prop_uri, range=_datatype)
             else:
