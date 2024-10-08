@@ -1,0 +1,2642 @@
+@prefix : <http://www.gbif.es/PliC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.gbif.es/PliC/> .
+
+<http://www.gbif.es/PliC/> rdf:type owl:Ontology ;
+                            owl:versionIRI :v3_2_2_8_1 ;
+                            <http://purl.org/dc/terms/accrualMethod> <https://github.com/tdwg/PlinianCore/tree/master?tab=readme-ov-file#plinian-core-task-group-charter> ;
+                            <http://purl.org/dc/terms/created> "2024"^^xsd:gYear ;
+                            <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9064-0463> ,
+                                                               <https://orcid.org/0000-0002-6321-9398> ,
+                                                               "Gloria Martínez" ;
+                            <http://purl.org/dc/terms/description> "Representation of the Plinian Core XSD vocabulary as an OWL ontology."@en ;
+                            <http://purl.org/dc/terms/issued> "2024-10-08"^^xsd:date ;
+                            <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
+                            <http://purl.org/dc/terms/title> "Plinian Core ontology" ;
+                            <http://purl.org/pav/createdOn> "2024"^^xsd:gYear ;
+                            <http://qudt.org/schema/qudt/acronym> "plic" ;
+                            <http://schema.org/dateCreated> "2024"^^xsd:gYear ;
+                            <http://schema.org/datePublished> "2024-10-08"^^xsd:date ;
+                            <http://schema.org/name> "Plinian Core ontology" ;
+                            <http://schema.org/subjectOf> <https://doi.org/10.3897/biss.2.25869> ;
+                            rdfs:label "Plinian Core ontology" ;
+                            owl:versionInfo "3.2.2.8.1" ;
+                            <http://www.w3.org/ns/dcat#langindgPage> <https://github.com/Wimmics/plic2owl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/accrualMethod
+<http://purl.org/dc/terms/accrualMethod> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/pav/createdOn
+<http://purl.org/pav/createdOn> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qudt/acronym
+<http://qudt.org/schema/qudt/acronym> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/dateCreated
+<http://schema.org/dateCreated> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/datePublished
+<http://schema.org/datePublished> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/subjectOf
+<http://schema.org/subjectOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#langindgPage
+<http://www.w3.org/ns/dcat#langindgPage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.gbif.es/PliC/hasAbundanceData
+:hasAbundanceData rdf:type owl:ObjectProperty ;
+                  rdfs:domain :PopulationBiologyAtomizedType ;
+                  rdfs:range :DetailType ;
+                  rdfs:comment "Total number of individuals of a population" ;
+                  rdfs:label "has abundance data" .
+
+
+###  http://www.gbif.es/PliC/hasActions
+:hasActions rdf:type owl:ObjectProperty ;
+            rdfs:domain :ManagementAndConservationAtomizedType ;
+            rdfs:range :ActionsType ;
+            rdfs:label "has actions" .
+
+
+###  http://www.gbif.es/PliC/hasAncillaryData
+:hasAncillaryData rdf:type owl:ObjectProperty ;
+                  rdfs:range <http://www.eol.org/transfer/content/0.3#dataObjectBaseType> ;
+                  rdfs:label "has ancillary data" .
+
+
+###  http://www.gbif.es/PliC/hasAnnualCycleAtomized
+:hasAnnualCycleAtomized rdf:type owl:ObjectProperty ;
+                        rdfs:domain :AnnualCyclesType ;
+                        rdfs:range :AnnualCycleAtomizedType ;
+                        rdfs:label "has annual cycle atomized" .
+
+
+###  http://www.gbif.es/PliC/hasAnnualCycles
+:hasAnnualCycles rdf:type owl:ObjectProperty ;
+                 rdfs:domain :NaturalHistoryType ;
+                 rdfs:range :AnnualCyclesType ;
+                 rdfs:label "has annual cycles" .
+
+
+###  http://www.gbif.es/PliC/hasAppliesTo
+:hasAppliesTo rdf:type owl:ObjectProperty ;
+              rdfs:range :DistributionType ;
+              rdfs:label "has applies to" .
+
+
+###  http://www.gbif.es/PliC/hasAreaOfOccupancy
+:hasAreaOfOccupancy rdf:type owl:ObjectProperty ;
+                    rdfs:domain :TerritoryAtomizedType ;
+                    rdfs:range :DetailType ;
+                    rdfs:comment "Area within its 'extent of occurrence' (see EOO) which is occupied by a taxon, excluding cases of vagrancy. The measure reflects the fact that a taxon will not usually occur throughout the area of its extent of occurrence, which may contain unsuitable or unoccupied habitats. Reference: http://www.iucnredlist.org/technical-documents/categories-and-criteria/2001-categories-criteria#definitions" ;
+                    rdfs:label "has area of occupancy" .
+
+
+###  http://www.gbif.es/PliC/hasAudience
+:hasAudience rdf:type owl:ObjectProperty ;
+             rdfs:domain :TargetAudiencesType ;
+             rdfs:range :AudienceEnumType ;
+             rdfs:comment "Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low)." ;
+             rdfs:label "has audience" .
+
+
+###  http://www.gbif.es/PliC/hasAverageDensity
+:hasAverageDensity rdf:type owl:ObjectProperty ;
+                   rdfs:domain :PopulationBiologyAtomizedType ;
+                   rdfs:range :DetailType ;
+                   rdfs:comment "Average of the densities obtained for a population" ;
+                   rdfs:label "has average density" .
+
+
+###  http://www.gbif.es/PliC/hasBaseElements
+:hasBaseElements rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TaxonRecordType ;
+                 rdfs:range :BaseElementsType ;
+                 rdfs:label "has base elements" .
+
+
+###  http://www.gbif.es/PliC/hasBehavior
+:hasBehavior rdf:type owl:ObjectProperty ;
+             rdfs:domain :NaturalHistoryType ;
+             rdfs:range :BehaviorType ;
+             rdfs:comment "Responses, reactions or movements made by an organism in a particular situation." ;
+             rdfs:label "has behavior" .
+
+
+###  http://www.gbif.es/PliC/hasBehaviorAtomized
+:hasBehaviorAtomized rdf:type owl:ObjectProperty ;
+                     rdfs:domain :BehaviorType ;
+                     rdfs:range :DetailType ;
+                     rdfs:label "has behavior atomized" .
+
+
+###  http://www.gbif.es/PliC/hasBirthRate
+:hasBirthRate rdf:type owl:ObjectProperty ;
+              rdfs:domain :PopulationBiologyAtomizedType ;
+              rdfs:range :DetailType ;
+              rdfs:comment "Production of new individuals in a population" ;
+              rdfs:label "has birth rate" .
+
+
+###  http://www.gbif.es/PliC/hasCarryingCapacity
+:hasCarryingCapacity rdf:type owl:ObjectProperty ;
+                     rdfs:domain :PopulationBiologyAtomizedType ;
+                     rdfs:range :DetailType ;
+                     rdfs:comment "Maximum population density defined by resources in the absence of predator and parasites." ;
+                     rdfs:label "has carrying capacity" .
+
+
+###  http://www.gbif.es/PliC/hasCauses
+:hasCauses rdf:type owl:ObjectProperty ;
+           rdfs:domain :MigratoryAtomizedType ;
+           rdfs:range :CausesEnumType ;
+           rdfs:comment "VCR: Seasonal climatic variation, Resource availability and Reproduction" ;
+           rdfs:label "has causes" .
+
+
+###  http://www.gbif.es/PliC/hasCitation
+:hasCitation rdf:type owl:ObjectProperty ;
+             rdfs:domain :MetadataType ;
+             rdfs:range :CitationType ;
+             rdfs:comment "A single citation for use when citing the dataset." ;
+             rdfs:label "has citation" .
+
+
+###  http://www.gbif.es/PliC/hasCommonNames
+:hasCommonNames rdf:type owl:ObjectProperty ;
+                rdfs:domain :NomenclatureAndClassificationType ;
+                rdfs:range :CommonNamesType ;
+                rdfs:label "has common names" .
+
+
+###  http://www.gbif.es/PliC/hasCommonNamesAtomized
+:hasCommonNamesAtomized rdf:type owl:ObjectProperty ;
+                        rdfs:domain :CommonNamesType ;
+                        rdfs:range :CommonNamesAtomizedType ;
+                        rdfs:label "has common names atomized" .
+
+
+###  http://www.gbif.es/PliC/hasDataset
+:hasDataset rdf:type owl:ObjectProperty ;
+            rdfs:range :DatasetType .
+
+
+###  http://www.gbif.es/PliC/hasDemographyAndThreat
+:hasDemographyAndThreat rdf:type owl:ObjectProperty ;
+                        rdfs:domain :TaxonRecordType ;
+                        rdfs:range :DemographyAndThreatType ;
+                        rdfs:label "has demography and threat" .
+
+
+###  http://www.gbif.es/PliC/hasDensityData
+:hasDensityData rdf:type owl:ObjectProperty ;
+                rdfs:domain :PopulationBiologyAtomizedType ;
+                rdfs:range :DetailType ;
+                rdfs:comment "Size of a population in relation to a definite unit of space" ;
+                rdfs:label "has density data" .
+
+
+###  http://www.gbif.es/PliC/hasDescriptionLifeStages
+:hasDescriptionLifeStages rdf:type owl:ObjectProperty ;
+                          rdfs:domain :PopulationBiologyAtomizedType ;
+                          rdfs:range :DetailType ;
+                          rdfs:comment "Sex/age categories or life stages of a species; can be size in the case of plants." ;
+                          rdfs:label "has description life stages" .
+
+
+###  http://www.gbif.es/PliC/hasDetailAtomized
+:hasDetailAtomized rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MiscDetailType ;
+                   rdfs:range :DetailType ;
+                   rdfs:label "has detail atomized" .
+
+
+###  http://www.gbif.es/PliC/hasDirectThreatAtomized
+:hasDirectThreatAtomized rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DirectThreatsType ;
+                         rdfs:range :DetailType ;
+                         rdfs:label "has direct threat atomized" .
+
+
+###  http://www.gbif.es/PliC/hasDirectThreats
+:hasDirectThreats rdf:type owl:ObjectProperty ;
+                  rdfs:domain :DemographyAndThreatType ;
+                  rdfs:range :DirectThreatsType ;
+                  rdfs:comment "Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future." ;
+                  rdfs:label "has direct threats" .
+
+
+###  http://www.gbif.es/PliC/hasDispersal
+:hasDispersal rdf:type owl:ObjectProperty ;
+              rdfs:domain :NaturalHistoryType ;
+              rdfs:range :DispersalType ;
+              rdfs:label "has dispersal" .
+
+
+###  http://www.gbif.es/PliC/hasDispersalAtomized
+:hasDispersalAtomized rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DispersalType ;
+                      rdfs:range :DispersalAtomizedType ;
+                      rdfs:label "has dispersal atomized" .
+
+
+###  http://www.gbif.es/PliC/hasDispersalMeans
+:hasDispersalMeans rdf:type owl:ObjectProperty ;
+                   rdfs:domain :DispersalAtomizedType ;
+                   rdfs:range :DispersalMeansEnumType ;
+                   rdfs:comment "VCR. Zoochory, Anemochory, Hydrochory, Barochory, Autochory" ;
+                   rdfs:label "has dispersal means" .
+
+
+###  http://www.gbif.es/PliC/hasDistance
+:hasDistance rdf:type owl:ObjectProperty ;
+             rdfs:domain :DispersalAtomizedType ;
+             rdfs:range :DistanceType ;
+             rdfs:label "has distance" .
+
+
+###  http://www.gbif.es/PliC/hasDistribution
+:hasDistribution rdf:type owl:ObjectProperty ;
+                 rdfs:domain :HabitatAndDistributionType ;
+                 rdfs:range :DistributionType ;
+                 rdfs:label "has distribution" .
+
+
+###  http://www.gbif.es/PliC/hasDistributionAtomized
+:hasDistributionAtomized rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DistributionType ;
+                         rdfs:range :DistributionAtomizedType ;
+                         rdfs:label "has distribution atomized" .
+
+
+###  http://www.gbif.es/PliC/hasDistributionScope
+:hasDistributionScope rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DistributionType ;
+                      rdfs:range :DistributionScopeType ;
+                      rdfs:label "has distribution scope" .
+
+
+###  http://www.gbif.es/PliC/hasEcologicalSignificance
+:hasEcologicalSignificance rdf:type owl:ObjectProperty ;
+                           rdfs:domain :NaturalHistoryType ;
+                           rdfs:range :EcologicalSignificanceType ;
+                           rdfs:comment "Ecological importance of the taxon. (Placeholder)" ;
+                           rdfs:label "has ecological significance" .
+
+
+###  http://www.gbif.es/PliC/hasEcologicalSignificanceAtomized
+:hasEcologicalSignificanceAtomized rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :EcologicalSignificanceType ;
+                                   rdfs:range :DetailType ;
+                                   rdfs:label "has ecological significance atomized" .
+
+
+###  http://www.gbif.es/PliC/hasEmigration
+:hasEmigration rdf:type owl:ObjectProperty ;
+               rdfs:domain :PopulationBiologyAtomizedType ;
+               rdfs:range :DetailType ;
+               rdfs:comment "Movement of individuals outside a population, or from one area to another" ;
+               rdfs:label "has emigration" .
+
+
+###  http://www.gbif.es/PliC/hasEndemic
+:hasEndemic rdf:type owl:ObjectProperty ;
+            rdfs:domain :HabitatAndDistributionType ;
+            rdfs:range :EndemicType ;
+            rdfs:label "has endemic" .
+
+
+###  http://www.gbif.es/PliC/hasEndemicAtomized
+:hasEndemicAtomized rdf:type owl:ObjectProperty ;
+                    rdfs:domain :EndemicType ;
+                    rdfs:range :EndemicAtomizedType ;
+                    rdfs:comment "List of areas structured and categorized the degree of safety." ;
+                    rdfs:label "has endemic atomized" .
+
+
+###  http://www.gbif.es/PliC/hasEnvironmentalEnvelope
+:hasEnvironmentalEnvelope rdf:type owl:ObjectProperty ;
+                          rdfs:domain :NaturalHistoryType ;
+                          rdfs:range :EnvironmentalEnvelopeType ;
+                          rdfs:label "has environmental envelope" .
+
+
+###  http://www.gbif.es/PliC/hasEnvironmentalEnvelopeAtomized
+:hasEnvironmentalEnvelopeAtomized rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :EnvironmentalEnvelopeType ;
+                                  rdfs:range :DetailType ;
+                                  rdfs:label "has environmental envelope atomized" .
+
+
+###  http://www.gbif.es/PliC/hasExtentOfOccurrence
+:hasExtentOfOccurrence rdf:type owl:ObjectProperty ;
+                       rdfs:domain :TerritoryAtomizedType ;
+                       rdfs:range :DetailType ;
+                       rdfs:comment "Area contained within the shortest continuous imaginary boundary which can be drawn to encompass all the known, inferred or projected sites of present occurrence of a taxon, excluding cases of vagrancy." ;
+                       rdfs:label "has extent of occurrence" .
+
+
+###  http://www.gbif.es/PliC/hasFecundity
+:hasFecundity rdf:type owl:ObjectProperty ;
+              rdfs:domain :PopulationBiologyAtomizedType ;
+              rdfs:range :DetailType ;
+              rdfs:comment "Potential ability of an organism to produce eggs or young; 						rate of production of young by a female" ;
+              rdfs:label "has fecundity" .
+
+
+###  http://www.gbif.es/PliC/hasFeeding
+:hasFeeding rdf:type owl:ObjectProperty ;
+            rdfs:domain :NaturalHistoryType ;
+            rdfs:range :FeedingType ;
+            rdfs:label "has feeding" .
+
+
+###  http://www.gbif.es/PliC/hasFeedingAtomized
+:hasFeedingAtomized rdf:type owl:ObjectProperty ;
+                    rdfs:domain :FeedingType ;
+                    rdfs:range :FeedingAtomizedType ;
+                    rdfs:label "has feeding atomized" .
+
+
+###  http://www.gbif.es/PliC/hasFeedingMode
+:hasFeedingMode rdf:type owl:ObjectProperty ;
+                rdfs:domain :FeedingAtomizedType ;
+                rdfs:range :FeedingModeEnumType ;
+                rdfs:comment "VC. Primary diet source." ;
+                rdfs:label "has feeding mode" .
+
+
+###  http://www.gbif.es/PliC/hasFullDescription
+:hasFullDescription rdf:type owl:ObjectProperty ;
+                    rdfs:domain :TaxonomicDescriptionType ;
+                    rdfs:range :FullDescriptionType ;
+                    rdfs:comment "Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism." ;
+                    rdfs:label "has full description" .
+
+
+###  http://www.gbif.es/PliC/hasFullDescriptionAtomized
+:hasFullDescriptionAtomized rdf:type owl:ObjectProperty ;
+                            rdfs:domain :FullDescriptionType ;
+                            rdfs:range :DetailType ;
+                            rdfs:label "has full description atomized" .
+
+
+###  http://www.gbif.es/PliC/hasHabitatAndDistribution
+:hasHabitatAndDistribution rdf:type owl:ObjectProperty ;
+                           rdfs:domain :TaxonRecordType ;
+                           rdfs:range :HabitatAndDistributionType ;
+                           rdfs:label "has habitat and distribution" .
+
+
+###  http://www.gbif.es/PliC/hasHabitatAtomized
+:hasHabitatAtomized rdf:type owl:ObjectProperty ;
+                    rdfs:domain :HabitatsType ;
+                    rdfs:range :DetailType ;
+                    rdfs:label "has habitat atomized" .
+
+
+###  http://www.gbif.es/PliC/hasHabitats
+:hasHabitats rdf:type owl:ObjectProperty ;
+             rdfs:domain :HabitatAndDistributionType ;
+             rdfs:range :HabitatsType ;
+             rdfs:label "has habitats" .
+
+
+###  http://www.gbif.es/PliC/hasHierarchy
+:hasHierarchy rdf:type owl:ObjectProperty ;
+              rdfs:domain :NomenclatureAndClassificationType ;
+              rdfs:range :HierarchyType ;
+              rdfs:label "has hierarchy" .
+
+
+###  http://www.gbif.es/PliC/hasIdentificationKeys
+:hasIdentificationKeys rdf:type owl:ObjectProperty ;
+                       rdfs:domain :TaxonomicDescriptionType ;
+                       rdfs:range :IdentificationKeysType ;
+                       rdfs:comment "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons.  For example:  If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)" ;
+                       rdfs:label "has identification keys" .
+
+
+###  http://www.gbif.es/PliC/hasImmigration
+:hasImmigration rdf:type owl:ObjectProperty ;
+                rdfs:domain :PopulationBiologyAtomizedType ;
+                rdfs:range :DetailType ;
+                rdfs:comment "Individuals entering a population" ;
+                rdfs:label "has immigration" .
+
+
+###  http://www.gbif.es/PliC/hasImpactMechanism
+:hasImpactMechanism rdf:type owl:ObjectProperty ;
+                    rdfs:domain :InvasivenessAtomizedType ;
+                    rdfs:range :ImpactMechanismEnumType ;
+                    rdfs:comment "Mechanism of introduction or impact to a new location." ;
+                    rdfs:label "has impact mechanism" .
+
+
+###  http://www.gbif.es/PliC/hasImpactTarget
+:hasImpactTarget rdf:type owl:ObjectProperty ;
+                 rdfs:domain :InvasivenessAtomizedType ;
+                 rdfs:range :ImpactTargetEnumType ;
+                 rdfs:comment "Who/what is impacting." ;
+                 rdfs:label "has impact target" .
+
+
+###  http://www.gbif.es/PliC/hasInteractionAtomized
+:hasInteractionAtomized rdf:type owl:ObjectProperty ;
+                        rdfs:domain :InteractionsType ;
+                        rdfs:range :InteractionAtomizedType ;
+                        rdfs:label "has interaction atomized" .
+
+
+###  http://www.gbif.es/PliC/hasInteractions
+:hasInteractions rdf:type owl:ObjectProperty ;
+                 rdfs:domain :NaturalHistoryType ;
+                 rdfs:range :InteractionsType ;
+                 rdfs:label "has interactions" .
+
+
+###  http://www.gbif.es/PliC/hasInvasiveness
+:hasInvasiveness rdf:type owl:ObjectProperty ;
+                 rdfs:domain :TaxonRecordType ;
+                 rdfs:range :InvasivenessType ;
+                 rdfs:comment "Information about invasive exotic species that could threaten to ecosystem, habitats and species" ;
+                 rdfs:label "has invasiveness" .
+
+
+###  http://www.gbif.es/PliC/hasInvasivenessAtomized
+:hasInvasivenessAtomized rdf:type owl:ObjectProperty ;
+                         rdfs:domain :InvasivenessType ;
+                         rdfs:range :InvasivenessAtomizedType ;
+                         rdfs:label "has invasiveness atomized" .
+
+
+###  http://www.gbif.es/PliC/hasLegislation
+:hasLegislation rdf:type owl:ObjectProperty ;
+                rdfs:domain :DemographyAndThreatType ;
+                rdfs:range :LegislationType ;
+                rdfs:label "has legislation" .
+
+
+###  http://www.gbif.es/PliC/hasLegislationAtomized
+:hasLegislationAtomized rdf:type owl:ObjectProperty ;
+                        rdfs:domain :LegislationType ;
+                        rdfs:range :LegislationAtomizedType ;
+                        rdfs:label "has legislation atomized" .
+
+
+###  http://www.gbif.es/PliC/hasLifeCycle
+:hasLifeCycle rdf:type owl:ObjectProperty ;
+              rdfs:domain :NaturalHistoryType ;
+              rdfs:range :LifeCycleType ;
+              rdfs:comment "Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes." ;
+              rdfs:label "has life cycle" .
+
+
+###  http://www.gbif.es/PliC/hasLifeCycleAtomized
+:hasLifeCycleAtomized rdf:type owl:ObjectProperty ;
+                      rdfs:domain :LifeCycleType ;
+                      rdfs:range :DetailType ;
+                      rdfs:label "has life cycle atomized" .
+
+
+###  http://www.gbif.es/PliC/hasLifeForm
+:hasLifeForm rdf:type owl:ObjectProperty ;
+             rdfs:domain :NaturalHistoryType ;
+             rdfs:range :LifeFormType ;
+             rdfs:comment "General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs." ;
+             rdfs:label "has life form" .
+
+
+###  http://www.gbif.es/PliC/hasLifeFormAtomized
+:hasLifeFormAtomized rdf:type owl:ObjectProperty ;
+                     rdfs:domain :LifeFormType ;
+                     rdfs:range :DetailType ;
+                     rdfs:label "has life form atomized" .
+
+
+###  http://www.gbif.es/PliC/hasManagementAndConservation
+:hasManagementAndConservation rdf:type owl:ObjectProperty ;
+                              rdfs:domain :UsesManagementAndConservationType ;
+                              rdfs:range :ManagementAndConservationType ;
+                              rdfs:comment "Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve  specie" ;
+                              rdfs:label "has management and conservation" .
+
+
+###  http://www.gbif.es/PliC/hasManagementAndConservationAtomized
+:hasManagementAndConservationAtomized rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :ManagementAndConservationType ;
+                                      rdfs:range :ManagementAndConservationAtomizedType ;
+                                      rdfs:label "has management and conservation atomized" .
+
+
+###  http://www.gbif.es/PliC/hasMeasurementOrFact
+:hasMeasurementOrFact rdf:type owl:ObjectProperty ;
+                      rdfs:range :MeasurementOrFactType ;
+                      rdfs:label "has measurement or fact" .
+
+
+###  http://www.gbif.es/PliC/hasMetadata
+:hasMetadata rdf:type owl:ObjectProperty ;
+             rdfs:domain :DatasetType ;
+             rdfs:range :MetadataType ;
+             rdfs:label "has metadata" .
+
+
+###  http://www.gbif.es/PliC/hasMigratory
+:hasMigratory rdf:type owl:ObjectProperty ;
+              rdfs:domain :NaturalHistoryType ;
+              rdfs:range :MigratoryType ;
+              rdfs:label "has migratory" .
+
+
+###  http://www.gbif.es/PliC/hasMigratoryAtomized
+:hasMigratoryAtomized rdf:type owl:ObjectProperty ;
+                      rdfs:domain :MigratoryType ;
+                      rdfs:range :MigratoryAtomizedType ;
+                      rdfs:label "has migratory atomized" .
+
+
+###  http://www.gbif.es/PliC/hasMiscDetails
+:hasMiscDetails rdf:type owl:ObjectProperty ;
+                rdfs:range :MiscDetailType ;
+                rdfs:label "has misc details" .
+
+
+###  http://www.gbif.es/PliC/hasMolecularData
+:hasMolecularData rdf:type owl:ObjectProperty ;
+                  rdfs:domain :NaturalHistoryType ;
+                  rdfs:range :MolecularDataType ;
+                  rdfs:comment "Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)" ;
+                  rdfs:label "has molecular data" .
+
+
+###  http://www.gbif.es/PliC/hasMolecularDataAtomized
+:hasMolecularDataAtomized rdf:type owl:ObjectProperty ;
+                          rdfs:domain :MolecularDataType ;
+                          rdfs:range :MolecularDataAtomizedType ;
+                          rdfs:label "has molecular data atomized" .
+
+
+###  http://www.gbif.es/PliC/hasMortalityRate
+:hasMortalityRate rdf:type owl:ObjectProperty ;
+                  rdfs:domain :PopulationBiologyAtomizedType ;
+                  rdfs:range :DetailType ;
+                  rdfs:comment "The probability of dying; the ratio of number dying in a given time interval to the number alive at the beginning of the time interval" ;
+                  rdfs:label "has mortality rate" .
+
+
+###  http://www.gbif.es/PliC/hasNaturalHistory
+:hasNaturalHistory rdf:type owl:ObjectProperty ;
+                   rdfs:domain :TaxonRecordType ;
+                   rdfs:range :NaturalHistoryType ;
+                   rdfs:label "has natural history" .
+
+
+###  http://www.gbif.es/PliC/hasNomenclatureAndClassification
+:hasNomenclatureAndClassification rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :TaxonRecordType ;
+                                  rdfs:range :NomenclatureAndClassificationType ;
+                                  rdfs:label "has nomenclature and classification" .
+
+
+###  http://www.gbif.es/PliC/hasNumberIndividualsPerObservation
+:hasNumberIndividualsPerObservation rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :PopulationBiologyAtomizedType ;
+                                    rdfs:range :DetailType ;
+                                    rdfs:comment "In case of having census data" ;
+                                    rdfs:label "has number individuals per observation" .
+
+
+###  http://www.gbif.es/PliC/hasParentTaxon
+:hasParentTaxon rdf:type owl:ObjectProperty ;
+                rdfs:domain :HierarchyType ;
+                rdfs:range :ParentTaxonType ;
+                rdfs:label "has parent taxon" .
+
+
+###  http://www.gbif.es/PliC/hasPatternDistribution
+:hasPatternDistribution rdf:type owl:ObjectProperty ;
+                        rdfs:domain :PopulationBiologyAtomizedType ;
+                        rdfs:range :DetailType ;
+                        rdfs:comment "VCR Clumped, Uniform and Random" ;
+                        rdfs:label "has pattern distribution" .
+
+
+###  http://www.gbif.es/PliC/hasPatterns
+:hasPatterns rdf:type owl:ObjectProperty ;
+             rdfs:domain :MigratoryAtomizedType ;
+             rdfs:range :PatternsEnumType ;
+             rdfs:comment "VCR. Latitudinal, Longitudinal , Altitudinal , Vertical in water columns and Local migrant" ;
+             rdfs:label "has patterns" .
+
+
+###  http://www.gbif.es/PliC/hasPopulationBiology
+:hasPopulationBiology rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DemographyAndThreatType ;
+                      rdfs:range :PopulationBiologyType ;
+                      rdfs:label "has population biology" .
+
+
+###  http://www.gbif.es/PliC/hasPopulationBiologyAtomized
+:hasPopulationBiologyAtomized rdf:type owl:ObjectProperty ;
+                              rdfs:domain :PopulationBiologyType ;
+                              rdfs:range :PopulationBiologyAtomizedType ;
+                              rdfs:label "has population biology atomized" .
+
+
+###  http://www.gbif.es/PliC/hasPopulationGrowthRate
+:hasPopulationGrowthRate rdf:type owl:ObjectProperty ;
+                         rdfs:domain :PopulationBiologyAtomizedType ;
+                         rdfs:range :DetailType ;
+                         rdfs:comment "Rate that estimates the annual growth rate of a population based on the births, rates, emigration and immigration." ;
+                         rdfs:label "has population growth rate" .
+
+
+###  http://www.gbif.es/PliC/hasPopulationTrend
+:hasPopulationTrend rdf:type owl:ObjectProperty ;
+                    rdfs:domain :PopulationBiologyAtomizedType ;
+                    rdfs:range :DetailType ;
+                    rdfs:comment "VCR Stable, Increasing and Dreasing" ;
+                    rdfs:label "has population trend" .
+
+
+###  http://www.gbif.es/PliC/hasProportionIndividualsPerStageLife
+:hasProportionIndividualsPerStageLife rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :PopulationBiologyAtomizedType ;
+                                      rdfs:range :DetailType ;
+                                      rdfs:comment "Percentage of individuals that belong to each life stage" ;
+                                      rdfs:label "has proportion individuals per stage life" .
+
+
+###  http://www.gbif.es/PliC/hasPurpose
+:hasPurpose rdf:type owl:ObjectProperty ;
+            rdfs:domain :DispersalAtomizedType ;
+            rdfs:range :MeasurementOrFactType ;
+            rdfs:comment "Makes reference to any data being measured" ;
+            rdfs:label "has purpose" .
+
+
+###  http://www.gbif.es/PliC/hasRecordMetadata
+:hasRecordMetadata rdf:type owl:ObjectProperty ;
+                   rdfs:domain :TaxonRecordType ;
+                   rdfs:range :RecordMetadataType ;
+                   rdfs:comment "This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record." ;
+                   rdfs:label "has record metadata" .
+
+
+###  http://www.gbif.es/PliC/hasRecruitment
+:hasRecruitment rdf:type owl:ObjectProperty ;
+                rdfs:domain :PopulationBiologyAtomizedType ;
+                rdfs:range :DetailType ;
+                rdfs:comment "Proportion of plants or animals that reach a size or age when  become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce" ;
+                rdfs:label "has recruitment" .
+
+
+###  http://www.gbif.es/PliC/hasReproduction
+:hasReproduction rdf:type owl:ObjectProperty ;
+                 rdfs:domain :NaturalHistoryType ;
+                 rdfs:range :ReproductionType ;
+                 rdfs:comment "All data related to the production of offspring." ;
+                 rdfs:label "has reproduction" .
+
+
+###  http://www.gbif.es/PliC/hasReproductionAtomized
+:hasReproductionAtomized rdf:type owl:ObjectProperty ;
+                         rdfs:domain :ReproductionType ;
+                         rdfs:range :DetailType ;
+                         rdfs:label "has reproduction atomized" .
+
+
+###  http://www.gbif.es/PliC/hasRevision
+:hasRevision rdf:type owl:ObjectProperty ;
+             rdfs:domain :RecordMetadataType ;
+             rdfs:range :RevisionType ;
+             rdfs:label "has revision" .
+
+
+###  http://www.gbif.es/PliC/hasScientificName
+:hasScientificName rdf:type owl:ObjectProperty ;
+                   rdfs:domain :TaxonRecordNameType ;
+                   rdfs:range <http://www.tdwg.org/schemas/tcs/1.01#ScientificName> ;
+                   rdfs:comment "Complete name of the taxon." ;
+                   rdfs:label "has scientific name" .
+
+
+###  http://www.gbif.es/PliC/hasSexRatio
+:hasSexRatio rdf:type owl:ObjectProperty ;
+             rdfs:domain :PopulationBiologyAtomizedType ;
+             rdfs:range :DetailType ;
+             rdfs:comment "The relative number of males to females in a population" ;
+             rdfs:label "has sex ratio" .
+
+
+###  http://www.gbif.es/PliC/hasSize
+:hasSize rdf:type owl:ObjectProperty ;
+         rdfs:domain :PopulationBiologyAtomizedType ;
+         rdfs:range :DetailType ;
+         rdfs:comment "Estimation of the size, usually expressed as a range, of the populations of a species. (E.g. “total population size is estimated between 200,000 to 400,000 ducks in its distribution area”)." ;
+         rdfs:label "has size" .
+
+
+###  http://www.gbif.es/PliC/hasSourceOfInformation
+:hasSourceOfInformation rdf:type owl:ObjectProperty ;
+                        rdfs:domain :UsesAtomizedType ;
+                        rdfs:range :SourceOfInformationType ;
+                        rdfs:comment "Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations should be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the informant recorded (name, gender, approximate age, occupation, ethnic identity, locality and language spoken)." ;
+                        rdfs:label "has source of information" .
+
+
+###  http://www.gbif.es/PliC/hasSpeciesInteraction
+:hasSpeciesInteraction rdf:type owl:ObjectProperty ;
+                       rdfs:domain :InteractionAtomizedType ;
+                       rdfs:range :ResourceRelationshipType ;
+                       rdfs:comment "The category of information pertaining to relationships between resources (instances of data records, such as Occurrences, Taxa, Locations, Events." ;
+                       rdfs:label "has species interaction" .
+
+
+###  http://www.gbif.es/PliC/hasStructureDispersed
+:hasStructureDispersed rdf:type owl:ObjectProperty ;
+                       rdfs:domain :DispersalAtomizedType ;
+                       rdfs:range :StructureDispersedEnumType ;
+                       rdfs:comment "VCR: Seed, Fruit, Vegetative structure, Spores, Gametes, Eggs, ffspring and Individuals" ;
+                       rdfs:label "has structure dispersed" .
+
+
+###  http://www.gbif.es/PliC/hasSynonymName
+:hasSynonymName rdf:type owl:ObjectProperty ;
+                rdfs:domain :SynonymsAtomizedType ;
+                rdfs:range <http://www.tdwg.org/schemas/tcs/1.01#ScientificName> ;
+                rdfs:label "has synonym name" .
+
+
+###  http://www.gbif.es/PliC/hasSynonyms
+:hasSynonyms rdf:type owl:ObjectProperty ;
+             rdfs:domain :NomenclatureAndClassificationType ;
+             rdfs:range :SynonymsType ;
+             rdfs:label "has synonyms" .
+
+
+###  http://www.gbif.es/PliC/hasSynonymsAtomized
+:hasSynonymsAtomized rdf:type owl:ObjectProperty ;
+                     rdfs:domain :SynonymsType ;
+                     rdfs:range :SynonymsAtomizedType ;
+                     rdfs:label "has synonyms atomized" .
+
+
+###  http://www.gbif.es/PliC/hasTargetAudiences
+:hasTargetAudiences rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RecordMetadataType ;
+                    rdfs:range :TargetAudiencesType ;
+                    rdfs:label "has target audiences" .
+
+
+###  http://www.gbif.es/PliC/hasTaxonRecord
+:hasTaxonRecord rdf:type owl:ObjectProperty ;
+                rdfs:domain :DatasetType ;
+                rdfs:range :TaxonRecordType ;
+                rdfs:comment "Information about the record." ;
+                rdfs:label "has taxon record" .
+
+
+###  http://www.gbif.es/PliC/hasTaxonRecordName
+:hasTaxonRecordName rdf:type owl:ObjectProperty ;
+                    rdfs:domain :NomenclatureAndClassificationType ;
+                    rdfs:range :TaxonRecordNameType ;
+                    rdfs:label "has taxon record name" .
+
+
+###  http://www.gbif.es/PliC/hasTaxonomicDescription
+:hasTaxonomicDescription rdf:type owl:ObjectProperty ;
+                         rdfs:domain :TaxonRecordType ;
+                         rdfs:range :TaxonomicDescriptionType ;
+                         rdfs:label "has taxonomic description" .
+
+
+###  http://www.gbif.es/PliC/hasTerritory
+:hasTerritory rdf:type owl:ObjectProperty ;
+              rdfs:domain :DemographyAndThreatType ;
+              rdfs:range :TerritoryType ;
+              rdfs:label "has territory" .
+
+
+###  http://www.gbif.es/PliC/hasTerritoryAtomized
+:hasTerritoryAtomized rdf:type owl:ObjectProperty ;
+                      rdfs:domain :TerritoryType ;
+                      rdfs:range :TerritoryAtomizedType ;
+                      rdfs:label "has territory atomized" .
+
+
+###  http://www.gbif.es/PliC/hasThreatStatus
+:hasThreatStatus rdf:type owl:ObjectProperty ;
+                 rdfs:domain :DemographyAndThreatType ;
+                 rdfs:range :ThreatStatusType ;
+                 rdfs:label "has threat status" .
+
+
+###  http://www.gbif.es/PliC/hasThreatStatusAtomized
+:hasThreatStatusAtomized rdf:type owl:ObjectProperty ;
+                         rdfs:domain :ThreatStatusType ;
+                         rdfs:range :ThreatStatusAtomizedType ;
+                         rdfs:label "has threat status atomized" .
+
+
+###  http://www.gbif.es/PliC/hasTrophic
+:hasTrophic rdf:type owl:ObjectProperty ;
+            rdfs:domain :FeedingAtomizedType ;
+            rdfs:range :TrophicType ;
+            rdfs:label "has trophic" .
+
+
+###  http://www.gbif.es/PliC/hasTrophicStrategy
+:hasTrophicStrategy rdf:type owl:ObjectProperty ;
+                    rdfs:domain :TrophicType ;
+                    rdfs:range :TrophicStrategyEnumType ;
+                    rdfs:comment "VC. Tactic used to obtain energy or nutrients." ;
+                    rdfs:label "has trophic strategy" .
+
+
+###  http://www.gbif.es/PliC/hasUsedIn
+:hasUsedIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :CommonNamesAtomizedType ;
+           rdfs:range :DistributionType ;
+           rdfs:comment "Location where the common name is used" ;
+           rdfs:label "has used in" .
+
+
+###  http://www.gbif.es/PliC/hasUses
+:hasUses rdf:type owl:ObjectProperty ;
+         rdfs:domain :UsesManagementAndConservationType ;
+         rdfs:range :UsesType ;
+         rdfs:comment "Ways in which species are utilized by people" ;
+         rdfs:label "has uses" .
+
+
+###  http://www.gbif.es/PliC/hasUsesAtomized
+:hasUsesAtomized rdf:type owl:ObjectProperty ;
+                 rdfs:domain :UsesType ;
+                 rdfs:range :UsesAtomizedType ;
+                 rdfs:label "has uses atomized" .
+
+
+###  http://www.gbif.es/PliC/hasUsesManagementAndConservation
+:hasUsesManagementAndConservation rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :TaxonRecordType ;
+                                  rdfs:range :UsesManagementAndConservationType ;
+                                  rdfs:label "has uses management and conservation" .
+
+
+###  http://www.gbif.es/PliC/hasVersion
+:hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:domain :RecordMetadataType ;
+            rdfs:range :VersionType ;
+            rdfs:label "has version" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.gbif.es/PliC/hasAbstract
+:hasAbstract rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "A brief summary of the most relevant or attractive features of this taxon to the general public. Could point to any kind of information. Example: Blue whale is the largest mammal in the world." ;
+             rdfs:label "has abstract" .
+
+
+###  http://www.gbif.es/PliC/hasActionsType
+:hasActionsType rdf:type owl:DatatypeProperty ;
+                rdfs:domain :ActionsType ;
+                rdfs:label "has actions's type" .
+
+
+###  http://www.gbif.es/PliC/hasAnnualCycleUnstructured
+:hasAnnualCycleUnstructured rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :AnnualCyclesType ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "has annual cycle unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasAssociatedParty
+:hasAssociatedParty rdf:type owl:DatatypeProperty ;
+                    rdfs:label "has associated party" .
+
+
+###  http://www.gbif.es/PliC/hasAudiencesUnstructured
+:hasAudiencesUnstructured rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :TargetAudiencesType ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "List audience codes separated by means of comma or /." ;
+                          rdfs:label "has audiences unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasAuthority
+:hasAuthority rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ThreatStatusAtomizedType ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Organism or institution that assess the status" ;
+              rdfs:label "has authority" .
+
+
+###  http://www.gbif.es/PliC/hasBehaviorUnstructured
+:hasBehaviorUnstructured rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :BehaviorType ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "has behavior unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasBriefDescription
+:hasBriefDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :TaxonomicDescriptionType ;
+                     rdfs:comment "Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa." ;
+                     rdfs:label "has brief description" .
+
+
+###  http://www.gbif.es/PliC/hasCitationIdentifier
+:hasCitationIdentifier rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :CitationType ;
+                       rdfs:label "has citation's identifier" .
+
+
+###  http://www.gbif.es/PliC/hasCommonName
+:hasCommonName rdf:type owl:DatatypeProperty ;
+               rdfs:domain :CommonNamesAtomizedType ;
+               rdfs:range xsd:string ;
+               rdfs:label "has common name" .
+
+
+###  http://www.gbif.es/PliC/hasCommonNamesUnstructured
+:hasCommonNamesUnstructured rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :CommonNamesType ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "has common names unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasConservationExplotationData
+:hasConservationExplotationData rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :UsesAtomizedType ;
+                                rdfs:comment "Acc. TDWG Economic Botany. Record frequency of plants, details of regeneration, sustainability or over-exploitation and note any locally imposed bans on felling or harvesting." ;
+                                rdfs:label "has conservation explotation data" .
+
+
+###  http://www.gbif.es/PliC/hasDataset
+:hasDataset rdf:type owl:DatatypeProperty .
+
+
+###  http://www.gbif.es/PliC/hasDataset_ID
+:hasDataset_ID rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MetadataType ;
+               rdfs:range xsd:string ;
+               rdfs:label "has dataset_id" .
+
+
+###  http://www.gbif.es/PliC/hasDateIssued
+:hasDateIssued rdf:type owl:DatatypeProperty ;
+               rdfs:domain :VersionType ;
+               rdfs:range xsd:date ;
+               rdfs:comment "Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!" ;
+               rdfs:label "has date issued" .
+
+
+###  http://www.gbif.es/PliC/hasDateStamp
+:hasDateStamp rdf:type owl:DatatypeProperty ;
+              rdfs:domain :MetadataType ;
+              rdfs:range xsd:date ;
+              rdfs:comment "The date the metadata document was created or modified." ;
+              rdfs:label "has date stamp" .
+
+
+###  http://www.gbif.es/PliC/hasDemographyAndThreatUnstructured
+:hasDemographyAndThreatUnstructured rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain :DemographyAndThreatType ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:label "has demography and threat unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:domain :TextDescriptionType ;
+                rdfs:label "has description" .
+
+
+###  http://www.gbif.es/PliC/hasDetailUnstructured
+:hasDetailUnstructured rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :MiscDetailType ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "has detail unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasDetailUnstructuredType
+:hasDetailUnstructuredType rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :DetailUnstructuredType ;
+                           rdfs:label "has detail unstructured's type" .
+
+
+###  http://www.gbif.es/PliC/hasDirectThreatUnstructured
+:hasDirectThreatUnstructured rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :DirectThreatsType ;
+                             rdfs:range xsd:string ;
+                             rdfs:label "has direct threat unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasDispersalUnstructured
+:hasDispersalUnstructured rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :DispersalType ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "has dispersal unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasDistributionScopeType
+:hasDistributionScopeType rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :DistributionScopeType ;
+                          rdfs:label "has distribution scope's Type" .
+
+
+###  http://www.gbif.es/PliC/hasDistributionUnstructured
+:hasDistributionUnstructured rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :DistributionType ;
+                             rdfs:range xsd:string ;
+                             rdfs:label "has distribution unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasEcologicalSignificanceUnstructured
+:hasEcologicalSignificanceUnstructured rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :EcologicalSignificanceType ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:label "has ecological significance unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasEconomics
+:hasEconomics rdf:type owl:DatatypeProperty ;
+              rdfs:domain :UsesAtomizedType ;
+              rdfs:comment "Acc. TDWG Economic Botany. Is t here trade in the live plants, plant parts, or derived products , and , if so , on what scale?" ;
+              rdfs:label "has economics" .
+
+
+###  http://www.gbif.es/PliC/hasEndTimeInterval
+:hasEndTimeInterval rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :AnnualCycleAtomizedType ;
+                    rdfs:comment "VC" ;
+                    rdfs:label "has end time interval" .
+
+
+###  http://www.gbif.es/PliC/hasEndemicIn
+:hasEndemicIn rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EndemicAtomizedType ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The concept is applied to an area either multinational or local. Ex: - Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region. - Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain)." ;
+              rdfs:label "has endemic in" .
+
+
+###  http://www.gbif.es/PliC/hasEndemicTo
+:hasEndemicTo rdf:type owl:DatatypeProperty ;
+              rdfs:domain :EndemicAtomizedType ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The concept is applied to one or several countries. Ex:- Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama" ;
+              rdfs:label "has endemic to" .
+
+
+###  http://www.gbif.es/PliC/hasEndemicUnstructured
+:hasEndemicUnstructured rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :EndemicType ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "List of areas presented in an unstructured and categorized the degree of safety." ;
+                        rdfs:label "has endemic unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasEnvironmentalEnvelopeUnstructured
+:hasEnvironmentalEnvelopeUnstructured rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :EnvironmentalEnvelopeType ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:label "has environmental envelope unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasEvent
+:hasEvent rdf:type owl:DatatypeProperty ;
+          rdfs:domain :AnnualCycleAtomizedType ;
+          rdfs:comment "VC" ;
+          rdfs:label "has event" .
+
+
+###  http://www.gbif.es/PliC/hasFeedingUnstructured
+:hasFeedingUnstructured rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FeedingType ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "has feeding unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasFullDescriptionUnstructured
+:hasFullDescriptionUnstructured rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :FullDescriptionType ;
+                                rdfs:range xsd:string ;
+                                rdfs:label "has full description unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasGeographicEntity
+:hasGeographicEntity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :DistributionAtomizedType ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Name of the geographic entity." ;
+                     rdfs:label "has geographic entity" .
+
+
+###  http://www.gbif.es/PliC/hasGeographicEntityCatalogue
+:hasGeographicEntityCatalogue rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :GeographicEntityType ;
+                              rdfs:label "has geographic entity's Catalogue" .
+
+
+###  http://www.gbif.es/PliC/hasGlobalUniqueIdentifier
+:hasGlobalUniqueIdentifier rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :BaseElementsType ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "An Uniform Resource Name (URN) used as an unique identifier of the taxon record." ;
+                           rdfs:label "has global unique identifier" .
+
+
+###  http://www.gbif.es/PliC/hasHabitatAndDistributionUnstructured
+:hasHabitatAndDistributionUnstructured rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :HabitatAndDistributionType ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:label "has habitat and distribution unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasHabitatUnstructured
+:hasHabitatUnstructured rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :HabitatsType ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "has habitat unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasHierarchyTypeClassification
+:hasHierarchyTypeClassification rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :HierarchyType ;
+                                rdfs:label "has hierarchy type's classification" .
+
+
+###  http://www.gbif.es/PliC/hasHierarchyTypeRecommended
+:hasHierarchyTypeRecommended rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :HierarchyType ;
+                             rdfs:label "has hierarchy type's recommended" .
+
+
+###  http://www.gbif.es/PliC/hasHumanAndEnvironmentalRelevance
+:hasHumanAndEnvironmentalRelevance rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :ManagementAndConservationAtomizedType ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:label "has human and environmental relevance" .
+
+
+###  http://www.gbif.es/PliC/hasInteractionUnstructured
+:hasInteractionUnstructured rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :InteractionsType ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "has interaction unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasInvasivenessUnstructured
+:hasInvasivenessUnstructured rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :InvasivenessType ;
+                             rdfs:range xsd:string ;
+                             rdfs:label "has invasiveness unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasItemAttribute
+:hasItemAttribute rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :DescriptionItemType ;
+                  rdfs:label "has item attribute" .
+
+
+###  http://www.gbif.es/PliC/hasItemValue
+:hasItemValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain :DescriptionItemType ;
+              rdfs:label "has item value" .
+
+
+###  http://www.gbif.es/PliC/hasKeys
+:hasKeys rdf:type owl:DatatypeProperty ;
+         rdfs:domain :IdentificationKeysType ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Dichotomic or multientrance keys." ;
+         rdfs:label "has keys" .
+
+
+###  http://www.gbif.es/PliC/hasLanguage
+:hasLanguage rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The language of the taxon record, according to ISO 639." ;
+             rdfs:label "has language" .
+
+
+###  http://www.gbif.es/PliC/hasLegalNorm
+:hasLegalNorm rdf:type owl:DatatypeProperty ;
+              rdfs:domain :LegislationAtomizedType ;
+              rdfs:label "has legal norm" .
+
+
+###  http://www.gbif.es/PliC/hasLegislationName
+:hasLegislationName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :LegislationAtomizedType ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Word or phrase to designate the law or group of laws" ;
+                    rdfs:label "has legislation name" .
+
+
+###  http://www.gbif.es/PliC/hasLegislationRead
+:hasLegislationRead rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :LegislationAtomizedType ;
+                    rdfs:comment "The oficial document in which the user can read the legislation." ;
+                    rdfs:label "has legislation read" .
+
+
+###  http://www.gbif.es/PliC/hasLegislationStatus
+:hasLegislationStatus rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :LegislationAtomizedType ;
+                      rdfs:comment "VCR: Consolidated, Repealed" ;
+                      rdfs:label "has legislation status" .
+
+
+###  http://www.gbif.es/PliC/hasLegislationType
+:hasLegislationType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :LegislationAtomizedType ;
+                    rdfs:comment "VCR: included, not included" ;
+                    rdfs:label "has legislation type" .
+
+
+###  http://www.gbif.es/PliC/hasLegislationUnstructured
+:hasLegislationUnstructured rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :LegislationType ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "has legislation unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasLifeCycleUnstructured
+:hasLifeCycleUnstructured rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :LifeCycleType ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "has life cycle unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasLifeFormUnstructured
+:hasLifeFormUnstructured rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :LifeFormType ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "has life form unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasMajor
+:hasMajor rdf:type owl:DatatypeProperty ;
+          rdfs:domain :VersionType ;
+          rdfs:range xsd:nonNegativeInteger ;
+          rdfs:comment "The major version number ('1' in 1.2) as defined by the 						content creators." ;
+          rdfs:label "has major" .
+
+
+###  http://www.gbif.es/PliC/hasManagementAndConservationAtomizedTypeType
+:hasManagementAndConservationAtomizedTypeType rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :ManagementAndConservationAtomizedType ;
+                                              rdfs:label "has management and conservation atomized type's type" .
+
+
+###  http://www.gbif.es/PliC/hasManagementAndConservationUnstructured
+:hasManagementAndConservationUnstructured rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain :ManagementAndConservationType ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:label "has management and conservation unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasManagementPlan
+:hasManagementPlan rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ManagementAndConservationAtomizedType ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has management plan" .
+
+
+###  http://www.gbif.es/PliC/hasMeansOfApplication-Administration
+:hasMeansOfApplication-Administration rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :UsesAtomizedType ;
+                                      rdfs:comment "Acc. TDWG Economic Botany. This is of particular relevance to medicines, poisons (e.g. insecticides), social products and some environmental purposes (e.g. fert ilisers)." ;
+                                      rdfs:label "has means of application- administration" .
+
+
+###  http://www.gbif.es/PliC/hasMigratoryUnstructured
+:hasMigratoryUnstructured rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :MigratoryType ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "has migratory unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasMinor
+:hasMinor rdf:type owl:DatatypeProperty ;
+          rdfs:domain :VersionType ;
+          rdfs:range xsd:nonNegativeInteger ;
+          rdfs:comment "An optional minor version number ('2' in 1.2)" ;
+          rdfs:label "has minor" .
+
+
+###  http://www.gbif.es/PliC/hasModifier
+:hasModifier rdf:type owl:DatatypeProperty ;
+             rdfs:domain :VersionType ;
+             rdfs:comment "Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed." ;
+             rdfs:label "has modifier" .
+
+
+###  http://www.gbif.es/PliC/hasMolecularDataUnstructured
+:hasMolecularDataUnstructured rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :MolecularDataType ;
+                              rdfs:range xsd:string ;
+                              rdfs:label "has molecular data unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasNaturalHistoryUnstructured
+:hasNaturalHistoryUnstructured rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :NaturalHistoryType ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "has natural history unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasNomenclatureAndClassificationUnstructured
+:hasNomenclatureAndClassificationUnstructured rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :NomenclatureAndClassificationType ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:label "has nomenclature and classification unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasNormalDateLanguage
+:hasNormalDateLanguage rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :NormalDate ;
+                       rdfs:label "has normal date's language" .
+
+
+###  http://www.gbif.es/PliC/hasObjectives
+:hasObjectives rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ManagementAndConservationAtomizedType ;
+               rdfs:label "has objectives" .
+
+
+###  http://www.gbif.es/PliC/hasOrganisms
+:hasOrganisms rdf:type owl:DatatypeProperty ;
+              rdfs:domain :UsesAtomizedType ;
+              rdfs:comment "Acc. TDWG Economic Botany. Which organisms use the plant/plant parts (e.g . for forage , medicines) or are affected by the plant (e.g. by poisons)?" ;
+              rdfs:label "has organisms" .
+
+
+###  http://www.gbif.es/PliC/hasPartUsed
+:hasPartUsed rdf:type owl:DatatypeProperty ;
+             rdfs:domain :UsesAtomizedType ;
+             rdfs:comment "Acc. TDWG Economic Botany. Which plant parts are used, or have any negative values ?" ;
+             rdfs:label "has part used" .
+
+
+###  http://www.gbif.es/PliC/hasPopulationBiologyAtomizedTypeRegion
+:hasPopulationBiologyAtomizedTypeRegion rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain :PopulationBiologyAtomizedType ;
+                                        rdfs:label "has population biology atomized type's Region" .
+
+
+###  http://www.gbif.es/PliC/hasPopulationBiologyUnstructured
+:hasPopulationBiologyUnstructured rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain :PopulationBiologyType ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "has population biology unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasPotential
+:hasPotential rdf:type owl:DatatypeProperty ;
+              rdfs:domain :UsesAtomizedType ;
+              rdfs:comment "Acc. TDWG Economic Botany. Could the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?" ;
+              rdfs:label "has potential" .
+
+
+###  http://www.gbif.es/PliC/hasPreferredFlag
+:hasPreferredFlag rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :VersionType ;
+                  rdfs:comment "TRUE to indicate currente version when providers serve more than one record per taxon." ;
+                  rdfs:label "has preferred flag" .
+
+
+###  http://www.gbif.es/PliC/hasProductionDetails
+:hasProductionDetails rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :UsesAtomizedType ;
+                      rdfs:comment "Acc. TDWG Economic Botany. (where relevant). Are wild /protected /cultivated plants used? Give details of cultivation, harvesting , yields, processing and storage methods and take note of special tools, timing etc." ;
+                      rdfs:label "has production details" .
+
+
+###  http://www.gbif.es/PliC/hasProperties
+:hasProperties rdf:type owl:DatatypeProperty ;
+               rdfs:domain :UsesAtomizedType ;
+               rdfs:comment "Acc. TDWG Economic Botany. Provide details of properties which influence its value for a specified purpose, e.g . nutritional value for foods; occurrence of bioactive compounds for medicines/poisons; mechanical and physical properties of woods; nectar flow periods and flowering dates for bee plants; calorific values and burning qualities of fuels; sizes of plants used environmentally etc." ;
+               rdfs:label "has properties" .
+
+
+###  http://www.gbif.es/PliC/hasProtectionLegalStatus
+:hasProtectionLegalStatus rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :LegislationAtomizedType ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "VC. Description of the status." ;
+                          rdfs:label "has protection legal status" .
+
+
+###  http://www.gbif.es/PliC/hasPubDate
+:hasPubDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RevisionType ;
+            rdfs:label "has pub date" .
+
+
+###  http://www.gbif.es/PliC/hasRatingPopularity
+:hasRatingPopularity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :UsesAtomizedType ;
+                     rdfs:comment "Acc. TDWG Economic Botany. Is the plant highly valued for its use or are other species preferred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessibility, depleted source, or low quality, ineffectiveness, difficult harvesting or processing requirements." ;
+                     rdfs:label "has rating popularity" .
+
+
+###  http://www.gbif.es/PliC/hasReferences
+:hasReferences rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:label "has references" .
+
+
+###  http://www.gbif.es/PliC/hasRelatedTo
+:hasRelatedTo rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:label "has related to" .
+
+
+###  http://www.gbif.es/PliC/hasReproductionUnstructured
+:hasReproductionUnstructured rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :ReproductionType ;
+                             rdfs:range xsd:string ;
+                             rdfs:label "has reproduction unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasResourceLogoUrl
+:hasResourceLogoUrl rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :MetadataType ;
+                    rdfs:range xsd:anyURI ;
+                    rdfs:comment "URL of the logo associated with this dataset." ;
+                    rdfs:label "has resource logo url" .
+
+
+###  http://www.gbif.es/PliC/hasRoute
+:hasRoute rdf:type owl:DatatypeProperty ;
+          rdfs:domain :InvasivenessAtomizedType ;
+          rdfs:label "has route" .
+
+
+###  http://www.gbif.es/PliC/hasRoutes
+:hasRoutes rdf:type owl:DatatypeProperty ;
+           rdfs:domain :MigratoryAtomizedType ;
+           rdfs:comment "Trajectory followed by the species" ;
+           rdfs:label "has routes" .
+
+
+###  http://www.gbif.es/PliC/hasSeason
+:hasSeason rdf:type owl:DatatypeProperty ;
+           rdfs:domain :MigratoryAtomizedType ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Time of year in which a species migrates." ;
+           rdfs:label "has season" .
+
+
+###  http://www.gbif.es/PliC/hasSeasonOfAvailabilityUse
+:hasSeasonOfAvailabilityUse rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :UsesAtomizedType ;
+                            rdfs:comment "Acc. TDWG Economic Botany. Note these and , if relevant, time of day." ;
+                            rdfs:label "has season of availability use" .
+
+
+###  http://www.gbif.es/PliC/hasSourceOfInformationText
+:hasSourceOfInformationText rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :SourceOfInformationType ;
+                            rdfs:label "has source of information text" .
+
+
+###  http://www.gbif.es/PliC/hasSpeciesInteractionType
+:hasSpeciesInteractionType rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :InteractionAtomizedType ;
+                           rdfs:comment "VC. String with the type of interaction." ;
+                           rdfs:label "has species interaction type" .
+
+
+###  http://www.gbif.es/PliC/hasStartTimeInterval
+:hasStartTimeInterval rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :AnnualCycleAtomizedType ;
+                      rdfs:comment "VC" ;
+                      rdfs:label "has start time interval" .
+
+
+###  http://www.gbif.es/PliC/hasSynonymStatus
+:hasSynonymStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :SynonymsAtomizedType ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "VC" ;
+                  rdfs:label "has synonym status" .
+
+
+###  http://www.gbif.es/PliC/hasSynonymsUnstructured
+:hasSynonymsUnstructured rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :SynonymsType ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "has synonyms unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasTaxonRecordID
+:hasTaxonRecordID rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has taxon record id" .
+
+
+###  http://www.gbif.es/PliC/hasTaxonValue
+:hasTaxonValue rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ParentTaxonType ;
+               rdfs:label "has taxon value" .
+
+
+###  http://www.gbif.es/PliC/hasTaxonomicDescriptionUnstructured
+:hasTaxonomicDescriptionUnstructured rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain :TaxonomicDescriptionType ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:label "has taxonomic description unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasTemporalCoverage
+:hasTemporalCoverage rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :DistributionType ;
+                     rdfs:label "has temporal coverage" .
+
+
+###  http://www.gbif.es/PliC/hasTerritoryUnstructured
+:hasTerritoryUnstructured rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :TerritoryType ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "has territory unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasThreatCategory
+:hasThreatCategory rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ThreatStatusAtomizedType ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "VCR. Description of the threat status." ;
+                   rdfs:label "has threat category" .
+
+
+###  http://www.gbif.es/PliC/hasThreatStatusUnstructured
+:hasThreatStatusUnstructured rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :ThreatStatusType ;
+                             rdfs:range xsd:string ;
+                             rdfs:label "has threat status unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasTrophicStrategyRemarks
+:hasTrophicStrategyRemarks rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :TrophicType ;
+                           rdfs:comment "Information notes about specific strategy of feeding." ;
+                           rdfs:label "has trophic strategy remarks" .
+
+
+###  http://www.gbif.es/PliC/hasUseNotes
+:hasUseNotes rdf:type owl:DatatypeProperty ;
+             rdfs:domain :UsesAtomizedType ;
+             rdfs:label "has use notes" .
+
+
+###  http://www.gbif.es/PliC/hasUseTypeAtomized
+:hasUseTypeAtomized rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :UsesAtomizedType ;
+                    rdfs:comment "Acc. TDWG Economic Is it a traditional, modern industrial or just a possible use?" ;
+                    rdfs:label "has use type atomized" .
+
+
+###  http://www.gbif.es/PliC/hasUseValue
+:hasUseValue rdf:type owl:DatatypeProperty ;
+             rdfs:domain :UsesAtomizedType ;
+             rdfs:comment "Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a weed affecting food production, or as an accident al poison)?" ;
+             rdfs:label "has use value" .
+
+
+###  http://www.gbif.es/PliC/hasUsedBy
+:hasUsedBy rdf:type owl:DatatypeProperty ;
+           rdfs:domain :CommonNamesAtomizedType ;
+           rdfs:range xsd:string ;
+           rdfs:label "has used by" .
+
+
+###  http://www.gbif.es/PliC/hasUsers
+:hasUsers rdf:type owl:DatatypeProperty ;
+          rdfs:domain :UsesAtomizedType ;
+          rdfs:comment "Acc. TDWG Economic Botany. Who recognises the value of the plant? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/area )." ;
+          rdfs:label "has users" .
+
+
+###  http://www.gbif.es/PliC/hasUsesManagementAndConservationUnstructured
+:hasUsesManagementAndConservationUnstructured rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :UsesManagementAndConservationType ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:label "has uses management and conservation unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasUsesUnstructured
+:hasUsesUnstructured rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :UsesType ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Uses in a unstructured format." ;
+                     rdfs:label "has uses unstructured" .
+
+
+###  http://www.gbif.es/PliC/hasVector
+:hasVector rdf:type owl:DatatypeProperty ;
+           rdfs:domain :InvasivenessAtomizedType ;
+           rdfs:label "has vector" .
+
+
+###  http://www.gbif.es/PliC/hasVernacularNameUseAnnotations
+:hasVernacularNameUseAnnotations rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :UsesAtomizedType ;
+                                 rdfs:comment "Acc. TDWG Economic Botany. The name of the taxon must be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refers to more than one taxon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to which the names belong should be stated along with details of ethnic group . Care should be taken with transliteration into the Roman alphabet; if a standard system exists, use it and note which one it is." ;
+                                 rdfs:label "has vernacular name use annotations" .
+
+
+###  http://www.gbif.es/PliC/hasWhatImpact
+:hasWhatImpact rdf:type owl:DatatypeProperty ;
+               rdfs:domain :InvasivenessAtomizedType ;
+               rdfs:comment "What the actual impact is, for instance: Is it eating all the riparian vegetation? Are their burrows destroying irrigation systems? Is it displacing Arvicola sapidus?" ;
+               rdfs:label "has what impact" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.eol.org/transfer/content/0.3#dataObjectBaseType
+<http://www.eol.org/transfer/content/0.3#dataObjectBaseType> rdf:type owl:Class .
+
+
+###  http://www.gbif.es/PliC/ActionsType
+:ActionsType rdf:type owl:Class ;
+             rdfs:label "Actions" .
+
+
+###  http://www.gbif.es/PliC/AnnualCycleAtomizedType
+:AnnualCycleAtomizedType rdf:type owl:Class ;
+                         rdfs:label "Annual Cycle Atomized" .
+
+
+###  http://www.gbif.es/PliC/AnnualCyclesType
+:AnnualCyclesType rdf:type owl:Class ;
+                  rdfs:label "Annual Cycles" .
+
+
+###  http://www.gbif.es/PliC/AudienceEnumType
+:AudienceEnumType rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:oneOf ( :AudienceEnumType_Expert
+                                                    :AudienceEnumType_General
+                                                    :AudienceEnumType_Knowledgeable
+                                                  )
+                                      ] ;
+                  rdfs:label "Enum values for Audience" .
+
+
+###  http://www.gbif.es/PliC/BaseElementsType
+:BaseElementsType rdf:type owl:Class ;
+                  rdfs:label "Base Elements" .
+
+
+###  http://www.gbif.es/PliC/BehaviorType
+:BehaviorType rdf:type owl:Class ;
+              rdfs:label "Behavior" .
+
+
+###  http://www.gbif.es/PliC/CausesEnumType
+:CausesEnumType rdf:type owl:Class ;
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:oneOf ( :CausesEnumType_Reproduction
+                                                  :CausesEnumType_Resource_availability
+                                                  :CausesEnumType_Seasonal_climatic_variation
+                                                )
+                                    ] ;
+                rdfs:label "Enum values for Causes" .
+
+
+###  http://www.gbif.es/PliC/CitationType
+:CitationType rdf:type owl:Class ;
+              rdfs:label "Citation" .
+
+
+###  http://www.gbif.es/PliC/CommonNamesAtomizedType
+:CommonNamesAtomizedType rdf:type owl:Class ;
+                         rdfs:label "Common Names Atomized" .
+
+
+###  http://www.gbif.es/PliC/CommonNamesType
+:CommonNamesType rdf:type owl:Class ;
+                 rdfs:label "Common Names" .
+
+
+###  http://www.gbif.es/PliC/DatasetType
+:DatasetType rdf:type owl:Class ;
+             rdfs:label "Dataset" .
+
+
+###  http://www.gbif.es/PliC/DemographyAndThreatType
+:DemographyAndThreatType rdf:type owl:Class ;
+                         rdfs:label "Demography And Threat" .
+
+
+###  http://www.gbif.es/PliC/DescriptionItemType
+:DescriptionItemType rdf:type owl:Class ;
+                     rdfs:label "Description Item" .
+
+
+###  http://www.gbif.es/PliC/DetailType
+:DetailType rdf:type owl:Class ;
+            rdfs:label "Detail" .
+
+
+###  http://www.gbif.es/PliC/DetailUnstructuredType
+:DetailUnstructuredType rdf:type owl:Class .
+
+
+###  http://www.gbif.es/PliC/DirectThreatsType
+:DirectThreatsType rdf:type owl:Class ;
+                   rdfs:label "Direct Threats" .
+
+
+###  http://www.gbif.es/PliC/DispersalAtomizedType
+:DispersalAtomizedType rdf:type owl:Class ;
+                       rdfs:label "Dispersal Atomized" .
+
+
+###  http://www.gbif.es/PliC/DispersalMeansEnumType
+:DispersalMeansEnumType rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Class ;
+                                              owl:oneOf ( :DispersalMeansEnumType_Anemochory
+                                                          :DispersalMeansEnumType_Autochory
+                                                          :DispersalMeansEnumType_Barochory
+                                                          :DispersalMeansEnumType_Hydrochory
+                                                          :DispersalMeansEnumType_Zoochory
+                                                        )
+                                            ] ;
+                        rdfs:label "Enum values for DispersalMeans" .
+
+
+###  http://www.gbif.es/PliC/DispersalType
+:DispersalType rdf:type owl:Class ;
+               rdfs:label "Dispersal" .
+
+
+###  http://www.gbif.es/PliC/DistanceType
+:DistanceType rdf:type owl:Class ;
+              rdfs:label "Distance" .
+
+
+###  http://www.gbif.es/PliC/DistributionAtomizedType
+:DistributionAtomizedType rdf:type owl:Class ;
+                          rdfs:label "Distribution Atomized" .
+
+
+###  http://www.gbif.es/PliC/DistributionScopeType
+:DistributionScopeType rdf:type owl:Class ;
+                       rdfs:label "Distribution Scope" .
+
+
+###  http://www.gbif.es/PliC/DistributionType
+:DistributionType rdf:type owl:Class ;
+                  rdfs:label "Distribution" .
+
+
+###  http://www.gbif.es/PliC/EcologicalSignificanceType
+:EcologicalSignificanceType rdf:type owl:Class ;
+                            rdfs:label "Ecological Significance" .
+
+
+###  http://www.gbif.es/PliC/EndemicAtomizedType
+:EndemicAtomizedType rdf:type owl:Class ;
+                     rdfs:label "Endemic Atomized" .
+
+
+###  http://www.gbif.es/PliC/EndemicType
+:EndemicType rdf:type owl:Class ;
+             rdfs:label "Endemic" .
+
+
+###  http://www.gbif.es/PliC/EnvironmentalEnvelopeType
+:EnvironmentalEnvelopeType rdf:type owl:Class ;
+                           rdfs:label "Environmental Envelope" .
+
+
+###  http://www.gbif.es/PliC/FeedingAtomizedType
+:FeedingAtomizedType rdf:type owl:Class ;
+                     rdfs:label "Feeding Atomized" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType
+:FeedingModeEnumType rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:oneOf ( :FeedingModeEnumType_Autotrophs
+                                                       :FeedingModeEnumType_Detritivore
+                                                       :FeedingModeEnumType_Frugivore
+                                                       :FeedingModeEnumType_Granivore
+                                                       :FeedingModeEnumType_Hematophagy
+                                                       :FeedingModeEnumType_Insectivore
+                                                       :FeedingModeEnumType_Nectarivore
+                                                       :FeedingModeEnumType_Omnivore
+                                                       :FeedingModeEnumType_Oophagy
+                                                       :FeedingModeEnumType_Palynivore
+                                                       :FeedingModeEnumType_Piscivore
+                                                       :FeedingModeEnumType_Rhizophagus
+                                                       :FeedingModeEnumType_Saprophagous
+                                                       :FeedingModeEnumType_Scavenger
+                                                     )
+                                         ] ;
+                     rdfs:label "Enum values for FeedingMode" .
+
+
+###  http://www.gbif.es/PliC/FeedingType
+:FeedingType rdf:type owl:Class ;
+             rdfs:label "Feeding" .
+
+
+###  http://www.gbif.es/PliC/FullDescriptionType
+:FullDescriptionType rdf:type owl:Class ;
+                     rdfs:label "Full Description" .
+
+
+###  http://www.gbif.es/PliC/GeographicEntityType
+:GeographicEntityType rdf:type owl:Class .
+
+
+###  http://www.gbif.es/PliC/HabitatAndDistributionType
+:HabitatAndDistributionType rdf:type owl:Class ;
+                            rdfs:label "Habitat And Distribution" .
+
+
+###  http://www.gbif.es/PliC/HabitatsType
+:HabitatsType rdf:type owl:Class ;
+              rdfs:label "Habitats" .
+
+
+###  http://www.gbif.es/PliC/HierarchyType
+:HierarchyType rdf:type owl:Class ;
+               rdfs:label "Hierarchy" .
+
+
+###  http://www.gbif.es/PliC/IdentificationKeysType
+:IdentificationKeysType rdf:type owl:Class ;
+                        rdfs:label "Identification Keys" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType
+:ImpactMechanismEnumType rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Class ;
+                                               owl:oneOf ( :ImpactMechanismEnumType_Allergeny
+                                                           :ImpactMechanismEnumType_Competition
+                                                           :ImpactMechanismEnumType_DiseaseTransmission
+                                                           :ImpactMechanismEnumType_Fouling
+                                                           :ImpactMechanismEnumType_Herbivory
+                                                           :ImpactMechanismEnumType_Hybridization
+                                                           :ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies
+                                                           :ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies
+                                                           :ImpactMechanismEnumType_ModifiesFireRegime
+                                                           :ImpactMechanismEnumType_ModifiesHydrology
+                                                           :ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities
+                                                           :ImpactMechanismEnumType_ModifiesNutrientRegime
+                                                           :ImpactMechanismEnumType_ModifiesSuccessionalPatterns
+                                                           :ImpactMechanismEnumType_OtherSeeMemoForDescription
+                                                           :ImpactMechanismEnumType_Parasitism
+                                                           :ImpactMechanismEnumType_Pathogenic
+                                                           :ImpactMechanismEnumType_PhysicalDisturbance
+                                                           :ImpactMechanismEnumType_PollenSwamping
+                                                           :ImpactMechanismEnumType_Predation
+                                                           :ImpactMechanismEnumType_Transpiration
+                                                           :ImpactMechanismEnumType_Unknown
+                                                         )
+                                             ] ;
+                         rdfs:label "Enum values for ImpactMechanism" .
+
+
+###  http://www.gbif.es/PliC/ImpactTargetEnumType
+:ImpactTargetEnumType rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:oneOf ( :ImpactTargetEnumType_Economy
+                                                        :ImpactTargetEnumType_Environment
+                                                        :ImpactTargetEnumType_HumanHealth
+                                                        :ImpactTargetEnumType_Unknown
+                                                      )
+                                          ] ;
+                      rdfs:label "Enum values for ImpactTarget" .
+
+
+###  http://www.gbif.es/PliC/InteractionAtomizedType
+:InteractionAtomizedType rdf:type owl:Class ;
+                         rdfs:label "Interaction Atomized" .
+
+
+###  http://www.gbif.es/PliC/InteractionsType
+:InteractionsType rdf:type owl:Class ;
+                  rdfs:label "Interactions" .
+
+
+###  http://www.gbif.es/PliC/InvasivenessAtomizedType
+:InvasivenessAtomizedType rdf:type owl:Class ;
+                          rdfs:label "Invasiveness Atomized" .
+
+
+###  http://www.gbif.es/PliC/InvasivenessType
+:InvasivenessType rdf:type owl:Class ;
+                  rdfs:label "Invasiveness" .
+
+
+###  http://www.gbif.es/PliC/LegislationAtomizedType
+:LegislationAtomizedType rdf:type owl:Class ;
+                         rdfs:label "Legislation Atomized" .
+
+
+###  http://www.gbif.es/PliC/LegislationType
+:LegislationType rdf:type owl:Class ;
+                 rdfs:label "Legislation" .
+
+
+###  http://www.gbif.es/PliC/LifeCycleType
+:LifeCycleType rdf:type owl:Class ;
+               rdfs:label "Life Cycle" .
+
+
+###  http://www.gbif.es/PliC/LifeFormType
+:LifeFormType rdf:type owl:Class ;
+              rdfs:label "Life Form" .
+
+
+###  http://www.gbif.es/PliC/ManagementAndConservationAtomizedType
+:ManagementAndConservationAtomizedType rdf:type owl:Class ;
+                                       rdfs:label "Management And Conservation Atomized" .
+
+
+###  http://www.gbif.es/PliC/ManagementAndConservationType
+:ManagementAndConservationType rdf:type owl:Class ;
+                               rdfs:label "Management And Conservation" .
+
+
+###  http://www.gbif.es/PliC/MeasurementOrFactType
+:MeasurementOrFactType rdf:type owl:Class ;
+                       rdfs:comment "From dwc" ;
+                       rdfs:label "Measurement Or Fact" .
+
+
+###  http://www.gbif.es/PliC/MetadataType
+:MetadataType rdf:type owl:Class ;
+              rdfs:label "Metadata" .
+
+
+###  http://www.gbif.es/PliC/MigratoryAtomizedType
+:MigratoryAtomizedType rdf:type owl:Class ;
+                       rdfs:label "Migratory Atomized" .
+
+
+###  http://www.gbif.es/PliC/MigratoryType
+:MigratoryType rdf:type owl:Class ;
+               rdfs:label "Migratory" .
+
+
+###  http://www.gbif.es/PliC/MiscDetailType
+:MiscDetailType rdf:type owl:Class ;
+                rdfs:label "Misc Detail" .
+
+
+###  http://www.gbif.es/PliC/MolecularDataAtomizedType
+:MolecularDataAtomizedType rdf:type owl:Class ;
+                           rdfs:label "Molecular Data Atomized" .
+
+
+###  http://www.gbif.es/PliC/MolecularDataType
+:MolecularDataType rdf:type owl:Class ;
+                   rdfs:label "Molecular Data" .
+
+
+###  http://www.gbif.es/PliC/NaturalHistoryType
+:NaturalHistoryType rdf:type owl:Class ;
+                    rdfs:label "Natural History" .
+
+
+###  http://www.gbif.es/PliC/NomenclatureAndClassificationType
+:NomenclatureAndClassificationType rdf:type owl:Class ;
+                                   rdfs:label "Nomenclature And Classification" .
+
+
+###  http://www.gbif.es/PliC/NormalDate
+:NormalDate rdf:type owl:Class .
+
+
+###  http://www.gbif.es/PliC/ParentTaxonType
+:ParentTaxonType rdf:type owl:Class ;
+                 rdfs:label "Parent Taxon" .
+
+
+###  http://www.gbif.es/PliC/PatternsEnumType
+:PatternsEnumType rdf:type owl:Class ;
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:oneOf ( :PatternsEnumType_Altitudinal
+                                                    :PatternsEnumType_Latitudinal
+                                                    :PatternsEnumType_Local_migrant
+                                                    :PatternsEnumType_Longitudinal
+                                                    :PatternsEnumType_Vertical_in_water_columns
+                                                  )
+                                      ] ;
+                  rdfs:label "Enum values for Patterns" .
+
+
+###  http://www.gbif.es/PliC/PopulationBiologyAtomizedType
+:PopulationBiologyAtomizedType rdf:type owl:Class ;
+                               rdfs:label "Population Biology Atomized" .
+
+
+###  http://www.gbif.es/PliC/PopulationBiologyType
+:PopulationBiologyType rdf:type owl:Class ;
+                       rdfs:label "Population Biology" .
+
+
+###  http://www.gbif.es/PliC/RecordMetadataType
+:RecordMetadataType rdf:type owl:Class ;
+                    rdfs:label "Record Metadata" .
+
+
+###  http://www.gbif.es/PliC/ReproductionType
+:ReproductionType rdf:type owl:Class ;
+                  rdfs:label "Reproduction" .
+
+
+###  http://www.gbif.es/PliC/ResourceRelationshipType
+:ResourceRelationshipType rdf:type owl:Class ;
+                          rdfs:comment "From dwc" ;
+                          rdfs:label "Resource Relationship" .
+
+
+###  http://www.gbif.es/PliC/RevisionType
+:RevisionType rdf:type owl:Class ;
+              rdfs:label "Revision" .
+
+
+###  http://www.gbif.es/PliC/SourceOfInformationType
+:SourceOfInformationType rdf:type owl:Class ;
+                         rdfs:label "Source Of Information" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType
+:StructureDispersedEnumType rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Class ;
+                                                  owl:oneOf ( :StructureDispersedEnumType_Eggs
+                                                              :StructureDispersedEnumType_Fruit
+                                                              :StructureDispersedEnumType_Gametes
+                                                              :StructureDispersedEnumType_Individuals
+                                                              :StructureDispersedEnumType_Offspring
+                                                              :StructureDispersedEnumType_Seed
+                                                              :StructureDispersedEnumType_Spores
+                                                              :StructureDispersedEnumType_Vegetative_structure
+                                                            )
+                                                ] ;
+                            rdfs:label "Enum values for StructureDispersed" .
+
+
+###  http://www.gbif.es/PliC/SynonymsAtomizedType
+:SynonymsAtomizedType rdf:type owl:Class ;
+                      rdfs:label "Synonyms Atomized" .
+
+
+###  http://www.gbif.es/PliC/SynonymsType
+:SynonymsType rdf:type owl:Class ;
+              rdfs:label "Synonyms" .
+
+
+###  http://www.gbif.es/PliC/TargetAudiencesType
+:TargetAudiencesType rdf:type owl:Class ;
+                     rdfs:label "Target Audiences" .
+
+
+###  http://www.gbif.es/PliC/TaxonRecordNameType
+:TaxonRecordNameType rdf:type owl:Class ;
+                     rdfs:label "Taxon Record Name" .
+
+
+###  http://www.gbif.es/PliC/TaxonRecordType
+:TaxonRecordType rdf:type owl:Class ;
+                 rdfs:label "Taxon Record" .
+
+
+###  http://www.gbif.es/PliC/TaxonomicDescriptionType
+:TaxonomicDescriptionType rdf:type owl:Class ;
+                          rdfs:label "Taxonomic Description" .
+
+
+###  http://www.gbif.es/PliC/TerritoryAtomizedType
+:TerritoryAtomizedType rdf:type owl:Class ;
+                       rdfs:label "Territory Atomized" .
+
+
+###  http://www.gbif.es/PliC/TerritoryType
+:TerritoryType rdf:type owl:Class ;
+               rdfs:label "Territory" .
+
+
+###  http://www.gbif.es/PliC/TextDescriptionType
+:TextDescriptionType rdf:type owl:Class ;
+                     rdfs:label "Text Description" .
+
+
+###  http://www.gbif.es/PliC/ThreatStatusAtomizedType
+:ThreatStatusAtomizedType rdf:type owl:Class ;
+                          rdfs:label "Threat Status Atomized" .
+
+
+###  http://www.gbif.es/PliC/ThreatStatusType
+:ThreatStatusType rdf:type owl:Class ;
+                  rdfs:label "Threat Status" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType
+:TrophicStrategyEnumType rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Class ;
+                                               owl:oneOf ( :TrophicStrategyEnumType_Borers
+                                                           :TrophicStrategyEnumType_Chemosynthetic
+                                                           :TrophicStrategyEnumType_Decomposers
+                                                           :TrophicStrategyEnumType_FilterFeeders
+                                                           :TrophicStrategyEnumType_Foragers
+                                                           :TrophicStrategyEnumType_Photosynthetic
+                                                           :TrophicStrategyEnumType_Vermin
+                                                           <http://www.gbif.es/PliC/TrophicStrategyEnumType_Fluid%C3%B3fagos>
+                                                           <http://www.gbif.es/PliC/TrophicStrategyEnumType_Sediment%C3%ADvoros>
+                                                         )
+                                             ] ;
+                         rdfs:label "Enum values for TrophicStrategy" .
+
+
+###  http://www.gbif.es/PliC/TrophicType
+:TrophicType rdf:type owl:Class ;
+             rdfs:label "Trophic" .
+
+
+###  http://www.gbif.es/PliC/UsesAtomizedType
+:UsesAtomizedType rdf:type owl:Class ;
+                  rdfs:label "Uses Atomized" .
+
+
+###  http://www.gbif.es/PliC/UsesManagementAndConservationType
+:UsesManagementAndConservationType rdf:type owl:Class ;
+                                   rdfs:label "Uses Management And Conservation" .
+
+
+###  http://www.gbif.es/PliC/UsesType
+:UsesType rdf:type owl:Class ;
+          rdfs:label "Uses" .
+
+
+###  http://www.gbif.es/PliC/VersionType
+:VersionType rdf:type owl:Class ;
+             rdfs:label "Version" .
+
+
+###  http://www.tdwg.org/schemas/tcs/1.01#ScientificName
+<http://www.tdwg.org/schemas/tcs/1.01#ScientificName> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.gbif.es/PliC/AudienceEnumType_Expert
+:AudienceEnumType_Expert rdf:type owl:NamedIndividual ;
+                         rdfs:label "expert" .
+
+
+###  http://www.gbif.es/PliC/AudienceEnumType_General
+:AudienceEnumType_General rdf:type owl:NamedIndividual ;
+                          rdfs:label "general" .
+
+
+###  http://www.gbif.es/PliC/AudienceEnumType_Knowledgeable
+:AudienceEnumType_Knowledgeable rdf:type owl:NamedIndividual ;
+                                rdfs:label "knowledgeable" .
+
+
+###  http://www.gbif.es/PliC/CausesEnumType_Reproduction
+:CausesEnumType_Reproduction rdf:type owl:NamedIndividual ;
+                             rdfs:label "reproduction" .
+
+
+###  http://www.gbif.es/PliC/CausesEnumType_Resource_availability
+:CausesEnumType_Resource_availability rdf:type owl:NamedIndividual ;
+                                      rdfs:label "resource availability" .
+
+
+###  http://www.gbif.es/PliC/CausesEnumType_Seasonal_climatic_variation
+:CausesEnumType_Seasonal_climatic_variation rdf:type owl:NamedIndividual ;
+                                            rdfs:label "seasonal climatic variation" .
+
+
+###  http://www.gbif.es/PliC/DispersalMeansEnumType_Anemochory
+:DispersalMeansEnumType_Anemochory rdf:type owl:NamedIndividual ;
+                                   rdfs:label "anemochory" .
+
+
+###  http://www.gbif.es/PliC/DispersalMeansEnumType_Autochory
+:DispersalMeansEnumType_Autochory rdf:type owl:NamedIndividual ;
+                                  rdfs:label "autochory" .
+
+
+###  http://www.gbif.es/PliC/DispersalMeansEnumType_Barochory
+:DispersalMeansEnumType_Barochory rdf:type owl:NamedIndividual ;
+                                  rdfs:label "barochory" .
+
+
+###  http://www.gbif.es/PliC/DispersalMeansEnumType_Hydrochory
+:DispersalMeansEnumType_Hydrochory rdf:type owl:NamedIndividual ;
+                                   rdfs:label "hydrochory" .
+
+
+###  http://www.gbif.es/PliC/DispersalMeansEnumType_Zoochory
+:DispersalMeansEnumType_Zoochory rdf:type owl:NamedIndividual ;
+                                 rdfs:label "zoochory" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Autotrophs
+:FeedingModeEnumType_Autotrophs rdf:type owl:NamedIndividual ;
+                                rdfs:label "autotrophs" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Detritivore
+:FeedingModeEnumType_Detritivore rdf:type owl:NamedIndividual ;
+                                 rdfs:label "detritivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Frugivore
+:FeedingModeEnumType_Frugivore rdf:type owl:NamedIndividual ;
+                               rdfs:label "frugivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Granivore
+:FeedingModeEnumType_Granivore rdf:type owl:NamedIndividual ;
+                               rdfs:label "granivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Hematophagy
+:FeedingModeEnumType_Hematophagy rdf:type owl:NamedIndividual ;
+                                 rdfs:label "hematophagy" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Insectivore
+:FeedingModeEnumType_Insectivore rdf:type owl:NamedIndividual ;
+                                 rdfs:label "insectivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Nectarivore
+:FeedingModeEnumType_Nectarivore rdf:type owl:NamedIndividual ;
+                                 rdfs:label "nectarivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Omnivore
+:FeedingModeEnumType_Omnivore rdf:type owl:NamedIndividual ;
+                              rdfs:label "omnivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Oophagy
+:FeedingModeEnumType_Oophagy rdf:type owl:NamedIndividual ;
+                             rdfs:label "oophagy" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Palynivore
+:FeedingModeEnumType_Palynivore rdf:type owl:NamedIndividual ;
+                                rdfs:label "palynivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Piscivore
+:FeedingModeEnumType_Piscivore rdf:type owl:NamedIndividual ;
+                               rdfs:label "piscivore" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Rhizophagus
+:FeedingModeEnumType_Rhizophagus rdf:type owl:NamedIndividual ;
+                                 rdfs:label "rhizophagus" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Saprophagous
+:FeedingModeEnumType_Saprophagous rdf:type owl:NamedIndividual ;
+                                  rdfs:label "saprophagous" .
+
+
+###  http://www.gbif.es/PliC/FeedingModeEnumType_Scavenger
+:FeedingModeEnumType_Scavenger rdf:type owl:NamedIndividual ;
+                               rdfs:label "scavenger" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Allergeny
+:ImpactMechanismEnumType_Allergeny rdf:type owl:NamedIndividual ;
+                                   rdfs:label "allergeny" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Competition
+:ImpactMechanismEnumType_Competition rdf:type owl:NamedIndividual ;
+                                     rdfs:label "competition" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_DiseaseTransmission
+:ImpactMechanismEnumType_DiseaseTransmission rdf:type owl:NamedIndividual ;
+                                             rdfs:label "disease transmission" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Fouling
+:ImpactMechanismEnumType_Fouling rdf:type owl:NamedIndividual ;
+                                 rdfs:label "fouling" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Herbivory
+:ImpactMechanismEnumType_Herbivory rdf:type owl:NamedIndividual ;
+                                   rdfs:label "herbivory" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Hybridization
+:ImpactMechanismEnumType_Hybridization rdf:type owl:NamedIndividual ;
+                                       rdfs:label "hybridization" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies
+:ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies rdf:type owl:NamedIndividual ;
+                                                      rdfs:label "inhibits growth of other species" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies
+:ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies rdf:type owl:NamedIndividual ;
+                                                             rdfs:label "interaction with other invasive species" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesFireRegime
+:ImpactMechanismEnumType_ModifiesFireRegime rdf:type owl:NamedIndividual ;
+                                            rdfs:label "modifies fire regime" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesHydrology
+:ImpactMechanismEnumType_ModifiesHydrology rdf:type owl:NamedIndividual ;
+                                           rdfs:label "modifies hydrology" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities
+:ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities rdf:type owl:NamedIndividual ;
+                                                           rdfs:label "modifies natural benthic communities" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNutrientRegime
+:ImpactMechanismEnumType_ModifiesNutrientRegime rdf:type owl:NamedIndividual ;
+                                                rdfs:label "modifies nutrient regime" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesSuccessionalPatterns
+:ImpactMechanismEnumType_ModifiesSuccessionalPatterns rdf:type owl:NamedIndividual ;
+                                                      rdfs:label "modifies successional patterns" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_OtherSeeMemoForDescription
+:ImpactMechanismEnumType_OtherSeeMemoForDescription rdf:type owl:NamedIndividual ;
+                                                    rdfs:label "other see memo for description" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Parasitism
+:ImpactMechanismEnumType_Parasitism rdf:type owl:NamedIndividual ;
+                                    rdfs:label "parasitism" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Pathogenic
+:ImpactMechanismEnumType_Pathogenic rdf:type owl:NamedIndividual ;
+                                    rdfs:label "pathogenic" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_PhysicalDisturbance
+:ImpactMechanismEnumType_PhysicalDisturbance rdf:type owl:NamedIndividual ;
+                                             rdfs:label "physical disturbance" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_PollenSwamping
+:ImpactMechanismEnumType_PollenSwamping rdf:type owl:NamedIndividual ;
+                                        rdfs:label "pollen swamping" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Predation
+:ImpactMechanismEnumType_Predation rdf:type owl:NamedIndividual ;
+                                   rdfs:label "predation" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Transpiration
+:ImpactMechanismEnumType_Transpiration rdf:type owl:NamedIndividual ;
+                                       rdfs:label "transpiration" .
+
+
+###  http://www.gbif.es/PliC/ImpactMechanismEnumType_Unknown
+:ImpactMechanismEnumType_Unknown rdf:type owl:NamedIndividual ;
+                                 rdfs:label "unknown" .
+
+
+###  http://www.gbif.es/PliC/ImpactTargetEnumType_Economy
+:ImpactTargetEnumType_Economy rdf:type owl:NamedIndividual ;
+                              rdfs:label "economy" .
+
+
+###  http://www.gbif.es/PliC/ImpactTargetEnumType_Environment
+:ImpactTargetEnumType_Environment rdf:type owl:NamedIndividual ;
+                                  rdfs:label "environment" .
+
+
+###  http://www.gbif.es/PliC/ImpactTargetEnumType_HumanHealth
+:ImpactTargetEnumType_HumanHealth rdf:type owl:NamedIndividual ;
+                                  rdfs:label "human health" .
+
+
+###  http://www.gbif.es/PliC/ImpactTargetEnumType_Unknown
+:ImpactTargetEnumType_Unknown rdf:type owl:NamedIndividual ;
+                              rdfs:label "unknown" .
+
+
+###  http://www.gbif.es/PliC/PatternsEnumType_Altitudinal
+:PatternsEnumType_Altitudinal rdf:type owl:NamedIndividual ;
+                              rdfs:label "altitudinal" .
+
+
+###  http://www.gbif.es/PliC/PatternsEnumType_Latitudinal
+:PatternsEnumType_Latitudinal rdf:type owl:NamedIndividual ;
+                              rdfs:label "latitudinal" .
+
+
+###  http://www.gbif.es/PliC/PatternsEnumType_Local_migrant
+:PatternsEnumType_Local_migrant rdf:type owl:NamedIndividual ;
+                                rdfs:label "local migrant" .
+
+
+###  http://www.gbif.es/PliC/PatternsEnumType_Longitudinal
+:PatternsEnumType_Longitudinal rdf:type owl:NamedIndividual ;
+                               rdfs:label "longitudinal" .
+
+
+###  http://www.gbif.es/PliC/PatternsEnumType_Vertical_in_water_columns
+:PatternsEnumType_Vertical_in_water_columns rdf:type owl:NamedIndividual ;
+                                            rdfs:label "vertical in water columns" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Eggs
+:StructureDispersedEnumType_Eggs rdf:type owl:NamedIndividual ;
+                                 rdfs:label "eggs" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Fruit
+:StructureDispersedEnumType_Fruit rdf:type owl:NamedIndividual ;
+                                  rdfs:label "fruit" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Gametes
+:StructureDispersedEnumType_Gametes rdf:type owl:NamedIndividual ;
+                                    rdfs:label "gametes" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Individuals
+:StructureDispersedEnumType_Individuals rdf:type owl:NamedIndividual ;
+                                        rdfs:label "individuals" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Offspring
+:StructureDispersedEnumType_Offspring rdf:type owl:NamedIndividual ;
+                                      rdfs:label "offspring" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Seed
+:StructureDispersedEnumType_Seed rdf:type owl:NamedIndividual ;
+                                 rdfs:label "seed" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Spores
+:StructureDispersedEnumType_Spores rdf:type owl:NamedIndividual ;
+                                   rdfs:label "spores" .
+
+
+###  http://www.gbif.es/PliC/StructureDispersedEnumType_Vegetative_structure
+:StructureDispersedEnumType_Vegetative_structure rdf:type owl:NamedIndividual ;
+                                                 rdfs:label "vegetative structure" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Borers
+:TrophicStrategyEnumType_Borers rdf:type owl:NamedIndividual ;
+                                rdfs:label "borers" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Chemosynthetic
+:TrophicStrategyEnumType_Chemosynthetic rdf:type owl:NamedIndividual ;
+                                        rdfs:label "chemosynthetic" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Decomposers
+:TrophicStrategyEnumType_Decomposers rdf:type owl:NamedIndividual ;
+                                     rdfs:label "decomposers" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_FilterFeeders
+:TrophicStrategyEnumType_FilterFeeders rdf:type owl:NamedIndividual ;
+                                       rdfs:label "filter feeders" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Foragers
+:TrophicStrategyEnumType_Foragers rdf:type owl:NamedIndividual ;
+                                  rdfs:label "foragers" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Photosynthetic
+:TrophicStrategyEnumType_Photosynthetic rdf:type owl:NamedIndividual ;
+                                        rdfs:label "photosynthetic" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Vermin
+:TrophicStrategyEnumType_Vermin rdf:type owl:NamedIndividual ;
+                                rdfs:label "vermin" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Fluid%C3%B3fagos
+<http://www.gbif.es/PliC/TrophicStrategyEnumType_Fluid%C3%B3fagos> rdf:type owl:NamedIndividual ;
+                                                                   rdfs:label "fluidófagos" .
+
+
+###  http://www.gbif.es/PliC/TrophicStrategyEnumType_Sediment%C3%ADvoros
+<http://www.gbif.es/PliC/TrophicStrategyEnumType_Sediment%C3%ADvoros> rdf:type owl:NamedIndividual ;
+                                                                      rdfs:label "sedimentívoros" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:hasDataset rdfs:comment "Root element from which all other elements will branch from" ;
+            rdfs:label "has dataset" .
+
+
+<https://orcid.org/0000-0001-9064-0463> <http://xmlns.com/foaf/0.1/name> "Franck MICHEL" .
+
+
+<https://orcid.org/0000-0002-6321-9398> <http://xmlns.com/foaf/0.1/name> "Francisco PANDO" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

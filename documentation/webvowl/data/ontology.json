@@ -1,0 +1,6307 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.gbif.es/PliC", "http://www.w3.org/2001/XMLSchema", "http://www.tdwg.org/schemas/tcs/1.01", "http://www.eol.org/transfer/content/0.3" ],
+    "title" : {
+      "undefined" : "Plinian Core ontology"
+    },
+    "iri" : "http://www.gbif.es/PliC/",
+    "version" : "3.2.2.8.1",
+    "author" : [ "https://orcid.org/0000-0001-9064-0463", "Gloria Martínez", "https://orcid.org/0000-0002-6321-9398" ],
+    "description" : {
+      "en" : "Representation of the Plinian Core XSD vocabulary as an OWL ontology."
+    },
+    "labels" : {
+      "undefined" : "Plinian Core ontology"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Gloria Martínez",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-6321-9398",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0001-9064-0463",
+        "type" : "iri"
+      } ],
+      "acronym" : [ {
+        "identifier" : "acronym",
+        "language" : "undefined",
+        "value" : "plic",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024",
+        "type" : "label"
+      } ],
+      "subjectOf" : [ {
+        "identifier" : "subjectOf",
+        "language" : "undefined",
+        "value" : "https://doi.org/10.3897/biss.2.25869",
+        "type" : "iri"
+      } ],
+      "langindgPage" : [ {
+        "identifier" : "langindgPage",
+        "language" : "undefined",
+        "value" : "https://github.com/Wimmics/plic2owl",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.2.2.8.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Plinian Core ontology",
+        "type" : "label"
+      } ],
+      "createdOn" : [ {
+        "identifier" : "createdOn",
+        "language" : "undefined",
+        "value" : "2024",
+        "type" : "label"
+      } ],
+      "datePublished" : [ {
+        "identifier" : "datePublished",
+        "language" : "undefined",
+        "value" : "2024-10-08",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "type" : "iri"
+      } ],
+      "accrualMethod" : [ {
+        "identifier" : "accrualMethod",
+        "language" : "undefined",
+        "value" : "https://github.com/tdwg/PlinianCore/tree/master?tab=readme-ov-file#plinian-core-task-group-charter",
+        "type" : "iri"
+      } ],
+      "dateCreated" : [ {
+        "identifier" : "dateCreated",
+        "language" : "undefined",
+        "value" : "2024",
+        "type" : "label"
+      } ],
+      "name" : [ {
+        "identifier" : "name",
+        "language" : "undefined",
+        "value" : "Plinian Core ontology",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2024-10-08",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "22",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "115",
+    "type" : "owl:Class"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "123",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "142",
+    "type" : "owl:Class"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "147",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "155",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "166",
+    "type" : "owl:Class"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "186",
+    "type" : "owl:Class"
+  }, {
+    "id" : "184",
+    "type" : "owl:Class"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "193",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "206",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "208",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "210",
+    "type" : "owl:Class"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "213",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "198",
+    "type" : "owl:Class"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "220",
+    "type" : "owl:Class"
+  }, {
+    "id" : "221",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "222",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "190",
+    "type" : "owl:Class"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "225",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "226",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "228",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "150",
+    "type" : "owl:Class"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "239",
+    "type" : "owl:Class"
+  }, {
+    "id" : "240",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "241",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "244",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "245",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "246",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "88",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "248",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "252",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "132",
+    "type" : "owl:Class"
+  }, {
+    "id" : "256",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "258",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "259",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "260",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "272",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "283",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "286",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "137",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "303",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "owl:Class"
+  }, {
+    "id" : "268",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "312",
+    "type" : "owl:Class"
+  }, {
+    "id" : "308",
+    "type" : "owl:Class"
+  }, {
+    "id" : "290",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "346",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "219",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "169",
+    "type" : "owl:Class"
+  }, {
+    "id" : "369",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "177",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "344",
+    "type" : "owl:Class"
+  }, {
+    "id" : "275",
+    "type" : "owl:Class"
+  }, {
+    "id" : "157",
+    "type" : "owl:Class"
+  }, {
+    "id" : "409",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "262",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "385",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "380",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "339",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "134",
+    "type" : "owl:Class"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "323",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "276",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "0",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "1",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ActionsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActionsType",
+      "undefined" : "Actions"
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/FullDescriptionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FullDescriptionType",
+      "undefined" : "Full Description"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "22",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ResourceRelationshipType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceRelationshipType",
+      "undefined" : "Resource Relationship"
+    },
+    "comment" : {
+      "undefined" : "From dwc"
+    },
+    "id" : "40"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "44",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/CommonNamesAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CommonNamesAtomizedType",
+      "undefined" : "Common Names Atomized"
+    },
+    "id" : "48"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TaxonRecordNameType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaxonRecordNameType",
+      "undefined" : "Taxon Record Name"
+    },
+    "id" : "76"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TaxonomicDescriptionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaxonomicDescriptionType",
+      "undefined" : "Taxonomic Description"
+    },
+    "id" : "69"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/RevisionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RevisionType",
+      "undefined" : "Revision"
+    },
+    "id" : "77"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/RecordMetadataType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecordMetadataType",
+      "undefined" : "Record Metadata"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/InteractionAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InteractionAtomizedType",
+      "undefined" : "Interaction Atomized"
+    },
+    "id" : "39"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/SynonymsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SynonymsType",
+      "undefined" : "Synonyms"
+    },
+    "id" : "85"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/CitationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CitationType",
+      "undefined" : "Citation"
+    },
+    "id" : "86"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/UsesAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UsesAtomizedType",
+      "undefined" : "Uses Atomized"
+    },
+    "id" : "25"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DispersalMeansEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DispersalMeansEnumType",
+      "undefined" : "Enum values for DispersalMeans"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Anemochory",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "DispersalMeansEnumType_Anemochory",
+        "undefined" : "anemochory"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Barochory",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "DispersalMeansEnumType_Barochory",
+        "undefined" : "barochory"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Zoochory",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "DispersalMeansEnumType_Zoochory",
+        "undefined" : "zoochory"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Autochory",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "DispersalMeansEnumType_Autochory",
+        "undefined" : "autochory"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Hydrochory",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "DispersalMeansEnumType_Hydrochory",
+        "undefined" : "hydrochory"
+      }
+    } ],
+    "id" : "101"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/HabitatAndDistributionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HabitatAndDistributionType",
+      "undefined" : "Habitat And Distribution"
+    },
+    "id" : "102"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TargetAudiencesType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TargetAudiencesType",
+      "undefined" : "Target Audiences"
+    },
+    "id" : "103"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DemographyAndThreatType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DemographyAndThreatType",
+      "undefined" : "Demography And Threat"
+    },
+    "id" : "107"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MetadataType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MetadataType",
+      "undefined" : "Metadata"
+    },
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "114",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrophicStrategyEnumType",
+      "undefined" : "Enum values for TrophicStrategy"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Chemosynthetic",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Chemosynthetic",
+        "undefined" : "chemosynthetic"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_FilterFeeders",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_FilterFeeders",
+        "undefined" : "filter feeders"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Sediment%C3%ADvoros",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Sediment%C3%ADvoros",
+        "undefined" : "sedimentívoros"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Vermin",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Vermin",
+        "undefined" : "vermin"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Decomposers",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Decomposers",
+        "undefined" : "decomposers"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Foragers",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Foragers",
+        "undefined" : "foragers"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Fluid%C3%B3fagos",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Fluid%C3%B3fagos",
+        "undefined" : "fluidófagos"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Borers",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Borers",
+        "undefined" : "borers"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Photosynthetic",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "TrophicStrategyEnumType_Photosynthetic",
+        "undefined" : "photosynthetic"
+      }
+    } ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DescriptionItemType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DescriptionItemType",
+      "undefined" : "Description Item"
+    },
+    "id" : "119"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/FeedingAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FeedingAtomizedType",
+      "undefined" : "Feeding Atomized"
+    },
+    "id" : "121"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.eol.org/transfer/content/0.3#dataObjectBaseType",
+    "baseIri" : "http://www.eol.org/transfer/content/0.3",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "dataObjectBaseType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "124",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "127",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ImpactTargetEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactTargetEnumType",
+      "undefined" : "Enum values for ImpactTarget"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Environment",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactTargetEnumType_Environment",
+        "undefined" : "environment"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactTargetEnumType_HumanHealth",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactTargetEnumType_HumanHealth",
+        "undefined" : "human health"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Economy",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactTargetEnumType_Economy",
+        "undefined" : "economy"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Unknown",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactTargetEnumType_Unknown",
+        "undefined" : "unknown"
+      }
+    } ],
+    "id" : "128"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TrophicType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TrophicType",
+      "undefined" : "Trophic"
+    },
+    "id" : "129"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "130",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructureDispersedEnumType",
+      "undefined" : "Enum values for StructureDispersed"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Gametes",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Gametes",
+        "undefined" : "gametes"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Vegetative_structure",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Vegetative_structure",
+        "undefined" : "vegetative structure"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Spores",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Spores",
+        "undefined" : "spores"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Fruit",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Fruit",
+        "undefined" : "fruit"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Seed",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Seed",
+        "undefined" : "seed"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Offspring",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Offspring",
+        "undefined" : "offspring"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Eggs",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Eggs",
+        "undefined" : "eggs"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Individuals",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "StructureDispersedEnumType_Individuals",
+        "undefined" : "individuals"
+      }
+    } ],
+    "id" : "138"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TextDescriptionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TextDescriptionType",
+      "undefined" : "Text Description"
+    },
+    "id" : "142"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "144",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "145",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "146",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "147",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "148",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "151",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "152",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "153",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "154",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MiscDetailType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MiscDetailType",
+      "undefined" : "Misc Detail"
+    },
+    "id" : "155"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "158",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "161",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DetailUnstructuredType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DetailUnstructuredType"
+    },
+    "id" : "166"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "170",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "172",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "173",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "163",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/EndemicAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EndemicAtomizedType",
+      "undefined" : "Endemic Atomized"
+    },
+    "id" : "175"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "180",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "185",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/NaturalHistoryType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NaturalHistoryType",
+      "undefined" : "Natural History"
+    },
+    "id" : "83"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/CausesEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CausesEnumType",
+      "undefined" : "Enum values for Causes"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/CausesEnumType_Resource_availability",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "CausesEnumType_Resource_availability",
+        "undefined" : "resource availability"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/CausesEnumType_Seasonal_climatic_variation",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "CausesEnumType_Seasonal_climatic_variation",
+        "undefined" : "seasonal climatic variation"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/CausesEnumType_Reproduction",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "CausesEnumType_Reproduction",
+        "undefined" : "reproduction"
+      }
+    } ],
+    "id" : "186"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/UsesManagementAndConservationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UsesManagementAndConservationType",
+      "undefined" : "Uses Management And Conservation"
+    },
+    "id" : "184"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "188",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "191",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "193",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/BaseElementsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BaseElementsType",
+      "undefined" : "Base Elements"
+    },
+    "id" : "117"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DistributionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistributionType",
+      "undefined" : "Distribution"
+    },
+    "id" : "74"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "195",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "196",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "199",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "200",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "201",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "202",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "203",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "204",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/LifeCycleType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LifeCycleType",
+      "undefined" : "Life Cycle"
+    },
+    "id" : "84"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "206",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "207",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/AudienceEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AudienceEnumType",
+      "undefined" : "Enum values for Audience"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/AudienceEnumType_General",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "AudienceEnumType_General",
+        "undefined" : "general"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/AudienceEnumType_Expert",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "AudienceEnumType_Expert",
+        "undefined" : "expert"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/AudienceEnumType_Knowledgeable",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "AudienceEnumType_Knowledgeable",
+        "undefined" : "knowledgeable"
+      }
+    } ],
+    "id" : "208"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FeedingModeEnumType",
+      "undefined" : "Enum values for FeedingMode"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Frugivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Frugivore",
+        "undefined" : "frugivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Hematophagy",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Hematophagy",
+        "undefined" : "hematophagy"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Rhizophagus",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Rhizophagus",
+        "undefined" : "rhizophagus"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Insectivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Insectivore",
+        "undefined" : "insectivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Saprophagous",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Saprophagous",
+        "undefined" : "saprophagous"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Scavenger",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Scavenger",
+        "undefined" : "scavenger"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Nectarivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Nectarivore",
+        "undefined" : "nectarivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Detritivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Detritivore",
+        "undefined" : "detritivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Autotrophs",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Autotrophs",
+        "undefined" : "autotrophs"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Piscivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Piscivore",
+        "undefined" : "piscivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Omnivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Omnivore",
+        "undefined" : "omnivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Granivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Granivore",
+        "undefined" : "granivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Palynivore",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Palynivore",
+        "undefined" : "palynivore"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/FeedingModeEnumType_Oophagy",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "FeedingModeEnumType_Oophagy",
+        "undefined" : "oophagy"
+      }
+    } ],
+    "id" : "210"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "211",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "212",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "213",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "214",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DirectThreatsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DirectThreatsType",
+      "undefined" : "Direct Threats"
+    },
+    "id" : "198"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "215",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "216",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/EndemicType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EndemicType",
+      "undefined" : "Endemic"
+    },
+    "id" : "220"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "221",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "222",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ParentTaxonType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ParentTaxonType",
+      "undefined" : "Parent Taxon"
+    },
+    "id" : "190"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "223",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "224",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "225",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "226",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "227",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "228",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "229",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/PopulationBiologyType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopulationBiologyType",
+      "undefined" : "Population Biology"
+    },
+    "id" : "150"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "230",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "232",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "233",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TaxonRecordType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TaxonRecordType",
+      "undefined" : "Taxon Record"
+    },
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "234",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "235",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/LegislationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LegislationType",
+      "undefined" : "Legislation"
+    },
+    "id" : "53"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DistributionScopeType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistributionScopeType",
+      "undefined" : "Distribution Scope"
+    },
+    "id" : "93"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/EnvironmentalEnvelopeType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnvironmentalEnvelopeType",
+      "undefined" : "Environmental Envelope"
+    },
+    "id" : "239"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "240",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "241",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "244",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "245",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "246",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "88",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "248",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "250",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "252",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/BehaviorType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BehaviorType",
+      "undefined" : "Behavior"
+    },
+    "id" : "132"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "256",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "258",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "259",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "260",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MigratoryType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MigratoryType",
+      "undefined" : "Migratory"
+    },
+    "id" : "46"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/InvasivenessType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InvasivenessType",
+      "undefined" : "Invasiveness"
+    },
+    "id" : "15"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/PatternsEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PatternsEnumType",
+      "undefined" : "Enum values for Patterns"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/PatternsEnumType_Local_migrant",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "PatternsEnumType_Local_migrant",
+        "undefined" : "local migrant"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/PatternsEnumType_Longitudinal",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "PatternsEnumType_Longitudinal",
+        "undefined" : "longitudinal"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/PatternsEnumType_Latitudinal",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "PatternsEnumType_Latitudinal",
+        "undefined" : "latitudinal"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/PatternsEnumType_Vertical_in_water_columns",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "PatternsEnumType_Vertical_in_water_columns",
+        "undefined" : "vertical in water columns"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/PatternsEnumType_Altitudinal",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "PatternsEnumType_Altitudinal",
+        "undefined" : "altitudinal"
+      }
+    } ],
+    "id" : "272"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MigratoryAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MigratoryAtomizedType",
+      "undefined" : "Migratory Atomized"
+    },
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "283",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "286",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "137",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NomenclatureAndClassificationType",
+      "undefined" : "Nomenclature And Classification"
+    },
+    "id" : "9"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DistributionAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistributionAtomizedType",
+      "undefined" : "Distribution Atomized"
+    },
+    "id" : "75"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ThreatStatusAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThreatStatusAtomizedType",
+      "undefined" : "Threat Status Atomized"
+    },
+    "id" : "50"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ManagementAndConservationAtomizedType",
+      "undefined" : "Management And Conservation Atomized"
+    },
+    "id" : "32"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MeasurementOrFactType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeasurementOrFactType",
+      "undefined" : "Measurement Or Fact"
+    },
+    "comment" : {
+      "undefined" : "From dwc"
+    },
+    "id" : "303"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ThreatStatusType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ThreatStatusType",
+      "undefined" : "Threat Status"
+    },
+    "id" : "64"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/SynonymsAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SynonymsAtomizedType",
+      "undefined" : "Synonyms Atomized"
+    },
+    "id" : "56"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DispersalAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DispersalAtomizedType",
+      "undefined" : "Dispersal Atomized"
+    },
+    "id" : "141"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/FeedingType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FeedingType",
+      "undefined" : "Feeding"
+    },
+    "id" : "268"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/LegislationAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LegislationAtomizedType",
+      "undefined" : "Legislation Atomized"
+    },
+    "id" : "54"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/NormalDate",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NormalDate"
+    },
+    "id" : "312"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DatasetType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DatasetType",
+      "undefined" : "Dataset"
+    },
+    "id" : "308"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/SourceOfInformationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SourceOfInformationType",
+      "undefined" : "Source Of Information"
+    },
+    "id" : "290"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ReproductionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReproductionType",
+      "undefined" : "Reproduction"
+    },
+    "id" : "111"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/UsesType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UsesType",
+      "undefined" : "Uses"
+    },
+    "id" : "113"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/IdentificationKeysType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IdentificationKeysType",
+      "undefined" : "Identification Keys"
+    },
+    "id" : "346"
+  }, {
+    "iri" : "http://www.tdwg.org/schemas/tcs/1.01#ScientificName",
+    "baseIri" : "http://www.tdwg.org/schemas/tcs/1.01",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScientificName"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/CommonNamesType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CommonNamesType",
+      "undefined" : "Common Names"
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ManagementAndConservationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ManagementAndConservationType",
+      "undefined" : "Management And Conservation"
+    },
+    "id" : "219"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/AnnualCycleAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnnualCycleAtomizedType",
+      "undefined" : "Annual Cycle Atomized"
+    },
+    "id" : "135"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/GeographicEntityType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeographicEntityType"
+    },
+    "id" : "169"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DistanceType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistanceType",
+      "undefined" : "Distance"
+    },
+    "id" : "369"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DispersalType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DispersalType",
+      "undefined" : "Dispersal"
+    },
+    "id" : "105"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/InteractionsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InteractionsType",
+      "undefined" : "Interactions"
+    },
+    "id" : "38"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/InvasivenessAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InvasivenessAtomizedType",
+      "undefined" : "Invasiveness Atomized"
+    },
+    "id" : "16"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/HierarchyType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HierarchyType",
+      "undefined" : "Hierarchy"
+    },
+    "id" : "177"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopulationBiologyAtomizedType",
+      "undefined" : "Population Biology Atomized"
+    },
+    "id" : "18"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImpactMechanismEnumType",
+      "undefined" : "Enum values for ImpactMechanism"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Competition",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Competition",
+        "undefined" : "competition"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Fouling",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Fouling",
+        "undefined" : "fouling"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Hybridization",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Hybridization",
+        "undefined" : "hybridization"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies",
+        "undefined" : "inhibits growth of other species"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesHydrology",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_ModifiesHydrology",
+        "undefined" : "modifies hydrology"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesSuccessionalPatterns",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_ModifiesSuccessionalPatterns",
+        "undefined" : "modifies successional patterns"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Unknown",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Unknown",
+        "undefined" : "unknown"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_PollenSwamping",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_PollenSwamping",
+        "undefined" : "pollen swamping"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Herbivory",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Herbivory",
+        "undefined" : "herbivory"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_PhysicalDisturbance",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_PhysicalDisturbance",
+        "undefined" : "physical disturbance"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Predation",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Predation",
+        "undefined" : "predation"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Allergeny",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Allergeny",
+        "undefined" : "allergeny"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_OtherSeeMemoForDescription",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_OtherSeeMemoForDescription",
+        "undefined" : "other see memo for description"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Parasitism",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Parasitism",
+        "undefined" : "parasitism"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_DiseaseTransmission",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_DiseaseTransmission",
+        "undefined" : "disease transmission"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities",
+        "undefined" : "modifies natural benthic communities"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Pathogenic",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Pathogenic",
+        "undefined" : "pathogenic"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNutrientRegime",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_ModifiesNutrientRegime",
+        "undefined" : "modifies nutrient regime"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Transpiration",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_Transpiration",
+        "undefined" : "transpiration"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies",
+        "undefined" : "interaction with other invasive species"
+      }
+    }, {
+      "iri" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesFireRegime",
+      "baseIri" : "http://www.gbif.es/PliC",
+      "labels" : {
+        "IRI-based" : "ImpactMechanismEnumType_ModifiesFireRegime",
+        "undefined" : "modifies fire regime"
+      }
+    } ],
+    "id" : "344"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TerritoryType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TerritoryType",
+      "undefined" : "Territory"
+    },
+    "id" : "275"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/LifeFormType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LifeFormType",
+      "undefined" : "Life Form"
+    },
+    "id" : "157"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MolecularDataAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MolecularDataAtomizedType",
+      "undefined" : "Molecular Data Atomized"
+    },
+    "id" : "409"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/DetailType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DetailType",
+      "undefined" : "Detail"
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/EcologicalSignificanceType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EcologicalSignificanceType",
+      "undefined" : "Ecological Significance"
+    },
+    "id" : "62"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "262",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "385",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "380",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/VersionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VersionType",
+      "undefined" : "Version"
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "339",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/AnnualCyclesType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnnualCyclesType",
+      "undefined" : "Annual Cycles"
+    },
+    "id" : "134"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "179",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/MolecularDataType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MolecularDataType",
+      "undefined" : "Molecular Data"
+    },
+    "id" : "323"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "237",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.gbif.es/PliC/HabitatsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HabitatsType",
+      "undefined" : "Habitats"
+    },
+    "id" : "109"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/TerritoryAtomizedType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TerritoryAtomizedType",
+      "undefined" : "Territory Atomized"
+    },
+    "id" : "276"
+  } ],
+  "property" : [ {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "136",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "167",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "168",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "174",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "176",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "181",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "182",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "183",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "189",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "192",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "197",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "205",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "217",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "218",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "231",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "236",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "238",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "242",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "243",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "247",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "249",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "251",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "253",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "254",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "255",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "257",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "261",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "263",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "264",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "265",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "266",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "267",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "269",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "270",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "271",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "273",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "274",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "277",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "278",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "279",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "280",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "281",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "282",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "284",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "285",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "287",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "288",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "289",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "291",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "292",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "293",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "294",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "295",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "296",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "297",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "298",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "299",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "300",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "301",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "302",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "304",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "305",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "306",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "307",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "309",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "310",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "311",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "313",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "314",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "315",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "316",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "317",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "318",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "319",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "320",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "321",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "322",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "324",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "325",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "326",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "327",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "328",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "329",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "330",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "331",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "332",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "333",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "334",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "335",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "336",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "337",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "338",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "340",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "341",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "342",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "343",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "345",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "347",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "348",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "349",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "350",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "351",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "352",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "353",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "354",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "355",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "356",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "357",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "358",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "359",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "360",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "361",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "362",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "363",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "364",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "365",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "366",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "367",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "368",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "370",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "371",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "372",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "373",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "374",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "375",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "376",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "377",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "378",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "379",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "381",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "382",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "383",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "384",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "386",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "387",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "388",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "389",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "390",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "391",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "392",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "393",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "394",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "395",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "396",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "397",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "398",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "399",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "400",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "401",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "402",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "403",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "404",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "405",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "406",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "407",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "408",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "410",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "411",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "412",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "413",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "414",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "415",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "416",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "417",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "418",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "419",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "420",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "421",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "422",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "423",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "424",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "425",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "426",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "427",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "428",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "429",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.gbif.es/PliC/hasCommonNames",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasCommonNames",
+      "undefined" : "has common names"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasVersion",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasVersion",
+      "undefined" : "has version"
+    },
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasInvasivenessAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasInvasivenessAtomized",
+      "undefined" : "has invasiveness atomized"
+    },
+    "domain" : "15",
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAverageDensity",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasAverageDensity",
+      "undefined" : "has average density"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Average of the densities obtained for a population"
+    },
+    "attributes" : [ "object" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUseValue",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasUseValue",
+      "undefined" : "has use value"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a weed affecting food production, or as an accident al poison)?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasManagementAndConservationAtomizedTypeType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "hasManagementAndConservationAtomizedTypeType",
+      "undefined" : "has management and conservation atomized type's type"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasInteractionAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasInteractionAtomized",
+      "undefined" : "has interaction atomized"
+    },
+    "domain" : "38",
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasResourceLogoUrl",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasResourceLogoUrl",
+      "undefined" : "has resource logo url"
+    },
+    "domain" : "42",
+    "comment" : {
+      "undefined" : "URL of the logo associated with this dataset."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMigratoryUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasMigratoryUnstructured",
+      "undefined" : "has migratory unstructured"
+    },
+    "domain" : "46",
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAuthority",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasAuthority",
+      "undefined" : "has authority"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "Organism or institution that assess the status"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislationAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasLegislationAtomized",
+      "undefined" : "has legislation atomized"
+    },
+    "domain" : "53",
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSynonymStatus",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasSynonymStatus",
+      "undefined" : "has synonym status"
+    },
+    "domain" : "56",
+    "comment" : {
+      "undefined" : "VC"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasInvasiveness",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasInvasiveness",
+      "undefined" : "has invasiveness"
+    },
+    "domain" : "59",
+    "comment" : {
+      "undefined" : "Information about invasive exotic species that could threaten to ecosystem, habitats and species"
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPopulationGrowthRate",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasPopulationGrowthRate",
+      "undefined" : "has population growth rate"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Rate that estimates the annual growth rate of a population based on the births, rates, emigration and immigration."
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEcologicalSignificanceAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasEcologicalSignificanceAtomized",
+      "undefined" : "has ecological significance atomized"
+    },
+    "domain" : "62",
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasThreatStatusAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasThreatStatusAtomized",
+      "undefined" : "has threat status atomized"
+    },
+    "domain" : "64",
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSeason",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "hasSeason",
+      "undefined" : "has season"
+    },
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "Time of year in which a species migrates."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasBriefDescription",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "hasBriefDescription",
+      "undefined" : "has brief description"
+    },
+    "domain" : "69",
+    "comment" : {
+      "undefined" : "Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSynonymName",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasSynonymName",
+      "undefined" : "has synonym name"
+    },
+    "domain" : "56",
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDistributionAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "hasDistributionAtomized",
+      "undefined" : "has distribution atomized"
+    },
+    "domain" : "74",
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislationRead",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "hasLegislationRead",
+      "undefined" : "has legislation read"
+    },
+    "domain" : "54",
+    "comment" : {
+      "undefined" : "The oficial document in which the user can read the legislation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFullDescriptionUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "81",
+    "label" : {
+      "IRI-based" : "hasFullDescriptionUnstructured",
+      "undefined" : "has full description unstructured"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLifeCycle",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "hasLifeCycle",
+      "undefined" : "has life cycle"
+    },
+    "domain" : "83",
+    "comment" : {
+      "undefined" : "Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAbstract",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "hasAbstract",
+      "undefined" : "has abstract"
+    },
+    "domain" : "88",
+    "comment" : {
+      "undefined" : "A brief summary of the most relevant or attractive features of this taxon to the general public. Could point to any kind of information. Example: Blue whale is the largest mammal in the world."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSexRatio",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasSexRatio",
+      "undefined" : "has sex ratio"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "The relative number of males to females in a population"
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFullDescriptionAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasFullDescriptionAtomized",
+      "undefined" : "has full description atomized"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDistributionScopeType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "94",
+    "label" : {
+      "IRI-based" : "hasDistributionScopeType",
+      "undefined" : "has distribution scope's Type"
+    },
+    "domain" : "93",
+    "attributes" : [ "datatype" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDateIssued",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "hasDateIssued",
+      "undefined" : "has date issued"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCommonNamesUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "98",
+    "label" : {
+      "IRI-based" : "hasCommonNamesUnstructured",
+      "undefined" : "has common names unstructured"
+    },
+    "domain" : "10",
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasGeographicEntity",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "hasGeographicEntity",
+      "undefined" : "has geographic entity"
+    },
+    "domain" : "75",
+    "comment" : {
+      "undefined" : "Name of the geographic entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDispersalUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "hasDispersalUnstructured",
+      "undefined" : "has dispersal unstructured"
+    },
+    "domain" : "105",
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHabitatAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasHabitatAtomized",
+      "undefined" : "has habitat atomized"
+    },
+    "domain" : "109",
+    "attributes" : [ "object" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasReproduction",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "111",
+    "label" : {
+      "IRI-based" : "hasReproduction",
+      "undefined" : "has reproduction"
+    },
+    "domain" : "83",
+    "comment" : {
+      "undefined" : "All data related to the production of offspring."
+    },
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsesAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasUsesAtomized",
+      "undefined" : "has uses atomized"
+    },
+    "domain" : "113",
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasBaseElements",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "hasBaseElements",
+      "undefined" : "has base elements"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasBehaviorAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasBehaviorAtomized",
+      "undefined" : "has behavior atomized"
+    },
+    "domain" : "132",
+    "attributes" : [ "object" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAnnualCycleAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "135",
+    "label" : {
+      "IRI-based" : "hasAnnualCycleAtomized",
+      "undefined" : "has annual cycle atomized"
+    },
+    "domain" : "134",
+    "attributes" : [ "object" ],
+    "id" : "133"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsers",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "137",
+    "label" : {
+      "IRI-based" : "hasUsers",
+      "undefined" : "has users"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Who recognises the value of the plant? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/area )."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHabitatAndDistributionUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "hasHabitatAndDistributionUnstructured",
+      "undefined" : "has habitat and distribution unstructured"
+    },
+    "domain" : "102",
+    "attributes" : [ "datatype" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDispersalAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "141",
+    "label" : {
+      "IRI-based" : "hasDispersalAtomized",
+      "undefined" : "has dispersal atomized"
+    },
+    "domain" : "105",
+    "attributes" : [ "object" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAncillaryData",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "123",
+    "label" : {
+      "IRI-based" : "hasAncillaryData",
+      "undefined" : "has ancillary data"
+    },
+    "domain" : "44",
+    "attributes" : [ "object" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPopulationBiology",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "150",
+    "label" : {
+      "IRI-based" : "hasPopulationBiology",
+      "undefined" : "has population biology"
+    },
+    "domain" : "107",
+    "attributes" : [ "object" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLifeForm",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "157",
+    "label" : {
+      "IRI-based" : "hasLifeForm",
+      "undefined" : "has life form"
+    },
+    "domain" : "83",
+    "comment" : {
+      "undefined" : "General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs."
+    },
+    "attributes" : [ "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasReproductionUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "160",
+    "label" : {
+      "IRI-based" : "hasReproductionUnstructured",
+      "undefined" : "has reproduction unstructured"
+    },
+    "domain" : "111",
+    "attributes" : [ "datatype" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasProtectionLegalStatus",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "163",
+    "label" : {
+      "IRI-based" : "hasProtectionLegalStatus",
+      "undefined" : "has protection legal status"
+    },
+    "domain" : "54",
+    "comment" : {
+      "undefined" : "VC. Description of the status."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "162"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasManagementPlan",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "165",
+    "label" : {
+      "IRI-based" : "hasManagementPlan",
+      "undefined" : "has management plan"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype" ],
+    "id" : "164"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTrophicStrategy",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "115",
+    "label" : {
+      "IRI-based" : "hasTrophicStrategy",
+      "undefined" : "has trophic strategy"
+    },
+    "domain" : "129",
+    "comment" : {
+      "undefined" : "VC. Tactic used to obtain energy or nutrients."
+    },
+    "attributes" : [ "object" ],
+    "id" : "167"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasGeographicEntityCatalogue",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasGeographicEntityCatalogue",
+      "undefined" : "has geographic entity's Catalogue"
+    },
+    "domain" : "169",
+    "attributes" : [ "datatype" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPopulationBiologyAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasPopulationBiologyAtomized",
+      "undefined" : "has population biology atomized"
+    },
+    "domain" : "150",
+    "attributes" : [ "object" ],
+    "id" : "174"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHierarchyTypeRecommended",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasHierarchyTypeRecommended",
+      "undefined" : "has hierarchy type's recommended"
+    },
+    "domain" : "177",
+    "attributes" : [ "datatype" ],
+    "id" : "176"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDateStamp",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "179",
+    "label" : {
+      "IRI-based" : "hasDateStamp",
+      "undefined" : "has date stamp"
+    },
+    "domain" : "42",
+    "comment" : {
+      "undefined" : "The date the metadata document was created or modified."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "178"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasStartTimeInterval",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "hasStartTimeInterval",
+      "undefined" : "has start time interval"
+    },
+    "domain" : "135",
+    "comment" : {
+      "undefined" : "VC"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "181"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEndTimeInterval",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasEndTimeInterval",
+      "undefined" : "has end time interval"
+    },
+    "domain" : "135",
+    "comment" : {
+      "undefined" : "VC"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "182"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUses",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "113",
+    "label" : {
+      "IRI-based" : "hasUses",
+      "undefined" : "has uses"
+    },
+    "domain" : "184",
+    "comment" : {
+      "undefined" : "Ways in which species are utilized by people"
+    },
+    "attributes" : [ "object" ],
+    "id" : "183"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHierarchy",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "177",
+    "label" : {
+      "IRI-based" : "hasHierarchy",
+      "undefined" : "has hierarchy"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "187"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasParentTaxon",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "190",
+    "label" : {
+      "IRI-based" : "hasParentTaxon",
+      "undefined" : "has parent taxon"
+    },
+    "domain" : "177",
+    "attributes" : [ "object" ],
+    "id" : "189"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCitationIdentifier",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hasCitationIdentifier",
+      "undefined" : "has citation's identifier"
+    },
+    "domain" : "86",
+    "attributes" : [ "datatype" ],
+    "id" : "192"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRecruitment",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasRecruitment",
+      "undefined" : "has recruitment"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Proportion of plants or animals that reach a size or age when  become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce"
+    },
+    "attributes" : [ "object" ],
+    "id" : "194"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDirectThreatAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasDirectThreatAtomized",
+      "undefined" : "has direct threat atomized"
+    },
+    "domain" : "198",
+    "attributes" : [ "object" ],
+    "id" : "197"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDescriptionLifeStages",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasDescriptionLifeStages",
+      "undefined" : "has description life stages"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Sex/age categories or life stages of a species; can be size in the case of plants."
+    },
+    "attributes" : [ "object" ],
+    "id" : "205"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPatternDistribution",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasPatternDistribution",
+      "undefined" : "has pattern distribution"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "VCR Clumped, Uniform and Random"
+    },
+    "attributes" : [ "object" ],
+    "id" : "209"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTemporalCoverage",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasTemporalCoverage",
+      "undefined" : "has temporal coverage"
+    },
+    "domain" : "74",
+    "attributes" : [ "datatype" ],
+    "id" : "217"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasManagementAndConservationAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasManagementAndConservationAtomized",
+      "undefined" : "has management and conservation atomized"
+    },
+    "domain" : "219",
+    "attributes" : [ "object" ],
+    "id" : "218"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCarryingCapacity",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasCarryingCapacity",
+      "undefined" : "has carrying capacity"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Maximum population density defined by resources in the absence of predator and parasites."
+    },
+    "attributes" : [ "object" ],
+    "id" : "231"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAnnualCycleUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "237",
+    "label" : {
+      "IRI-based" : "hasAnnualCycleUnstructured",
+      "undefined" : "has annual cycle unstructured"
+    },
+    "domain" : "134",
+    "attributes" : [ "datatype" ],
+    "id" : "236"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEndemicTo",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "145",
+    "label" : {
+      "IRI-based" : "hasEndemicTo",
+      "undefined" : "has endemic to"
+    },
+    "domain" : "175",
+    "comment" : {
+      "undefined" : "The concept is applied to one or several countries. Ex:- Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "238"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAssociatedParty",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasAssociatedParty",
+      "undefined" : "has associated party"
+    },
+    "domain" : "88",
+    "attributes" : [ "datatype" ],
+    "id" : "242"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasScientificName",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasScientificName",
+      "undefined" : "has scientific name"
+    },
+    "domain" : "76",
+    "comment" : {
+      "undefined" : "Complete name of the taxon."
+    },
+    "attributes" : [ "object" ],
+    "id" : "243"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEndemicAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "175",
+    "label" : {
+      "IRI-based" : "hasEndemicAtomized",
+      "undefined" : "has endemic atomized"
+    },
+    "domain" : "220",
+    "comment" : {
+      "undefined" : "List of areas structured and categorized the degree of safety."
+    },
+    "attributes" : [ "object" ],
+    "id" : "247"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDetailUnstructuredType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasDetailUnstructuredType",
+      "undefined" : "has detail unstructured's type"
+    },
+    "domain" : "166",
+    "attributes" : [ "datatype" ],
+    "id" : "249"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasNaturalHistory",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "hasNaturalHistory",
+      "undefined" : "has natural history"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "251"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEmigration",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasEmigration",
+      "undefined" : "has emigration"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Movement of individuals outside a population, or from one area to another"
+    },
+    "attributes" : [ "object" ],
+    "id" : "253"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsesManagementAndConservation",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "184",
+    "label" : {
+      "IRI-based" : "hasUsesManagementAndConservation",
+      "undefined" : "has uses management and conservation"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "254"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMajor",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "193",
+    "label" : {
+      "IRI-based" : "hasMajor",
+      "undefined" : "has major"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "The major version number ('1' in 1.2) as defined by the \t\t\t\t\t\tcontent creators."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "255"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasInvasivenessUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "hasInvasivenessUnstructured",
+      "undefined" : "has invasiveness unstructured"
+    },
+    "domain" : "15",
+    "attributes" : [ "datatype" ],
+    "id" : "257"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAudiencesUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "262",
+    "label" : {
+      "IRI-based" : "hasAudiencesUnstructured",
+      "undefined" : "has audiences unstructured"
+    },
+    "domain" : "103",
+    "comment" : {
+      "undefined" : "List audience codes separated by means of comma or /."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "261"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsesUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "223",
+    "label" : {
+      "IRI-based" : "hasUsesUnstructured",
+      "undefined" : "has uses unstructured"
+    },
+    "domain" : "113",
+    "comment" : {
+      "undefined" : "Uses in a unstructured format."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "263"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPartUsed",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "214",
+    "label" : {
+      "IRI-based" : "hasPartUsed",
+      "undefined" : "has part used"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Which plant parts are used, or have any negative values ?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "264"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMigratory",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasMigratory",
+      "undefined" : "has migratory"
+    },
+    "domain" : "83",
+    "attributes" : [ "object" ],
+    "id" : "265"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLanguage",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "114",
+    "label" : {
+      "IRI-based" : "hasLanguage",
+      "undefined" : "has language"
+    },
+    "domain" : "213",
+    "comment" : {
+      "undefined" : "The language of the taxon record, according to ISO 639."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "266"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFeedingUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "127",
+    "label" : {
+      "IRI-based" : "hasFeedingUnstructured",
+      "undefined" : "has feeding unstructured"
+    },
+    "domain" : "268",
+    "attributes" : [ "datatype" ],
+    "id" : "267"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasModifier",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "216",
+    "label" : {
+      "IRI-based" : "hasModifier",
+      "undefined" : "has modifier"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "269"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasOrganisms",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "215",
+    "label" : {
+      "IRI-based" : "hasOrganisms",
+      "undefined" : "has organisms"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Which organisms use the plant/plant parts (e.g . for forage , medicines) or are affected by the plant (e.g. by poisons)?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "270"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRecordMetadata",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasRecordMetadata",
+      "undefined" : "has record metadata"
+    },
+    "domain" : "59",
+    "comment" : {
+      "undefined" : "This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record."
+    },
+    "attributes" : [ "object" ],
+    "id" : "271"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRatingPopularity",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "211",
+    "label" : {
+      "IRI-based" : "hasRatingPopularity",
+      "undefined" : "has rating popularity"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Is the plant highly valued for its use or are other species preferred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessibility, depleted source, or low quality, ineffectiveness, difficult harvesting or processing requirements."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "273"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTerritoryAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "276",
+    "label" : {
+      "IRI-based" : "hasTerritoryAtomized",
+      "undefined" : "has territory atomized"
+    },
+    "domain" : "275",
+    "attributes" : [ "object" ],
+    "id" : "274"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRoutes",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "212",
+    "label" : {
+      "IRI-based" : "hasRoutes",
+      "undefined" : "has routes"
+    },
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "Trajectory followed by the species"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "277"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCauses",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "186",
+    "label" : {
+      "IRI-based" : "hasCauses",
+      "undefined" : "has causes"
+    },
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "VCR: Seasonal climatic variation, Resource availability and Reproduction"
+    },
+    "attributes" : [ "object" ],
+    "id" : "278"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTaxonValue",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "207",
+    "label" : {
+      "IRI-based" : "hasTaxonValue",
+      "undefined" : "has taxon value"
+    },
+    "domain" : "190",
+    "attributes" : [ "datatype" ],
+    "id" : "279"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasItemAttribute",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "206",
+    "label" : {
+      "IRI-based" : "hasItemAttribute",
+      "undefined" : "has item attribute"
+    },
+    "domain" : "119",
+    "attributes" : [ "datatype" ],
+    "id" : "280"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasWhatImpact",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "204",
+    "label" : {
+      "IRI-based" : "hasWhatImpact",
+      "undefined" : "has what impact"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "What the actual impact is, for instance: Is it eating all the riparian vegetation? Are their burrows destroying irrigation systems? Is it displacing Arvicola sapidus?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "281"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUseTypeAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "202",
+    "label" : {
+      "IRI-based" : "hasUseTypeAtomized",
+      "undefined" : "has use type atomized"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Is it a traditional, modern industrial or just a possible use?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "282"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLifeFormUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "199",
+    "label" : {
+      "IRI-based" : "hasLifeFormUnstructured",
+      "undefined" : "has life form unstructured"
+    },
+    "domain" : "157",
+    "attributes" : [ "datatype" ],
+    "id" : "284"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRevision",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "hasRevision",
+      "undefined" : "has revision"
+    },
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "285"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFullDescription",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasFullDescription",
+      "undefined" : "has full description"
+    },
+    "domain" : "69",
+    "comment" : {
+      "undefined" : "Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism."
+    },
+    "attributes" : [ "object" ],
+    "id" : "287"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasNomenclatureAndClassification",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasNomenclatureAndClassification",
+      "undefined" : "has nomenclature and classification"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "288"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSourceOfInformation",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "290",
+    "label" : {
+      "IRI-based" : "hasSourceOfInformation",
+      "undefined" : "has source of information"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations should be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the informant recorded (name, gender, approximate age, occupation, ethnic identity, locality and language spoken)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "289"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasGlobalUniqueIdentifier",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "130",
+    "label" : {
+      "IRI-based" : "hasGlobalUniqueIdentifier",
+      "undefined" : "has global unique identifier"
+    },
+    "domain" : "117",
+    "comment" : {
+      "undefined" : "An Uniform Resource Name (URN) used as an unique identifier of the taxon record."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "291"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEndemicUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "144",
+    "label" : {
+      "IRI-based" : "hasEndemicUnstructured",
+      "undefined" : "has endemic unstructured"
+    },
+    "domain" : "220",
+    "comment" : {
+      "undefined" : "List of areas presented in an unstructured and categorized the degree of safety."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "292"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasNumberIndividualsPerObservation",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasNumberIndividualsPerObservation",
+      "undefined" : "has number individuals per observation"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "In case of having census data"
+    },
+    "attributes" : [ "object" ],
+    "id" : "293"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasActions",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasActions",
+      "undefined" : "has actions"
+    },
+    "domain" : "32",
+    "attributes" : [ "object" ],
+    "id" : "294"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsedBy",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "222",
+    "label" : {
+      "IRI-based" : "hasUsedBy",
+      "undefined" : "has used by"
+    },
+    "domain" : "48",
+    "attributes" : [ "datatype" ],
+    "id" : "295"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEnvironmentalEnvelope",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "239",
+    "label" : {
+      "IRI-based" : "hasEnvironmentalEnvelope",
+      "undefined" : "has environmental envelope"
+    },
+    "domain" : "83",
+    "attributes" : [ "object" ],
+    "id" : "296"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSynonymsUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "161",
+    "label" : {
+      "IRI-based" : "hasSynonymsUnstructured",
+      "undefined" : "has synonyms unstructured"
+    },
+    "domain" : "85",
+    "attributes" : [ "datatype" ],
+    "id" : "297"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislationStatus",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "201",
+    "label" : {
+      "IRI-based" : "hasLegislationStatus",
+      "undefined" : "has legislation status"
+    },
+    "domain" : "54",
+    "comment" : {
+      "undefined" : "VCR: Consolidated, Repealed"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "298"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTargetAudiences",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "hasTargetAudiences",
+      "undefined" : "has target audiences"
+    },
+    "domain" : "12",
+    "attributes" : [ "object" ],
+    "id" : "299"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMigratoryAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "hasMigratoryAtomized",
+      "undefined" : "has migratory atomized"
+    },
+    "domain" : "46",
+    "attributes" : [ "object" ],
+    "id" : "300"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEvent",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "203",
+    "label" : {
+      "IRI-based" : "hasEvent",
+      "undefined" : "has event"
+    },
+    "domain" : "135",
+    "comment" : {
+      "undefined" : "VC"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "301"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTrophicStrategyRemarks",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "259",
+    "label" : {
+      "IRI-based" : "hasTrophicStrategyRemarks",
+      "undefined" : "has trophic strategy remarks"
+    },
+    "domain" : "129",
+    "comment" : {
+      "undefined" : "Information notes about specific strategy of feeding."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "302"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPurpose",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "303",
+    "label" : {
+      "IRI-based" : "hasPurpose",
+      "undefined" : "has purpose"
+    },
+    "domain" : "141",
+    "comment" : {
+      "undefined" : "Makes reference to any data being measured"
+    },
+    "attributes" : [ "object" ],
+    "id" : "304"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMiscDetails",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "155",
+    "label" : {
+      "IRI-based" : "hasMiscDetails",
+      "undefined" : "has misc details"
+    },
+    "domain" : "258",
+    "attributes" : [ "object" ],
+    "id" : "305"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLifeCycleAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasLifeCycleAtomized",
+      "undefined" : "has life cycle atomized"
+    },
+    "domain" : "84",
+    "attributes" : [ "object" ],
+    "id" : "306"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDataset",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "308",
+    "label" : {
+      "IRI-based" : "hasDataset",
+      "undefined" : "has dataset"
+    },
+    "domain" : "256",
+    "comment" : {
+      "undefined" : "Root element from which all other elements will branch from"
+    },
+    "attributes" : [ "object" ],
+    "id" : "307"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFeedingMode",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "hasFeedingMode",
+      "undefined" : "has feeding mode"
+    },
+    "domain" : "121",
+    "comment" : {
+      "undefined" : "VC. Primary diet source."
+    },
+    "attributes" : [ "object" ],
+    "id" : "309"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHabitatAndDistribution",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "102",
+    "label" : {
+      "IRI-based" : "hasHabitatAndDistribution",
+      "undefined" : "has habitat and distribution"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "310"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasProductionDetails",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "252",
+    "label" : {
+      "IRI-based" : "hasProductionDetails",
+      "undefined" : "has production details"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. (where relevant). Are wild /protected /cultivated plants used? Give details of cultivation, harvesting , yields, processing and storage methods and take note of special tools, timing etc."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "311"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLifeFormAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasLifeFormAtomized",
+      "undefined" : "has life form atomized"
+    },
+    "domain" : "157",
+    "attributes" : [ "object" ],
+    "id" : "313"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasNormalDateLanguage",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "250",
+    "label" : {
+      "IRI-based" : "hasNormalDateLanguage",
+      "undefined" : "has normal date's language"
+    },
+    "domain" : "312",
+    "attributes" : [ "datatype" ],
+    "id" : "314"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTaxonomicDescriptionUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "225",
+    "label" : {
+      "IRI-based" : "hasTaxonomicDescriptionUnstructured",
+      "undefined" : "has taxonomic description unstructured"
+    },
+    "domain" : "69",
+    "attributes" : [ "datatype" ],
+    "id" : "315"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHierarchyTypeClassification",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "246",
+    "label" : {
+      "IRI-based" : "hasHierarchyTypeClassification",
+      "undefined" : "has hierarchy type's classification"
+    },
+    "domain" : "177",
+    "attributes" : [ "datatype" ],
+    "id" : "316"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTerritory",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "275",
+    "label" : {
+      "IRI-based" : "hasTerritory",
+      "undefined" : "has territory"
+    },
+    "domain" : "107",
+    "attributes" : [ "object" ],
+    "id" : "317"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEconomics",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "248",
+    "label" : {
+      "IRI-based" : "hasEconomics",
+      "undefined" : "has economics"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Is t here trade in the live plants, plant parts, or derived products , and , if so , on what scale?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "318"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSize",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasSize",
+      "undefined" : "has size"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Estimation of the size, usually expressed as a range, of the populations of a species. (E.g. “total population size is estimated between 200,000 to 400,000 ducks in its distribution area”)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "319"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasProperties",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "241",
+    "label" : {
+      "IRI-based" : "hasProperties",
+      "undefined" : "has properties"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Provide details of properties which influence its value for a specified purpose, e.g . nutritional value for foods; occurrence of bioactive compounds for medicines/poisons; mechanical and physical properties of woods; nectar flow periods and flowering dates for bee plants; calorific values and burning qualities of fuels; sizes of plants used environmentally etc."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "320"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPubDate",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "240",
+    "label" : {
+      "IRI-based" : "hasPubDate",
+      "undefined" : "has pub date"
+    },
+    "domain" : "77",
+    "attributes" : [ "datatype" ],
+    "id" : "321"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMolecularData",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "323",
+    "label" : {
+      "IRI-based" : "hasMolecularData",
+      "undefined" : "has molecular data"
+    },
+    "domain" : "83",
+    "comment" : {
+      "undefined" : "Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "322"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMeasurementOrFact",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "303",
+    "label" : {
+      "IRI-based" : "hasMeasurementOrFact",
+      "undefined" : "has measurement or fact"
+    },
+    "domain" : "245",
+    "attributes" : [ "object" ],
+    "id" : "324"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasManagementAndConservationUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "191",
+    "label" : {
+      "IRI-based" : "hasManagementAndConservationUnstructured",
+      "undefined" : "has management and conservation unstructured"
+    },
+    "domain" : "219",
+    "attributes" : [ "datatype" ],
+    "id" : "325"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDemographyAndThreatUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "152",
+    "label" : {
+      "IRI-based" : "hasDemographyAndThreatUnstructured",
+      "undefined" : "has demography and threat unstructured"
+    },
+    "domain" : "107",
+    "attributes" : [ "datatype" ],
+    "id" : "326"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSourceOfInformationText",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "244",
+    "label" : {
+      "IRI-based" : "hasSourceOfInformationText",
+      "undefined" : "has source of information text"
+    },
+    "domain" : "290",
+    "attributes" : [ "datatype" ],
+    "id" : "327"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDispersal",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "hasDispersal",
+      "undefined" : "has dispersal"
+    },
+    "domain" : "83",
+    "attributes" : [ "object" ],
+    "id" : "328"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasProportionIndividualsPerStageLife",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasProportionIndividualsPerStageLife",
+      "undefined" : "has proportion individuals per stage life"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Percentage of individuals that belong to each life stage"
+    },
+    "attributes" : [ "object" ],
+    "id" : "329"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEcologicalSignificanceUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "151",
+    "label" : {
+      "IRI-based" : "hasEcologicalSignificanceUnstructured",
+      "undefined" : "has ecological significance unstructured"
+    },
+    "domain" : "62",
+    "attributes" : [ "datatype" ],
+    "id" : "330"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSeasonOfAvailabilityUse",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "233",
+    "label" : {
+      "IRI-based" : "hasSeasonOfAvailabilityUse",
+      "undefined" : "has season of availability use"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Note these and , if relevant, time of day."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "331"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSynonymsAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "hasSynonymsAtomized",
+      "undefined" : "has synonyms atomized"
+    },
+    "domain" : "85",
+    "attributes" : [ "object" ],
+    "id" : "332"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasNaturalHistoryUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "180",
+    "label" : {
+      "IRI-based" : "hasNaturalHistoryUnstructured",
+      "undefined" : "has natural history unstructured"
+    },
+    "domain" : "83",
+    "attributes" : [ "datatype" ],
+    "id" : "333"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasItemValue",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "235",
+    "label" : {
+      "IRI-based" : "hasItemValue",
+      "undefined" : "has item value"
+    },
+    "domain" : "119",
+    "attributes" : [ "datatype" ],
+    "id" : "334"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCommonNamesAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "hasCommonNamesAtomized",
+      "undefined" : "has common names atomized"
+    },
+    "domain" : "10",
+    "attributes" : [ "object" ],
+    "id" : "335"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUseNotes",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "234",
+    "label" : {
+      "IRI-based" : "hasUseNotes",
+      "undefined" : "has use notes"
+    },
+    "domain" : "25",
+    "attributes" : [ "datatype" ],
+    "id" : "336"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMortalityRate",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasMortalityRate",
+      "undefined" : "has mortality rate"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "The probability of dying; the ratio of number dying in a given time interval to the number alive at the beginning of the time interval"
+    },
+    "attributes" : [ "object" ],
+    "id" : "337"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDataset_ID",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "339",
+    "label" : {
+      "IRI-based" : "hasDataset_ID",
+      "undefined" : "has dataset_id"
+    },
+    "domain" : "42",
+    "attributes" : [ "datatype" ],
+    "id" : "338"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRoute",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "229",
+    "label" : {
+      "IRI-based" : "hasRoute",
+      "undefined" : "has route"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "340"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTaxonRecord",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasTaxonRecord",
+      "undefined" : "has taxon record"
+    },
+    "domain" : "308",
+    "comment" : {
+      "undefined" : "Information about the record."
+    },
+    "attributes" : [ "object" ],
+    "id" : "341"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsesManagementAndConservationUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "221",
+    "label" : {
+      "IRI-based" : "hasUsesManagementAndConservationUnstructured",
+      "undefined" : "has uses management and conservation unstructured"
+    },
+    "domain" : "184",
+    "attributes" : [ "datatype" ],
+    "id" : "342"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasImpactMechanism",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "344",
+    "label" : {
+      "IRI-based" : "hasImpactMechanism",
+      "undefined" : "has impact mechanism"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Mechanism of introduction or impact to a new location."
+    },
+    "attributes" : [ "object" ],
+    "id" : "343"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHumanAndEnvironmentalRelevance",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "hasHumanAndEnvironmentalRelevance",
+      "undefined" : "has human and environmental relevance"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype" ],
+    "id" : "345"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMolecularDataUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "185",
+    "label" : {
+      "IRI-based" : "hasMolecularDataUnstructured",
+      "undefined" : "has molecular data unstructured"
+    },
+    "domain" : "323",
+    "attributes" : [ "datatype" ],
+    "id" : "347"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAnnualCycles",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "134",
+    "label" : {
+      "IRI-based" : "hasAnnualCycles",
+      "undefined" : "has annual cycles"
+    },
+    "domain" : "83",
+    "attributes" : [ "object" ],
+    "id" : "348"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasStructureDispersed",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "138",
+    "label" : {
+      "IRI-based" : "hasStructureDispersed",
+      "undefined" : "has structure dispersed"
+    },
+    "domain" : "141",
+    "comment" : {
+      "undefined" : "VCR: Seed, Fruit, Vegetative structure, Spores, Gametes, Eggs, ffspring and Individuals"
+    },
+    "attributes" : [ "object" ],
+    "id" : "349"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTaxonRecordID",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "158",
+    "label" : {
+      "IRI-based" : "hasTaxonRecordID",
+      "undefined" : "has taxon record id"
+    },
+    "domain" : "88",
+    "attributes" : [ "datatype" ],
+    "id" : "350"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasInteractionUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "125",
+    "label" : {
+      "IRI-based" : "hasInteractionUnstructured",
+      "undefined" : "has interaction unstructured"
+    },
+    "domain" : "38",
+    "attributes" : [ "datatype" ],
+    "id" : "351"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasImpactTarget",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "128",
+    "label" : {
+      "IRI-based" : "hasImpactTarget",
+      "undefined" : "has impact target"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Who/what is impacting."
+    },
+    "attributes" : [ "object" ],
+    "id" : "352"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasVernacularNameUseAnnotations",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "228",
+    "label" : {
+      "IRI-based" : "hasVernacularNameUseAnnotations",
+      "undefined" : "has vernacular name use annotations"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. The name of the taxon must be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refers to more than one taxon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to which the names belong should be stated along with details of ethnic group . Care should be taken with transliteration into the Roman alphabet; if a standard system exists, use it and note which one it is."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "353"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTaxonomicDescription",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasTaxonomicDescription",
+      "undefined" : "has taxonomic description"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "354"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMinor",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "188",
+    "label" : {
+      "IRI-based" : "hasMinor",
+      "undefined" : "has minor"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "An optional minor version number ('2' in 1.2)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "355"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislationName",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "196",
+    "label" : {
+      "IRI-based" : "hasLegislationName",
+      "undefined" : "has legislation name"
+    },
+    "domain" : "54",
+    "comment" : {
+      "undefined" : "Word or phrase to designate the law or group of laws"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "356"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDistributionScope",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "hasDistributionScope",
+      "undefined" : "has distribution scope"
+    },
+    "domain" : "74",
+    "attributes" : [ "object" ],
+    "id" : "357"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDirectThreatUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "153",
+    "label" : {
+      "IRI-based" : "hasDirectThreatUnstructured",
+      "undefined" : "has direct threat unstructured"
+    },
+    "domain" : "198",
+    "attributes" : [ "datatype" ],
+    "id" : "358"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPotential",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "232",
+    "label" : {
+      "IRI-based" : "hasPotential",
+      "undefined" : "has potential"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Could the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "359"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDescription",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "230",
+    "label" : {
+      "IRI-based" : "hasDescription",
+      "undefined" : "has description"
+    },
+    "domain" : "142",
+    "attributes" : [ "datatype" ],
+    "id" : "360"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasObjectives",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "286",
+    "label" : {
+      "IRI-based" : "hasObjectives",
+      "undefined" : "has objectives"
+    },
+    "domain" : "32",
+    "attributes" : [ "datatype" ],
+    "id" : "361"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEnvironmentalEnvelopeAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasEnvironmentalEnvelopeAtomized",
+      "undefined" : "has environmental envelope atomized"
+    },
+    "domain" : "239",
+    "attributes" : [ "object" ],
+    "id" : "362"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasExtentOfOccurrence",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasExtentOfOccurrence",
+      "undefined" : "has extent of occurrence"
+    },
+    "domain" : "276",
+    "comment" : {
+      "undefined" : "Area contained within the shortest continuous imaginary boundary which can be drawn to encompass all the known, inferred or projected sites of present occurrence of a taxon, excluding cases of vagrancy."
+    },
+    "attributes" : [ "object" ],
+    "id" : "363"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPopulationTrend",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasPopulationTrend",
+      "undefined" : "has population trend"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "VCR Stable, Increasing and Dreasing"
+    },
+    "attributes" : [ "object" ],
+    "id" : "364"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEndemic",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "220",
+    "label" : {
+      "IRI-based" : "hasEndemic",
+      "undefined" : "has endemic"
+    },
+    "domain" : "102",
+    "attributes" : [ "object" ],
+    "id" : "365"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasIdentificationKeys",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "346",
+    "label" : {
+      "IRI-based" : "hasIdentificationKeys",
+      "undefined" : "has identification keys"
+    },
+    "domain" : "69",
+    "comment" : {
+      "undefined" : "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons.  For example:  If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "366"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPreferredFlag",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "283",
+    "label" : {
+      "IRI-based" : "hasPreferredFlag",
+      "undefined" : "has preferred flag"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "TRUE to indicate currente version when providers serve more than one record per taxon."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "367"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasImmigration",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasImmigration",
+      "undefined" : "has immigration"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Individuals entering a population"
+    },
+    "attributes" : [ "object" ],
+    "id" : "368"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasRelatedTo",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "170",
+    "label" : {
+      "IRI-based" : "hasRelatedTo",
+      "undefined" : "has related to"
+    },
+    "domain" : "88",
+    "attributes" : [ "datatype" ],
+    "id" : "370"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDistribution",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasDistribution",
+      "undefined" : "has distribution"
+    },
+    "domain" : "102",
+    "attributes" : [ "object" ],
+    "id" : "371"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAppliesTo",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasAppliesTo",
+      "undefined" : "has applies to"
+    },
+    "domain" : "22",
+    "attributes" : [ "object" ],
+    "id" : "372"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasBirthRate",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasBirthRate",
+      "undefined" : "has birth rate"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Production of new individuals in a population"
+    },
+    "attributes" : [ "object" ],
+    "id" : "373"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislationUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "195",
+    "label" : {
+      "IRI-based" : "hasLegislationUnstructured",
+      "undefined" : "has legislation unstructured"
+    },
+    "domain" : "53",
+    "attributes" : [ "datatype" ],
+    "id" : "374"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasThreatStatus",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasThreatStatus",
+      "undefined" : "has threat status"
+    },
+    "domain" : "107",
+    "attributes" : [ "object" ],
+    "id" : "375"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDistance",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "369",
+    "label" : {
+      "IRI-based" : "hasDistance",
+      "undefined" : "has distance"
+    },
+    "domain" : "141",
+    "attributes" : [ "object" ],
+    "id" : "376"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPatterns",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "272",
+    "label" : {
+      "IRI-based" : "hasPatterns",
+      "undefined" : "has patterns"
+    },
+    "domain" : "66",
+    "comment" : {
+      "undefined" : "VCR. Latitudinal, Longitudinal , Altitudinal , Vertical in water columns and Local migrant"
+    },
+    "attributes" : [ "object" ],
+    "id" : "377"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasKeys",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "118",
+    "label" : {
+      "IRI-based" : "hasKeys",
+      "undefined" : "has keys"
+    },
+    "domain" : "346",
+    "comment" : {
+      "undefined" : "Dichotomic or multientrance keys."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "378"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCommonName",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "380",
+    "label" : {
+      "IRI-based" : "hasCommonName",
+      "undefined" : "has common name"
+    },
+    "domain" : "48",
+    "attributes" : [ "datatype" ],
+    "id" : "379"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSpeciesInteraction",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "40",
+    "label" : {
+      "IRI-based" : "hasSpeciesInteraction",
+      "undefined" : "has species interaction"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "The category of information pertaining to relationships between resources (instances of data records, such as Occurrences, Taxa, Locations, Events."
+    },
+    "attributes" : [ "object" ],
+    "id" : "381"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDispersalMeans",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "hasDispersalMeans",
+      "undefined" : "has dispersal means"
+    },
+    "domain" : "141",
+    "comment" : {
+      "undefined" : "VCR. Zoochory, Anemochory, Hydrochory, Barochory, Autochory"
+    },
+    "attributes" : [ "object" ],
+    "id" : "382"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFecundity",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasFecundity",
+      "undefined" : "has fecundity"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Potential ability of an organism to produce eggs or young; \t\t\t\t\t\trate of production of young by a female"
+    },
+    "attributes" : [ "object" ],
+    "id" : "383"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasBehaviorUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "385",
+    "label" : {
+      "IRI-based" : "hasBehaviorUnstructured",
+      "undefined" : "has behavior unstructured"
+    },
+    "domain" : "132",
+    "attributes" : [ "datatype" ],
+    "id" : "384"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAreaOfOccupancy",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasAreaOfOccupancy",
+      "undefined" : "has area of occupancy"
+    },
+    "domain" : "276",
+    "comment" : {
+      "undefined" : "Area within its 'extent of occurrence' (see EOO) which is occupied by a taxon, excluding cases of vagrancy. The measure reflects the fact that a taxon will not usually occur throughout the area of its extent of occurrence, which may contain unsuitable or unoccupied habitats. Reference: http://www.iucnredlist.org/technical-documents/categories-and-criteria/2001-categories-criteria#definitions"
+    },
+    "attributes" : [ "object" ],
+    "id" : "386"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEndemicIn",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "148",
+    "label" : {
+      "IRI-based" : "hasEndemicIn",
+      "undefined" : "has endemic in"
+    },
+    "domain" : "175",
+    "comment" : {
+      "undefined" : "The concept is applied to an area either multinational or local. Ex: - Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region. - Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "387"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHabitatUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "122",
+    "label" : {
+      "IRI-based" : "hasHabitatUnstructured",
+      "undefined" : "has habitat unstructured"
+    },
+    "domain" : "109",
+    "attributes" : [ "datatype" ],
+    "id" : "388"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasUsedIn",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasUsedIn",
+      "undefined" : "has used in"
+    },
+    "domain" : "48",
+    "comment" : {
+      "undefined" : "Location where the common name is used"
+    },
+    "attributes" : [ "object" ],
+    "id" : "389"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLifeCycleUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "200",
+    "label" : {
+      "IRI-based" : "hasLifeCycleUnstructured",
+      "undefined" : "has life cycle unstructured"
+    },
+    "domain" : "84",
+    "attributes" : [ "datatype" ],
+    "id" : "390"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasReproductionAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasReproductionAtomized",
+      "undefined" : "has reproduction atomized"
+    },
+    "domain" : "111",
+    "attributes" : [ "object" ],
+    "id" : "391"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPopulationBiologyAtomizedTypeRegion",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hasPopulationBiologyAtomizedTypeRegion",
+      "undefined" : "has population biology atomized type's Region"
+    },
+    "domain" : "18",
+    "attributes" : [ "datatype" ],
+    "id" : "392"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDetailAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasDetailAtomized",
+      "undefined" : "has detail atomized"
+    },
+    "domain" : "155",
+    "attributes" : [ "object" ],
+    "id" : "393"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSpeciesInteractionType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasSpeciesInteractionType",
+      "undefined" : "has species interaction type"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "VC. String with the type of interaction."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "394"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMeansOfApplication-Administration",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasMeansOfApplication-Administration",
+      "undefined" : "has means of application- administration"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. This is of particular relevance to medicines, poisons (e.g. insecticides), social products and some environmental purposes (e.g. fert ilisers)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "395"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFeedingAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "121",
+    "label" : {
+      "IRI-based" : "hasFeedingAtomized",
+      "undefined" : "has feeding atomized"
+    },
+    "domain" : "268",
+    "attributes" : [ "object" ],
+    "id" : "396"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMetadata",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "hasMetadata",
+      "undefined" : "has metadata"
+    },
+    "domain" : "308",
+    "attributes" : [ "object" ],
+    "id" : "397"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTaxonRecordName",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasTaxonRecordName",
+      "undefined" : "has taxon record name"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "398"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasCitation",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "hasCitation",
+      "undefined" : "has citation"
+    },
+    "domain" : "42",
+    "comment" : {
+      "undefined" : "A single citation for use when citing the dataset."
+    },
+    "attributes" : [ "object" ],
+    "id" : "399"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAbundanceData",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasAbundanceData",
+      "undefined" : "has abundance data"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Total number of individuals of a population"
+    },
+    "attributes" : [ "object" ],
+    "id" : "400"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasAudience",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "208",
+    "label" : {
+      "IRI-based" : "hasAudience",
+      "undefined" : "has audience"
+    },
+    "domain" : "103",
+    "comment" : {
+      "undefined" : "Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "401"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDirectThreats",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "198",
+    "label" : {
+      "IRI-based" : "hasDirectThreats",
+      "undefined" : "has direct threats"
+    },
+    "domain" : "107",
+    "comment" : {
+      "undefined" : "Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future."
+    },
+    "attributes" : [ "object" ],
+    "id" : "402"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasManagementAndConservation",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "219",
+    "label" : {
+      "IRI-based" : "hasManagementAndConservation",
+      "undefined" : "has management and conservation"
+    },
+    "domain" : "184",
+    "comment" : {
+      "undefined" : "Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve  specie"
+    },
+    "attributes" : [ "object" ],
+    "id" : "403"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasSynonyms",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "hasSynonyms",
+      "undefined" : "has synonyms"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "404"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasActionsType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasActionsType",
+      "undefined" : "has actions's type"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "405"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasConservationExplotationData",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "hasConservationExplotationData",
+      "undefined" : "has conservation explotation data"
+    },
+    "domain" : "25",
+    "comment" : {
+      "undefined" : "Acc. TDWG Economic Botany. Record frequency of plants, details of regeneration, sustainability or over-exploitation and note any locally imposed bans on felling or harvesting."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "406"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegalNorm",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasLegalNorm",
+      "undefined" : "has legal norm"
+    },
+    "domain" : "54",
+    "attributes" : [ "datatype" ],
+    "id" : "407"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasThreatCategory",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "227",
+    "label" : {
+      "IRI-based" : "hasThreatCategory",
+      "undefined" : "has threat category"
+    },
+    "domain" : "50",
+    "comment" : {
+      "undefined" : "VCR. Description of the threat status."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "408"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislation",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "hasLegislation",
+      "undefined" : "has legislation"
+    },
+    "domain" : "107",
+    "attributes" : [ "object" ],
+    "id" : "410"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDetailUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "154",
+    "label" : {
+      "IRI-based" : "hasDetailUnstructured",
+      "undefined" : "has detail unstructured"
+    },
+    "domain" : "155",
+    "attributes" : [ "datatype" ],
+    "id" : "411"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasInteractions",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasInteractions",
+      "undefined" : "has interactions"
+    },
+    "domain" : "83",
+    "attributes" : [ "object" ],
+    "id" : "412"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasReferences",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "173",
+    "label" : {
+      "IRI-based" : "hasReferences",
+      "undefined" : "has references"
+    },
+    "domain" : "88",
+    "attributes" : [ "datatype" ],
+    "id" : "413"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasHabitats",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "109",
+    "label" : {
+      "IRI-based" : "hasHabitats",
+      "undefined" : "has habitats"
+    },
+    "domain" : "102",
+    "attributes" : [ "object" ],
+    "id" : "414"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEcologicalSignificance",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasEcologicalSignificance",
+      "undefined" : "has ecological significance"
+    },
+    "domain" : "83",
+    "comment" : {
+      "undefined" : "Ecological importance of the taxon. (Placeholder)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "415"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDistributionUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "147",
+    "label" : {
+      "IRI-based" : "hasDistributionUnstructured",
+      "undefined" : "has distribution unstructured"
+    },
+    "domain" : "74",
+    "attributes" : [ "datatype" ],
+    "id" : "416"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTerritoryUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "224",
+    "label" : {
+      "IRI-based" : "hasTerritoryUnstructured",
+      "undefined" : "has territory unstructured"
+    },
+    "domain" : "275",
+    "attributes" : [ "datatype" ],
+    "id" : "417"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasThreatStatusUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "226",
+    "label" : {
+      "IRI-based" : "hasThreatStatusUnstructured",
+      "undefined" : "has threat status unstructured"
+    },
+    "domain" : "64",
+    "attributes" : [ "datatype" ],
+    "id" : "418"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasBehavior",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "hasBehavior",
+      "undefined" : "has behavior"
+    },
+    "domain" : "83",
+    "comment" : {
+      "undefined" : "Responses, reactions or movements made by an organism in a particular situation."
+    },
+    "attributes" : [ "object" ],
+    "id" : "419"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasPopulationBiologyUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "171",
+    "label" : {
+      "IRI-based" : "hasPopulationBiologyUnstructured",
+      "undefined" : "has population biology unstructured"
+    },
+    "domain" : "150",
+    "attributes" : [ "datatype" ],
+    "id" : "420"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasFeeding",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "268",
+    "label" : {
+      "IRI-based" : "hasFeeding",
+      "undefined" : "has feeding"
+    },
+    "domain" : "83",
+    "attributes" : [ "object" ],
+    "id" : "421"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasLegislationType",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasLegislationType",
+      "undefined" : "has legislation type"
+    },
+    "domain" : "54",
+    "comment" : {
+      "undefined" : "VCR: included, not included"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "422"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDensityData",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "hasDensityData",
+      "undefined" : "has density data"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Size of a population in relation to a definite unit of space"
+    },
+    "attributes" : [ "object" ],
+    "id" : "423"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasTrophic",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "hasTrophic",
+      "undefined" : "has trophic"
+    },
+    "domain" : "121",
+    "attributes" : [ "object" ],
+    "id" : "424"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasVector",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasVector",
+      "undefined" : "has vector"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "425"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasEnvironmentalEnvelopeUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "146",
+    "label" : {
+      "IRI-based" : "hasEnvironmentalEnvelopeUnstructured",
+      "undefined" : "has environmental envelope unstructured"
+    },
+    "domain" : "239",
+    "attributes" : [ "datatype" ],
+    "id" : "426"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasDemographyAndThreat",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "hasDemographyAndThreat",
+      "undefined" : "has demography and threat"
+    },
+    "domain" : "59",
+    "attributes" : [ "object" ],
+    "id" : "427"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasMolecularDataAtomized",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "409",
+    "label" : {
+      "IRI-based" : "hasMolecularDataAtomized",
+      "undefined" : "has molecular data atomized"
+    },
+    "domain" : "323",
+    "attributes" : [ "object" ],
+    "id" : "428"
+  }, {
+    "iri" : "http://www.gbif.es/PliC/hasNomenclatureAndClassificationUnstructured",
+    "baseIri" : "http://www.gbif.es/PliC",
+    "range" : "172",
+    "label" : {
+      "IRI-based" : "hasNomenclatureAndClassificationUnstructured",
+      "undefined" : "has nomenclature and classification unstructured"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype" ],
+    "id" : "429"
+  } ]
+}

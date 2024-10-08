@@ -1,0 +1,4110 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/AudienceEnumType_Expert"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/AudienceEnumType_General"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/AudienceEnumType_Knowledgeable"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Autotrophs"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Detritivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Frugivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Granivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Hematophagy"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Insectivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Nectarivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Omnivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Oophagy"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Palynivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Piscivore"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Rhizophagus"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Saprophagous"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Scavenger"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Allergeny"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Competition"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_DiseaseTransmission"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Fouling"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Herbivory"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Hybridization"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesFireRegime"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesHydrology"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNutrientRegime"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesSuccessionalPatterns"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_OtherSeeMemoForDescription"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Parasitism"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Pathogenic"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_PhysicalDisturbance"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_PollenSwamping"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Predation"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Transpiration"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Unknown"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/CausesEnumType_Reproduction"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/CausesEnumType_Resource_availability"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/CausesEnumType_Seasonal_climatic_variation"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Economy"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Environment"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_HumanHealth"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Unknown"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Altitudinal"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Latitudinal"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Local_migrant"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Longitudinal"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Vertical_in_water_columns"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Eggs"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Fruit"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Gametes"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Individuals"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Offspring"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Seed"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Spores"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Vegetative_structure"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid72",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Borers"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Chemosynthetic"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Decomposers"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_FilterFeeders"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Foragers"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Photosynthetic"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Vermin"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Fluid%C3%B3fagos"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Sediment%C3%ADvoros"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Anemochory"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Autochory"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Barochory"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Hydrochory"
+    }, {
+      "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Zoochory"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/accrualMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/pav/createdOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/acronym",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/dateCreated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/datePublished",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/subjectOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.eol.org/transfer/content/0.3#dataObjectBaseType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/accrualMethod" : [ {
+    "@id" : "https://github.com/tdwg/PlinianCore/tree/master?tab=readme-ov-file#plinian-core-task-group-charter"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+    "@value" : "2024"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0001-9064-0463"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-6321-9398"
+  }, {
+    "@value" : "Gloria Martínez"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Representation of the Plinian Core XSD vocabulary as an OWL ontology."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-10-08"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://www.apache.org/licenses/LICENSE-2.0"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Plinian Core ontology"
+  } ],
+  "http://purl.org/pav/createdOn" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+    "@value" : "2024"
+  } ],
+  "http://qudt.org/schema/qudt/acronym" : [ {
+    "@value" : "plic"
+  } ],
+  "http://schema.org/dateCreated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#gYear",
+    "@value" : "2024"
+  } ],
+  "http://schema.org/datePublished" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-10-08"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Plinian Core ontology"
+  } ],
+  "http://schema.org/subjectOf" : [ {
+    "@id" : "https://doi.org/10.3897/biss.2.25869"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Plinian Core ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://www.gbif.es/PliC/v3_2_2_8_1"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.2.2.8.1"
+  } ],
+  "http://www.w3.org/ns/dcat#langindgPage" : [ {
+    "@id" : "https://github.com/Wimmics/plic2owl"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ActionsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Actions"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/AnnualCycleAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Annual Cycle Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/AnnualCyclesType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Annual Cycles"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/AudienceEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for Audience"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/AudienceEnumType_Expert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "expert"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/AudienceEnumType_General",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "general"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/AudienceEnumType_Knowledgeable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "knowledgeable"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/BaseElementsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Base Elements"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/BehaviorType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Behavior"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CausesEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for Causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CausesEnumType_Reproduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "reproduction"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CausesEnumType_Resource_availability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "resource availability"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CausesEnumType_Seasonal_climatic_variation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "seasonal climatic variation"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CitationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Citation"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CommonNamesAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Common Names Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/CommonNamesType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Common Names"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DatasetType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dataset"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Demography And Threat"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DescriptionItemType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Description Item"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DetailType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Detail"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DetailUnstructuredType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DirectThreatsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Direct Threats"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dispersal Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for DispersalMeans"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Anemochory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "anemochory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Autochory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "autochory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Barochory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "barochory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Hydrochory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hydrochory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType_Zoochory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "zoochory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DispersalType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Dispersal"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DistanceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distance"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DistributionAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distribution Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DistributionScopeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distribution Scope"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/DistributionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distribution"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/EcologicalSignificanceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ecological Significance"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/EndemicAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Endemic Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/EndemicType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Endemic"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/EnvironmentalEnvelopeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Environmental Envelope"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feeding Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for FeedingMode"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Autotrophs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "autotrophs"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Detritivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "detritivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Frugivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "frugivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Granivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "granivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Hematophagy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hematophagy"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Insectivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "insectivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Nectarivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nectarivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Omnivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "omnivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Oophagy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "oophagy"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Palynivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "palynivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Piscivore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "piscivore"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Rhizophagus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "rhizophagus"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Saprophagous",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "saprophagous"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType_Scavenger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "scavenger"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FeedingType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feeding"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/FullDescriptionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Full Description"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/GeographicEntityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/HabitatAndDistributionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Habitat And Distribution"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/HabitatsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Habitats"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/HierarchyType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hierarchy"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/IdentificationKeysType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Identification Keys"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for ImpactMechanism"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid30"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Allergeny",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "allergeny"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Competition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "competition"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_DiseaseTransmission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "disease transmission"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Fouling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fouling"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Herbivory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "herbivory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Hybridization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hybridization"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "inhibits growth of other species"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "interaction with other invasive species"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesFireRegime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "modifies fire regime"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesHydrology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "modifies hydrology"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "modifies natural benthic communities"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesNutrientRegime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "modifies nutrient regime"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_ModifiesSuccessionalPatterns",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "modifies successional patterns"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_OtherSeeMemoForDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "other see memo for description"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Parasitism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "parasitism"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Pathogenic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pathogenic"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_PhysicalDisturbance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "physical disturbance"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_PollenSwamping",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "pollen swamping"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Predation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "predation"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Transpiration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "transpiration"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType_Unknown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unknown"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for ImpactTarget"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid52"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Economy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "economy"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Environment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "environment"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_HumanHealth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "human health"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType_Unknown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "unknown"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/InteractionAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Interaction Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/InteractionsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Interactions"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Invasiveness Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/InvasivenessType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Invasiveness"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Legislation Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/LegislationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Legislation"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/LifeCycleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Life Cycle"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/LifeFormType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Life Form"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Management And Conservation Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ManagementAndConservationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Management And Conservation"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MeasurementOrFactType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "From dwc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measurement Or Fact"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MetadataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Metadata"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MigratoryAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Migratory Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MigratoryType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Migratory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MiscDetailType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Misc Detail"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MolecularDataAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Molecular Data Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/MolecularDataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Molecular Data"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/NaturalHistoryType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Natural History"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nomenclature And Classification"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/NormalDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ParentTaxonType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Parent Taxon"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PatternsEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for Patterns"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid57"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Altitudinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "altitudinal"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Latitudinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "latitudinal"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Local_migrant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "local migrant"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Longitudinal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "longitudinal"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PatternsEnumType_Vertical_in_water_columns",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vertical in water columns"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Population Biology Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/PopulationBiologyType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Population Biology"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/RecordMetadataType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Record Metadata"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ReproductionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reproduction"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ResourceRelationshipType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "From dwc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Resource Relationship"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/RevisionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Revision"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/SourceOfInformationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Source Of Information"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for StructureDispersed"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid63"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Eggs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "eggs"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Fruit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fruit"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Gametes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "gametes"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Individuals",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "individuals"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Offspring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "offspring"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Seed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "seed"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Spores",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "spores"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType_Vegetative_structure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vegetative structure"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/SynonymsAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Synonyms Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/SynonymsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Synonyms"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TargetAudiencesType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Target Audiences"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TaxonRecordNameType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taxon Record Name"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TaxonRecordType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taxon Record"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TaxonomicDescriptionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taxonomic Description"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TerritoryAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Territory Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TerritoryType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Territory"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TextDescriptionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Text Description"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ThreatStatusAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Threat Status Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/ThreatStatusType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Threat Status"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enum values for TrophicStrategy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid72"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Borers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "borers"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Chemosynthetic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "chemosynthetic"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Decomposers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "decomposers"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_FilterFeeders",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "filter feeders"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Fluid%C3%B3fagos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fluidófagos"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Foragers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "foragers"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Photosynthetic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "photosynthetic"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Sediment%C3%ADvoros",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sedimentívoros"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType_Vermin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "vermin"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/TrophicType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Trophic"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/UsesAtomizedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Uses Atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/UsesManagementAndConservationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Uses Management And Conservation"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/UsesType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Uses"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/VersionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Version"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAbstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A brief summary of the most relevant or attractive features of this taxon to the general public. Could point to any kind of information. Example: Blue whale is the largest mammal in the world."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has abstract"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAbundanceData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Total number of individuals of a population"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has abundance data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasActions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has actions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ActionsType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasActionsType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ActionsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has actions's type"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAncillaryData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has ancillary data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eol.org/transfer/content/0.3#dataObjectBaseType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAnnualCycleAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCyclesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has annual cycle atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCycleAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAnnualCycleUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCyclesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has annual cycle unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAnnualCycles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has annual cycles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCyclesType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAppliesTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has applies to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAreaOfOccupancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Area within its 'extent of occurrence' (see EOO) which is occupied by a taxon, excluding cases of vagrancy. The measure reflects the fact that a taxon will not usually occur throughout the area of its extent of occurrence, which may contain unsuitable or unoccupied habitats. Reference: http://www.iucnredlist.org/technical-documents/categories-and-criteria/2001-categories-criteria#definitions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TerritoryAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has area of occupancy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAssociatedParty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has associated party"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAudience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TargetAudiencesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has audience"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/AudienceEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAudiencesUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "List audience codes separated by means of comma or /."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TargetAudiencesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has audiences unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAuthority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Organism or institution that assess the status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ThreatStatusAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has authority"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasAverageDensity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Average of the densities obtained for a population"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has average density"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasBaseElements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has base elements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/BaseElementsType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasBehavior",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Responses, reactions or movements made by an organism in a particular situation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has behavior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/BehaviorType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasBehaviorAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/BehaviorType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has behavior atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasBehaviorUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/BehaviorType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has behavior unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasBirthRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Production of new individuals in a population"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has birth rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasBriefDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonomicDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has brief description"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCarryingCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Maximum population density defined by resources in the absence of predator and parasites."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has carrying capacity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCauses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR: Seasonal climatic variation, Resource availability and Reproduction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has causes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/CausesEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A single citation for use when citing the dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has citation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/CitationType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCitationIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/CitationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has citation's identifier"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCommonName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has common name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCommonNames",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has common names"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCommonNamesAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has common names atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasCommonNamesUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has common names unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasConservationExplotationData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Record frequency of plants, details of regeneration, sustainability or over-exploitation and note any locally imposed bans on felling or harvesting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has conservation explotation data"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Root element from which all other elements will branch from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DatasetType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDataset_ID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has dataset_id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDateIssued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/VersionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has date issued"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDateStamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date the metadata document was created or modified."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has date stamp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDemographyAndThreat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has demography and threat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDemographyAndThreatUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has demography and threat unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDensityData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Size of a population in relation to a definite unit of space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has density data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TextDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has description"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDescriptionLifeStages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Sex/age categories or life stages of a species; can be size in the case of plants."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has description life stages"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDetailAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MiscDetailType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has detail atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDetailUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MiscDetailType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has detail unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDetailUnstructuredType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailUnstructuredType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has detail unstructured's type"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDirectThreatAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DirectThreatsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has direct threat atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDirectThreatUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DirectThreatsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has direct threat unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDirectThreats",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has direct threats"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DirectThreatsType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDispersal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has dispersal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDispersalAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has dispersal atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDispersalMeans",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR. Zoochory, Anemochory, Hydrochory, Barochory, Autochory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has dispersal means"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalMeansEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDispersalUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has dispersal unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has distance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistanceType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDistribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatAndDistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDistributionAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has distribution atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDistributionScope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has distribution scope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionScopeType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDistributionScopeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionScopeType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has distribution scope's Type"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasDistributionUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has distribution unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEcologicalSignificance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ecological importance of the taxon. (Placeholder)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has ecological significance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/EcologicalSignificanceType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEcologicalSignificanceAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EcologicalSignificanceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has ecological significance atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEcologicalSignificanceUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EcologicalSignificanceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has ecological significance unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEconomics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Is t here trade in the live plants, plant parts, or derived products , and , if so , on what scale?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has economics"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEmigration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Movement of individuals outside a population, or from one area to another"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has emigration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEndTimeInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCycleAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has end time interval"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEndemic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatAndDistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has endemic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/EndemicType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEndemicAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "List of areas structured and categorized the degree of safety."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EndemicType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has endemic atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/EndemicAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEndemicIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The concept is applied to an area either multinational or local. Ex: - Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region. - Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EndemicAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has endemic in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEndemicTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The concept is applied to one or several countries. Ex:- Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EndemicAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has endemic to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEndemicUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "List of areas presented in an unstructured and categorized the degree of safety."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EndemicType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has endemic unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEnvironmentalEnvelope",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has environmental envelope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/EnvironmentalEnvelopeType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEnvironmentalEnvelopeAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EnvironmentalEnvelopeType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has environmental envelope atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEnvironmentalEnvelopeUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/EnvironmentalEnvelopeType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has environmental envelope unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCycleAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has event"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasExtentOfOccurrence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Area contained within the shortest continuous imaginary boundary which can be drawn to encompass all the known, inferred or projected sites of present occurrence of a taxon, excluding cases of vagrancy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TerritoryAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has extent of occurrence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFecundity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Potential ability of an organism to produce eggs or young; \t\t\t\t\t\trate of production of young by a female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has fecundity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFeeding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has feeding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFeedingAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has feeding atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFeedingMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC. Primary diet source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has feeding mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingModeEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFeedingUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has feeding unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFullDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonomicDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has full description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/FullDescriptionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFullDescriptionAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/FullDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has full description atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasFullDescriptionUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/FullDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has full description unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasGeographicEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Name of the geographic entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has geographic entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasGeographicEntityCatalogue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/GeographicEntityType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has geographic entity's Catalogue"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasGlobalUniqueIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An Uniform Resource Name (URN) used as an unique identifier of the taxon record."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/BaseElementsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has global unique identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHabitatAndDistribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has habitat and distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatAndDistributionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHabitatAndDistributionUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatAndDistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has habitat and distribution unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHabitatAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has habitat atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHabitatUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has habitat unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHabitats",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatAndDistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has habitats"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/HabitatsType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHierarchy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has hierarchy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/HierarchyType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHierarchyTypeClassification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HierarchyType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has hierarchy type's classification"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHierarchyTypeRecommended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HierarchyType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has hierarchy type's recommended"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasHumanAndEnvironmentalRelevance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has human and environmental relevance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasIdentificationKeys",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons.  For example:  If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonomicDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has identification keys"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/IdentificationKeysType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasImmigration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Individuals entering a population"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has immigration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasImpactMechanism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Mechanism of introduction or impact to a new location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has impact mechanism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ImpactMechanismEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasImpactTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Who/what is impacting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has impact target"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ImpactTargetEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasInteractionAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InteractionsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has interaction atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/InteractionAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasInteractionUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InteractionsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has interaction unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasInteractions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has interactions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/InteractionsType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasInvasiveness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Information about invasive exotic species that could threaten to ecosystem, habitats and species"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has invasiveness"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasInvasivenessAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has invasiveness atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasInvasivenessUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has invasiveness unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasItemAttribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DescriptionItemType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has item attribute"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasItemValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DescriptionItemType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has item value"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasKeys",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Dichotomic or multientrance keys."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/IdentificationKeysType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has keys"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The language of the taxon record, according to ISO 639."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegalNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legal norm"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislationAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislationName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Word or phrase to designate the law or group of laws"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislationRead",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The oficial document in which the user can read the legislation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation read"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislationStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR: Consolidated, Repealed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation status"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislationType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR: included, not included"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation type"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLegislationUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has legislation unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLifeCycle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has life cycle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/LifeCycleType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLifeCycleAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LifeCycleType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has life cycle atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLifeCycleUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LifeCycleType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has life cycle unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLifeForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has life form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/LifeFormType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLifeFormAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LifeFormType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has life form atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasLifeFormUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LifeFormType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has life form unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMajor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The major version number ('1' in 1.2) as defined by the \t\t\t\t\t\tcontent creators."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/VersionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has major"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasManagementAndConservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve  specie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesManagementAndConservationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has management and conservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasManagementAndConservationAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has management and conservation atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasManagementAndConservationAtomizedTypeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has management and conservation atomized type's type"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasManagementAndConservationUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has management and conservation unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasManagementPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has management plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMeansOfApplication-Administration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. This is of particular relevance to medicines, poisons (e.g. insecticides), social products and some environmental purposes (e.g. fert ilisers)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has means of application- administration"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMeasurementOrFact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has measurement or fact"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MeasurementOrFactType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMetadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DatasetType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has metadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MetadataType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMigratory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has migratory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMigratoryAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has migratory atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMigratoryUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has migratory unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMinor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An optional minor version number ('2' in 1.2)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/VersionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has minor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMiscDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has misc details"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MiscDetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasModifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/VersionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has modifier"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMolecularData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has molecular data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MolecularDataType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMolecularDataAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MolecularDataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has molecular data atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MolecularDataAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMolecularDataUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MolecularDataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has molecular data unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasMortalityRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The probability of dying; the ratio of number dying in a given time interval to the number alive at the beginning of the time interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has mortality rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasNaturalHistory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has natural history"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasNaturalHistoryUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has natural history unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasNomenclatureAndClassification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has nomenclature and classification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasNomenclatureAndClassificationUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has nomenclature and classification unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasNormalDateLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NormalDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has normal date's language"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasNumberIndividualsPerObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In case of having census data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has number individuals per observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasObjectives",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ManagementAndConservationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has objectives"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasOrganisms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Which organisms use the plant/plant parts (e.g . for forage , medicines) or are affected by the plant (e.g. by poisons)?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has organisms"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasParentTaxon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/HierarchyType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has parent taxon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ParentTaxonType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPartUsed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Which plant parts are used, or have any negative values ?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has part used"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPatternDistribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR Clumped, Uniform and Random"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has pattern distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPatterns",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR. Latitudinal, Longitudinal , Altitudinal , Vertical in water columns and Local migrant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has patterns"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/PatternsEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPopulationBiology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population biology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPopulationBiologyAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population biology atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPopulationBiologyAtomizedTypeRegion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population biology atomized type's Region"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPopulationBiologyUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population biology unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPopulationGrowthRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Rate that estimates the annual growth rate of a population based on the births, rates, emigration and immigration."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population growth rate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPopulationTrend",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR Stable, Increasing and Dreasing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has population trend"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPotential",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Could the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has potential"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPreferredFlag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "TRUE to indicate currente version when providers serve more than one record per taxon."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/VersionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has preferred flag"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasProductionDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. (where relevant). Are wild /protected /cultivated plants used? Give details of cultivation, harvesting , yields, processing and storage methods and take note of special tools, timing etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has production details"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasProperties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Provide details of properties which influence its value for a specified purpose, e.g . nutritional value for foods; occurrence of bioactive compounds for medicines/poisons; mechanical and physical properties of woods; nectar flow periods and flowering dates for bee plants; calorific values and burning qualities of fuels; sizes of plants used environmentally etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has properties"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasProportionIndividualsPerStageLife",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Percentage of individuals that belong to each life stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has proportion individuals per stage life"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasProtectionLegalStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC. Description of the status."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/LegislationAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has protection legal status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPubDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/RevisionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has pub date"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasPurpose",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Makes reference to any data being measured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has purpose"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/MeasurementOrFactType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRatingPopularity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Is the plant highly valued for its use or are other species preferred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessibility, depleted source, or low quality, ineffectiveness, difficult harvesting or processing requirements."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has rating popularity"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRecordMetadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has record metadata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/RecordMetadataType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRecruitment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Proportion of plants or animals that reach a size or age when  become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has recruitment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasReferences",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has references"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRelatedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has related to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasReproduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "All data related to the production of offspring."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NaturalHistoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has reproduction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ReproductionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasReproductionAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ReproductionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has reproduction atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasReproductionUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ReproductionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has reproduction unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasResourceLogoUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "URL of the logo associated with this dataset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has resource logo url"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/RecordMetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has revision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/RevisionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRoute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has route"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasRoutes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Trajectory followed by the species"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has routes"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasScientificName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Complete name of the taxon."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordNameType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has scientific name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.tdwg.org/schemas/tcs/1.01#ScientificName"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSeason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Time of year in which a species migrates."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/MigratoryAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSeasonOfAvailabilityUse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Note these and , if relevant, time of day."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has season of availability use"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSexRatio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The relative number of males to females in a population"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has sex ratio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Estimation of the size, usually expressed as a range, of the populations of a species. (E.g. “total population size is estimated between 200,000 to 400,000 ducks in its distribution area”)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/PopulationBiologyAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DetailType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSourceOfInformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations should be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the informant recorded (name, gender, approximate age, occupation, ethnic identity, locality and language spoken)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has source of information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/SourceOfInformationType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSourceOfInformationText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/SourceOfInformationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has source of information text"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSpeciesInteraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The category of information pertaining to relationships between resources (instances of data records, such as Occurrences, Taxa, Locations, Events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InteractionAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has species interaction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ResourceRelationshipType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSpeciesInteractionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC. String with the type of interaction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InteractionAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has species interaction type"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasStartTimeInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/AnnualCycleAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has start time interval"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasStructureDispersed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR: Seed, Fruit, Vegetative structure, Spores, Gametes, Eggs, ffspring and Individuals"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DispersalAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has structure dispersed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/StructureDispersedEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSynonymName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/SynonymsAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has synonym name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.tdwg.org/schemas/tcs/1.01#ScientificName"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSynonymStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/SynonymsAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has synonym status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSynonyms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has synonyms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/SynonymsType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSynonymsAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/SynonymsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has synonyms atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/SynonymsAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasSynonymsUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/SynonymsType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has synonyms unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTargetAudiences",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/RecordMetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has target audiences"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TargetAudiencesType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTaxonRecord",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Information about the record."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DatasetType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has taxon record"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTaxonRecordID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has taxon record id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTaxonRecordName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/NomenclatureAndClassificationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has taxon record name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordNameType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTaxonValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ParentTaxonType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has taxon value"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTaxonomicDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has taxonomic description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonomicDescriptionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTaxonomicDescriptionUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonomicDescriptionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has taxonomic description unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTemporalCoverage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has temporal coverage"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTerritory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has territory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TerritoryType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTerritoryAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TerritoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has territory atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TerritoryAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTerritoryUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TerritoryType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has territory unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasThreatCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VCR. Description of the threat status."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ThreatStatusAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has threat category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasThreatStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/DemographyAndThreatType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has threat status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ThreatStatusType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasThreatStatusAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ThreatStatusType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has threat status atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/ThreatStatusAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasThreatStatusUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/ThreatStatusType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has threat status unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTrophic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/FeedingAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has trophic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TrophicType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTrophicStrategy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "VC. Tactic used to obtain energy or nutrients."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TrophicType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has trophic strategy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/TrophicStrategyEnumType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasTrophicStrategyRemarks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Information notes about specific strategy of feeding."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TrophicType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has trophic strategy remarks"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUseNotes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has use notes"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUseTypeAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Is it a traditional, modern industrial or just a possible use?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has use type atomized"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUseValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a weed affecting food production, or as an accident al poison)?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has use value"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has used by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Location where the common name is used"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/CommonNamesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has used in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/DistributionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. Who recognises the value of the plant? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/area )."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has users"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ways in which species are utilized by people"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesManagementAndConservationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has uses"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsesAtomized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has uses atomized"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsesManagementAndConservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/TaxonRecordType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has uses management and conservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesManagementAndConservationType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsesManagementAndConservationUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesManagementAndConservationType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has uses management and conservation unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasUsesUnstructured",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Uses in a unstructured format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has uses unstructured"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasVector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has vector"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasVernacularNameUseAnnotations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Acc. TDWG Economic Botany. The name of the taxon must be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refers to more than one taxon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to which the names belong should be stated along with details of ethnic group . Care should be taken with transliteration into the Roman alphabet; if a standard system exists, use it and note which one it is."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/UsesAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has vernacular name use annotations"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/RecordMetadataType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.gbif.es/PliC/VersionType"
+  } ]
+}, {
+  "@id" : "http://www.gbif.es/PliC/hasWhatImpact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "What the actual impact is, for instance: Is it eating all the riparian vegetation? Are their burrows destroying irrigation systems? Is it displacing Arvicola sapidus?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.gbif.es/PliC/InvasivenessAtomizedType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has what impact"
+  } ]
+}, {
+  "@id" : "http://www.tdwg.org/schemas/tcs/1.01#ScientificName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#gYear",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#langindgPage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://orcid.org/0000-0001-9064-0463",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Franck MICHEL"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0002-6321-9398",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Francisco PANDO"
+  } ]
+} ]
