@@ -417,11 +417,13 @@ def create_property_from_atribute(component: XsdComponent, indent="") -> None:
         if _attribute is not None:
             # Create a property corresponding to the attribute, with a unique URI
             _local_name = find_first_local_name(component)
-            _local_name = to_camel_case(_local_name + "_" + str(_attribute))
+            _local_name = to_camel_case(_local_name + to_camel_case(str(_attribute)))
             _prop_uri = (
                 graph.make_rdf_namespace(component.target_namespace) + "has" + _local_name
             )
-            graph.add_datatype_property(_prop_uri, label=f"attribute '{str(_attribute)}'")
+
+            _class = camel_case_split(find_first_local_name(component)).lower()
+            graph.add_datatype_property(_prop_uri, label=f"has {_class}'s {str(_attribute)}")
 
             _class = make_complex_type_uri(component)
             logger.debug(

@@ -7,1230 +7,1312 @@
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
 plic:hasAbstract a owl:DatatypeProperty ;
-    rdfs:label "has Abstract" ;
-    rdfs:domain plic:BaseElementsType ;
+    rdfs:label "has abstract" ;
+    rdfs:comment "A brief summary of the most relevant or attractive features of this taxon to the general public. Could point to any kind of information. Example: Blue whale is the largest mammal in the world." ;
     rdfs:range xs:string .
 
 plic:hasAbundanceData a owl:ObjectProperty ;
-    rdfs:label "has Abundance Data" ;
+    rdfs:label "has abundance data" ;
     rdfs:comment "Total number of individuals of a population" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasActions a owl:ObjectProperty ;
-    rdfs:label "has Actions" ;
+    rdfs:label "has actions" ;
     rdfs:domain plic:ManagementAndConservationAtomizedType ;
     rdfs:range plic:ActionsType .
 
+plic:hasActionsType a owl:DatatypeProperty ;
+    rdfs:label "has actions's type" ;
+    rdfs:domain plic:ActionsType .
+
 plic:hasAncillaryData a owl:ObjectProperty ;
-    rdfs:label "has Ancillary Data" ;
+    rdfs:label "has ancillary data" ;
     rdfs:range eol:dataObjectBaseType .
 
 plic:hasAnnualCycleAtomized a owl:ObjectProperty ;
-    rdfs:label "has Annual Cycle Atomized" ;
+    rdfs:label "has annual cycle atomized" ;
     rdfs:domain plic:AnnualCyclesType ;
     rdfs:range plic:AnnualCycleAtomizedType .
 
 plic:hasAnnualCycleUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Annual Cycle Unstructured" ;
+    rdfs:label "has annual cycle unstructured" ;
     rdfs:domain plic:AnnualCyclesType ;
     rdfs:range xs:string .
 
 plic:hasAnnualCycles a owl:ObjectProperty ;
-    rdfs:label "has Annual Cycles" ;
+    rdfs:label "has annual cycles" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:AnnualCyclesType .
 
 plic:hasAppliesTo a owl:ObjectProperty ;
-    rdfs:label "has Applies To" ;
-    rdfs:comment "Location where the legislation is used." ;
+    rdfs:label "has applies to" ;
     rdfs:range plic:DistributionType .
 
 plic:hasAreaOfOccupancy a owl:ObjectProperty ;
-    rdfs:label "has Area Of Occupancy" ;
+    rdfs:label "has area of occupancy" ;
     rdfs:comment "Area within its 'extent of occurrence' (see EOO) which is occupied by a taxon, excluding cases of vagrancy. The measure reflects the fact that a taxon will not usually occur throughout the area of its extent of occurrence, which may contain unsuitable or unoccupied habitats. Reference: http://www.iucnredlist.org/technical-documents/categories-and-criteria/2001-categories-criteria#definitions" ;
     rdfs:domain plic:TerritoryAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasAssociatedParty a owl:DatatypeProperty ;
-    rdfs:label "has Associated Party" .
+    rdfs:label "has associated party" .
 
 plic:hasAudience a owl:ObjectProperty ;
-    rdfs:label "has Audience" ;
+    rdfs:label "has audience" ;
     rdfs:comment "Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low)." ;
     rdfs:domain plic:TargetAudiencesType ;
     rdfs:range plic:AudienceEnumType .
 
 plic:hasAudiencesUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Audiences Unstructured" ;
+    rdfs:label "has audiences unstructured" ;
     rdfs:comment "List audience codes separated by means of comma or /." ;
     rdfs:domain plic:TargetAudiencesType ;
     rdfs:range xs:string .
 
 plic:hasAuthority a owl:DatatypeProperty ;
-    rdfs:label "has Authority" ;
+    rdfs:label "has authority" ;
     rdfs:comment "Organism or institution that assess the status" ;
     rdfs:domain plic:ThreatStatusAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasAverageDensity a owl:ObjectProperty ;
-    rdfs:label "has Average Density" ;
+    rdfs:label "has average density" ;
     rdfs:comment "Average of the densities obtained for a population" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasBaseElements a owl:ObjectProperty ;
-    rdfs:label "has Base Elements" ;
+    rdfs:label "has base elements" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:BaseElementsType .
 
 plic:hasBehavior a owl:ObjectProperty ;
-    rdfs:label "has Behavior" ;
+    rdfs:label "has behavior" ;
     rdfs:comment "Responses, reactions or movements made by an organism in a particular situation." ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:BehaviorType .
 
 plic:hasBehaviorAtomized a owl:ObjectProperty ;
-    rdfs:label "has Behavior Atomized" ;
+    rdfs:label "has behavior atomized" ;
     rdfs:domain plic:BehaviorType ;
     rdfs:range plic:DetailType .
 
 plic:hasBehaviorUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Behavior Unstructured" ;
+    rdfs:label "has behavior unstructured" ;
     rdfs:domain plic:BehaviorType ;
     rdfs:range xs:string .
 
 plic:hasBirthRate a owl:ObjectProperty ;
-    rdfs:label "has Birth Rate" ;
+    rdfs:label "has birth rate" ;
     rdfs:comment "Production of new individuals in a population" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasBriefDescription a owl:DatatypeProperty ;
-    rdfs:label "has Brief Description" ;
+    rdfs:label "has brief description" ;
     rdfs:comment "Brief description which reflect only the diagnostic characters, i.e. those that distinguish a taxon from other related or close taxa." ;
     rdfs:domain plic:TaxonomicDescriptionType .
 
 plic:hasCarryingCapacity a owl:ObjectProperty ;
-    rdfs:label "has Carrying Capacity" ;
+    rdfs:label "has carrying capacity" ;
     rdfs:comment "Maximum population density defined by resources in the absence of predator and parasites." ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasCauses a owl:ObjectProperty ;
-    rdfs:label "has Causes" ;
+    rdfs:label "has causes" ;
     rdfs:comment "VCR: Seasonal climatic variation, Resource availability and Reproduction" ;
     rdfs:domain plic:MigratoryAtomizedType ;
     rdfs:range plic:CausesEnumType .
 
 plic:hasCitation a owl:ObjectProperty ;
-    rdfs:label "has Citation" ;
+    rdfs:label "has citation" ;
     rdfs:comment "A single citation for use when citing the dataset." ;
     rdfs:domain plic:MetadataType ;
     rdfs:range plic:CitationType .
 
+plic:hasCitationIdentifier a owl:DatatypeProperty ;
+    rdfs:label "has citation's identifier" ;
+    rdfs:domain plic:CitationType .
+
 plic:hasCommonName a owl:DatatypeProperty ;
-    rdfs:label "has Common Name" ;
+    rdfs:label "has common name" ;
     rdfs:domain plic:CommonNamesAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasCommonNames a owl:ObjectProperty ;
-    rdfs:label "has Common Names" ;
+    rdfs:label "has common names" ;
     rdfs:domain plic:NomenclatureAndClassificationType ;
     rdfs:range plic:CommonNamesType .
 
 plic:hasCommonNamesAtomized a owl:ObjectProperty ;
-    rdfs:label "has Common Names Atomized" ;
+    rdfs:label "has common names atomized" ;
     rdfs:domain plic:CommonNamesType ;
     rdfs:range plic:CommonNamesAtomizedType .
 
 plic:hasCommonNamesUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Common Names Unstructured" ;
+    rdfs:label "has common names unstructured" ;
     rdfs:domain plic:CommonNamesType ;
     rdfs:range xs:string .
 
-plic:hasConservation-ExplotationData a owl:DatatypeProperty ;
-    rdfs:label "has Conservation- Explotation Data" ;
+plic:hasConservationExplotationData a owl:DatatypeProperty ;
+    rdfs:label "has conservation explotation data" ;
     rdfs:comment "Acc. TDWG Economic Botany. Record frequency of plants, details of regeneration, sustainability or over-exploitation and note any locally imposed bans on felling or harvesting." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasDataset a owl:DatatypeProperty,
         owl:ObjectProperty ;
-    rdfs:label "has Dataset" ;
+    rdfs:label "has dataset" ;
     rdfs:comment "Root element from which all other elements will branch from" ;
     rdfs:range plic:DatasetType .
 
 plic:hasDataset_ID a owl:DatatypeProperty ;
-    rdfs:label "has Dataset_ID" ;
+    rdfs:label "has dataset_id" ;
     rdfs:domain plic:MetadataType ;
     rdfs:range xs:string .
 
 plic:hasDateIssued a owl:DatatypeProperty ;
-    rdfs:label "has Date Issued" ;
+    rdfs:label "has date issued" ;
     rdfs:comment "Source for Dublin-Core standard element Date.Issued: Citable 'publication date' of the current version (comp. RevisionData/DateCreated and DateModified for version- independent dates). This date should be missing if the current version is not yet published!" ;
     rdfs:domain plic:VersionType ;
     rdfs:range xs:date .
 
 plic:hasDateStamp a owl:DatatypeProperty ;
-    rdfs:label "has Date Stamp" ;
+    rdfs:label "has date stamp" ;
     rdfs:comment "The date the metadata document was created or modified." ;
     rdfs:domain plic:MetadataType ;
     rdfs:range xs:date .
 
 plic:hasDemographyAndThreat a owl:ObjectProperty ;
-    rdfs:label "has Demography And Threat" ;
+    rdfs:label "has demography and threat" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:DemographyAndThreatType .
 
 plic:hasDemographyAndThreatUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Demography And Threat Unstructured" ;
+    rdfs:label "has demography and threat unstructured" ;
     rdfs:domain plic:DemographyAndThreatType ;
     rdfs:range xs:string .
 
 plic:hasDensityData a owl:ObjectProperty ;
-    rdfs:label "has Density Data" ;
+    rdfs:label "has density data" ;
     rdfs:comment "Size of a population in relation to a definite unit of space" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasDescription a owl:DatatypeProperty ;
-    rdfs:label "has Description" ;
+    rdfs:label "has description" ;
     rdfs:domain plic:TextDescriptionType .
 
 plic:hasDescriptionLifeStages a owl:ObjectProperty ;
-    rdfs:label "has Description Life Stages" ;
+    rdfs:label "has description life stages" ;
     rdfs:comment "Sex/age categories or life stages of a species; can be size in the case of plants." ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasDetailAtomized a owl:ObjectProperty ;
-    rdfs:label "has Detail Atomized" ;
+    rdfs:label "has detail atomized" ;
     rdfs:domain plic:MiscDetailType ;
     rdfs:range plic:DetailType .
 
 plic:hasDetailUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Detail Unstructured" ;
+    rdfs:label "has detail unstructured" ;
     rdfs:domain plic:MiscDetailType ;
     rdfs:range xs:string .
 
+plic:hasDetailUnstructuredType a owl:DatatypeProperty ;
+    rdfs:label "has detail unstructured's type" ;
+    rdfs:domain plic:DetailUnstructuredType .
+
 plic:hasDirectThreatAtomized a owl:ObjectProperty ;
-    rdfs:label "has Direct Threat Atomized" ;
+    rdfs:label "has direct threat atomized" ;
     rdfs:domain plic:DirectThreatsType ;
     rdfs:range plic:DetailType .
 
 plic:hasDirectThreatUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Direct Threat Unstructured" ;
+    rdfs:label "has direct threat unstructured" ;
     rdfs:domain plic:DirectThreatsType ;
     rdfs:range xs:string .
 
 plic:hasDirectThreats a owl:ObjectProperty ;
-    rdfs:label "has Direct Threats" ;
+    rdfs:label "has direct threats" ;
     rdfs:comment "Direct threats are the proximate human activities or processes that have caused, are causing, or may cause the destruction, degradation, and/or impairment of biodiversity targets (e.g., unsustainable fishing or logging). Direct threats are synonymous with sources of stress and proximate pressures. Threats can be past (historical), ongoing, and/or likely to occur in the future." ;
     rdfs:domain plic:DemographyAndThreatType ;
     rdfs:range plic:DirectThreatsType .
 
 plic:hasDispersal a owl:ObjectProperty ;
-    rdfs:label "has Dispersal" ;
+    rdfs:label "has dispersal" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:DispersalType .
 
 plic:hasDispersalAtomized a owl:ObjectProperty ;
-    rdfs:label "has Dispersal Atomized" ;
+    rdfs:label "has dispersal atomized" ;
     rdfs:domain plic:DispersalType ;
     rdfs:range plic:DispersalAtomizedType .
 
 plic:hasDispersalMeans a owl:ObjectProperty ;
-    rdfs:label "has Dispersal Means" ;
+    rdfs:label "has dispersal means" ;
     rdfs:comment "VCR. Zoochory, Anemochory, Hydrochory, Barochory, Autochory" ;
     rdfs:domain plic:DispersalAtomizedType ;
     rdfs:range plic:DispersalMeansEnumType .
 
 plic:hasDispersalUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Dispersal Unstructured" ;
+    rdfs:label "has dispersal unstructured" ;
     rdfs:domain plic:DispersalType ;
     rdfs:range xs:string .
 
 plic:hasDistance a owl:ObjectProperty ;
-    rdfs:label "has Distance" ;
+    rdfs:label "has distance" ;
     rdfs:domain plic:DispersalAtomizedType ;
     rdfs:range plic:DistanceType .
 
 plic:hasDistribution a owl:ObjectProperty ;
-    rdfs:label "has Distribution" ;
+    rdfs:label "has distribution" ;
     rdfs:domain plic:HabitatAndDistributionType ;
     rdfs:range plic:DistributionType .
 
 plic:hasDistributionAtomized a owl:ObjectProperty ;
-    rdfs:label "has Distribution Atomized" ;
+    rdfs:label "has distribution atomized" ;
     rdfs:domain plic:DistributionType ;
     rdfs:range plic:DistributionAtomizedType .
 
 plic:hasDistributionScope a owl:ObjectProperty ;
-    rdfs:label "has Distribution Scope" ;
+    rdfs:label "has distribution scope" ;
     rdfs:domain plic:DistributionType ;
     rdfs:range plic:DistributionScopeType .
 
+plic:hasDistributionScopeType a owl:DatatypeProperty ;
+    rdfs:label "has distribution scope's Type" ;
+    rdfs:domain plic:DistributionScopeType .
+
 plic:hasDistributionUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Distribution Unstructured" ;
+    rdfs:label "has distribution unstructured" ;
     rdfs:domain plic:DistributionType ;
     rdfs:range xs:string .
 
 plic:hasEcologicalSignificance a owl:ObjectProperty ;
-    rdfs:label "has Ecological Significance" ;
+    rdfs:label "has ecological significance" ;
     rdfs:comment "Ecological importance of the taxon. (Placeholder)" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:EcologicalSignificanceType .
 
 plic:hasEcologicalSignificanceAtomized a owl:ObjectProperty ;
-    rdfs:label "has Ecological Significance Atomized" ;
+    rdfs:label "has ecological significance atomized" ;
     rdfs:domain plic:EcologicalSignificanceType ;
     rdfs:range plic:DetailType .
 
 plic:hasEcologicalSignificanceUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Ecological Significance Unstructured" ;
+    rdfs:label "has ecological significance unstructured" ;
     rdfs:domain plic:EcologicalSignificanceType ;
     rdfs:range xs:string .
 
 plic:hasEconomics a owl:DatatypeProperty ;
-    rdfs:label "has Economics" ;
+    rdfs:label "has economics" ;
     rdfs:comment "Acc. TDWG Economic Botany. Is t here trade in the live plants, plant parts, or derived products , and , if so , on what scale?" ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasEmigration a owl:ObjectProperty ;
-    rdfs:label "has Emigration" ;
+    rdfs:label "has emigration" ;
     rdfs:comment "Movement of individuals outside a population, or from one area to another" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasEndTimeInterval a owl:DatatypeProperty ;
-    rdfs:label "has End Time Interval" ;
+    rdfs:label "has end time interval" ;
     rdfs:comment "VC" ;
     rdfs:domain plic:AnnualCycleAtomizedType .
 
 plic:hasEndemic a owl:ObjectProperty ;
-    rdfs:label "has Endemic" ;
+    rdfs:label "has endemic" ;
     rdfs:domain plic:HabitatAndDistributionType ;
     rdfs:range plic:EndemicType .
 
 plic:hasEndemicAtomized a owl:ObjectProperty ;
-    rdfs:label "has Endemic Atomized" ;
+    rdfs:label "has endemic atomized" ;
     rdfs:comment "List of areas structured and categorized the degree of safety." ;
     rdfs:domain plic:EndemicType ;
     rdfs:range plic:EndemicAtomizedType .
 
 plic:hasEndemicIn a owl:DatatypeProperty ;
-    rdfs:label "has Endemic In" ;
+    rdfs:label "has endemic in" ;
     rdfs:comment "The concept is applied to an area either multinational or local. Ex: - Vicuña (Vicugna vicugna Molina, 1782) endemic in the Andean region. - Manzanilla Real (Artemisia granatensis Boiss.) endemic in the peaks of Sierra Nevada (Spain)." ;
     rdfs:domain plic:EndemicAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasEndemicTo a owl:DatatypeProperty ;
-    rdfs:label "has Endemic To" ;
+    rdfs:label "has endemic to" ;
     rdfs:comment "The concept is applied to one or several countries. Ex:- Giant panda (Ailuropoda melanoleuca (David, 1869) endemic to China. Quetzal Resplendent (Pharomachrus mocinno de la Llave, 1832) endemic to Mexico, Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica and Panama" ;
     rdfs:domain plic:EndemicAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasEndemicUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Endemic Unstructured" ;
+    rdfs:label "has endemic unstructured" ;
     rdfs:comment "List of areas presented in an unstructured and categorized the degree of safety." ;
     rdfs:domain plic:EndemicType ;
     rdfs:range xs:string .
 
 plic:hasEnvironmentalEnvelope a owl:ObjectProperty ;
-    rdfs:label "has Environmental Envelope" ;
+    rdfs:label "has environmental envelope" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:EnvironmentalEnvelopeType .
 
 plic:hasEnvironmentalEnvelopeAtomized a owl:ObjectProperty ;
-    rdfs:label "has Environmental Envelope Atomized" ;
+    rdfs:label "has environmental envelope atomized" ;
     rdfs:domain plic:EnvironmentalEnvelopeType ;
     rdfs:range plic:DetailType .
 
 plic:hasEnvironmentalEnvelopeUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Environmental Envelope Unstructured" ;
+    rdfs:label "has environmental envelope unstructured" ;
     rdfs:domain plic:EnvironmentalEnvelopeType ;
     rdfs:range xs:string .
 
 plic:hasEvent a owl:DatatypeProperty ;
-    rdfs:label "has Event" ;
+    rdfs:label "has event" ;
     rdfs:comment "VC" ;
     rdfs:domain plic:AnnualCycleAtomizedType .
 
 plic:hasExtentOfOccurrence a owl:ObjectProperty ;
-    rdfs:label "has Extent Of Occurrence" ;
+    rdfs:label "has extent of occurrence" ;
     rdfs:comment "Area contained within the shortest continuous imaginary boundary which can be drawn to encompass all the known, inferred or projected sites of present occurrence of a taxon, excluding cases of vagrancy." ;
     rdfs:domain plic:TerritoryAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasFecundity a owl:ObjectProperty ;
-    rdfs:label "has Fecundity" ;
-    rdfs:comment "Potential ability of an organism to produce eggs or young;     					rate of production of young by a female" ;
+    rdfs:label "has fecundity" ;
+    rdfs:comment "Potential ability of an organism to produce eggs or young; 						rate of production of young by a female" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasFeeding a owl:ObjectProperty ;
-    rdfs:label "has Feeding" ;
+    rdfs:label "has feeding" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:FeedingType .
 
 plic:hasFeedingAtomized a owl:ObjectProperty ;
-    rdfs:label "has Feeding Atomized" ;
+    rdfs:label "has feeding atomized" ;
     rdfs:domain plic:FeedingType ;
     rdfs:range plic:FeedingAtomizedType .
 
-plic:hasFeedingType a owl:ObjectProperty ;
-    rdfs:label "has Feeding Type" ;
+plic:hasFeedingMode a owl:ObjectProperty ;
+    rdfs:label "has feeding mode" ;
     rdfs:comment "VC. Primary diet source." ;
     rdfs:domain plic:FeedingAtomizedType ;
-    rdfs:range plic:FeedingTypeEnumType .
+    rdfs:range plic:FeedingModeEnumType .
 
 plic:hasFeedingUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Feeding Unstructured" ;
+    rdfs:label "has feeding unstructured" ;
     rdfs:domain plic:FeedingType ;
     rdfs:range xs:string .
 
 plic:hasFullDescription a owl:ObjectProperty ;
-    rdfs:label "has Full Description" ;
+    rdfs:label "has full description" ;
     rdfs:comment "Complete and detailed account of the taxonomic and systematic characters, i.e. those that define and allow to recognize an organism." ;
     rdfs:domain plic:TaxonomicDescriptionType ;
     rdfs:range plic:FullDescriptionType .
 
 plic:hasFullDescriptionAtomized a owl:ObjectProperty ;
-    rdfs:label "has Full Description Atomized" ;
+    rdfs:label "has full description atomized" ;
     rdfs:domain plic:FullDescriptionType ;
     rdfs:range plic:DetailType .
 
 plic:hasFullDescriptionUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Full Description Unstructured" ;
+    rdfs:label "has full description unstructured" ;
     rdfs:domain plic:FullDescriptionType ;
     rdfs:range xs:string .
 
 plic:hasGeographicEntity a owl:DatatypeProperty ;
-    rdfs:label "has Geographic Entity" ;
+    rdfs:label "has geographic entity" ;
     rdfs:comment "Name of the geographic entity." ;
     rdfs:domain plic:DistributionAtomizedType ;
     rdfs:range xs:string .
 
+plic:hasGeographicEntityCatalogue a owl:DatatypeProperty ;
+    rdfs:label "has geographic entity's Catalogue" ;
+    rdfs:domain plic:GeographicEntityType .
+
 plic:hasGlobalUniqueIdentifier a owl:DatatypeProperty ;
-    rdfs:label "has Global Unique Identifier" ;
+    rdfs:label "has global unique identifier" ;
     rdfs:comment "An Uniform Resource Name (URN) used as an unique identifier of the taxon record." ;
     rdfs:domain plic:BaseElementsType ;
     rdfs:range xs:string .
 
 plic:hasHabitatAndDistribution a owl:ObjectProperty ;
-    rdfs:label "has Habitat And Distribution" ;
+    rdfs:label "has habitat and distribution" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:HabitatAndDistributionType .
 
 plic:hasHabitatAndDistributionUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Habitat And Distribution Unstructured" ;
+    rdfs:label "has habitat and distribution unstructured" ;
     rdfs:domain plic:HabitatAndDistributionType ;
     rdfs:range xs:string .
 
 plic:hasHabitatAtomized a owl:ObjectProperty ;
-    rdfs:label "has Habitat Atomized" ;
+    rdfs:label "has habitat atomized" ;
     rdfs:domain plic:HabitatsType ;
     rdfs:range plic:DetailType .
 
 plic:hasHabitatUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Habitat Unstructured" ;
+    rdfs:label "has habitat unstructured" ;
     rdfs:domain plic:HabitatsType ;
     rdfs:range xs:string .
 
 plic:hasHabitats a owl:ObjectProperty ;
-    rdfs:label "has Habitats" ;
+    rdfs:label "has habitats" ;
     rdfs:domain plic:HabitatAndDistributionType ;
     rdfs:range plic:HabitatsType .
 
 plic:hasHierarchy a owl:ObjectProperty ;
-    rdfs:label "has Hierarchy" ;
+    rdfs:label "has hierarchy" ;
     rdfs:domain plic:NomenclatureAndClassificationType ;
     rdfs:range plic:HierarchyType .
 
+plic:hasHierarchyTypeClassification a owl:DatatypeProperty ;
+    rdfs:label "has hierarchy type's classification" ;
+    rdfs:domain plic:HierarchyType .
+
+plic:hasHierarchyTypeRecommended a owl:DatatypeProperty ;
+    rdfs:label "has hierarchy type's recommended" ;
+    rdfs:domain plic:HierarchyType .
+
 plic:hasHumanAndEnvironmentalRelevance a owl:DatatypeProperty ;
-    rdfs:label "has Human And Environmental Relevance" ;
+    rdfs:label "has human and environmental relevance" ;
     rdfs:domain plic:ManagementAndConservationAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasIdentificationKeys a owl:ObjectProperty ;
-    rdfs:label "has Identification Keys" ;
-    rdfs:comment "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons.   For example:   If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)" ;
+    rdfs:label "has identification keys" ;
+    rdfs:comment "Tool for the identification of organisms, comprising a series of steps, each of which represents a question about one or more characters of the organism. Each step offers multiple alternatives, choosing one of them will lead us to the next step until ending, finally, in the name of the organism. Most printed keys have only two alternatives, so called dichotomous keys. A taxon includes a key or an identification of key in the subordinate taxons.  For example:  If we are in a register of a genre, this register would include the keys of the species that this register includes, and if it´s one specie, then it would include the key of the infraspecific rank (For plants: subspecies, variety forms)" ;
     rdfs:domain plic:TaxonomicDescriptionType ;
     rdfs:range plic:IdentificationKeysType .
 
 plic:hasImmigration a owl:ObjectProperty ;
-    rdfs:label "has Immigration" ;
+    rdfs:label "has immigration" ;
     rdfs:comment "Individuals entering a population" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasImpactMechanism a owl:ObjectProperty ;
-    rdfs:label "has Impact Mechanism" ;
+    rdfs:label "has impact mechanism" ;
     rdfs:comment "Mechanism of introduction or impact to a new location." ;
     rdfs:domain plic:InvasivenessAtomizedType ;
-    rdfs:range plic:impactMechanismEnumType .
+    rdfs:range plic:ImpactMechanismEnumType .
 
 plic:hasImpactTarget a owl:ObjectProperty ;
-    rdfs:label "has Impact Target" ;
+    rdfs:label "has impact target" ;
     rdfs:comment "Who/what is impacting." ;
     rdfs:domain plic:InvasivenessAtomizedType ;
-    rdfs:range plic:impactTargetEnumType .
+    rdfs:range plic:ImpactTargetEnumType .
 
 plic:hasInteractionAtomized a owl:ObjectProperty ;
-    rdfs:label "has Interaction Atomized" ;
+    rdfs:label "has interaction atomized" ;
     rdfs:domain plic:InteractionsType ;
     rdfs:range plic:InteractionAtomizedType .
 
 plic:hasInteractionUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Interaction Unstructured" ;
+    rdfs:label "has interaction unstructured" ;
     rdfs:domain plic:InteractionsType ;
     rdfs:range xs:string .
 
 plic:hasInteractions a owl:ObjectProperty ;
-    rdfs:label "has Interactions" ;
+    rdfs:label "has interactions" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:InteractionsType .
 
 plic:hasInvasiveness a owl:ObjectProperty ;
-    rdfs:label "has Invasiveness" ;
+    rdfs:label "has invasiveness" ;
     rdfs:comment "Information about invasive exotic species that could threaten to ecosystem, habitats and species" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:InvasivenessType .
 
 plic:hasInvasivenessAtomized a owl:ObjectProperty ;
-    rdfs:label "has Invasiveness Atomized" ;
+    rdfs:label "has invasiveness atomized" ;
     rdfs:domain plic:InvasivenessType ;
     rdfs:range plic:InvasivenessAtomizedType .
 
 plic:hasInvasivenessUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Invasiveness Unstructured" ;
+    rdfs:label "has invasiveness unstructured" ;
     rdfs:domain plic:InvasivenessType ;
     rdfs:range xs:string .
 
 plic:hasItemAttribute a owl:DatatypeProperty ;
-    rdfs:label "has Item Attribute" ;
+    rdfs:label "has item attribute" ;
     rdfs:domain plic:DescriptionItemType .
 
 plic:hasItemValue a owl:DatatypeProperty ;
-    rdfs:label "has Item Value" ;
+    rdfs:label "has item value" ;
     rdfs:domain plic:DescriptionItemType .
 
 plic:hasKeys a owl:DatatypeProperty ;
-    rdfs:label "has Keys" ;
+    rdfs:label "has keys" ;
     rdfs:comment "Dichotomic or multientrance keys." ;
     rdfs:domain plic:IdentificationKeysType ;
     rdfs:range xs:string .
 
 plic:hasLanguage a owl:DatatypeProperty ;
-    rdfs:label "has Language" ;
+    rdfs:label "has language" ;
     rdfs:comment "The language of the taxon record, according to ISO 639." ;
     rdfs:range xs:string .
 
 plic:hasLegalNorm a owl:DatatypeProperty ;
-    rdfs:label "has Legal Norm" ;
+    rdfs:label "has legal norm" ;
     rdfs:domain plic:LegislationAtomizedType .
 
 plic:hasLegislation a owl:ObjectProperty ;
-    rdfs:label "has Legislation" ;
+    rdfs:label "has legislation" ;
     rdfs:domain plic:DemographyAndThreatType ;
     rdfs:range plic:LegislationType .
 
 plic:hasLegislationAtomized a owl:ObjectProperty ;
-    rdfs:label "has Legislation Atomized" ;
+    rdfs:label "has legislation atomized" ;
     rdfs:domain plic:LegislationType ;
     rdfs:range plic:LegislationAtomizedType .
 
 plic:hasLegislationName a owl:DatatypeProperty ;
-    rdfs:label "has Legislation Name" ;
+    rdfs:label "has legislation name" ;
     rdfs:comment "Word or phrase to designate the law or group of laws" ;
     rdfs:domain plic:LegislationAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasLegislationRead a owl:DatatypeProperty ;
-    rdfs:label "has Legislation Read" ;
+    rdfs:label "has legislation read" ;
     rdfs:comment "The oficial document in which the user can read the legislation." ;
     rdfs:domain plic:LegislationAtomizedType .
 
 plic:hasLegislationStatus a owl:DatatypeProperty ;
-    rdfs:label "has Legislation Status" ;
+    rdfs:label "has legislation status" ;
     rdfs:comment "VCR: Consolidated, Repealed" ;
     rdfs:domain plic:LegislationAtomizedType .
 
 plic:hasLegislationType a owl:DatatypeProperty ;
-    rdfs:label "has Legislation Type" ;
+    rdfs:label "has legislation type" ;
     rdfs:comment "VCR: included, not included" ;
     rdfs:domain plic:LegislationAtomizedType .
 
 plic:hasLegislationUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Legislation Unstructured" ;
+    rdfs:label "has legislation unstructured" ;
     rdfs:domain plic:LegislationType ;
     rdfs:range xs:string .
 
 plic:hasLifeCycle a owl:ObjectProperty ;
-    rdfs:label "has Life Cycle" ;
+    rdfs:label "has life cycle" ;
     rdfs:comment "Life history of a living organism: The course of developmental changes in an organism from fertilized zygote to maturity or stages through which an organism passes." ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:LifeCycleType .
 
 plic:hasLifeCycleAtomized a owl:ObjectProperty ;
-    rdfs:label "has Life Cycle Atomized" ;
+    rdfs:label "has life cycle atomized" ;
     rdfs:domain plic:LifeCycleType ;
     rdfs:range plic:DetailType .
 
 plic:hasLifeCycleUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Life Cycle Unstructured" ;
+    rdfs:label "has life cycle unstructured" ;
     rdfs:domain plic:LifeCycleType ;
     rdfs:range xs:string .
 
 plic:hasLifeForm a owl:ObjectProperty ;
-    rdfs:label "has Life Form" ;
+    rdfs:label "has life form" ;
     rdfs:comment "General appearance. Characteristic mode of growth or occurrence associated to its environment, particularly for plants. Comprising its size, shape, texture and orientation. Example: tree, shrubs, herbs." ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:LifeFormType .
 
 plic:hasLifeFormAtomized a owl:ObjectProperty ;
-    rdfs:label "has Life Form Atomized" ;
+    rdfs:label "has life form atomized" ;
     rdfs:domain plic:LifeFormType ;
     rdfs:range plic:DetailType .
 
 plic:hasLifeFormUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Life Form Unstructured" ;
+    rdfs:label "has life form unstructured" ;
     rdfs:domain plic:LifeFormType ;
     rdfs:range xs:string .
 
 plic:hasMajor a owl:DatatypeProperty ;
-    rdfs:label "has Major" ;
-    rdfs:comment "The major version number ('1' in 1.2) as defined by the     					content creators." ;
+    rdfs:label "has major" ;
+    rdfs:comment "The major version number ('1' in 1.2) as defined by the 						content creators." ;
     rdfs:domain plic:VersionType ;
     rdfs:range xs:nonNegativeInteger .
 
 plic:hasManagementAndConservation a owl:ObjectProperty ;
-    rdfs:label "has Management And Conservation" ;
+    rdfs:label "has management and conservation" ;
     rdfs:comment "Management: actions directed at conserving or restoring species / Conservation: interventions undertaken designed to preserve  specie" ;
     rdfs:domain plic:UsesManagementAndConservationType ;
     rdfs:range plic:ManagementAndConservationType .
 
 plic:hasManagementAndConservationAtomized a owl:ObjectProperty ;
-    rdfs:label "has Management And Conservation Atomized" ;
+    rdfs:label "has management and conservation atomized" ;
     rdfs:domain plic:ManagementAndConservationType ;
     rdfs:range plic:ManagementAndConservationAtomizedType .
 
+plic:hasManagementAndConservationAtomizedTypeType a owl:DatatypeProperty ;
+    rdfs:label "has management and conservation atomized type's type" ;
+    rdfs:domain plic:ManagementAndConservationAtomizedType .
+
 plic:hasManagementAndConservationUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Management And Conservation Unstructured" ;
+    rdfs:label "has management and conservation unstructured" ;
     rdfs:domain plic:ManagementAndConservationType ;
     rdfs:range xs:string .
 
 plic:hasManagementPlan a owl:DatatypeProperty ;
-    rdfs:label "has Management Plan" ;
+    rdfs:label "has management plan" ;
     rdfs:domain plic:ManagementAndConservationAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasMeansOfApplication-Administration a owl:DatatypeProperty ;
-    rdfs:label "has Means Of Application- Administration" ;
+    rdfs:label "has means of application- administration" ;
     rdfs:comment "Acc. TDWG Economic Botany. This is of particular relevance to medicines, poisons (e.g. insecticides), social products and some environmental purposes (e.g. fert ilisers)." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasMeasurementOrFact a owl:ObjectProperty ;
-    rdfs:label "has Measurement Or Fact" ;
+    rdfs:label "has measurement or fact" ;
     rdfs:range plic:MeasurementOrFactType .
 
 plic:hasMetadata a owl:ObjectProperty ;
-    rdfs:label "has Metadata" ;
+    rdfs:label "has metadata" ;
     rdfs:domain plic:DatasetType ;
     rdfs:range plic:MetadataType .
 
 plic:hasMigratory a owl:ObjectProperty ;
-    rdfs:label "has Migratory" ;
+    rdfs:label "has migratory" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:MigratoryType .
 
 plic:hasMigratoryAtomized a owl:ObjectProperty ;
-    rdfs:label "has Migratory Atomized" ;
+    rdfs:label "has migratory atomized" ;
     rdfs:domain plic:MigratoryType ;
     rdfs:range plic:MigratoryAtomizedType .
 
 plic:hasMigratoryUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Migratory Unstructured" ;
+    rdfs:label "has migratory unstructured" ;
     rdfs:domain plic:MigratoryType ;
     rdfs:range xs:string .
 
 plic:hasMinor a owl:DatatypeProperty ;
-    rdfs:label "has Minor" ;
+    rdfs:label "has minor" ;
     rdfs:comment "An optional minor version number ('2' in 1.2)" ;
     rdfs:domain plic:VersionType ;
     rdfs:range xs:nonNegativeInteger .
 
 plic:hasMiscDetails a owl:ObjectProperty ;
-    rdfs:label "has Misc Details" ;
+    rdfs:label "has misc details" ;
     rdfs:range plic:MiscDetailType .
 
 plic:hasModifier a owl:DatatypeProperty ;
-    rdfs:label "has Modifier" ;
+    rdfs:label "has modifier" ;
     rdfs:comment "Unconstrained text specifying status + optional number, e. g., 'beta', 'alpha', 'rc/release candidate', 'internal'. If missing, release status is assumed." ;
     rdfs:domain plic:VersionType .
 
 plic:hasMolecularData a owl:ObjectProperty ;
-    rdfs:label "has Molecular Data" ;
+    rdfs:label "has molecular data" ;
     rdfs:comment "Information on the chemical structures and biological processes at the molecular level: DNA and proteins sequences, protein structures, expression profiles of genes protein domains, families of genes, mutations, polymorphisms, involvement in disease, ... Undeveloped. Placeholder for connecting with standards developed by specialists. For example, Standards for Data Exchange and Management from Scalalife (http://www.scalalife.eu/content/data)" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:MolecularDataType .
 
 plic:hasMolecularDataAtomized a owl:ObjectProperty ;
-    rdfs:label "has Molecular Data Atomized" ;
+    rdfs:label "has molecular data atomized" ;
     rdfs:domain plic:MolecularDataType ;
     rdfs:range plic:MolecularDataAtomizedType .
 
 plic:hasMolecularDataUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Molecular Data Unstructured" ;
+    rdfs:label "has molecular data unstructured" ;
     rdfs:domain plic:MolecularDataType ;
     rdfs:range xs:string .
 
 plic:hasMortalityRate a owl:ObjectProperty ;
-    rdfs:label "has Mortality Rate" ;
+    rdfs:label "has mortality rate" ;
     rdfs:comment "The probability of dying; the ratio of number dying in a given time interval to the number alive at the beginning of the time interval" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasNaturalHistory a owl:ObjectProperty ;
-    rdfs:label "has Natural History" ;
+    rdfs:label "has natural history" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:NaturalHistoryType .
 
 plic:hasNaturalHistoryUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Natural History Unstructured" ;
+    rdfs:label "has natural history unstructured" ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range xs:string .
 
 plic:hasNomenclatureAndClassification a owl:ObjectProperty ;
-    rdfs:label "has Nomenclature And Classification" ;
+    rdfs:label "has nomenclature and classification" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:NomenclatureAndClassificationType .
 
 plic:hasNomenclatureAndClassificationUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Nomenclature And Classification Unstructured" ;
+    rdfs:label "has nomenclature and classification unstructured" ;
     rdfs:domain plic:NomenclatureAndClassificationType ;
     rdfs:range xs:string .
 
+plic:hasNormalDateLanguage a owl:DatatypeProperty ;
+    rdfs:label "has normal date's language" ;
+    rdfs:domain plic:NormalDate .
+
 plic:hasNumberIndividualsPerObservation a owl:ObjectProperty ;
-    rdfs:label "has Number Individuals Per Observation" ;
+    rdfs:label "has number individuals per observation" ;
     rdfs:comment "In case of having census data" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasObjectives a owl:DatatypeProperty ;
-    rdfs:label "has Objectives" ;
+    rdfs:label "has objectives" ;
     rdfs:domain plic:ManagementAndConservationAtomizedType .
 
 plic:hasOrganisms a owl:DatatypeProperty ;
-    rdfs:label "has Organisms" ;
+    rdfs:label "has organisms" ;
     rdfs:comment "Acc. TDWG Economic Botany. Which organisms use the plant/plant parts (e.g . for forage , medicines) or are affected by the plant (e.g. by poisons)?" ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasParentTaxon a owl:ObjectProperty ;
-    rdfs:label "has Parent Taxon" ;
+    rdfs:label "has parent taxon" ;
     rdfs:domain plic:HierarchyType ;
     rdfs:range plic:ParentTaxonType .
 
 plic:hasPartUsed a owl:DatatypeProperty ;
-    rdfs:label "has Part Used" ;
+    rdfs:label "has part used" ;
     rdfs:comment "Acc. TDWG Economic Botany. Which plant parts are used, or have any negative values ?" ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasPatternDistribution a owl:ObjectProperty ;
-    rdfs:label "has Pattern Distribution" ;
+    rdfs:label "has pattern distribution" ;
     rdfs:comment "VCR Clumped, Uniform and Random" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasPatterns a owl:ObjectProperty ;
-    rdfs:label "has Patterns" ;
+    rdfs:label "has patterns" ;
     rdfs:comment "VCR. Latitudinal, Longitudinal , Altitudinal , Vertical in water columns and Local migrant" ;
     rdfs:domain plic:MigratoryAtomizedType ;
     rdfs:range plic:PatternsEnumType .
 
 plic:hasPopulationBiology a owl:ObjectProperty ;
-    rdfs:label "has Population Biology" ;
+    rdfs:label "has population biology" ;
     rdfs:domain plic:DemographyAndThreatType ;
     rdfs:range plic:PopulationBiologyType .
 
 plic:hasPopulationBiologyAtomized a owl:ObjectProperty ;
-    rdfs:label "has Population Biology Atomized" ;
+    rdfs:label "has population biology atomized" ;
     rdfs:domain plic:PopulationBiologyType ;
     rdfs:range plic:PopulationBiologyAtomizedType .
 
+plic:hasPopulationBiologyAtomizedTypeRegion a owl:DatatypeProperty ;
+    rdfs:label "has population biology atomized type's Region" ;
+    rdfs:domain plic:PopulationBiologyAtomizedType .
+
 plic:hasPopulationBiologyUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Population Biology Unstructured" ;
+    rdfs:label "has population biology unstructured" ;
     rdfs:domain plic:PopulationBiologyType ;
     rdfs:range xs:string .
 
 plic:hasPopulationGrowthRate a owl:ObjectProperty ;
-    rdfs:label "has Population Growth Rate" ;
+    rdfs:label "has population growth rate" ;
     rdfs:comment "Rate that estimates the annual growth rate of a population based on the births, rates, emigration and immigration." ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasPopulationTrend a owl:ObjectProperty ;
-    rdfs:label "has Population Trend" ;
+    rdfs:label "has population trend" ;
     rdfs:comment "VCR Stable, Increasing and Dreasing" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasPotential a owl:DatatypeProperty ;
-    rdfs:label "has Potential" ;
+    rdfs:label "has potential" ;
     rdfs:comment "Acc. TDWG Economic Botany. Could the use , cultivation, manufacture of products etc. be increased and /or introduced to other areas or social groups?" ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasPreferredFlag a owl:DatatypeProperty ;
-    rdfs:label "has Preferred Flag" ;
+    rdfs:label "has preferred flag" ;
     rdfs:comment "TRUE to indicate currente version when providers serve more than one record per taxon." ;
     rdfs:domain plic:VersionType .
 
 plic:hasProductionDetails a owl:DatatypeProperty ;
-    rdfs:label "has Production Details" ;
+    rdfs:label "has production details" ;
     rdfs:comment "Acc. TDWG Economic Botany. (where relevant). Are wild /protected /cultivated plants used? Give details of cultivation, harvesting , yields, processing and storage methods and take note of special tools, timing etc." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasProperties a owl:DatatypeProperty ;
-    rdfs:label "has Properties" ;
+    rdfs:label "has properties" ;
     rdfs:comment "Acc. TDWG Economic Botany. Provide details of properties which influence its value for a specified purpose, e.g . nutritional value for foods; occurrence of bioactive compounds for medicines/poisons; mechanical and physical properties of woods; nectar flow periods and flowering dates for bee plants; calorific values and burning qualities of fuels; sizes of plants used environmentally etc." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasProportionIndividualsPerStageLife a owl:ObjectProperty ;
-    rdfs:label "has Proportion Individuals Per Stage Life" ;
+    rdfs:label "has proportion individuals per stage life" ;
     rdfs:comment "Percentage of individuals that belong to each life stage" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasProtectionLegalStatus a owl:DatatypeProperty ;
-    rdfs:label "has Protection Legal Status" ;
+    rdfs:label "has protection legal status" ;
     rdfs:comment "VC. Description of the status." ;
     rdfs:domain plic:LegislationAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasPubDate a owl:DatatypeProperty ;
-    rdfs:label "has Pub Date" ;
+    rdfs:label "has pub date" ;
     rdfs:domain plic:RevisionType .
 
 plic:hasPurpose a owl:ObjectProperty ;
-    rdfs:label "has Purpose" ;
+    rdfs:label "has purpose" ;
     rdfs:comment "Makes reference to any data being measured" ;
     rdfs:domain plic:DispersalAtomizedType ;
     rdfs:range plic:MeasurementOrFactType .
 
 plic:hasRatingPopularity a owl:DatatypeProperty ;
-    rdfs:label "has Rating Popularity" ;
+    rdfs:label "has rating popularity" ;
     rdfs:comment "Acc. TDWG Economic Botany. Is the plant highly valued for its use or are other species preferred and , if so, which? Try to record factors influencing any preference, e.g. rarity, inaccessibility, depleted source, or low quality, ineffectiveness, difficult harvesting or processing requirements." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasRecordMetadata a owl:ObjectProperty ;
-    rdfs:label "has Record Metadata" ;
+    rdfs:label "has record metadata" ;
     rdfs:comment "This element includes the information about the Version, Revision,the language and target audiences of the Taxon Record." ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:RecordMetadataType .
 
 plic:hasRecruitment a owl:ObjectProperty ;
-    rdfs:label "has Recruitment" ;
+    rdfs:label "has recruitment" ;
     rdfs:comment "Proportion of plants or animals that reach a size or age when  become less vulnerable to a change in their environment. Stage in which plants or animals can be consumed and can survive, as well as reproduce" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasReferences a owl:DatatypeProperty ;
-    rdfs:label "has References" ;
+    rdfs:label "has references" ;
     rdfs:range xs:string .
 
 plic:hasRelatedTo a owl:DatatypeProperty ;
-    rdfs:label "has Related To" ;
+    rdfs:label "has related to" ;
     rdfs:range xs:string .
 
 plic:hasReproduction a owl:ObjectProperty ;
-    rdfs:label "has Reproduction" ;
+    rdfs:label "has reproduction" ;
     rdfs:comment "All data related to the production of offspring." ;
     rdfs:domain plic:NaturalHistoryType ;
     rdfs:range plic:ReproductionType .
 
 plic:hasReproductionAtomized a owl:ObjectProperty ;
-    rdfs:label "has Reproduction Atomized" ;
+    rdfs:label "has reproduction atomized" ;
     rdfs:domain plic:ReproductionType ;
     rdfs:range plic:DetailType .
 
 plic:hasReproductionUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Reproduction Unstructured" ;
+    rdfs:label "has reproduction unstructured" ;
     rdfs:domain plic:ReproductionType ;
     rdfs:range xs:string .
 
 plic:hasResourceLogoUrl a owl:DatatypeProperty ;
-    rdfs:label "has Resource Logo Url" ;
+    rdfs:label "has resource logo url" ;
     rdfs:comment "URL of the logo associated with this dataset." ;
     rdfs:domain plic:MetadataType ;
     rdfs:range xs:anyURI .
 
 plic:hasRevision a owl:ObjectProperty ;
-    rdfs:label "has Revision" ;
+    rdfs:label "has revision" ;
     rdfs:domain plic:RecordMetadataType ;
     rdfs:range plic:RevisionType .
 
 plic:hasRoute a owl:DatatypeProperty ;
-    rdfs:label "has Route" ;
+    rdfs:label "has route" ;
     rdfs:domain plic:InvasivenessAtomizedType .
 
 plic:hasRoutes a owl:DatatypeProperty ;
-    rdfs:label "has Routes" ;
+    rdfs:label "has routes" ;
     rdfs:comment "Trajectory followed by the species" ;
     rdfs:domain plic:MigratoryAtomizedType .
 
 plic:hasScientificName a owl:ObjectProperty ;
-    rdfs:label "has Scientific Name" ;
+    rdfs:label "has scientific name" ;
     rdfs:comment "Complete name of the taxon." ;
     rdfs:domain plic:TaxonRecordNameType ;
     rdfs:range tcs:ScientificName .
 
 plic:hasSeason a owl:DatatypeProperty ;
-    rdfs:label "has Season" ;
+    rdfs:label "has season" ;
     rdfs:comment "Time of year in which a species migrates." ;
     rdfs:domain plic:MigratoryAtomizedType ;
     rdfs:range xs:string .
 
-plic:hasSeasonOfAvailability-Use a owl:DatatypeProperty ;
-    rdfs:label "has Season Of Availability- Use" ;
+plic:hasSeasonOfAvailabilityUse a owl:DatatypeProperty ;
+    rdfs:label "has season of availability use" ;
     rdfs:comment "Acc. TDWG Economic Botany. Note these and , if relevant, time of day." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasSexRatio a owl:ObjectProperty ;
-    rdfs:label "has Sex Ratio" ;
+    rdfs:label "has sex ratio" ;
     rdfs:comment "The relative number of males to females in a population" ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasSize a owl:ObjectProperty ;
-    rdfs:label "has Size" ;
+    rdfs:label "has size" ;
     rdfs:comment "Estimation of the size, usually expressed as a range, of the populations of a species. (E.g. “total population size is estimated between 200,000 to 400,000 ducks in its distribution area”)." ;
     rdfs:domain plic:PopulationBiologyAtomizedType ;
     rdfs:range plic:DetailType .
 
 plic:hasSourceOfInformation a owl:ObjectProperty ;
-    rdfs:label "has Source Of Information" ;
+    rdfs:label "has source of information" ;
     rdfs:comment "Acc. TDWG Economic Botany. Is the source personal observation, or from else where? If the latter, reference citations should be given. Where appropriate, voucher specimen details should be provided (collector, number, date, herbari um) and detai ls of the informant recorded (name, gender, approximate age, occupation, ethnic identity, locality and language spoken)." ;
     rdfs:domain plic:UsesAtomizedType ;
     rdfs:range plic:SourceOfInformationType .
 
 plic:hasSourceOfInformationText a owl:DatatypeProperty ;
-    rdfs:label "has Source Of Information Text" ;
+    rdfs:label "has source of information text" ;
     rdfs:domain plic:SourceOfInformationType .
 
 plic:hasSpeciesInteraction a owl:ObjectProperty ;
-    rdfs:label "has Species Interaction" ;
+    rdfs:label "has species interaction" ;
     rdfs:comment "The category of information pertaining to relationships between resources (instances of data records, such as Occurrences, Taxa, Locations, Events." ;
     rdfs:domain plic:InteractionAtomizedType ;
     rdfs:range plic:ResourceRelationshipType .
 
 plic:hasSpeciesInteractionType a owl:DatatypeProperty ;
-    rdfs:label "has Species Interaction Type" ;
+    rdfs:label "has species interaction type" ;
     rdfs:comment "VC. String with the type of interaction." ;
     rdfs:domain plic:InteractionAtomizedType .
 
 plic:hasStartTimeInterval a owl:DatatypeProperty ;
-    rdfs:label "has Start Time Interval" ;
+    rdfs:label "has start time interval" ;
     rdfs:comment "VC" ;
     rdfs:domain plic:AnnualCycleAtomizedType .
 
 plic:hasStructureDispersed a owl:ObjectProperty ;
-    rdfs:label "has Structure Dispersed" ;
+    rdfs:label "has structure dispersed" ;
     rdfs:comment "VCR: Seed, Fruit, Vegetative structure, Spores, Gametes, Eggs, ffspring and Individuals" ;
     rdfs:domain plic:DispersalAtomizedType ;
     rdfs:range plic:StructureDispersedEnumType .
 
 plic:hasSynonymName a owl:ObjectProperty ;
-    rdfs:label "has Synonym Name" ;
+    rdfs:label "has synonym name" ;
     rdfs:domain plic:SynonymsAtomizedType ;
     rdfs:range tcs:ScientificName .
 
 plic:hasSynonymStatus a owl:DatatypeProperty ;
-    rdfs:label "has Synonym Status" ;
+    rdfs:label "has synonym status" ;
     rdfs:comment "VC" ;
     rdfs:domain plic:SynonymsAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasSynonyms a owl:ObjectProperty ;
-    rdfs:label "has Synonyms" ;
+    rdfs:label "has synonyms" ;
     rdfs:domain plic:NomenclatureAndClassificationType ;
     rdfs:range plic:SynonymsType .
 
 plic:hasSynonymsAtomized a owl:ObjectProperty ;
-    rdfs:label "has Synonyms Atomized" ;
+    rdfs:label "has synonyms atomized" ;
     rdfs:domain plic:SynonymsType ;
     rdfs:range plic:SynonymsAtomizedType .
 
 plic:hasSynonymsUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Synonyms Unstructured" ;
+    rdfs:label "has synonyms unstructured" ;
     rdfs:domain plic:SynonymsType ;
     rdfs:range xs:string .
 
 plic:hasTargetAudiences a owl:ObjectProperty ;
-    rdfs:label "has Target Audiences" ;
+    rdfs:label "has target audiences" ;
     rdfs:domain plic:RecordMetadataType ;
     rdfs:range plic:TargetAudiencesType .
 
 plic:hasTaxonRecord a owl:ObjectProperty ;
-    rdfs:label "has Taxon Record" ;
+    rdfs:label "has taxon record" ;
     rdfs:comment "Information about the record." ;
     rdfs:domain plic:DatasetType ;
     rdfs:range plic:TaxonRecordType .
 
 plic:hasTaxonRecordID a owl:DatatypeProperty ;
-    rdfs:label "has Taxon Record ID" ;
-    rdfs:comment "Unique identifier of the record within the database." ;
+    rdfs:label "has taxon record id" ;
     rdfs:range xs:string .
 
 plic:hasTaxonRecordName a owl:ObjectProperty ;
-    rdfs:label "has Taxon Record Name" ;
+    rdfs:label "has taxon record name" ;
     rdfs:domain plic:NomenclatureAndClassificationType ;
     rdfs:range plic:TaxonRecordNameType .
 
 plic:hasTaxonValue a owl:DatatypeProperty ;
-    rdfs:label "has Taxon Value" ;
+    rdfs:label "has taxon value" ;
     rdfs:domain plic:ParentTaxonType .
 
 plic:hasTaxonomicDescription a owl:ObjectProperty ;
-    rdfs:label "has Taxonomic Description" ;
+    rdfs:label "has taxonomic description" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:TaxonomicDescriptionType .
 
 plic:hasTaxonomicDescriptionUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Taxonomic Description Unstructured" ;
+    rdfs:label "has taxonomic description unstructured" ;
     rdfs:domain plic:TaxonomicDescriptionType ;
     rdfs:range xs:string .
 
 plic:hasTemporalCoverage a owl:DatatypeProperty ;
-    rdfs:label "has Temporal Coverage" ;
+    rdfs:label "has temporal coverage" ;
     rdfs:domain plic:DistributionType .
 
 plic:hasTerritory a owl:ObjectProperty ;
-    rdfs:label "has Territory" ;
+    rdfs:label "has territory" ;
     rdfs:domain plic:DemographyAndThreatType ;
     rdfs:range plic:TerritoryType .
 
 plic:hasTerritoryAtomized a owl:ObjectProperty ;
-    rdfs:label "has Territory Atomized" ;
+    rdfs:label "has territory atomized" ;
     rdfs:domain plic:TerritoryType ;
     rdfs:range plic:TerritoryAtomizedType .
 
 plic:hasTerritoryUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Territory Unstructured" ;
+    rdfs:label "has territory unstructured" ;
     rdfs:domain plic:TerritoryType ;
     rdfs:range xs:string .
 
 plic:hasThreatCategory a owl:DatatypeProperty ;
-    rdfs:label "has Threat Category" ;
+    rdfs:label "has threat category" ;
     rdfs:comment "VCR. Description of the threat status." ;
     rdfs:domain plic:ThreatStatusAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasThreatStatus a owl:ObjectProperty ;
-    rdfs:label "has Threat Status" ;
+    rdfs:label "has threat status" ;
     rdfs:domain plic:DemographyAndThreatType ;
     rdfs:range plic:ThreatStatusType .
 
 plic:hasThreatStatusAtomized a owl:ObjectProperty ;
-    rdfs:label "has Threat Status Atomized" ;
+    rdfs:label "has threat status atomized" ;
     rdfs:domain plic:ThreatStatusType ;
     rdfs:range plic:ThreatStatusAtomizedType .
 
 plic:hasThreatStatusUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Threat Status Unstructured" ;
+    rdfs:label "has threat status unstructured" ;
     rdfs:domain plic:ThreatStatusType ;
     rdfs:range xs:string .
 
-plic:hasThropic a owl:ObjectProperty ;
-    rdfs:label "has Thropic" ;
+plic:hasTrophic a owl:ObjectProperty ;
+    rdfs:label "has trophic" ;
     rdfs:domain plic:FeedingAtomizedType ;
-    rdfs:range plic:ThropicType .
+    rdfs:range plic:TrophicType .
 
 plic:hasTrophicStrategy a owl:ObjectProperty ;
-    rdfs:label "has Trophic Strategy" ;
+    rdfs:label "has trophic strategy" ;
     rdfs:comment "VC. Tactic used to obtain energy or nutrients." ;
-    rdfs:domain plic:ThropicType ;
+    rdfs:domain plic:TrophicType ;
     rdfs:range plic:TrophicStrategyEnumType .
 
 plic:hasTrophicStrategyRemarks a owl:DatatypeProperty ;
-    rdfs:label "has Trophic Strategy Remarks" ;
+    rdfs:label "has trophic strategy remarks" ;
     rdfs:comment "Information notes about specific strategy of feeding." ;
-    rdfs:domain plic:ThropicType .
-
-plic:hasUse-Value a owl:DatatypeProperty ;
-    rdfs:label "has Use- Value" ;
-    rdfs:comment "Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a weed affecting food production, or as an accident al poison)?" ;
-    rdfs:domain plic:UsesAtomizedType .
+    rdfs:domain plic:TrophicType .
 
 plic:hasUseNotes a owl:DatatypeProperty ;
-    rdfs:label "has Use Notes" ;
+    rdfs:label "has use notes" ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasUseTypeAtomized a owl:DatatypeProperty ;
-    rdfs:label "has Use Type Atomized" ;
+    rdfs:label "has use type atomized" ;
     rdfs:comment "Acc. TDWG Economic Is it a traditional, modern industrial or just a possible use?" ;
     rdfs:domain plic:UsesAtomizedType .
 
+plic:hasUseValue a owl:DatatypeProperty ;
+    rdfs:label "has use value" ;
+    rdfs:comment "Acc. TDWG Economic Botany. What is t he plant used for, or what negative values does it have (e.g . as a weed affecting food production, or as an accident al poison)?" ;
+    rdfs:domain plic:UsesAtomizedType .
+
 plic:hasUsedBy a owl:DatatypeProperty ;
-    rdfs:label "has Used By" ;
+    rdfs:label "has used by" ;
     rdfs:domain plic:CommonNamesAtomizedType ;
     rdfs:range xs:string .
 
 plic:hasUsedIn a owl:ObjectProperty ;
-    rdfs:label "has Used In" ;
+    rdfs:label "has used in" ;
     rdfs:comment "Location where the common name is used" ;
     rdfs:domain plic:CommonNamesAtomizedType ;
     rdfs:range plic:DistributionType .
 
 plic:hasUsers a owl:DatatypeProperty ;
-    rdfs:label "has Users" ;
+    rdfs:label "has users" ;
     rdfs:comment "Acc. TDWG Economic Botany. Who recognises the value of the plant? State ethnic group (tribe/caste /sect etc. with language/dialect, locality/area )." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasUses a owl:ObjectProperty ;
-    rdfs:label "has Uses" ;
+    rdfs:label "has uses" ;
     rdfs:comment "Ways in which species are utilized by people" ;
     rdfs:domain plic:UsesManagementAndConservationType ;
     rdfs:range plic:UsesType .
 
 plic:hasUsesAtomized a owl:ObjectProperty ;
-    rdfs:label "has Uses Atomized" ;
+    rdfs:label "has uses atomized" ;
     rdfs:domain plic:UsesType ;
     rdfs:range plic:UsesAtomizedType .
 
 plic:hasUsesManagementAndConservation a owl:ObjectProperty ;
-    rdfs:label "has Uses Management And Conservation" ;
+    rdfs:label "has uses management and conservation" ;
     rdfs:domain plic:TaxonRecordType ;
     rdfs:range plic:UsesManagementAndConservationType .
 
 plic:hasUsesManagementAndConservationUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Uses Management And Conservation Unstructured" ;
+    rdfs:label "has uses management and conservation unstructured" ;
     rdfs:domain plic:UsesManagementAndConservationType ;
     rdfs:range xs:string .
 
 plic:hasUsesUnstructured a owl:DatatypeProperty ;
-    rdfs:label "has Uses Unstructured" ;
+    rdfs:label "has uses unstructured" ;
     rdfs:comment "Uses in a unstructured format." ;
     rdfs:domain plic:UsesType ;
     rdfs:range xs:string .
 
 plic:hasVector a owl:DatatypeProperty ;
-    rdfs:label "has Vector" ;
+    rdfs:label "has vector" ;
     rdfs:domain plic:InvasivenessAtomizedType .
 
 plic:hasVernacularNameUseAnnotations a owl:DatatypeProperty ;
-    rdfs:label "has Vernacular Name Use Annotations" ;
+    rdfs:label "has vernacular name use annotations" ;
     rdfs:comment "Acc. TDWG Economic Botany. The name of the taxon must be distinguished from the name of plant parts, the names of any processing stages, and the final product. Names used in trade should be identified. It should also be mentioned if any vernacular name refers to more than one taxon. The use of some names may be restricted to a time of year or occasion, or have sacred connotations. The language and dialect to which the names belong should be stated along with details of ethnic group . Care should be taken with transliteration into the Roman alphabet; if a standard system exists, use it and note which one it is." ;
     rdfs:domain plic:UsesAtomizedType .
 
 plic:hasVersion a owl:ObjectProperty ;
-    rdfs:label "has Version" ;
+    rdfs:label "has version" ;
     rdfs:domain plic:RecordMetadataType ;
     rdfs:range plic:VersionType .
 
 plic:hasWhatImpact a owl:DatatypeProperty ;
-    rdfs:label "has What Impact" ;
+    rdfs:label "has what impact" ;
     rdfs:comment "What the actual impact is, for instance: Is it eating all the riparian vegetation? Are their burrows destroying irrigation systems? Is it displacing Arvicola sapidus?" ;
     rdfs:domain plic:InvasivenessAtomizedType .
 
-plic:ActionsType a owl:Class ;
-    rdfs:label "Actions" .
-
 plic:AudienceEnumType a owl:Class ;
     rdfs:label "Enum values for Audience" ;
-    rdfs:comment "Repetitive concept where the target audiences are written one by one. (Predetermined list: 01. Expert (High). 02. Knowledgeable (Medium). 03. General (Low)." ;
     owl:oneOf ( plic:AudienceEnumType_Expert plic:AudienceEnumType_Knowledgeable plic:AudienceEnumType_General ) .
 
-plic:AudienceEnumType_Expert rdfs:label "Expert" .
+plic:AudienceEnumType_Expert rdfs:label "expert" .
 
-plic:AudienceEnumType_General rdfs:label "General" .
+plic:AudienceEnumType_General rdfs:label "general" .
 
-plic:AudienceEnumType_Knowledgeable rdfs:label "Knowledgeable" .
+plic:AudienceEnumType_Knowledgeable rdfs:label "knowledgeable" .
 
 plic:CausesEnumType a owl:Class ;
     rdfs:label "Enum values for Causes" ;
-    rdfs:comment "VCR: Seasonal climatic variation, Resource availability and Reproduction" ;
-    owl:oneOf ( plic:CausesEnumType_Seasonal%20climatic%20variation plic:CausesEnumType_Resource%20availability plic:CausesEnumType_Reproduction ) .
+    owl:oneOf ( plic:CausesEnumType_Seasonal_climatic_variation plic:CausesEnumType_Resource_availability plic:CausesEnumType_Reproduction ) .
 
-plic:CausesEnumType_Reproduction rdfs:label "Reproduction " .
+plic:CausesEnumType_Reproduction rdfs:label "reproduction" .
 
-plic:CausesEnumType_Resource%20availability rdfs:label "Resource availability" .
+plic:CausesEnumType_Resource_availability rdfs:label "resource availability" .
 
-plic:CausesEnumType_Seasonal%20climatic%20variation rdfs:label "Seasonal climatic variation" .
-
-plic:CitationType a owl:Class ;
-    rdfs:label "Citation" .
+plic:CausesEnumType_Seasonal_climatic_variation rdfs:label "seasonal climatic variation" .
 
 plic:DispersalMeansEnumType a owl:Class ;
     rdfs:label "Enum values for DispersalMeans" ;
-    rdfs:comment "VCR. Zoochory, Anemochory, Hydrochory, Barochory, Autochory" ;
     owl:oneOf ( plic:DispersalMeansEnumType_Zoochory plic:DispersalMeansEnumType_Anemochory plic:DispersalMeansEnumType_Hydrochory plic:DispersalMeansEnumType_Barochory plic:DispersalMeansEnumType_Autochory ) .
 
-plic:DispersalMeansEnumType_Anemochory rdfs:label "Anemochory" .
+plic:DispersalMeansEnumType_Anemochory rdfs:label "anemochory" .
 
-plic:DispersalMeansEnumType_Autochory rdfs:label "Autochory" .
+plic:DispersalMeansEnumType_Autochory rdfs:label "autochory" .
 
-plic:DispersalMeansEnumType_Barochory rdfs:label "Barochory" .
+plic:DispersalMeansEnumType_Barochory rdfs:label "barochory" .
 
-plic:DispersalMeansEnumType_Hydrochory rdfs:label "Hydrochory" .
+plic:DispersalMeansEnumType_Hydrochory rdfs:label "hydrochory" .
 
-plic:DispersalMeansEnumType_Zoochory rdfs:label "Zoochory" .
+plic:DispersalMeansEnumType_Zoochory rdfs:label "zoochory" .
 
 plic:DistanceType a owl:Class ;
     rdfs:label "Distance" .
 
-plic:DistributionScopeType a owl:Class ;
-    rdfs:label "Distribution Scope" .
+plic:FeedingModeEnumType a owl:Class ;
+    rdfs:label "Enum values for FeedingMode" ;
+    owl:oneOf ( plic:FeedingModeEnumType_Autotrophs plic:FeedingModeEnumType_Palynivore plic:FeedingModeEnumType_Nectarivore plic:FeedingModeEnumType_Granivore plic:FeedingModeEnumType_Frugivore plic:FeedingModeEnumType_Rhizophagus plic:FeedingModeEnumType_Hematophagy plic:FeedingModeEnumType_Insectivore plic:FeedingModeEnumType_Piscivore plic:FeedingModeEnumType_Oophagy plic:FeedingModeEnumType_Omnivore plic:FeedingModeEnumType_Scavenger plic:FeedingModeEnumType_Saprophagous plic:FeedingModeEnumType_Detritivore ) .
 
-plic:FeedingTypeEnumType a owl:Class ;
-    rdfs:label "Enum values for FeedingType" ;
-    rdfs:comment "VC. Primary diet source." ;
-    owl:oneOf ( plic:FeedingTypeEnumType_Autotrophs plic:FeedingTypeEnumType_Palynivore plic:FeedingTypeEnumType_Nectarivore plic:FeedingTypeEnumType_Granivore plic:FeedingTypeEnumType_Frugivore plic:FeedingTypeEnumType_Rhizophagus plic:FeedingTypeEnumType_Hematophagy plic:FeedingTypeEnumType_Insectivore plic:FeedingTypeEnumType_Piscivore plic:FeedingTypeEnumType_Oophagy plic:FeedingTypeEnumType_Omnivore plic:FeedingTypeEnumType_Scavenger plic:FeedingTypeEnumType_Saprophagous plic:FeedingTypeEnumType_Detritivore ) .
+plic:FeedingModeEnumType_Autotrophs rdfs:label "autotrophs" .
 
-plic:FeedingTypeEnumType_Autotrophs rdfs:label "Autotrophs" .
+plic:FeedingModeEnumType_Detritivore rdfs:label "detritivore" .
 
-plic:FeedingTypeEnumType_Detritivore rdfs:label "Detritivore" .
+plic:FeedingModeEnumType_Frugivore rdfs:label "frugivore" .
 
-plic:FeedingTypeEnumType_Frugivore rdfs:label "Frugivore" .
+plic:FeedingModeEnumType_Granivore rdfs:label "granivore" .
 
-plic:FeedingTypeEnumType_Granivore rdfs:label "Granivore" .
+plic:FeedingModeEnumType_Hematophagy rdfs:label "hematophagy" .
 
-plic:FeedingTypeEnumType_Hematophagy rdfs:label "Hematophagy" .
+plic:FeedingModeEnumType_Insectivore rdfs:label "insectivore" .
 
-plic:FeedingTypeEnumType_Insectivore rdfs:label "Insectivore" .
+plic:FeedingModeEnumType_Nectarivore rdfs:label "nectarivore" .
 
-plic:FeedingTypeEnumType_Nectarivore rdfs:label "Nectarivore" .
+plic:FeedingModeEnumType_Omnivore rdfs:label "omnivore" .
 
-plic:FeedingTypeEnumType_Omnivore rdfs:label "Omnivore" .
+plic:FeedingModeEnumType_Oophagy rdfs:label "oophagy" .
 
-plic:FeedingTypeEnumType_Oophagy rdfs:label "Oophagy" .
+plic:FeedingModeEnumType_Palynivore rdfs:label "palynivore" .
 
-plic:FeedingTypeEnumType_Palynivore rdfs:label "Palynivore" .
+plic:FeedingModeEnumType_Piscivore rdfs:label "piscivore" .
 
-plic:FeedingTypeEnumType_Piscivore rdfs:label "Piscivore" .
+plic:FeedingModeEnumType_Rhizophagus rdfs:label "rhizophagus" .
 
-plic:FeedingTypeEnumType_Rhizophagus rdfs:label "Rhizophagus" .
+plic:FeedingModeEnumType_Saprophagous rdfs:label "saprophagous" .
 
-plic:FeedingTypeEnumType_Saprophagous rdfs:label "Saprophagous" .
+plic:FeedingModeEnumType_Scavenger rdfs:label "scavenger" .
 
-plic:FeedingTypeEnumType_Scavenger rdfs:label "Scavenger" .
+plic:ImpactMechanismEnumType a owl:Class ;
+    rdfs:label "Enum values for ImpactMechanism" ;
+    owl:oneOf ( plic:ImpactMechanismEnumType_Allergeny plic:ImpactMechanismEnumType_Competition plic:ImpactMechanismEnumType_DiseaseTransmission plic:ImpactMechanismEnumType_Fouling plic:ImpactMechanismEnumType_Herbivory plic:ImpactMechanismEnumType_Hybridization plic:ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies plic:ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies plic:ImpactMechanismEnumType_ModifiesFireRegime plic:ImpactMechanismEnumType_ModifiesHydrology plic:ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities plic:ImpactMechanismEnumType_ModifiesNutrientRegime plic:ImpactMechanismEnumType_ModifiesSuccessionalPatterns plic:ImpactMechanismEnumType_OtherSeeMemoForDescription plic:ImpactMechanismEnumType_Parasitism plic:ImpactMechanismEnumType_Pathogenic plic:ImpactMechanismEnumType_PhysicalDisturbance plic:ImpactMechanismEnumType_PollenSwamping plic:ImpactMechanismEnumType_Predation plic:ImpactMechanismEnumType_Transpiration plic:ImpactMechanismEnumType_Unknown ) .
+
+plic:ImpactMechanismEnumType_Allergeny rdfs:label "allergeny" .
+
+plic:ImpactMechanismEnumType_Competition rdfs:label "competition" .
+
+plic:ImpactMechanismEnumType_DiseaseTransmission rdfs:label "disease transmission" .
+
+plic:ImpactMechanismEnumType_Fouling rdfs:label "fouling" .
+
+plic:ImpactMechanismEnumType_Herbivory rdfs:label "herbivory" .
+
+plic:ImpactMechanismEnumType_Hybridization rdfs:label "hybridization" .
+
+plic:ImpactMechanismEnumType_InhibitsGrowthOfOtherSpecies rdfs:label "inhibits growth of other species" .
+
+plic:ImpactMechanismEnumType_InteractionWithOtherInvasiveSpecies rdfs:label "interaction with other invasive species" .
+
+plic:ImpactMechanismEnumType_ModifiesFireRegime rdfs:label "modifies fire regime" .
+
+plic:ImpactMechanismEnumType_ModifiesHydrology rdfs:label "modifies hydrology" .
+
+plic:ImpactMechanismEnumType_ModifiesNaturalBenthicCommunities rdfs:label "modifies natural benthic communities" .
+
+plic:ImpactMechanismEnumType_ModifiesNutrientRegime rdfs:label "modifies nutrient regime" .
+
+plic:ImpactMechanismEnumType_ModifiesSuccessionalPatterns rdfs:label "modifies successional patterns" .
+
+plic:ImpactMechanismEnumType_OtherSeeMemoForDescription rdfs:label "other see memo for description" .
+
+plic:ImpactMechanismEnumType_Parasitism rdfs:label "parasitism" .
+
+plic:ImpactMechanismEnumType_Pathogenic rdfs:label "pathogenic" .
+
+plic:ImpactMechanismEnumType_PhysicalDisturbance rdfs:label "physical disturbance" .
+
+plic:ImpactMechanismEnumType_PollenSwamping rdfs:label "pollen swamping" .
+
+plic:ImpactMechanismEnumType_Predation rdfs:label "predation" .
+
+plic:ImpactMechanismEnumType_Transpiration rdfs:label "transpiration" .
+
+plic:ImpactMechanismEnumType_Unknown rdfs:label "unknown" .
+
+plic:ImpactTargetEnumType a owl:Class ;
+    rdfs:label "Enum values for ImpactTarget" ;
+    owl:oneOf ( plic:ImpactTargetEnumType_Economy plic:ImpactTargetEnumType_Environment plic:ImpactTargetEnumType_HumanHealth plic:ImpactTargetEnumType_Unknown ) .
+
+plic:ImpactTargetEnumType_Economy rdfs:label "economy" .
+
+plic:ImpactTargetEnumType_Environment rdfs:label "environment" .
+
+plic:ImpactTargetEnumType_HumanHealth rdfs:label "human health" .
+
+plic:ImpactTargetEnumType_Unknown rdfs:label "unknown" .
 
 plic:MolecularDataAtomizedType a owl:Class ;
     rdfs:label "Molecular Data Atomized" .
 
 plic:PatternsEnumType a owl:Class ;
     rdfs:label "Enum values for Patterns" ;
-    rdfs:comment "VCR. Latitudinal, Longitudinal , Altitudinal , Vertical in water columns and Local migrant" ;
-    owl:oneOf ( plic:PatternsEnumType_Latitudinal plic:PatternsEnumType_Longitudinal plic:PatternsEnumType_Altitudinal plic:PatternsEnumType_Vertical%20in%20water%20columns plic:PatternsEnumType_Local%20migrant ) .
+    owl:oneOf ( plic:PatternsEnumType_Latitudinal plic:PatternsEnumType_Longitudinal plic:PatternsEnumType_Altitudinal plic:PatternsEnumType_Vertical_in_water_columns plic:PatternsEnumType_Local_migrant ) .
 
-plic:PatternsEnumType_Altitudinal rdfs:label "Altitudinal" .
+plic:PatternsEnumType_Altitudinal rdfs:label "altitudinal" .
 
-plic:PatternsEnumType_Latitudinal rdfs:label "Latitudinal" .
+plic:PatternsEnumType_Latitudinal rdfs:label "latitudinal" .
 
-plic:PatternsEnumType_Local%20migrant rdfs:label "Local migrant" .
+plic:PatternsEnumType_Local_migrant rdfs:label "local migrant" .
 
-plic:PatternsEnumType_Longitudinal rdfs:label "Longitudinal" .
+plic:PatternsEnumType_Longitudinal rdfs:label "longitudinal" .
 
-plic:PatternsEnumType_Vertical%20in%20water%20columns rdfs:label "Vertical in water columns" .
+plic:PatternsEnumType_Vertical_in_water_columns rdfs:label "vertical in water columns" .
 
 plic:ResourceRelationshipType a owl:Class ;
     rdfs:label "Resource Relationship" ;
@@ -1238,110 +1320,57 @@ plic:ResourceRelationshipType a owl:Class ;
 
 plic:StructureDispersedEnumType a owl:Class ;
     rdfs:label "Enum values for StructureDispersed" ;
-    rdfs:comment "VCR: Seed, Fruit, Vegetative structure, Spores, Gametes, Eggs, ffspring and Individuals" ;
-    owl:oneOf ( plic:StructureDispersedEnumType_Seed plic:StructureDispersedEnumType_Fruit plic:StructureDispersedEnumType_Vegetative%20structure plic:StructureDispersedEnumType_Spores plic:StructureDispersedEnumType_Gametes plic:StructureDispersedEnumType_Eggs plic:StructureDispersedEnumType_Offspring plic:StructureDispersedEnumType_Individuals ) .
+    owl:oneOf ( plic:StructureDispersedEnumType_Seed plic:StructureDispersedEnumType_Fruit plic:StructureDispersedEnumType_Vegetative_structure plic:StructureDispersedEnumType_Spores plic:StructureDispersedEnumType_Gametes plic:StructureDispersedEnumType_Eggs plic:StructureDispersedEnumType_Offspring plic:StructureDispersedEnumType_Individuals ) .
 
-plic:StructureDispersedEnumType_Eggs rdfs:label "Eggs" .
+plic:StructureDispersedEnumType_Eggs rdfs:label "eggs" .
 
-plic:StructureDispersedEnumType_Fruit rdfs:label "Fruit" .
+plic:StructureDispersedEnumType_Fruit rdfs:label "fruit" .
 
-plic:StructureDispersedEnumType_Gametes rdfs:label "Gametes" .
+plic:StructureDispersedEnumType_Gametes rdfs:label "gametes" .
 
-plic:StructureDispersedEnumType_Individuals rdfs:label "Individuals" .
+plic:StructureDispersedEnumType_Individuals rdfs:label "individuals" .
 
-plic:StructureDispersedEnumType_Offspring rdfs:label "Offspring" .
+plic:StructureDispersedEnumType_Offspring rdfs:label "offspring" .
 
-plic:StructureDispersedEnumType_Seed rdfs:label "Seed" .
+plic:StructureDispersedEnumType_Seed rdfs:label "seed" .
 
-plic:StructureDispersedEnumType_Spores rdfs:label "Spores" .
+plic:StructureDispersedEnumType_Spores rdfs:label "spores" .
 
-plic:StructureDispersedEnumType_Vegetative%20structure rdfs:label "Vegetative structure" .
+plic:StructureDispersedEnumType_Vegetative_structure rdfs:label "vegetative structure" .
 
 plic:TextDescriptionType a owl:Class ;
     rdfs:label "Text Description" .
 
 plic:TrophicStrategyEnumType a owl:Class ;
     rdfs:label "Enum values for TrophicStrategy" ;
-    rdfs:comment "VC. Tactic used to obtain energy or nutrients." ;
     owl:oneOf ( plic:TrophicStrategyEnumType_Chemosynthetic plic:TrophicStrategyEnumType_Photosynthetic plic:TrophicStrategyEnumType_Vermin plic:TrophicStrategyEnumType_Decomposers plic:TrophicStrategyEnumType_FilterFeeders plic:TrophicStrategyEnumType_Sediment%C3%ADvoros plic:TrophicStrategyEnumType_Borers plic:TrophicStrategyEnumType_Foragers plic:TrophicStrategyEnumType_Fluid%C3%B3fagos ) .
 
-plic:TrophicStrategyEnumType_Borers rdfs:label "Borers" .
+plic:TrophicStrategyEnumType_Borers rdfs:label "borers" .
 
-plic:TrophicStrategyEnumType_Chemosynthetic rdfs:label "Chemosynthetic" .
+plic:TrophicStrategyEnumType_Chemosynthetic rdfs:label "chemosynthetic" .
 
-plic:TrophicStrategyEnumType_Decomposers rdfs:label "Decomposers" .
+plic:TrophicStrategyEnumType_Decomposers rdfs:label "decomposers" .
 
-plic:TrophicStrategyEnumType_FilterFeeders rdfs:label "FilterFeeders" .
+plic:TrophicStrategyEnumType_FilterFeeders rdfs:label "filter feeders" .
 
-plic:TrophicStrategyEnumType_Fluid%C3%B3fagos rdfs:label "Fluidófagos" .
+plic:TrophicStrategyEnumType_Fluid%C3%B3fagos rdfs:label "fluidófagos" .
 
-plic:TrophicStrategyEnumType_Foragers rdfs:label "Foragers" .
+plic:TrophicStrategyEnumType_Foragers rdfs:label "foragers" .
 
-plic:TrophicStrategyEnumType_Photosynthetic rdfs:label "Photosynthetic" .
+plic:TrophicStrategyEnumType_Photosynthetic rdfs:label "photosynthetic" .
 
-plic:TrophicStrategyEnumType_Sediment%C3%ADvoros rdfs:label "Sedimentívoros" .
+plic:TrophicStrategyEnumType_Sediment%C3%ADvoros rdfs:label "sedimentívoros" .
 
-plic:TrophicStrategyEnumType_Vermin rdfs:label "Vermin" .
+plic:TrophicStrategyEnumType_Vermin rdfs:label "vermin" .
 
-plic:impactMechanismEnumType a owl:Class ;
-    rdfs:label "Enum values for impactMechanism" ;
-    rdfs:comment "Mechanism of introduction or impact to a new location." ;
-    owl:oneOf ( plic:impactMechanismEnumType_Allergeny plic:impactMechanismEnumType_Competition plic:impactMechanismEnumType_DiseaseTransmission plic:impactMechanismEnumType_Fouling plic:impactMechanismEnumType_Herbivory plic:impactMechanismEnumType_Hybridization plic:impactMechanismEnumType_InhibitsGrowthOfOtherSpecies plic:impactMechanismEnumType_InteractionWithOtherInvasiveSpecies plic:impactMechanismEnumType_ModifiesFireRegime plic:impactMechanismEnumType_ModifiesHydrology plic:impactMechanismEnumType_ModifiesNaturalBenthicCommunities plic:impactMechanismEnumType_ModifiesNutrientRegime plic:impactMechanismEnumType_ModifiesSuccessionalPatterns plic:impactMechanismEnumType_OtherSeeMemoForDescription plic:impactMechanismEnumType_Parasitism plic:impactMechanismEnumType_Pathogenic plic:impactMechanismEnumType_PhysicalDisturbance plic:impactMechanismEnumType_PollenSwamping plic:impactMechanismEnumType_Predation plic:impactMechanismEnumType_Transpiration plic:impactMechanismEnumType_Unknown ) .
+plic:ActionsType a owl:Class ;
+    rdfs:label "Actions" .
 
-plic:impactMechanismEnumType_Allergeny rdfs:label "Allergeny" .
+plic:BaseElementsType a owl:Class ;
+    rdfs:label "Base Elements" .
 
-plic:impactMechanismEnumType_Competition rdfs:label "Competition" .
-
-plic:impactMechanismEnumType_DiseaseTransmission rdfs:label "DiseaseTransmission" .
-
-plic:impactMechanismEnumType_Fouling rdfs:label "Fouling" .
-
-plic:impactMechanismEnumType_Herbivory rdfs:label "Herbivory" .
-
-plic:impactMechanismEnumType_Hybridization rdfs:label "Hybridization" .
-
-plic:impactMechanismEnumType_InhibitsGrowthOfOtherSpecies rdfs:label "InhibitsGrowthOfOtherSpecies" .
-
-plic:impactMechanismEnumType_InteractionWithOtherInvasiveSpecies rdfs:label "InteractionWithOtherInvasiveSpecies" .
-
-plic:impactMechanismEnumType_ModifiesFireRegime rdfs:label "ModifiesFireRegime" .
-
-plic:impactMechanismEnumType_ModifiesHydrology rdfs:label "ModifiesHydrology" .
-
-plic:impactMechanismEnumType_ModifiesNaturalBenthicCommunities rdfs:label "ModifiesNaturalBenthicCommunities" .
-
-plic:impactMechanismEnumType_ModifiesNutrientRegime rdfs:label "ModifiesNutrientRegime" .
-
-plic:impactMechanismEnumType_ModifiesSuccessionalPatterns rdfs:label "ModifiesSuccessionalPatterns" .
-
-plic:impactMechanismEnumType_OtherSeeMemoForDescription rdfs:label "OtherSeeMemoForDescription" .
-
-plic:impactMechanismEnumType_Parasitism rdfs:label "Parasitism" .
-
-plic:impactMechanismEnumType_Pathogenic rdfs:label "Pathogenic" .
-
-plic:impactMechanismEnumType_PhysicalDisturbance rdfs:label "PhysicalDisturbance" .
-
-plic:impactMechanismEnumType_PollenSwamping rdfs:label "PollenSwamping" .
-
-plic:impactMechanismEnumType_Predation rdfs:label "Predation" .
-
-plic:impactMechanismEnumType_Transpiration rdfs:label "Transpiration " .
-
-plic:impactMechanismEnumType_Unknown rdfs:label "Unknown" .
-
-plic:impactTargetEnumType a owl:Class ;
-    rdfs:label "Enum values for impactTarget" ;
-    rdfs:comment "Who/what is impacting." ;
-    owl:oneOf ( plic:impactTargetEnumType_Economy plic:impactTargetEnumType_Environment plic:impactTargetEnumType_HumanHealth plic:impactTargetEnumType_Unknown ) .
-
-plic:impactTargetEnumType_Economy rdfs:label "Economy" .
-
-plic:impactTargetEnumType_Environment rdfs:label "Environment" .
-
-plic:impactTargetEnumType_HumanHealth rdfs:label "HumanHealth" .
-
-plic:impactTargetEnumType_Unknown rdfs:label "Unknown" .
+plic:CitationType a owl:Class ;
+    rdfs:label "Citation" .
 
 plic:DescriptionItemType a owl:Class ;
     rdfs:label "Description Item" .
@@ -1349,8 +1378,8 @@ plic:DescriptionItemType a owl:Class ;
 plic:DistributionAtomizedType a owl:Class ;
     rdfs:label "Distribution Atomized" .
 
-plic:HierarchyType a owl:Class ;
-    rdfs:label "Hierarchy" .
+plic:DistributionScopeType a owl:Class ;
+    rdfs:label "Distribution Scope" .
 
 plic:IdentificationKeysType a owl:Class ;
     rdfs:label "Identification Keys" .
@@ -1373,9 +1402,6 @@ plic:TaxonRecordNameType a owl:Class ;
 
 plic:AnnualCyclesType a owl:Class ;
     rdfs:label "Annual Cycles" .
-
-plic:BaseElementsType a owl:Class ;
-    rdfs:label "Base Elements" .
 
 plic:BehaviorType a owl:Class ;
     rdfs:label "Behavior" .
@@ -1473,8 +1499,8 @@ plic:ThreatStatusAtomizedType a owl:Class ;
 plic:ThreatStatusType a owl:Class ;
     rdfs:label "Threat Status" .
 
-plic:ThropicType a owl:Class ;
-    rdfs:label "Thropic" .
+plic:TrophicType a owl:Class ;
+    rdfs:label "Trophic" .
 
 plic:UsesType a owl:Class ;
     rdfs:label "Uses" .
@@ -1484,6 +1510,9 @@ plic:AnnualCycleAtomizedType a owl:Class ;
 
 plic:CommonNamesAtomizedType a owl:Class ;
     rdfs:label "Common Names Atomized" .
+
+plic:HierarchyType a owl:Class ;
+    rdfs:label "Hierarchy" .
 
 plic:RecordMetadataType a owl:Class ;
     rdfs:label "Record Metadata" .
@@ -1497,9 +1526,6 @@ plic:DispersalAtomizedType a owl:Class ;
 plic:HabitatAndDistributionType a owl:Class ;
     rdfs:label "Habitat And Distribution" .
 
-plic:ManagementAndConservationAtomizedType a owl:Class ;
-    rdfs:label "Management And Conservation Atomized" .
-
 plic:MetadataType a owl:Class ;
     rdfs:label "Metadata" .
 
@@ -1511,6 +1537,9 @@ plic:TaxonomicDescriptionType a owl:Class ;
 
 plic:InvasivenessAtomizedType a owl:Class ;
     rdfs:label "Invasiveness Atomized" .
+
+plic:ManagementAndConservationAtomizedType a owl:Class ;
+    rdfs:label "Management And Conservation Atomized" .
 
 plic:NomenclatureAndClassificationType a owl:Class ;
     rdfs:label "Nomenclature And Classification" .

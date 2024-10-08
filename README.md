@@ -52,7 +52,7 @@ To save time and bandwidth, add option `--copy` to store the downloaded schemas 
 python ./main.py /home/user/plic/PlinianCore.xsd --copy schemas
 ```
 
-At subsequent invocations, the XSD files will be read from direcory `schemas`. You may run the same command again or keep only the base name of the schema:
+At subsequent invocations, the XSD files will be read from directory `schemas`. You may run the same command again or keep only the base name of the schema:
 
 ```sh
 python ./main.py PlinianCore.xsd --copy schemas
