@@ -12586,7 +12586,7 @@ webvowl =
 	    objectPropertyFilter,
 	    subclassFilter,
 	    setOperatorFilter,
-	    maxLabelWidth = 120,
+	    maxLabelWidth = 200,
 	    metadataObject = {},
 	    generalOntologyMetaData = {},
 	    disjointPropertyFilter,
